@@ -1,382 +1,933 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مهر راهنما | بانک قرض‌الحسنه مهر ایران</title>
+<title>مهر راهنما - بانک قرض‌الحسنه مهر ایران</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Tahoma, sans-serif; background: #0d5c3a; padding: 15px; min-height: 100vh; }
-.box { background: #fff; max-width: 500px; margin: 0 auto; border-radius: 20px; padding: 20px; }
-h1 { color: #0d5c3a; text-align: center; font-size: 22px; margin-bottom: 5px; }
-.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 15px; }
-.qr-section { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 12px; padding: 15px; margin-bottom: 20px; }
-.qr-section p { color: #0d5c3a; font-size: 13px; margin-bottom: 10px; font-weight: bold; }
-.qr-img { width: 130px; height: 130px; background: #fff; padding: 5px; border-radius: 8px; }
-.qr-link { color: #0d5c3a; font-size: 11px; word-break: break-all; margin-top: 8px; }
-.voice-btn { display: block; width: 100%; padding: 12px; background: #0d5c3a; color: #fff; border: none; border-radius: 10px; font-size: 14px; font-family: inherit; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
-.q { color: #0d5c3a; font-size: 16px; font-weight: bold; margin-bottom: 12px; }
-details { background: #f5f5f5; border: 2px solid #e0e0e0; border-radius: 12px; margin-bottom: 8px; overflow: hidden; }
+body {
+font-family: Tahoma, Arial, sans-serif;
+background: linear-gradient(180deg, #0d5c3a 0%, #1a8f5a 100%);
+padding: 15px;
+min-height: 100vh;
+line-height: 1.8;
+}
+.box {
+background: #fff;
+max-width: 600px;
+margin: 0 auto;
+border-radius: 20px;
+padding: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+h1 {
+color: #0d5c3a;
+text-align: center;
+font-size: 24px;
+margin-bottom: 8px;
+}
+.sub {
+text-align: center;
+color: #666;
+font-size: 14px;
+margin-bottom: 20px;
+}
+.welcome-box {
+background: #e8f5ee;
+border: 2px solid #0d5c3a;
+border-radius: 12px;
+padding: 15px;
+margin-bottom: 20px;
+}
+.welcome-box p {
+color: #0d5c3a;
+font-size: 14px;
+line-height: 1.9;
+text-align: center;
+}
+.voice-main-btn {
+display: block;
+width: 100%;
+padding: 15px;
+background: #0d5c3a;
+color: #fff;
+border: none;
+border-radius: 12px;
+font-size: 16px;
+font-family: inherit;
+font-weight: bold;
+cursor: pointer;
+margin-bottom: 20px;
+}
+.voice-main-btn:active { background: #094228; }
+.q {
+color: #0d5c3a;
+font-size: 17px;
+font-weight: bold;
+margin-bottom: 15px;
+text-align: center;
+padding: 10px;
+background: #f5f5f5;
+border-radius: 10px;
+}
+details {
+background: #fafafa;
+border: 2px solid #e0e0e0;
+border-radius: 12px;
+margin-bottom: 10px;
+overflow: hidden;
+}
 details[open] { border-color: #0d5c3a; }
-summary { padding: 14px 18px; cursor: pointer; font-size: 15px; list-style: none; color: #333; }
+summary {
+padding: 16px 18px;
+cursor: pointer;
+font-size: 16px;
+font-weight: bold;
+list-style: none;
+color: #333;
+background: #f0f0f0;
+}
 summary::-webkit-details-marker { display: none; }
-summary::after { content: " ▼"; float: left; color: #0d5c3a; }
 details[open] summary { background: #0d5c3a; color: #fff; }
-details[open] summary::after { content: " ▲"; color: #fff; }
-.plans { padding: 12px; background: #fff; }
-.card { background: #f9fdfb; border: 2px solid #0d5c3a; border-radius: 10px; padding: 12px; margin-bottom: 10px; }
-.card h3 { color: #0d5c3a; font-size: 15px; margin-bottom: 5px; }
-.type { display: inline-block; background: #0d5c3a; color: #fff; padding: 2px 8px; border-radius: 15px; font-size: 10px; margin-bottom: 6px; }
-.card p { color: #555; font-size: 12px; line-height: 1.6; margin-bottom: 6px; }
-.card ul { color: #333; font-size: 12px; line-height: 1.8; padding-right: 18px; }
-.speak-card-btn { display: block; width: 100%; padding: 8px; background: #e8f5ee; color: #0d5c3a; border: 2px solid #0d5c3a; border-radius: 8px; font-size: 13px; font-family: inherit; cursor: pointer; margin-top: 8px; font-weight: bold; }
-.footer { text-align: center; color: #999; font-size: 11px; margin-top: 15px; }
+.plans { padding: 15px; background: #fff; }
+.card {
+background: #f9fdfb;
+border: 2px solid #0d5c3a;
+border-radius: 12px;
+padding: 18px;
+margin-bottom: 15px;
+}
+.card h3 {
+color: #0d5c3a;
+font-size: 18px;
+margin-bottom: 8px;
+text-align: center;
+}
+.type-badge {
+display: block;
+background: #0d5c3a;
+color: #fff;
+padding: 5px 12px;
+border-radius: 20px;
+font-size: 12px;
+text-align: center;
+margin-bottom: 12px;
+width: fit-content;
+margin-left: auto;
+margin-right: auto;
+}
+.card p {
+color: #444;
+font-size: 14px;
+line-height: 2;
+margin-bottom: 12px;
+text-align: justify;
+}
+.card .detail-box {
+background: #fff;
+border-right: 4px solid #0d5c3a;
+padding: 12px 15px;
+margin-bottom: 12px;
+border-radius: 8px;
+}
+.card .detail-box div {
+color: #333;
+font-size: 13.5px;
+line-height: 2.1;
+}
+.speak-btn {
+display: block;
+width: 100%;
+padding: 12px;
+background: #0d5c3a;
+color: #fff;
+border: none;
+border-radius: 10px;
+font-size: 15px;
+font-family: inherit;
+font-weight: bold;
+cursor: pointer;
+}
+.speak-btn:active { background: #094228; }
+.footer {
+text-align: center;
+color: #999;
+font-size: 12px;
+margin-top: 20px;
+line-height: 1.9;
+}
 </style>
 </head>
 <body>
 <div class="box">
+
 <h1>مهر راهنما</h1>
 <div class="sub">بانک قرض‌الحسنه مهر ایران</div>
 
-<div class="qr-section">
-<p>📱 برای اشتراک‌گذاری، QR را اسکن کنید</p>
-<img class="qr-img" id="qrImg" src="" alt="QR">
-<div class="qr-link" id="qrLink"></div>
+<div class="welcome-box">
+<p>
+سلام و وقت بخیر. به سامانه مهر راهنما خوش آمدید.
+این سامانه به شما کمک می‌کند تا بر اساس شغل خود،
+طرح مناسب خود را از بین طرح‌های بانک قرض‌الحسنه مهر ایران پیدا کنید.
+کافی است شغل خود را از لیست زیر انتخاب کنید.
+</p>
 </div>
 
-<button class="voice-btn" onclick="readAll()">🔊 راهنمای صوتی</button>
+<button class="voice-main-btn" onclick="read شدهWelcome()">
+راهنمای صو استتی - کلیک کنید
+که </button>
 
-<div class="q">شغل خود را انتخاب کنید:</div>
+<div class="q">شغل خود را از لیست زیر انتخاب کنید</div>
 
 <details>
-<summary>🏛️ کارمند دولت</summary>
+<summary>کارمند دولت</summary>
 <div class="plans">
+
 <div class="card">
 <h3>طرح مهریار</h3>
-<span class="type">تسهیلات حقوق‌محور</span>
-<p>ویژه کارمندان با واریز حقوق از طریق بانک مهر ایران</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li><li>بازپرداخت تا ۳۶ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهریار. تسهیلات حقوق محور. ویژه کارمندان با واریز حقوق. وام تا ۵۰۰ میلیون تومان با کارمزد ۴ درصد.')">🔊 خواندن این طرح</button>
+<span class="type-badge">تسهیلات حقوق محور با تفاهم‌نامه حقوق</span>
+<p>
+طرح مهریار ویژه کارمندان سازمان‌ها و شرکت‌هایی است که حقوق خود را از طریق بانک مهر ایران دریافت می‌کنند.
+این طرح برای کارمندان دولت بسیار مناسب است،
+چون واریز حقوق از طرف سازمان شما تضمین‌کننده بازپرداخت اقساط است.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>نیاز به ضامن: با توجه به شرایط، معمولاً ندارد</div>
+<div>مدارک لازم: کارت ملی و معرفی‌نامه از سازمان</div>
 </div>
+<button class="speak-btn" onclick="readPlan('mehryar')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح نیلوفر</h3>
-<span class="type">امتیازی - سپرده‌محور</span>
-<p>بر اساس معدل حساب شما در بانک</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت تا ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نیلوفر. امتیازی سپرده محور. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">امتیازی - سپرده محور</span>
+<p>
+طرح نیلوفر بر اساس میانگین موجودی حساب شما در بانک مهر ایران محاسبه می‌شود.
+هر چه میانگین موجودی شما در بانک بیشتر باشد، مبلغ وام قابل دریافت شما هم بیشتر خواهد بود.
+این طرح بدون نیاز به ضامن و بر اساس اعتبار سپرده شما پرداخت می‌شود.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>نیاز به ضامن: ندارد، بر اساس معدل حساب</div>
+<div>مدارک لازم: کارت ملی و شماره حساب</div>
 </div>
+<button class="speak-btn" onclick="readPlan('niloufar')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح کرامت</h3>
-<span class="type">حمایتی</span>
-<p>بر اساس واریز مستمر حقوق</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح کرامت. حمایتی. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حمایتی - حقوق محور</span>
+<p>
+طرح کرامت برای کارمندانی طراحی خود را به صورت مستمر
+از طریق بانک مهر ایران دریافت می‌کنند. این طرح بر اساس میزان واریزی
+حقوق ماهیانه شما، اعتبار تعیین می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: سی و شش ماه</div>
+<div>نیاز به ضامن: با توجه به شرایط</div>
 </div>
+<button class="speak-btn" onclick="readPlan('karamat')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح مهر معاش</h3>
+<span class="type-badge">دسترسی به حقوق پیش از موعد</span>
+<p>
+طرح مهر معاش به شما اجازه می‌دهد بخشی از حقوقی که تا امروز
+کار کرده‌اید را پیش از موعد دریافت کنید. این مبلغ در روز حقوق بعدی
+به صورت خودکار از حقوق شما کسر می‌شود. این طرح نیاز به ضامن ندارد
+و کارمزد آن بسیار پایین است.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: سی درصد حقوق خالص ماهانه</div>
+<div>نرخ کارمزد: نیم درصد، حداکثر پنجاه هزار تومان</div>
+<div>مدت بازپرداخت: تا سی روز</div>
+<div>نیاز به ضامن: ندارد</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mehrmash')">شنیدن توضیحات این طرح</button>
+</div>
+
 </div>
 </details>
 
 <details>
-<summary>🏢 کارمند بخش خصوصی</summary>
+<summary>کارمند بخش خصوصی</summary>
 <div class="plans">
+
 <div class="card">
 <h3>طرح مهریار</h3>
-<span class="type">تسهیلات حقوق‌محور</span>
-<p>ویژه کارمندان با واریز حقوق</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li><li>بازپرداخت ۳۶ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهریار. وام تا ۵۰۰ میلیون تومان با کارمزد ۴ درصد.')">🔊 خواندن این طرح</button>
+<span class="type-badge">تسهیلات حقوق محور با تفاهم‌نامه</span>
+<p>
+طرح مهریار برای کارکنان شرکت‌های خصوصی که حقوق خود را
+از طریق بانک مهر ایران دریافت می‌کنند نیز قابل استفاده است.
+با انعقاد تفاهم‌نامه بین شرکت و بانک، شما می‌توانید
+از تسهیلات قرض‌الحسنه با کارمزد پایین بهره‌مند شوید.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>نیاز به ضامن: معمولاً ندارد</div>
 </div>
+<button class="speak-btn" onclick="readPlan('mehryar')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح توسکا</h3>
-<span class="type">حقوق‌محور</span>
-<p>برای کارکنان شرکت‌های خصوصی</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li><li>بازپرداخت ۲۴ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح توسکا. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حقوق محور</span>
+<p>
+طرح توسکا ویژه کارکنان شرکت‌های خصوصی است.
+در این طرح، کارفرما با بانک تفاهم‌نامه امضا می‌کند
+و کارکنان می‌توانند تا پانصد میلیون تومان وام قرض‌الحسنه
+با کارمزد چهار درصد دریافت کنند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: بیست و چهار ماه</div>
+<div>نیاز به ضامن: با ضمانت ضربدری کارکنان</div>
 </div>
+<button class="speak-btn" onclick="readPlan('tooska')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح نیلوفر</h3>
-<span class="type">امتیازی</span>
-<p>بر اساس معدل حساب</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۲-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نیلوفر. امتیازی. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">امتیازی - سپرده محور</span>
+<p>
+طرح نیلوفر بر اساس میانگین موجودی حساب شما محاسبه می‌شود
+و بدون نیاز به ضامن، بر اساس اعتبار سپرده شما پرداخت می‌شود.
+این طرح برای همه کارمندان بخش خصوصی قابل استفاده است.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>نیاز به ضامن: ندارد</div>
 </div>
+<button class="speak-btn" onclick="readPlan('niloufar')">شنیدن توضیحات این طرح</button>
+</div>
+
 </div>
 </details>
 
 <details>
-<summary>👴 بازنشسته</summary>
+<summary>بازنشسته</summary>
 <div class="plans">
+
 <div class="card">
 <h3>طرح نیلوفر</h3>
-<span class="type">امتیازی - سپرده‌محور</span>
-<p>بر اساس معدل حساب</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت تا ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نیلوفر. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">امتیازی - سپرده محور</span>
+<p>
+طرح نیلوفر برای بازنشستگان عزیز بسیار مناسب است.
+شما با نگهداری میانگین موجودی در حساب خود،
+می‌توانید بدون نیاز به ضامن، وام قرض‌الحسنه دریافت کنید.
+هر چه میانگین موجودی بیشتر باشد، مبلغ وام بیشتر خواهد بود.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>نیاز به ضامن: ندارد</div>
 </div>
+<button class="speak-btn" onclick="readPlan('niloufar')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح نجم</h3>
-<span class="type">حمایتی - اجتماعی</span>
-<p>ویژه بازنشستگان صندوق‌های خدمات کشوری و تامین اجتماعی</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نجم. ویژه بازنشستگان. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حمایتی - اجتماعی</span>
+<p>
+طرح نجم ویژه بازنشستگان صندوق خدمات کشوری و تامین اجتماعی است.
+این طرح با ضریب امتیازی بالاتر نسبت به سایر طرح‌ها،
+به بازنشستگان عزیز امکان دریافت وام قرض‌الحسنه می‌دهد.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+<div>نیاز به ضامن: با توجه به شرایط</div>
 </div>
+<button class="speak-btn" onclick="readPlan('najm')">شنیدن توضیحات این طرح</button>
+</div>
+
 </div>
 </details>
 
 <details>
-<summary>🏪 اصناف و کسبه</summary>
+<summary>اصناف و کسبه</summary>
 <div class="plans">
+
 <div class="card">
 <h3>طرح نارون</h3>
-<span class="type">امتیازی - اصناف</span>
-<p>ویژه اصناف و کسبه با جواز کسب</p>
-<ul><li>وام تا ۱ میلیارد تومان</li><li>کارمزد ۰-۴٪</li><li>بازپرداخت تا ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نارون. ویژه اصناف. وام تا ۱ میلیارد تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">امتیازی - ویژه اصناف</span>
+<p>
+طرح نارون ویژه اصناف و کسبه‌ای است که دارای جواز کسب یا پروانه صنفی معتبر هستند.
+این طرح بر اساس امتیاز کسب‌وکار شما، تسهیلات با کارمزد صفر تا چهار درصد پرداخت می‌کند.
+برای اصناف خرد، الزامی به انعقاد تفاهم‌نامه نیست و وام از طریق معدل حساب قابل دریافت است.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام اشخاص حقیقی: یک میلیارد تومان</div>
+<div>حداکثر مبلغ وام اشخاص حقوقی: یک میلیارد و پانصد میلیون تومان</div>
+<div>نرخ کارمزد: صفر تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>مدارک لازم: جواز کسب و کارت ملی</div>
 </div>
+<button class="speak-btn" onclick="readPlan('naron')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح سرو</h3>
-<span class="type">حمایتی</span>
-<p>بر اساس تودیع مبلغ مشخص</p>
-<ul><li>وام تا ۱۵۰ میلیون تومان</li><li>کارمزد ۳-۴٪</li><li>بازپرداخت ۷-۲۴ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح سرو. وام تا ۱۵۰ میلیون تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حمایتی - بدون تفاهم‌نامه</span>
+<p>
+طرح سرو ویژه اصناف، اتحادیه‌ها و صاحبان کسب و کار است.
+در این طرح، با تودیع مبلغی مشخص برای مدت معین،
+می‌توانید تسهیلات قرض‌الحسنه دریافت کنید.
+این طرح بر اساس وام حمایتی طراحی شده و مشتری محور است.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: تا یک میلیارد و پانصد میلیون تومان</div>
+<div>نرخ کارمزد: سه تا چهار درصد</div>
+<div>مدت بازپرداخت: از هفت ماه تا بیست و چهار ماه</div>
+<div>مدت انتظار: از بیست تا شصت روز</div>
 </div>
+<button class="speak-btn" onclick="readPlan('sarv')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح توسکا</h3>
-<span class="type">حقوق‌محور</span>
-<p>برای کارفرمایان حقیقی</p>
-<ul><li>وام تا ۱ میلیارد تومان</li><li>کارمزد ۴٪</li><li>بازپرداخت ۲۴ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح توسکا. وام تا ۱ میلیارد تومان.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حقوق محور - برای کارفرمایان</span>
+<p>
+طرح توسکا ویژه کارفرمایان حقیقی است که حقوق کارکنان خود را
+از طریق بانک مهر ایران واریز می‌کنند.
+با این طرح، هم خود کارفرما و هم کارکنانش می‌توانند
+تسهیلات قرض‌الحسنه دریافت کنند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: یک میلیارد تومان برای کارفرما، پانصد میلیون برای هر کارمند</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: بیست و چهار ماه</div>
+<div>نیاز به حداقل سه ماه میانگین موجودی</div>
 </div>
+<button class="speak-btn" onclick="readPlan('tooska')">شنیدن توضیحات این طرح</button>
 </div>
-</details>
 
-<details>
-<summary>🌾 کشاورز / دامدار</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح سرو</h3>
-<span class="type">حمایتی</span>
-<p>بر اساس تودیع مبلغ مشخص</p>
-<ul><li>وام تا ۱۵۰ میلیون تومان</li><li>کارمزد ۳-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح سرو. وام تا ۱۵۰ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح نجم</h3>
-<span class="type">حمایتی - اجتماعی</span>
-<p>ویژه مشاغل روستایی و عشایری</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نجم. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>⚕️ پزشک / پرستار</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح نارون</h3>
-<span class="type">امتیازی - اصناف</span>
-<p>ویژه پزشکان، دندانپزشکان، داروسازان</p>
-<ul><li>وام تا ۱ میلیارد تومان</li><li>کارمزد ۰-۴٪</li><li>بازپرداخت ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نارون. ویژه پزشکان. وام تا ۱ میلیارد تومان.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح مهریار</h3>
-<span class="type">تسهیلات حقوق‌محور</span>
-<p>برای پرستاران و کارکنان بیمارستان‌ها</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهریار. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>📚 معلم / استاد</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح مهریار</h3>
-<span class="type">تسهیلات حقوق‌محور</span>
-<p>ویژه کارمندان آموزش و پرورش</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li><li>بازپرداخت ۳۶ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهریار. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح رضوان</h3>
-<span class="type">امتیازی - اجتماعی</span>
-<p>برای فرهنگیان و اساتید</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح رضوان. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>🔧 مهندس / فنی</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح مهریار</h3>
-<span class="type">تسهیلات حقوق‌محور</span>
-<p>برای کارمندان شرکت‌های فنی و مهندسی</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهریار. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح یاقوت</h3>
-<span class="type">امتیازی - سازمانی</span>
-<p>برای شرکت‌های مهندسی و پیمانکاری</p>
-<ul><li>وام تا ۵۰۰ میلیون تومان</li><li>کارمزد ۲-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح یاقوت. وام تا ۵۰۰ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>🎓 دانشجو</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح مهر آینده</h3>
-<span class="type">پس‌انداز هدفمند</span>
-<p>برنامه تربیت مالی و پس‌انداز</p>
-<ul><li>حساب قرض‌الحسنه</li><li>۵ پنجره امتیاز</li><li>پاداش غیرنقدی</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهر آینده. حساب قرض الحسنه با ۵ پنجره امتیاز.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح‌های حمایتی</h3>
-<span class="type">حمایتی</span>
-<p>ویژه دانشجویان نیازمند</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۰-۴٪</li></ul>
-<button class="speak-card-btn" onclick="دreadCard('طرح های حمایتیجو. وام ق</رض الحسنه.summary')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>
->📖 دانش‌آموز</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح مهر آینده</h3>
-<span class="type">پس‌انداز هدفمند - ویژه</span>
-<p>اولین طرح تربیت مالی دانش‌آموزان در ایران</p>
-<ul><li>حساب قرض‌الحسنه</li><li>۵ پنجره: شروع، حفظ، افزایش، استمرار، هدف</li><li>۱۰ دوره آموزش مالی</li><li>پاداش غیرنقدی تا ۲ میلیون تومان</li><li>بیمه مکمل دانش‌آموزی</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهر آینده. اولین طرح تربیت مالی دانش آموزان در ایران.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>🏠 خانه‌دار</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح نجم</h3>
-<span class="type">حمایتی - اجتماعی</span>
-<p>ویژه بانوان سرپرست خانوار و خانه‌دار</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نجم. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح شمس</h3>
-<span class="type">پس‌انداز ماهیانه</span>
-<p>شروع با پس‌انداز منظم</p>
-<ul><li>حداقل ۹ ماه پس‌انداز</li><li>سپس وام</li><li>کارمزد ۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح شمس. پس انداز ماهیانه. سپس وام.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>🤝 نیازمند / مد <div class="plans">
-<div class="card">
-<h3>طرح نجم</h3>
-<span class="type">حمایتی - اجتماعی</span>
-<p>ویژه مددجویان کمیته امداد و بهزیستی</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li><li>بازپرداخت ۶۰ ماه</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نجم. ویژه مددجویان. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
-</div>
-<div class="card">
-<h3>طرح نصر حقیقی</h3>
-<span class="type">حمایتی</span>
-<p>برای اقشار آسیب‌پذیر</p>
-<ul><li>وام تا ۱.۵ میلیون تومان</li><li>کارمزد ۰-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نصر حقیقی. وام تا ۱.۵ میلیون تومان.')">🔊 خواندن این طرح</button>
-</div>
-</div>
-</details>
-
-<details>
-<summary>🏭 سازمان / شرکت</summary>
-<div class="plans">
-<div class="card">
-<h3>طرح یاقوت</h3>
-<span class="type">امتیازی - سازمانی</span>
-<p>برای سازمان‌ها و شرکت‌ها</p>
-<ul><li>وام حقیقی تا ۵ میلیارد ریال</li><li>وام حقوقی تا ۱۵ میلیارد ریال</li><li>کارمزد ۰-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح یاقوت. برای سازمان ها. وام حقیقی تا ۵ میلیارد ریال.')">🔊 خواندن این طرح</button>
-</div>
 <div class="card">
 <h3>طرح الماس</h3>
-<span class="type">حمایتی - تفاهم‌نامه</span>
-<p>برای شرکت‌های سهامی</p>
-<ul><li>وام تا ۵ میلیارد ریال</li><li>کارمزد ۲-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح الماس. وام تا ۵ میلیارد ریال.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حمایتی - دارای تفاهم‌نامه</span>
+<p>
+طرح الماس ویژه شرکت‌های سهامی و کلیه شرکت‌های مشمول قانون تجارت است.
+در این طرح، امکان انعقاد تفاهم‌نامه حمایتی برای اعطای تسهیلات
+به کارکنان و افراد معرفی‌شده فراهم است.
+مشتری می‌تواند از ماه دوم، از بازگشت اقساط سهم خود
+جهت پرداخت تسهیلات مجدد استفاده کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان به میزان یک برابر حمایت بانک</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+<div>مدت انتظار: ده روز از زمان واریز</div>
 </div>
-<div class="card">
-<h3>طرح مهر تامین</h3>
-<span class="type">تأمین مالی زنجیره‌ای</span>
-<p>تأمین مالی بر اساس فاکتور</p>
-<ul><li>دو مسیر: حمایتی و معدل‌محور</li><li>بدون خرید دین</li><li>کارمزد ۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح مهر تامین. تأمین مالی زنجیره ای.')">🔊 خواندن این طرح</button>
+<button class="speak-btn" onclick="readPlan('almas')">شنیدن توضیحات این طرح</button>
 </div>
+
 </div>
 </details>
 
 <details>
-<summary>👤 سایر / فاقد شغل</summary>
+<summary>کشاورز و دامدار</summary>
 <div class="plans">
+
+<div class="card">
+<h3>طرح سرو</h3>
+<span class="type-badge">حمایتی - بدون تفاهم‌نامه</span>
+<p>
+طرح سرو برای کشاورزان و دامداران عزیز که دارای جواز کسب
+یا پروانه صنفی معتبر هستند، فرصت مناسبی برای دریافت
+تسهیلات قرض‌الحسنه با کارمزد پایین فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: تا یک میلیارد و پانصد میلیون تومان</div>
+<div>نرخ کارمزد: سه تا چهار درصد</div>
+<div>مدت بازپرداخت: از هفت تا بیست و چهار ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('sarv')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح نجم</h3>
-<span class="type">حمایتی - اجتماعی</span>
-<p>ویژه اقشار آسیب‌پذیر</p>
-<ul><li>وام قرض‌الحسنه</li><li>کارمزد ۲-۴٪</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح نجم. وام قرض الحسنه.')">🔊 خواندن این طرح</button>
+<span class="type-badge">حمایتی - اجتماعی</span>
+<p>
+طرح نجم ویژه مشاغل روستایی و عشایری است.
+این طرح با ضریب امتیازی بالاتر، به کشاورزان و دامداران عزیز
+امکان دریافت وام قرض‌الحسنه را فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
 </div>
+<button class="speak-btn" onclick="readPlan('najm')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>پزشک و پرستار</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح نارون</h3>
+<span class="type-badge">امتیازی - ویژه اصناف</span>
+<p>
+طرح نارون برای پزشکان، دندانپزشکان و داروسازانی که
+دارای پروانه طبابت یا مجوز رسمی هستند، فرصت مناسبی است.
+این طرح بر اساس امتیاز کسب‌وکار شما، تسهیلات
+با کارمزد صفر تا چهار درصد پرداخت می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: یک میلیارد تومان</div>
+<div>نرخ کارمزد: صفر تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+<div>مدارک لازم: پروانه طبابت و کارت ملی</div>
+</div>
+<button class="speak-btn" onclick="readPlan('naron')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type-badge">تسهیلات حقوق محور</span>
+<p>
+طرح مهریار برای پرستاران و کارکنان بیمارستان‌ها و مراکز درمانی
+که حقوق خود را از طریق بانک مهر ایران دریافت می‌کنند،
+امکان دریافت تسهیلات قرض‌الحسنه با کارمزد پایین را فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: سی و شش ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mehryar')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>معلم و استاد</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type-badge">تسهیلات حقوق محور</span>
+<p>
+طرح مهریار ویژه معلمان و کارمندان آموزش و پرورش است که
+حقوق خود را از طریق بانک مهر ایران دریافت می‌کنند.
+این طرح با کارمزد چهار درصد و بازپرداخت تا سی و شش ماه،
+فرصت مناسبی برای فرهنگیان عزیز فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: سی و شش ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mehryar')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح رضوان</h3>
+<span class="type-badge">امتیازی - اجتماعی</span>
+<p>
+طرح رضوان ویژه فرهنگیان، معلمان و اساتید دانشگاه است.
+این طرح بر اساس امتیاز اجتماعی، وام قرض‌الحسنه
+با کارمزد دو تا چهار درصد پرداخت می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('rezvan')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>مهندس و فنی</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type-badge">تسهیلات حقوق محور</span>
+<p>
+طرح مهریار برای کارمندان شرکت‌های فنی و مهندسی که
+حقوق خود را از طریق بانک مهر ایران دریافت می‌کنند،
+امکان دریافت تسهیلات قرض‌الحسنه فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: چهار درصد</div>
+<div>مدت بازپرداخت: سی و شش ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mehryar')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح یاقوت</h3>
+<span class="type-badge">امتیازی - سازمانی</span>
+<p>
+طرح یاقوت ویژه شرکت‌های مهندسی و پیمانکاری است.
+در این طرح، با انعقاد تفاهم‌نامه، کارکنان و افراد معرفی‌شده
+می‌توانند تسهیلات قرض‌الحسنه دریافت کنند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام اشخاص حقیقی: پانصد میلیون تومان</div>
+<div>حداکثر مبلغ وام اشخاص حقوقی: یک میلیارد و پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('yaghout')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>دانشجو</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح مهر آینده</h3>
+<span class="type-badge">پس‌انداز هدفمند</span>
+<p>
+طرح مهر آینده یک برنامه تربیت مالی و پس‌انداز برای
+دانشجویان و دانش‌آموزان است. با افتتاح حساب قرض‌الحسنه،
+هر ماه مبلغی پس‌انداز می‌کنید و بر اساس پنج پنجره
+امتیاز می‌گیرید. این امتیازها به پاداش غیرنقدی
+تبدیل می‌شوند.
+</p>
+<div class="detail-box">
+<div>حداقل مبلغ افتتاح: یکصد هزار تومان</div>
+<div>پاداش سالانه: از دویست هزار تا دو میلیون تومان</div>
+<div>پنج پنجره امتیاز: شروع، حفظ، افزایش، استمرار، آموزش</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mahrayandeh')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح‌های حمایتی</h3>
+<span class="type-badge">حمایتی</span>
+<p>
+طرح‌های حمایتی ویژه دانشجویان نیازمند است.
+در این طرح، با تأیید نهادهای حمایتی، امکان دریافت
+وام قرض‌الحسنه با کارمزد صفر تا چهار درصد فراهم می‌شود.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: طبق ضوابط</div>
+<div>نرخ کارمزد: صفر تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('hemayati')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>دانش‌آموز</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح مهر آینده</h3>
+<span class="type-badge">پس‌انداز هدفمند - ویژه</span>
+<p>
+طرح مهر آینده اولین طرح تربیت مالی دانش‌آموزان در ایران است.
+این طرح برای دانش‌آموزان هفت تا هجده سال طراحی شده است.
+دانش‌آموز با افتتاح حساب قرض‌الحسنه، هر ماه مبلغی پس‌انداز می‌کند
+و از پنج پنجره امتیاز، پاداش غیرنقدی دریافت می‌کند.
+همچنین ده دوره آموزش مالی، بیمه مکمل و هدف‌گذاری
+برای دانش‌آموز فراهم می‌شود.
+</p>
+<div class="detail-box">
+<div>حداقل مبلغ افتتاح: یکصد هزار تومان</div>
+<div>پنج پنجره امتیاز: شروع بیست، حفظ چهل، افزایش سی، استمرار بیست، آموزش ده</div>
+<div>پاداش غیرنقدی: از دویست هزار تا دو میلیون تومان</div>
+<div>بیمه مکمل دانش‌آموزی: دارد</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mahrayandeh')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>خانه‌دار</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type-badge">حمایتی - اجتماعی</span>
+<p>
+طرح نجم ویژه بانوان سرپرست خانوار و خانه‌داران عزیز است.
+این طرح با ضریب امتیازی بالاتر، امکان دریافت وام
+قرض‌الحسنه با کارمزد دو تا چهار درصد را فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('najm')">شنیدن توضیحات این طرح</button>
+</div>
+
 <div class="card">
 <h3>طرح شمس</h3>
-<span class="type">پس‌انداز ماهیانه</span>
-<p>شروع با پس‌انداز منظم</p>
-<ul><li>حداقل ۹ ماه پس‌انداز</li><li>سپس وام</li></ul>
-<button class="speak-card-btn" onclick="readCard('طرح شمس. پس انداز ماهیانه.')">🔊 خواندن این طرح</button>
+<span class="type-badge">پس‌انداز ماهیانه</span>
+<p>
+طرح شمس ویژه بانوان خانه‌دار و افرادی است که
+می‌خواهند با پس‌انداز ماهیانه، امکان دریافت وام را
+برای خود فراهم کنند. با واریز ماهیانه، مدت انتظار
+کوتاه و وام تضمینی دریافت می‌کنید.
+</p>
+<div class="detail-box">
+<div>مدت پس‌انداز: حداقل نه ماه و حداکثر سی ماه</div>
+<div>حداقل پس‌انداز: نود میلیون ریال</div>
+<div>نرخ کارمزد: چهار درصد</div>
 </div>
+<button class="speak-btn" onclick="readPlan('shams')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>نیازمند و مددجو</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type-badge">حمایتی - اجتماعی</span>
+<p>
+طرح نجم ویژه مددجویان کمیته امداد و بهزیستی است.
+این طرح با ضریب امتیازی بالاتر، امکان دریافت
+وام قرض‌الحسنه را فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('najm')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح نصر حقیقی</h3>
+<span class="type-badge">حمایتی</span>
+<p>
+طرح نصر حقیقی برای اقشار آسیب‌پذیر طراحی شده است.
+این طرح با حمایت از محل منابع بانک و بانکداری اجتماعی،
+وام قرض‌الحسنه تا یک میلیون و پانصد میلیون ریال پرداخت می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: یک میلیون و پانصد میلیون ریال</div>
+<div>نرخ کارمزد: صفر تا چهار درصد</div>
+<div>مدت بازپرداخت: از بیست تا سی ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('nasr')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>سازمان و شرکت</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح یاقوت</h3>
+<span class="type-badge">امتیازی - سازمانی</span>
+<p>
+طرح یاقوت برای سازمان‌ها، نهادها و شرکت‌ها طراحی شده است.
+با انعقاد تفاهم‌نامه، کارکنان و افراد معرفی‌شده
+می‌توانند تسهیلات قرض‌الحسنه دریافت کنند.
+</p>
+<div class="detail-box">
+<div>حداکثر وام اشخاص حقیقی: پانصد میلیون تومان</div>
+<div>حداکثر وام اشخاص حقوقی: یک میلیارد و پانصد میلیون تومان</div>
+<div>نرخ کارمزد: صفر تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('yaghout')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح الماس</h3>
+<span class="type-badge">حمایتی - دارای تفاهم‌نامه</span>
+<p>
+طرح الماس ویژه شرکت‌های سهامی و مشمول قانون تجارت است.
+در این طرح، با انعقاد تفاهم‌نامه حمایتی،
+امکان اعطای تسهیلات به کارکنان و افراد معرفی‌شده فراهم می‌شود.
+مشتری می‌تواند از ماه دوم، از بازگشت اقساط سهم خود
+برای تسهیلات مجدد استفاده کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان به میزان یک برابر حمایت بانک</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: تا شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('almas')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح مهر تامین</h3>
+<span class="type-badge">تأمین مالی زنجیره‌ای</span>
+<p>
+طرح مهر تامین برای تأمین مالی زنجیره تأمین طراحی شده است.
+با ارائه فاکتور فروش، تأمین‌کننده می‌تواند تسهیلات
+قرض‌الحسنه دریافت کند. این طرح دو مسیر دارد:
+مسیر حمایتی با تودیع از طرفین، و مسیر معدل محور
+بر اساس میانگین موجودی. بدون خرید دین و کاملاً شرعی است.
+</p>
+<div class="detail-box">
+<div>مسیر حمایتی: سقف سی میلیارد ریال</div>
+<div>مسیر معدل محور: سقف پانزده میلیارد ریال</div>
+<div>نرخ کارمزد: چهار درصد</div>
+</div>
+<button class="speak-btn" onclick="readPlan('mehrtamin')">شنیدن توضیحات این طرح</button>
+</div>
+
+</div>
+</details>
+
+<details>
+<summary>سایر و فاقد شغل</summary>
+<div class="plans">
+
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type-badge">حمایتی - اجتماعی</span>
+<p>
+طرح نجم ویژه اقشار آسیب‌پذیر است. این طرح
+با ضریب امتیازی بالاتر، امکان دریافت وام قرض‌الحسنه
+را برای افراد نیازمند فراهم می‌کند.
+</p>
+<div class="detail-box">
+<div>حداکثر مبلغ وام: پانصد میلیون تومان</div>
+<div>نرخ کارمزد: دو تا چهار درصد</div>
+<div>مدت بازپرداخت: شصت ماه</div>
+</div>
+<button class="speak-btn" onclick="readPlan('najm')">شنیدن توضیحات این طرح</button>
+</div>
+
+<div class="card">
+<h3>طرح شمس</h3>
+<span class="type-badge">پس‌انداز ماهیانه</span>
+<p>
+طرح شمس به شما این امکان را می‌دهد که با پس‌انداز
+ماهیانه، به تدریج شرایط دریافت وام قرض‌الحسنه را
+برای خود فراهم کنید. هر چه مدت پس‌انداز طولانی‌تر باشد،
+مبلغ وام بیشتر خواهد بود.
+</p>
+<div class="detail-box">
+<div>مدت پس‌انداز: حداقل نه ماه و حداکثر سی ماه</div>
+<div>حداقل پس‌انداز: نود میلیون ریال</div>
+<div>نرخ کارمزد: چهار درصد</div>
+</div>
+<button class="speak-btn" onclick="readPlan('shams')">شنیدن توضیحات این طرح</button>
+</div>
+
 </div>
 </details>
 
 <div class="footer">
-مهر راهنما؛ مشکل خود را بگو، مسیرش را نشانت می‌دهیم.
+مهر راهنما - بانک قرض‌الحسنه مهر ایران<br>
+مشکل خود را بگو، مسیرش را نشانت می‌دهیم.
 </div>
+
 </div>
 
 <script>
-var currentUrl = window.location.href.split('?')[0].split('#')[0];
-document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
-document.getElementById('qrLink').textContent = currentUrl;
+var voices = [];
+var persianVoice = null;
+
+function loadVoices() {
+voices = window.speechSynthesis.getVoices();
+for (var i = 0; i < voices.length; i++) {
+if (voices[i].lang.indexOf('fa') === 0) {
+persianVoice = voices[i];
+break;
+}
+}
+if (!persianVoice) {
+for (var j = 0; j < voices.length; j++) {
+if (voices[j].lang.indexOf('ar') === 0) {
+persianVoice = voices[j];
+break;
+}
+}
+}
+}
+
+if ('speechSynthesis' in window) {
+loadVoices();
+window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+var planTexts = {
+mehryar: 'طرح مهریار. این طرح ویژه کارمندان سازمان‌ها و شرکت‌هایی است که حقوق خود را از طریق بانک مهر ایران دریافت می‌کنند. حداکثر مبلغ وام در این طرح، پانصد میلیون تومان است. نرخ کارمزد آن چهار درصد می‌باشد. مدت بازپرداخت تا شصت ماه است. برای دریافت این وام، کارت ملی و معرفی‌نامه از سازمان نیاز است.',
+niloufar: 'طرح نیلوفر. این طرح بر اساس میانگین موجودی حساب شما در بانک مهر ایران محاسبه می‌شود. هر چه میانگین موجودی شما بیشتر باشد، مبلغ وام قابل دریافت شما هم بیشتر خواهد بود. حداکثر مبلغ وام، پانصد میلیون تومان است. نرخ کارمزد آن دو تا چهار درصد می‌باشد. مدت بازپرداخت تا شصت ماه است. این طرح نیاز به ضامن ندارد.',
+karamat: 'طرح کرامت. این طرح برای کارمندانی طراحی شده است که حقوق خود را به صورت مستمر از طریق بانک مهر ایران دریافت می‌کنند. حداکثر مبلغ وام، پانصد میلیون تومان است. نرخ کارمزد آن چهار درصد می‌باشد. مدت بازپرداخت سی و شش ماه است.',
+mehrmash: 'طرح مهر معاش. این طرح به شما اجازه می‌دهد بخشی از حقوقی که تا امروز کار کرده‌اید را پیش از موعد دریافت کنید. حداکثر مبلغ، سی درصد حقوق خالص ماهانه شماست. نرخ کارمزد آن نیم درصد و حداکثر پنجاه هزار تومان است. این مبلغ در روز حقوق بعدی به صورت خودکار کسر می‌شود. این طرح نیاز به ضامن ندارد.',
+tooska: 'طرح توسکا. این طرح ویژه کارکنان شرکت‌های خصوصی است. در این طرح، کارفرما با بانک تفاهم‌نامه امضا می‌کند و کارکنان می‌توانند تا پانصد میلیون تومان وام قرض‌الحسنه با کارمزد چهار درصد دریافت کنند. مدت بازپرداخت بیست و چهار ماه است.',
+najm: 'طرح نجم. این طرح ویژه اقشار آسیب‌پذیر، بانوان سرپرست خانوار، مددجویان کمیته امداد و بهزیستی، عشایر و مشاغل روستایی است. حداکثر مبلغ وام، پانصد میلیون تومان است. نرخ کارمزد آن دو تا چهار درصد می‌باشد. مدت بازپرداخت شصت ماه است.',
+naron: 'طرح نارون. این طرح ویژه اصناف و کسبه‌ای است که دارای جواز کسب یا پروانه صنفی معتبر هستند. حداکثر مبلغ وام برای اشخاص حقیقی، یک میلیارد تومان و برای اشخاص حقوقی، یک میلیارد و پانصد میلیون تومان است. نرخ کارمزد آن صفر تا چهار درصد می‌باشد. مدت بازپرداخت تا شصت ماه است.',
+sarv: 'طرح سرو. این طرح ویژه اصناف، اتحادیه‌ها و صاحبان کسب و کار است. با تودیع مبلغی مشخص برای مدت معین، می‌توانید تسهیلات قرض‌الحسنه دریافت کنید. حداکثر مبلغ وام، تا یک میلیارد و پانصد میلیون تومان است. نرخ کارمزد آن سه تا چهار درصد می‌باشد.',
+almas: 'طرح الماس. این طرح ویژه شرکت‌های سهامی و مشمول قانون تجارت است. با انعقاد تفاهم‌نامه حمایتی، امکان اعطای تسهیلات به کارکنان و افراد معرفی‌شده فراهم می‌شود. حداکثر مبلغ وام، پانصد میلیون تومان به میزان یک برابر حمایت بانک است. نرخ کارمزد دو تا چهار درصد می‌باشد.',
+rezvan: 'طرح رضوان. این طرح ویژه فرهنگیان، معلمان و اساتید دانشگاه است. حداکثر مبلغ وام، پانصد میلیون تومان است. نرخ کارمزد آن دو تا چهار درصد می‌باشد. مدت بازپرداخت شصت ماه است.',
+yaghout: 'طرح یاقوت. این طرح ویژه سازمان‌ها، نهادها و شرکت‌ها است. با انعقاد تفاهم‌نامه، کارکنان و افراد معرفی‌شده می‌توانند تسهیلات قرض‌الحسنه دریافت کنند. حداکثر وام اشخاص حقیقی، پانصد میلیون تومان و اشخاص حقوقی، یک میلیارد و پانصد میلیون تومان است.',
+mahrayandeh: 'طرح مهر آینده. این طرح اولین برنامه تربیت مالی دانش‌آموزان در ایران است و برای دانش‌آموزان هفت تا هجده سال طراحی شده است. با افتتاح حساب قرض‌الحسنه با حداقل یکصد هزار تومان، هر ماه مبلغی پس‌انداز می‌کنید. پنج پنجره امتیاز وجود دارد: پنجره شروع بیست امتیاز، پنجره حفظ چهل امتیاز، پنجره افزایش سی امتیاز، پنجره استمرار بیست امتیاز و پنجره آموزش ده امتیاز. مجموع امتیازات صد و بیست است. پاداش غیرنقدی از دویست هزار تومان تا دو میلیون تومان می‌باشد. بیمه مکمل دانش‌آموزی و ده دوره آموزش مالی نیز در این طرح ارائه می‌شود.',
+shams: 'طرح شمس. این طرح ویژه افرادی است که می‌خواهند با پس‌انداز ماهیانه، امکان دریافت وام را برای خود فراهم کنند. مدت پس‌انداز حداقل نه ماه و حداکثر سی ماه است. حداقل پس‌انداز، نود میلیون ریال می‌باشد. نرخ کارمزد چهار درصد است.',
+nasr: 'طرح نصر حقیقی. این طرح برای اقشار آسیب‌پذیر طراحی شده است. حداکثر مبلغ وام، یک میلیون و پانصد میلیون ریال است. نرخ کارمزد آن صفر تا چهار درصد می‌باشد. مدت بازپرداخت از بیست تا سی ماه است.',
+mehrtamin: 'طرح مهر تامین. این طرح برای تأمین مالی زنجیره تأمین طراحی شده است. با ارائه فاکتور فروش، تأمین‌کننده می‌تواند تسهیلات قرض‌الحسنه دریافت کند. این طرح دو مسیر دارد. مسیر حمایتی با تودیع بیست و پنج درصد از هر طرف و سقف سی میلیارد ریال. مسیر معدل محور با سقف پانزده میلیارد ریال. این طرح بدون خرید دین و کاملاً شرعی است.',
+hemayati: 'طرح‌های حمایتی. این طرح‌ها ویژه دانشجویان و اقشار نیازمند است. با تأیید نهادهای حمایتی، امکان دریافت وام قرض‌الحسنه با کارمزد صفر تا چهار درصد فراهم می‌شود.'
+};
 
 function speak(text) {
-if ('speechSynthesis' in window) {
+if (!('speechSynthesis' in window)) {
+alert('مرورگر شما از صوتی پشتیبانی نمی‌کند.');
+return;
+}
 window.speechSynthesis.cancel();
 var msg = new SpeechSynthesisUtterance(text);
-msg.lang = 'fa-IR';
-msg.rate = 0.9;
-window.speechSynthesis.speak(msg);
+if (persianVoice) {
+msg.voice = persianVoice;
+msg.lang = persianVoice.lang;
 } else {
-alert('مرورگر شما از صوتی پشتیبانی نمی‌کند. لطفاً از Chrome استفاده کنید.');
+msg.lang = 'fa-IR';
 }
+msg.rate = 0.85;
+msg.pitch = 1;
+msg.volume = 1;
+window.speechSynthesis.speak(msg);
 }
 
-function readAll() {
-speak('به سامانه مهر راهنما بانک قرض الحسنه مهر ایران خوش آمدید. لطفاً شغل خود را از لیست زیر انتخاب کنید.');
+function readWelcome() {
+speak('سلام و وقت بخیر. به سامانه مهر راهنما خوش آمدید. این سامانه به شما کمک می‌کند تا بر اساس شغل خود، طرح مناسب خود را از بین طرح‌های بانک قرض‌الحسنه مهر ایران پیدا کنید. کافی است شغل خود را از لیست زیر انتخاب کنید.');
 }
 
-function readCard(text) {
-speak(text);
+function readPlan(key) {
+if (planTexts[key]) {
+speak(planTexts[key]);
+}
 }
 </script>
 </body>
