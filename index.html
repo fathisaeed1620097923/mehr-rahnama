@@ -7,340 +7,456 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-font-family: 'Tahoma', 'IRANSans', sans-serif;
-background: linear-gradient(135deg, #0d5c3a 0%, #1a8f5a 100%);
-min-height: 100vh;
+font-family: Tahoma, sans-serif;
+background: #0d5c3a;
 padding: 20px;
-display: flex;
-justify-content: center;
-align-items: flex-start;
+min-height: 100vh;
 }
-.container {
+.box {
 background: #fff;
-max-width: 520px;
-width: 100%;
+max-width: 500px;
+margin: 0 auto;
 border-radius: 20px;
-padding: 30px 25px;
-box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-margin: 20px 0;
+padding: 25px;
 }
-.logo { text-align: center; margin-bottom: 20px; }
-.logo-icon {
-width: 70px; height: 70px;
-background: #0d5c3a; color: #fff;
-border-radius: 50%;
-display: inline-flex;
-align-items: center; justify-content: center;
-font-size: 32px; font-weight: bold;
-margin-bottom: 10px;
-}
-h1 { color: #0d5c3a; text-align: center; font-size: 22px; margin-bottom: 8px; }
-.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 25px; }
-.step { display: none; }
-.step.active { display: block; animation: fadeIn 0.4s; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-.question { color: #0d5c3a; font-size: 16px; font-weight: bold; margin-bottom: 15px; }
-.option {
-display: block; width: 100%;
-padding: 13px 18px; margin-bottom: 8px;
+h1 { color: #0d5c3a; text-align: center; font-size: 22px; margin-bottom: 5px; }
+.sub { text-align: center; color: #666; font-size: 14px; margin-bottom: 20px; }
+.q { color: #0d5c3a; font-size: 16px; font-weight: bold; margin-bottom: 15px; }
+details {
 background: #f5f5f5;
 border: 2px solid #e0e0e0;
 border-radius: 12px;
-font-size: 14px;
-font-family: inherit;
+margin-bottom: 8px;
+overflow: hidden;
+}
+details[open] { border-color: #0d5c3a; }
+summary {
+padding: 14px 18px;
 cursor: pointer;
-text-align: right;
-transition: all 0.2s;
+font-size: 15px;
+list-style: none;
 color: #333;
 }
-.option:hover { background: #e8f5ee; border-color: #0d5c3a; }
-.progress {
-display: flex; justify-content: center; gap: 8px;
-margin-bottom: 25px;
-}
-.dot { width: 10px; height: 10px; border-radius: 50%; background: #e0e0e0; }
-.dot.active { background: #0d5c3a; width: 30px; border-radius: 5px; }
-.back-btn {
-background: none; border: none; color: #666;
-font-size: 14px; cursor: pointer; padding: 8px 0;
-font-family: inherit; margin-top: 10px;
-}
-.result-card {
+summary::-webkit-details-marker { display: none; }
+summary::after { content: " ▼"; float: left; color: #0d5c3a; }
+details[open] summary { background: #0d5c3a; color: #fff; }
+details[open] summary::after { content: " ▲"; color: #fff; }
+.plans { padding: 15px; background: #fff; }
+.card {
 background: #f9fdfb;
 border: 2px solid #0d5c3a;
-border-radius: 12px;
-padding: 18px; margin-bottom: 15px;
+border-radius: 10px;
+padding: 15px;
+margin-bottom: 12px;
 }
-.result-card h3 { color: #0d5c3a; font-size: 17px; margin-bottom: 5px; }
-.result-card .type {
+.card h3 { color: #0d5c3a; font-size: 16px; margin-bottom: 5px; }
+.type {
 display: inline-block;
-background: #0d5c3a; color: #fff;
-padding: 3px 10px; border-radius: 20px;
-font-size: 11px; margin-bottom: 10px;
+background: #0d5c3a;
+color: #fff;
+padding: 3px 10px;
+border-radius: 15px;
+font-size: 11px;
+margin-bottom: 8px;
 }
-.result-card p { color: #555; font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
-.result-card .features {
-color: #333; font-size: 13px; line-height: 1.9;
-padding-right: 15px; margin-bottom: 10px;
-}
-.result-card button {
-width: 100%; padding: 10px;
-background: #0d5c3a; color: #fff;
-border: none; border-radius: 8px;
-font-size: 14px; font-family: inherit;
-cursor: pointer; margin-top: 5px;
-}
-.result-title { text-align: center; color: #0d5c3a; font-size: 18px; font-weight: bold; margin-bottom: 10px; }
-.result-subtitle { text-align: center; color: #666; font-size: 13px; margin-bottom: 20px; }
-.restart {
-width: 100%; padding: 12px;
-background: #f0f0f0; color: #333;
-border: none; border-radius: 10px;
-font-size: 14px; font-family: inherit;
-cursor: pointer; margin-top: 15px;
-}
-.footer {
-text-align: center; color: #999;
-font-size: 11px; margin-top: 20px;
-line-height: 1.8;
-}
-.count {
-text-align: center; color: #0d5c3a;
-font-size: 13px; margin-bottom: 15px;
-background: #e8f5ee; padding: 8px;
-border-radius: 8px;
-}
+.card p { color: #555; font-size: 13px; line-height: 1.7; margin-bottom: 8px; }
+.card ul { color: #333; font-size: 13px; line-height: 1.9; padding-right: 20px; }
+.footer { text-align: center; color: #999; font-size: 12px; margin-top: 20px; }
 </style>
 </head>
 <body>
-<div class="container">
-
-<div class="logo">
-<div class="logo-icon">✓</div>
+<div class="box">
 <h1>مهر راهنما</h1>
-<div class="subtitle">بانک قرض‌الحسنه مهر ایران</div>
-</div>
+<div class="sub">بانک قرض‌الحسنه مهر ایران</div>
+<div class="q">شغل خود را انتخاب کنید:</div>
 
-<div class="progress">
-<div class="dot active" id="d1"></div>
-<div class="dot" id="d2"></div>
+<details>
+<summary>🏛️ کارمند دولت</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type">تسهیلات حقوق‌محور</span>
+<p>ویژه کارمندان با واریز حقوق از طریق بانک مهر ایران</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+<li>بازپرداخت تا ۳۶ ماه</li>
+</ul>
 </div>
+<div class="card">
+<h3>طرح نیلوفر</h3>
+<span class="type">امتیازی - سپرده‌محور</span>
+<p>بر اساس معدل حساب شما در بانک</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت تا ۶۰ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح کرامت</h3>
+<span class="type">حمایتی</span>
+<p>بر اساس واریز مستمر حقوق</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+</ul>
+</div>
+</div>
+</details>
 
-<!-- سوال ۱: شغل -->
-<div class="step active" id="step1">
-<div class="question">شغل شما چیست؟</div>
-<button class="option" onclick="selectJob('employee_public')">🏛️ کارمند دولت</button>
-<button class="option" onclick="selectJob('employee_private')">🏢 کارمند بخش خصوصی</button>
-<button class="option" onclick="selectJob('retired')">👴 بازنشسته</button>
-<button class="option" onclick="selectJob('business')">🏪 اصناف و کسبه</button>
-<button class="option" onclick="selectJob('farmer')">🌾 کشاورز / دامدار</button>
-<button class="option" onclick="selectJob('doctor')">⚕️ پزشک / پرستار</button>
-<button class="option" onclick="selectJob('teacher')">📚 معلم / استاد</button>
-<button class="option" onclick="selectJob('engineer')">🔧 مهندس / فنی</button>
-<button class="option" onclick="selectJob('student')">🎓 دانشجو</button>
-<button class="option" onclick="selectJob('school_student')">📖 دانش‌آموز</button>
-<button class="option" onclick="selectJob('housewife')">🏠 خانه‌دار</button>
-<button class="option" onclick="selectJob('vulnerable')">🤝 نیازمند / مددجو</button>
-<button class="option" onclick="selectJob('company')">🏭 سازمان / شرکت</button>
-<button class="option" onclick="selectJob('other')">👤 سایر / فاقد شغل</button>
+<details>
+<summary>🏢 کارمند بخش خصوصی</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type">تسهیلات حقوق‌محور</span>
+<p>ویژه کارمندان با واریز حقوق</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+<li>بازپرداخت ۳۶ ماه</li>
+</ul>
 </div>
+<div class="card">
+<h3>طرح توسکا</h3>
+<span class="type">حقوق‌محور</span>
+<p>برای کارکنان شرکت‌های خصوصی</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+<li>بازپرداخت ۲۴ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح نیلوفر</h3>
+<span class="type">امتیازی</span>
+<p>بر اساس معدل حساب</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۲-۴٪</li>
+</ul>
+</div>
+</div>
+</details>
 
-<!-- نتیجه -->
-<div class="step" id="result">
-<div class="result-title" id="resultTitle"></div>
-<div class="result-subtitle" id="resultSubtitle"></div>
-<div class="count" id="resultCount"></div>
-<div id="resultsContainer"></div>
-<button class="restart" onclick="restart()">🔄 شروع مجدد</button>
+<details>
+<summary>👴 بازنشسته</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نیلوفر</h3>
+<span class="type">امتیازی - سپرده‌محور</span>
+<p>بر اساس معدل حساب</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت تا ۶۰ ماه</li>
+</ul>
 </div>
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type">حمایتی - اجتماعی</span>
+<p>ویژه بازنشستگان صندوق‌های خدمات کشوری و تامین اجتماعی</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت ۶۰ ماه</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🏪 اصناف و کسبه</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نارون</h3>
+<span class="type">امتیازی - اصناف</span>
+<p>ویژه اصناف و کسبه با جواز کسب</p>
+<ul>
+<li>وام تا ۱ میلیارد تومان</li>
+<li>کارمزد ۰-۴٪</li>
+<li>بازپرداخت تا ۶۰ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح سرو</h3>
+<span class="type">حمایتی</span>
+<p>بر اساس تودیع مبلغ مشخص</p>
+<ul>
+<li>وام تا ۱۵۰ میلیون تومان</li>
+<li>کارمزد ۳-۴٪</li>
+<li>بازپرداخت ۷-۲۴ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح توسکا</h3>
+<span class="type">حقوق‌محور</span>
+<p>برای کارفرمایان حقیقی</p>
+<ul>
+<li>وام تا ۱ میلیارد تومان</li>
+<li>کارمزد ۴٪</li>
+<li>بازپرداخت ۲۴ ماه</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🌾 کشاورز / دامدار</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح سرو</h3>
+<span class="type">حمایتی</span>
+<p>بر اساس تودیع مبلغ مشخص</p>
+<ul>
+<li>وام تا ۱۵۰ میلیون تومان</li>
+<li>کارمزد ۳-۴٪</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type">حمایتی - اجتماعی</span>
+<p>ویژه مشاغل روستایی و عشایری</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت ۶۰ ماه</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>⚕️ پزشک / پرستار</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نارون</h3>
+<span class="type">امتیازی - اصناف</span>
+<p>ویژه پزشکان، دندانپزشکان، داروسازان</p>
+<ul>
+<li>وام تا ۱ میلیارد تومان</li>
+<li>کارمزد ۰-۴٪</li>
+<li>بازپرداخت ۶۰ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type">تسهیلات حقوق‌محور</span>
+<p>برای پرستاران و کارکنان بیمارستان‌ها</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>📚 معلم / استاد</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type">تسهیلات حقوق‌محور</span>
+<p>ویژه کارمندان آموزش و پرورش</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+<li>بازپرداخت ۳۶ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح رضوان</h3>
+<span class="type">امتیازی - اجتماعی</span>
+<p>برای فرهنگیان و اساتید</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🔧 مهندس / فنی</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهریار</h3>
+<span class="type">تسهیلات حقوق‌محور</span>
+<p>برای کارمندان شرکت‌های فنی و مهندسی</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۴٪</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح یاقوت</h3>
+<span class="type">امتیازی - سازمانی</span>
+<p>برای شرکت‌های مهندسی و پیمانکاری</p>
+<ul>
+<li>وام تا ۵۰۰ میلیون تومان</li>
+<li>کارمزد ۲-۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🎓 دانشجو</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهر آینده</h3>
+<span class="type">پس‌انداز هدفمند</span>
+<p>برنامه تربیت مالی و پس‌انداز</p>
+<ul>
+<li>حساب قرض‌الحسنه</li>
+<li>۵ پنجره امتیاز</li>
+<li>پاداش غیرنقدی</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح‌های حمایتی</h3>
+<span class="type">حمایتی</span>
+<p>ویژه دانشجویان نیازمند</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۰-۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>📖 دانش‌آموز</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح مهر آینده</h3>
+<span class="type">پس‌انداز هدفمند - ویژه</span>
+<p>اولین طرح تربیت مالی دانش‌آموزان در ایران</p>
+<ul>
+<li>حساب قرض‌الحسنه</li>
+<li>۵ پنجره: شروع، حفظ، افزایش، استمرار، هدف</li>
+<li>۱۰ دوره آموزش مالی</li>
+<li>پاداش غیرنقدی تا ۲ میلیون تومان</li>
+<li>بیمه مکمل دانش‌آموزی</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🏠 خانه‌دار</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type">حمایتی - اجتماعی</span>
+<p>ویژه بانوان سرپرست خانوار و خانه‌دار</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت ۶۰ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح شمس</h3>
+<span class="type">پس‌انداز ماهیانه</span>
+<p>شروع با پس‌انداز منظم</p>
+<ul>
+<li>حداقل ۹ ماه پس‌انداز</li>
+<li>سپس وام</li>
+<li>کارمزد ۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🤝 نیازمند / مددجو</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type">حمایتی - اجتماعی</span>
+<p>ویژه مددجویان کمیته امداد و بهزیستی</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+<li>بازپرداخت ۶۰ ماه</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح نصر حقیقی</h3>
+<span class="type">حمایتی</span>
+<p>برای اقشار آسیب‌پذیر</p>
+<ul>
+<li>وام تا ۱.۵ میلیون تومان</li>
+<li>کارمزد ۰-۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>🏭 سازمان / شرکت</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح یاقوت</h3>
+<span class="type">امتیازی - سازمانی</span>
+<p>برای سازمان‌ها و شرکت‌ها</p>
+<ul>
+<li>وام حقیقی تا ۵ میلیارد ریال</li>
+<li>وام حقوقی تا ۱۵ میلیارد ریال</li>
+<li>کارمزد ۰-۴٪</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح الماس</h3>
+<span class="type">حمایتی - تفاهم‌نامه</span>
+<p>برای شرکت‌های سهامی</p>
+<ul>
+<li>وام تا ۵ میلیارد ریال</li>
+<li>کارمزد ۲-۴٪</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح مهر تامین</h3>
+<span class="type">تأمین مالی زنجیره‌ای</span>
+<p>تأمین مالی بر اساس فاکتور</p>
+<ul>
+<li>دو مسیر: حمایتی و معدل‌محور</li>
+<li>بدون خرید دین</li>
+<li>کارمزد ۴٪</li>
+</ul>
+</div>
+</div>
+</details>
+
+<details>
+<summary>👤 سایر / فاقد شغل</summary>
+<div class="plans">
+<div class="card">
+<h3>طرح نجم</h3>
+<span class="type">حمایتی - اجتماعی</span>
+<p>ویژه اقشار آسیب‌پذیر</p>
+<ul>
+<li>وام قرض‌الحسنه</li>
+<li>کارمزد ۲-۴٪</li>
+</ul>
+</div>
+<div class="card">
+<h3>طرح شمس</h3>
+<span class="type">پس‌انداز ماهیانه</span>
+<p>شروع با پس‌انداز منظم</p>
+<ul>
+<li>حداقل ۹ ماه پس‌انداز</li>
+<li>سپس وام</li>
+</ul>
+</div>
+</div>
+</details>
 
 <div class="footer">
 مهر راهنما؛ مشکل خود را بگو، مسیرش را نشانت می‌دهیم.
 </div>
 </div>
-
-<script>
-const plans = {
-employee_public: {
-title: "کارمند دولت",
-subtitle: "طرح‌های مناسب کارمندان دولت",
-list: [
-{ name: "طرح مهریار", type: "تسهیلات حقوق‌محور", desc: "ویژه کارمندان با واریز حقوق از طریق بانک مهر ایران", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت تا ۳۶ ماه", "امکان ضمانت ضربدری"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب شما در بانک", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪", "بازپرداخت تا ۶۰ ماه", "بدون نیاز به ضامن (بر اساس معدل)"] },
-{ name: "طرح کرامت", type: "حمایتی - حقوق‌محور", desc: "بر اساس واریز مستمر حقوق", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت ۳۶ ماه"] },
-{ name: "طرح مهر معاش", type: "حقوق پیش از موعد", desc: "دسترسی به بخشی از حقوق پیش از سررسید", features: ["دریافت تا ۳۰٪ حقوق", "کارمزد ۰.۵٪", "تسویه خودکار در روز حقوق"] },
-{ name: "طرح مهر تامین", type: "تأمین مالی زنجیره‌ای", desc: "تأمین مالی بر اساس فاکتور", features: ["ویژه خریدهای بزرگ", "دو مسیر حمایتی و معدل‌محور", "کارمزد ۴٪"] }
-]
-},
-employee_private: {
-title: "کارمند بخش خصوصی",
-subtitle: "طرح‌های مناسب کارمندان شرکت‌های خصوصی",
-list: [
-{ name: "طرح مهریار", type: "تسهیلات حقوق‌محور", desc: "ویژه کارمندان با واریز حقوق از طریق بانک مهر ایران", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت تا ۳۶ ماه"] },
-{ name: "طرح توسکا (مهریار حقیقی)", type: "تسهیلات حقوق‌محور", desc: "ویژه کارکنان اصناف و کسب‌وکارها", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت تا ۲۴ ماه"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪", "بازپرداخت تا ۶۰ ماه"] },
-{ name: "طرح فیروزه", type: "حمایتی - حقوق‌محور", desc: "بر اساس واریز حقوق توسط کارفرما", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت ۳۶ ماه"] },
-{ name: "طرح مهر معاش", type: "حقوق پیش از موعد", desc: "دسترسی به بخشی از حقوق پیش از سررسید", features: ["دریافت تا ۳۰٪ حقوق", "کارمزد ۰.۵٪"] }
-]
-},
-retired: {
-title: "بازنشسته",
-subtitle: "طرح‌های مناسب بازنشستگان",
-list: [
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب شما", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪", "بازپرداخت تا ۶۰ ماه"] },
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "ویژه بازنشستگان صندوق‌های خدمات کشوری و تامین اجتماعی", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪", "بازپرداخت تا ۶۰ ماه"] },
-{ name: "طرح سرو", type: "حمایتی - اصناف", desc: "بر اساس سپرده و مدت", features: ["وام تا ۱۵۰ میلیون تومان", "کارمزد ۳-۴٪", "بازپرداخت ۷-۲۴ ماه"] },
-{ name: "طرح شمس", type: "پس‌انداز ماهیانه", desc: "شروع با پس‌انداز منظم", features: ["حداقل ۹ ماه پس‌انداز", "سپس وام تا ۹۰۰ میلیون ریال", "کارمزد ۴٪"] }
-]
-},
-business: {
-title: "اصناف و کسبه",
-subtitle: "طرح‌های مناسب اصناف، مغازه‌داران و کسبه",
-list: [
-{ name: "طرح نارون", type: "امتیازی - اصناف", desc: "ویژه اصناف و کسبه با جواز کسب", features: ["وام تا ۱ میلیارد تومان", "کارمزد ۰-۴٪", "بازپرداخت تا ۶۰ ماه", "بدون نیاز به ضامن رسمی"] },
-{ name: "طرح سرو", type: "حمایتی - بدون تفاهم‌نامه", desc: "بر اساس تودیع مبلغ مشخص", features: ["وام تا ۱۵۰ میلیون تومان", "کارمزد ۳-۴٪", "بازپرداخت ۷-۲۴ ماه", "بدون ضامن"] },
-{ name: "طرح توسکا (مهریار حقیقی)", type: "حقوق‌محور", desc: "برای کارفرمایان حقیقی با واریز حقوق", features: ["وام تا ۱ میلیارد تومان", "کارمزد ۴٪", "بازپرداخت ۲۴ ماه"] },
-{ name: "طرح الماس", type: "حمایتی - تفاهم‌نامه", desc: "برای شرکت‌های سهامی و تجاری", features: ["وام تا ۵ میلیارد ریال", "کارمزد ۲-۴٪", "بازپرداخت تا ۶۰ ماه"] },
-{ name: "طرح مهر تامین", type: "تأمین مالی زنجیره‌ای", desc: "تأمین مالی بر اساس فاکتور فروش", features: ["دو مسیر: حمایتی و معدل‌محور", "بدون خرید دین", "کارمزد ۴٪"] },
-{ name: "طرح مهر سهیم همیار", type: "تسویه گروهی", desc: "برای هزینه‌های گروهی اصناف", features: ["بدون حساب واسط", "پرداخت مشروط", "کارمزد ۴٪"] }
-]
-},
-farmer: {
-title: "کشاورز / دامدار",
-subtitle: "طرح‌های مناسب بخش کشاورزی و دامداری",
-list: [
-{ name: "طرح سرو", type: "حمایتی - بدون تفاهم‌نامه", desc: "بر اساس تودیع مبلغ مشخص", features: ["وام تا ۱۵۰ میلیون تومان", "کارمزد ۳-۴٪", "بازپرداخت ۷-۲۴ ماه"] },
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "ویژه مشاغل روستایی و عشایری", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح‌های حمایتی کشاورزی", type: "حمایتی", desc: "با همکاری اتحادیه‌های کشاورزی", features: ["وام قرض‌الحسنه", "کارمزد ۰-۴٪", "بازپرداخت تا ۳۶ ماه"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪"] }
-]
-},
-doctor: {
-title: "پزشک / پرستار",
-subtitle: "طرح‌های مناسب کادر درمان",
-list: [
-{ name: "طرح نارون", type: "امتیازی - اصناف", desc: "ویژه پزشکان، دندانپزشکان، داروسازان", features: ["وام تا ۱ میلیارد تومان", "کارمزد ۰-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح مهریار", type: "تسهیلات حقوق‌محور", desc: "برای پرستاران و کارکنان بیمارستان‌ها", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت ۳۶ ماه"] },
-{ name: "طرح یاقوت", type: "امتیازی - سازمانی", desc: "برای تیم‌های پزشکی و کلینیک‌ها", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪"] }
-]
-},
-teacher: {
-title: "معلم / استاد",
-subtitle: "طرح‌های مناسب معلمان، اساتید و فرهنگیان",
-list: [
-{ name: "طرح مهریار", type: "تسهیلات حقوق‌محور", desc: "ویژه کارمندان دولت و آموزش و پرورش", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪", "بازپرداخت ۳۶ ماه"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح کرامت", type: "حمایتی - حقوق‌محور", desc: "بر اساس واریز مستمر حقوق", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪"] },
-{ name: "طرح رضوان", type: "امتیازی - اجتماعی", desc: "برای فرهنگیان و اساتید", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] }
-]
-},
-engineer: {
-title: "مهندس / فنی",
-subtitle: "طرح‌های مناسب مهندسان و کارکنان فنی",
-list: [
-{ name: "طرح مهریار", type: "تسهیلات حقوق‌محور", desc: "برای کارمندان شرکت‌های فنی و مهندسی", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۴٪"] },
-{ name: "طرح نارون", type: "امتیازی - اصناف", desc: "برای مهندسان دارای پروانه کسب", features: ["وام تا ۱ میلیارد تومان", "کارمزد ۰-۴٪"] },
-{ name: "طرح یاقوت", type: "امتیازی - سازمانی", desc: "برای شرکت‌های مهندسی و پیمانکاری", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪"] },
-{ name: "طرح الماس", type: "حمایتی - تفاهم‌نامه", desc: "برای شرکت‌های سهامی", features: ["وام تا ۵ میلیارد ریال", "کارمزد ۲-۴٪"] }
-]
-},
-student: {
-title: "دانشجو",
-subtitle: "طرح‌های مناسب دانشجویان",
-list: [
-{ name: "طرح مهر آینده", type: "پس‌انداز هدفمند", desc: "برنامه تربیت مالی و پس‌انداز", features: ["حساب قرض‌الحسنه", "۵ پنجره امتیاز", "پاداش غیرنقدی", "بیمه مکمل"] },
-{ name: "طرح‌های حمایتی", type: "حمایتی - اجتماعی", desc: "ویژه دانشجویان نیازمند", features: ["وام قرض‌الحسنه", "کارمزد ۰-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "برای دانشجویان تحت پوشش نهادهای حمایتی", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪"] },
-{ name: "طرح شمس", type: "پس‌انداز ماهیانه", desc: "شروع با پس‌انداز منظم", features: ["حداقل ۹ ماه پس‌انداز", "سپس وام تا ۹۰۰ میلیون ریال"] }
-]
-},
-school_student: {
-title: "دانش‌آموز",
-subtitle: "طرح‌های مناسب دانش‌آموزان ۷ تا ۱۸ سال",
-list: [
-{ name: "طرح مهر آینده", type: "پس‌انداز هدفمند - ویژه", desc: "اولین طرح تربیت مالی دانش‌آموزان در ایران", features: ["حساب قرض‌الحسنه", "۵ پنجره: شروع، حفظ، افزایش، استمرار، هدف", "۱۰ دوره آموزش مالی", "پاداش غیرنقدی تا ۲ میلیون تومان", "بیمه مکمل دانش‌آموزی"] },
-{ name: "طرح شمس", type: "پس‌انداز ماهیانه", desc: "برای دانش‌آموزان بزرگ‌تر", features: ["حداقل ۹ ماه پس‌انداز", "وام تا ۹۰۰ میلیون ریال", "کارمزد ۴٪"] }
-]
-},
-housewife: {
-title: "خانه‌دار",
-subtitle: "طرح‌های مناسب بانوان خانه‌دار",
-list: [
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "ویژه بانوان سرپرست خانوار و خانه‌دار", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح‌های حمایتی", type: "حمایتی", desc: "کمک به خانواده‌ها", features: ["وام قرض‌الحسنه", "کارمزد ۰-۴٪"] },
-{ name: "طرح شمس", type: "پس‌انداز ماهیانه", desc: "شروع با پس‌انداز منظم", features: ["حداقل ۹ ماه پس‌انداز", "سپس وام", "کارمزد ۴٪"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪"] }
-]
-},
-vulnerable: {
-title: "نیازمند / مددجو",
-subtitle: "طرح‌های حمایتی ویژه اقشار آسیب‌پذیر",
-list: [
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "ویژه مددجویان کمیته امداد و بهزیستی", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح نصر حقیقی", type: "حمایتی - اجتماعی", desc: "برای اقشار آسیب‌پذیر", features: ["وام تا ۱.۵ میلیون تومان", "کارمزد ۰-۴٪", "بازپرداخت ۲۰-۳۰ ماه"] },
-{ name: "طرح‌های حمایتی بنیاد علوی", type: "حمایتی", desc: "با همکاری بنیاد علوی", features: ["وام قرض‌الحسنه", "کارمزد ۰٪"] },
-{ name: "طرح اردیده", type: "حمایتی - بدون تفاهم‌نامه", desc: "بر اساس تودیع مبلغ مشخص", features: ["وام تا ۲ برابر سپرده", "کارمزد ۰-۴٪"] }
-]
-},
-company: {
-title: "سازمان / شرکت",
-subtitle: "طرح‌های ویژه اشخاص حقوقی و سازمان‌ها",
-list: [
-{ name: "طرح یاقوت", type: "امتیازی - سازمانی", desc: "برای سازمان‌ها و شرکت‌ها با معرفی کارکنان", features: ["وام اشخاص حقیقی تا ۵ میلیارد ریال", "وام اشخاص حقوقی تا ۱۵ میلیارد ریال", "کارمزد ۰-۴٪"] },
-{ name: "طرح یاقوت با حفظ مبلغ ثابت", type: "امتیازی - سازمانی", desc: "با حفظ مبلغ ثابت نزد بانک", features: ["وام تا ۱۵ میلیارد ریال", "کارمزد ۴٪", "بدون محدودیت تمدید"] },
-{ name: "طرح الماس", type: "حمایتی - تفاهم‌نامه", desc: "برای شرکت‌های سهامی و تجاری", features: ["وام تا ۵ میلیارد ریال", "کارمزد ۲-۴٪", "بازپرداخت ۶۰ ماه"] },
-{ name: "طرح فیروزه", type: "حقوق‌محور", desc: "بر اساس واریز حقوق کارکنان", features: ["وام تا ۵ میلیارد ریال", "کارمزد ۴٪"] },
-{ name: "طرح مهر تامین", type: "تأمین مالی زنجیره‌ای", desc: "تأمین مالی بر اساس فاکتور", features: ["دو مسیر: حمایتی و معدل‌محور", "بدون خرید دین", "کارمزد ۴٪"] },
-{ name: "طرح نصر حقوقی", type: "حمایتی - تفاهم‌نامه", desc: "برای سازمان‌های حمایتی و مردم نهاد", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪"] }
-]
-},
-other: {
-title: "سایر / فاقد شغل",
-subtitle: "طرح‌های موجود برای سایر گروه‌ها",
-list: [
-{ name: "طرح نجم", type: "حمایتی - اجتماعی", desc: "ویژه اقشار آسیب‌پذیر", features: ["وام قرض‌الحسنه", "کارمزد ۲-۴٪"] },
-{ name: "طرح‌های حمایتی", type: "حمایتی", desc: "کمک به اقشار نیازمند", features: ["وام قرض‌الحسنه", "کارمزد ۰-۴٪"] },
-{ name: "طرح شمس", type: "پس‌انداز ماهیانه", desc: "شروع با پس‌انداز منظم", features: ["حداقل ۹ ماه پس‌انداز", "سپس وام", "joinکارمزد ۴٪"] },
-{ name: "طرح نیلوفر", type: "امتیازی - سپرده‌محور", desc: "بر اساس معدل حساب", features: ["وام تا ۵۰۰ میلیون تومان", "کارمزد ۲-۴٪"] },
-{ name: "طرح مهر سهیم همیار", type: "تسویه گروهی", desc: "برای هزینه‌های گروهی و خانوادگی", features: ["بدون حساب واسط", "پرداخت مشروط"] }
-]
-}
-};
-
-function selectJob(job) {
-const data = plans[job];
-if (!data) return;
-
-document.getElementById('resultTitle').textContent = data.title;
-document.getElementById('resultSubtitle').textContent = data.subtitle;
-document.getElementById('resultCount').textContent = `${data.list.length} طرح مناسب برای شما پیدا شد`;
-
-const container = document.getElementById('resultsContainer');
-container.innerHTML = data.list.map(p => `
-<div class="result-card">
-<h3>${p.name}</h3>
-<span class="type">${p.type}</span>
-<p>${p.desc}</p>
-<div class="features">
-${p.features.map(f => '• ' + f).('<br>')}
-</div>
-<button onclick="alert('درخواست شما برای «${p.name}» ثبت شد.\\nکارشناس بانک مهر ایران به‌زودی با شما تماس می‌گیرد.')">درخواست این طرح</button>
-</div>
-`).join('');
-
-document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-document.getElementById('result').classList.add('active');
-document.getElementById('d1').classList.add('active');
-document.getElementById('d2').classList.add('active');
-}
-
-function restart() {
-document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-document.getElementById('step1').classList.add('active');
-document.getElementById('d1').classList.add('active');
-document.getElementById('d2').classList.remove('active');
-}
-</script>
 </body>
 </html>
