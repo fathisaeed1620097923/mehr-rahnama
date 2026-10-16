@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -11,8 +10,10 @@
 body { font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #0d5c3a 0%, #1a8f5a 100%); padding: 15px; min-height: 100vh; line-height: 1.8; }
 .box { background: #fff; max-width: 640px; margin: 0 auto; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 h1 { color: #0d5c3a; text-align: center; font-size: 24px; margin-bottom: 6px; }
-.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 18px; }
-.qr-box { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 15px; padding: 14px; margin-bottom: 18px; }
+.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 12px; }
+.banner { background: #fff3cd; border-right: 4px solid #f39c12; padding: 10px 14px; border-radius: 8px; font-size: 12px; color: #7a5c00; margin-bottom: 15px; line-height: 1.7; }
+.banner.good { background: #d4edda; border-color: #28a745; color: #155724; }
+.qr-box { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 15px; padding: 14px; margin-bottom: 15px; }
 .qr-box p { color: #0d5c3a; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
 .qr-box img { width: 140px; height: 140px; background: #fff; padding: 5px; border-radius: 10px; }
 .qr-box .qr-url { color: #0d5c3a; font-size: 10px; word-break: break-all; margin-top: 8px; direction: ltr; }
@@ -45,6 +46,8 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <h1>مهر راهنما</h1>
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
 
+<div id="voiceBanner" class="banner">🔍 در حال بررسی صدای فارسی...</div>
+
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
 <img id="qrImg" src="" alt="QR Code">
@@ -56,7 +59,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 
 <div class="q">شغل خود را انتخاب کنید</div>
 
-<!-- ========== کارمند / بازنشسته ========== -->
 <details>
 <summary>کارمند دولت / بخش خصوصی / بازنشسته</summary>
 <div class="plans">
@@ -131,7 +133,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 </details>
 
-<!-- ========== اصناف ========== -->
 <details>
 <summary>اصناف و کسبه</summary>
 <div class="plans">
@@ -139,7 +140,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نارون</h3>
 <span class="type-badge">امتیازی - دارای تفاهم‌نامه</span>
-<p>به منظور تعامل با صاحبین کسب‌وکارها و حمایت از شاغلین زیرمجموعه، امکان اخذ وام قرض‌الحسنه بر اساس معدل حساب و مطابق جداول مربوطه فراهم شده است.</p>
+<p>به منظور تعامل با صاحبین کسب‌وکارها و حمایت از شاغلین زیرمجموعه، امکان اخذ وام قرض‌الحسنه بر اساس معدل حساب فراهم شده است.</p>
 <div class="detail-box">
 <div>جامعه هدف: اتحادیه‌ها و تمامی اصناف واجد شرایط</div>
 <div>مبلغ تسهیلات: حقیقی ۱۰ میلیارد ریال، حقوقی ۱۵ میلیارد ریال</div>
@@ -178,7 +179,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح توسکا</h3>
 <span class="type-badge">حقوق محور - تفاهم‌نامه</span>
-<p>به پشتوانه ضریبی از پرداخت مستمر حقوق کارکنان نزد بانک، امکان اخذ وام قرض‌الحسنه فراهم شده است. داشتن دستگاه پوز فعال در بانک از شروط اصلی است.</p>
+<p>به پشتوانه ضریبی از پرداخت مستمر حقوق کارکنان نزد بانک. داشتن دستگاه پوز فعال در بانک از شروط اصلی است.</p>
 <div class="detail-box">
 <div>مبلغ تسهیلات: سقف ۱۰ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
@@ -191,7 +192,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 </details>
 
-<!-- ========== سازمان‌ها و شرکت‌ها ========== -->
 <details>
 <summary>سازمان‌ها و شرکت‌ها</summary>
 <div class="plans">
@@ -199,7 +199,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح یاقوت</h3>
 <span class="type-badge">امتیازی - دارای تفاهم‌نامه</span>
-<p>به منظور تعامل با اشخاص حقوقی که گردش منابع خود را نزد بانک متمرکز می‌نمایند، امکان اعطای تسهیلات قرض‌الحسنه به کارکنان فراهم شده است.</p>
+<p>به منظور تعامل با اشخاص حقوقی که گردش منابع خود را نزد بانک متمرکز می‌نمایند، امکان اعطای تسهیلات به کارکنان فراهم شده است.</p>
 <div class="detail-box">
 <div>مبلغ تسهیلات: حقیقی ۵ میلیارد ریال، حقوقی ۱۵ میلیارد ریال</div>
 <div>نرخ کارمزد: طبق جداول امتیازی ابلاغی</div>
@@ -212,7 +212,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح یاقوت با حفظ مبلغ ثابت</h3>
 <span class="type-badge">امتیازی - تبصره یاقوت</span>
-<p>برای متقاضیان حقوقی که تمایل دارند با حفظ مبلغ ثابت برای مدت ثابت نزد بانک (حداکثر ۱۲ ماه و بدون محدودیت تمدید) از تسهیلات استفاده کنند.</p>
+<p>برای متقاضیان حقوقی که با حفظ مبلغ ثابت برای مدت ثابت نزد بانک، از تسهیلات استفاده می‌کنند. حداکثر ۱۲ ماه و بدون محدودیت تمدید.</p>
 <div class="detail-box">
 <div>مبلغ تسهیلات: حقیقی ۵ میلیارد ریال، حقوقی ۱۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
@@ -225,11 +225,11 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس</h3>
 <span class="type-badge">حمایتی - دارای تفاهم‌نامه</span>
-<p>برای شرکت‌های سهامی و مشمول قانون تجارت، امکان انعقاد تفاهم‌نامه حمایتی و اعطای تسهیلات به کارکنان. مشتری از ماه دوم می‌تواند از بازگشت اقساط سهم خود برای تسهیلات مجدد استفاده کند.</p>
-<div class="detail-box">
+<p>برای شرکت‌های سهامی و مشمول قانون تجارت. مشتری از ماه دوم می‌تواند از بازگشت اقساط سهم خود برای تسهیلات مجدد استفاده کند تو.</pضی>
+<divحات class="detail-box">
 <div>مبلغ تسهیلات: تا سقف ۵ میلیارد ریال و یک برابر حمایت بانک</div>
 <div>نرخ کارمزد: بانک ۴٪، مشتری ۲٪ یا ۴٪</div>
-<div>مدت انتظار: ۱۰ روز از زمان واریزی</div>
+<div>مدت انتظار: ۱۰ روز</div>
 <div>کد تسهیلات: بانک ۲۴۲، اجتماعی ۲۵۸</div>
 </div>
 <button class="speak-btn" onclick="readPlan('almas')">🔊 شنیدن توضیحات</button>
@@ -238,7 +238,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس با حمایت بالای ۱۰۰٪</h3>
 <span class="type-badge">حمایتی - ویژه</span>
-<p>در این طرح علاوه بر شرایط الماس، جدول حمایت بالای صد درصدی اعمال می‌شود. در صورت عدم انتخاب ستون (۱) یا (۲)، حداکثر حمایت بانک معادل ۱۰۰٪ خواهد بود.</p>
+<p>علاوه بر شرایط الماس، جدول حمایت بالای صد درصدی اعمال می‌شود. در صورت عدم انتخاب ستون، حداکثر حمایت بانک ۱۰۰٪ است.</p>
 <div class="detail-box">
 <div>حداقل آورده مشتری: ۱۰۰ واحد</div>
 <div>مدت بازپرداخت: ۱۲ تا ۶۰ ماه</div>
@@ -250,7 +250,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس با بازگشت اقساط</h3>
 <span class="type-badge">حمایتی - پیشرفته</span>
-<p>به‌منظور پاسخگویی به مشتریان حقوقی که درخواست پرداخت تسهیلات از محل بازگشت اقساط دارند.</p>
+<p>برای مشتریان حقوقی که پرداخت تسهیلات از محل بازگشت اقساط را درخواست می‌کنند.</p>
 <div class="detail-box">
 <div>مدت انتظار: ۱۰ روز از تودیع تفاهم‌نامه</div>
 <div>دوره بازپرداخت: ۱۲ تا ۶۰ ماه</div>
@@ -263,11 +263,11 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس با کارمزد کمتر از ۲٪</h3>
 <span class="type-badge">حمایتی - کم‌کارمزد</span>
-<p>برای مشتریان حقوقی که درخواست کارمزد کمتر از ۲ درصد برای سهم شخص حقوقی دارند.</p>
+<p>برای مشتریان حقوقی که کارمزد کمتر از ۲ درصد برای سهم شخص حقوقی درخواست دارند.</p>
 <div class="detail-box">
-<div>حالت اول: آورده ۱۰۰ واحد، کارمزد مشتری ۱٪، حمایت بانک ۹۰ واحد، کارمزد بانک ۴٪</div>
-<div>حالت دوم: آورده ۱۰۰ واحد، کارمزد مشتری ۰٪، حمایت بانک ۸۰ واحد، کارمزد بانک ۴٪</div>
-<div>توجه: تسویه زودتر از موعد و بازگشت اقساط مجاز نیست</div>
+<div>حالت اول: آورده ۱۰۰، کارمزد مشتری ۱٪، حمایت بانک ۹۰، کارمزد بانک ۴٪</div>
+<div>حالت دوم: آورده ۱۰۰، کارمزد مشتری ۰٪، حمایت بانک ۸۰، کارمزد بانک ۴٪</div>
+<div>توجه: تسویه زودتر از موعد مجاز نیست</div>
 </div>
 <button class="speak-btn" onclick="readPlan('almas2')">🔊 شنیدن توضیحات</button>
 </div>
@@ -275,7 +275,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح فیروزه</h3>
 <span class="type-badge">محاسبه امتیاز واریز حقوق</span>
-<p>شرکت‌ها با انتقال فرآیند پرداخت حقوق به بانک، می‌توانند افراد را تا ۵ درصد مجموع حقوق واریزی ماهیانه با بازپرداخت حداکثر ۱۸ ماهه معرفی نمایند.</p>
+<p>شرکت‌ها با انتقال پرداخت حقوق به بانک، می‌توانند افراد را تا ۵ درصد مجموع حقوق واریزی ماهیانه معرفی نمایند.</p>
 <div class="detail-box">
 <div>مبلغ تسهیلات: سقف ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
@@ -288,7 +288,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 </details>
 
-<!-- ========== اقشار حمایتی ========== -->
 <details>
 <summary>اقشار حمایتی و خاص</summary>
 <div class="plans">
@@ -296,11 +295,11 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نجم</h3>
 <span class="type-badge">حمایتی - بانکداری اجتماعی</span>
-<p>برای اقشار آسیب‌پذیر و مشتریان بانکداری اجتماعی، تسهیلات قرض‌الحسنه امتیازی با ضرایب بالاتر (۱۱۵٪ ضرایب عادی).</p>
+<p>برای اقشار آسیب‌پذیر و مشتریان بانکداری اجتماعی، تسهیلات امتیازی با ضرایب بالاتر (۱۱۵٪ ضرایب عادی).</p>
 <div class="detail-box">
 <div>جامعه هدف: بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان</div>
 <div>مبلغ تسهیلات: سقف ۵ میلیارد ریال</div>
-<div>نرخ کارمزد: طبق جداول امتیازی ابلاغی</div>
+<div>نرخ کارمزد: طبق جداول امتیازی</div>
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۸۳</div>
 </div>
@@ -328,7 +327,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مبلغ تسهیلات: سقف ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: بانک ۴٪، اجتماعی ۲٪ یا ۴٪</div>
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
-<div>مدت انتظار: ۱۰ روز پس از واریز یکجا</div>
+<div>مدت انتظار: ۱۰ روز</div>
 </div>
 <button class="speak-btn" onclick="readPlan('nasr2')">🔊 شنیدن توضیحات</button>
 </div>
@@ -336,14 +335,14 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح ارکیده</h3>
 <span class="type-badge">حمایتی - بدون تفاهم‌نامه</span>
-<p>بر اساس تسهیلات حمایتی، به میزان مجموعاً دو برابر مبلغ سپرده تودیعی مصالح در زمان درخواست.</p>
+<p>به میزان مجموعاً دو برابر مبلغ سپرده تودیعی مصالح در زمان درخواست.</p>
 <div class="detail-box">
 <div>مدت بازپرداخت: ۲۰ تا ۵۰ ماه اقساطی</div>
 <div>کد تسهیلات: بانک ۱۳۸، اجتماعی ۱۶۴</div>
 <div>نرخ کارمزد: بانک ۴٪، اجتماعی صفر</div>
-<div>ویژگی: پرداخت وام به شخص معرفی‌شده از سوی مصالح</div>
+<div>ویژگی: پرداخت وام به شخص معرفی‌شده</div>
 </div>
-<button class="speak-btn" onclick="readPlan('orkideh')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('orkideh')">🔊 شنیدن</button>
 </div>
 
 <div class="card">
@@ -365,17 +364,72 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 
 <script>
-// ============ صوتی فارسی با Google Translate TTS ============
+// ============ تشخیص و پخش صدای فارسی ============
+var persianVoice = null;
+var useGoogleTTS = false;
 var currentAudio = null;
 var isPlaying = false;
 
+function detectPersianVoice() {
+var banner = document.getElementById('voiceBanner');
+if (!('speechSynthesis' in window)) {
+useGoogleTTS = true;
+banner.className = 'banner';
+banner.innerHTML = '⚠️ مرورگر شما از Web Speech پشتیبانی نمی‌کند. برای صدای بهتر از <b>Microsoft Edge</b> استفاده کنید.';
+return;
+}
+
+var voices = window.speechSynthesis.getVoices();
+// اولویت ۱: صدای نورال مایکروسافت (Edge)
+for (var i = 0; i < voices.length; i++) {
+var v = voices[i];
+if (v.name.indexOf('Farid') !== -1 || v.name.indexOf('Dilara') !== -1) {
+persianVoice = v; break;
+}
+}
+// اولویت ۲: هر صدای با lang = fa
+if (!persianVoice) {
+for (var i = 0; i < voices.length; i++) {
+var v = voices[i];
+if (v.lang && (v.lang === 'fa-IR' || v.lang.indexOf('fa') === 0)) {
+persianVoice = v; break;
+}
+}
+}
+// اولویت ۳: نام شامل Persian یا Farsi
+if (!persianVoice) {
+for (var i = 0; i < voices.length; i++) {
+var v = voices[i];
+var n = (v.name || '').toLowerCase();
+if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) {
+persianVoice = v; break;
+}
+}
+}
+
+if (persianVoice) {
+useGoogleTTS = false;
+banner.className = 'banner good';
+banner.innerHTML = '✅ صدای فارسی پیدا شد: <b>' + persianVoice.name + '</b>';
+} else {
+useGoogleTTS = true;
+banner.className = 'banner';
+banner.innerHTML = '⚠️ صدای فارسی روی دستگاه شما نصب نیست. برای صدای عالی از <b>Microsoft Edge</b> استفاده کنید یا صدای فارسی نصب کنید.';
+}
+}
+
+if ('speechSynthesis' in window) {
+detectPersianVoice();
+window.speechSynthesis.onvoiceschanged = detectPersianVoice;
+}
+
+// ============ Google TTS (پشتیبان) ============
 function chunkText(text, maxLen) {
 maxLen = maxLen || 180;
-var sentences = text.split(/(?<=[.!?؟،:؛])\s+/);
-var chunks = [];
-var buf = '';
-for (var i = 0; i < sentences.length; i++) {
-var s = sentences[i];
+var parts = text.split(/(?<=[.!?؟،:؛])\s+/);
+var chunks = [], buf = '';
+for (var i = 0; i < parts.length; i++) {
+var s = parts[i];
 if ((buf + ' ' + s).length > maxLen) {
 if (buf) chunks.push(buf.trim());
 while (s.length > maxLen) {
@@ -398,20 +452,11 @@ var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=f
 var audio = new Audio(url);
 currentAudio = audio;
 audio.onended = function() { if (onEnd) onEnd(); };
-audio.onerror = function() {
-console.warn('خطا در پخش - شاید اینترنت قطع است');
-if (onEnd) onEnd();
-};
-audio.play().catch(function(e){
-console.warn('پخش ناموفق:', e);
-if (onEnd) onEnd();
-});
+audio.onerror = function() { if (onEnd) onEnd(); };
+audio.play().catch(function() { if (onEnd) onEnd(); });
 }
 
-function speak(text) {
-if (!text || !text.trim()) return;
-stopAll();
-isPlaying = true;
+function speakGoogle(text) {
 var chunks = chunkText(text);
 var i = 0;
 function next() {
@@ -424,8 +469,31 @@ if (isPlaying) setTimeout(next, 150);
 next();
 }
 
+// ============ تابع اصلی ============
+function speak(text) {
+if (!text || !text.trim()) return;
+stopAll();
+isPlaying = true;
+
+if (persianVoice) {
+// Web Speech API با صدای فارسی
+var msg = new SpeechSynthesisUtterance(text);
+msg.voice = persianVoice;
+msg.lang = persianVoice.lang || 'fa-IR';
+msg.rate = 0.9;
+msg.pitch = 1;
+msg.volume = 1;
+msg.onend = function() { isPlaying = false; };
+window.speechSynthesis.speak(msg);
+} else {
+// Google TTS
+speakGoogle(text);
+}
+}
+
 function stopAll() {
 isPlaying = false;
+try { window.speechSynthesis.cancel(); } catch(e) {}
 if (currentAudio) {
 try { currentAudio.pause(); currentAudio.src = ''; } catch(e) {}
 currentAudio = null;
@@ -445,7 +513,7 @@ sarv2: 'طرح سرو تفاهم‌نامه‌ای. برای اتحادیه‌ه
 tooska: 'طرح توسکا. حقوق محور. با پشتوانه پرداخت مستمر حقوق. سقف تسهیلات ده میلیارد ریال، نرخ کارمزد چهار درصد، مدت بازپرداخت تا شصت ماه، کد تسهیلات دویست و سی و سه. داشتن دستگاه پوز فعال در بانک از شروط اصلی است.',
 yaghout: 'طرح یاقوت. امتیازی با تفاهم‌نامه. سقف تسهیلات اشخاص حقیقی پنج میلیارد ریال و اشخاص حقوقی پانزده میلیارد ریال. نرخ کارمزد بر اساس جداول امتیازی ابلاغی هر سال. مدت بازپرداخت تا شصت ماه. کد تسهیلات اشخاص حقیقی یکصد و هشتاد و حقوقی هشتصد و پنجاه.',
 yaghout2: 'طرح یاقوت با حفظ مبلغ ثابت. تبصره‌ای برای طرح یاقوت. برای متقاضیان حقوقی که تمایل دارند با حفظ مبلغ ثابت برای مدت ثابت نزد بانک حداکثر دوازده ماه و بدون محدودیت تمدید از تسهیلات استفاده کنند. نرخ کارمزد چهار درصد.',
-almas: 'طرح الماس. حمایتی با تفاهم‌نامه. برای شرکت‌های سهامی و مشمول قانون تجارت. سقف تسهیلات تا پنج میلیارد ریال و به میزان یک برابر حمایت بانک. نرخ کارمزد از محل منابع بانک چهار درصد و از محل منابع مشتری دو یا چهار درصد. مدت انتظار ده روز از زمان واریز. کد تسهیلات دویست و چهل و دو یا دویست و پنجاه و هشت.',
+almas: 'طرح الماس. حمایتی با تفاهم‌نامه. برای شرکت‌های سهامی و مشمول قانون تجارت. سقف تسهیلات تا پنج میلیارد ریال و به میزان یک برابر حمایت بانک. نرخ کارمزد از محل منابع بانک چهار درصد و از محل منابع مشتری دو یا چهار درصد. مدت انتظار ده روز. کد تسهیلات دویست و چهل و دو یا دویست و پنجاه و هشت.',
 almas100: 'طرح الماس با حمایت بالای صد درصد. در این طرح علاوه بر رعایت شرایط الماس، جدول حمایت بالای صد درصدی اعمال می‌شود. حداقل آورده مشتری صد واحد، مدت بازپرداخت دوازده تا شصت ماه. در صورت عدم انتخاب ستون یک یا دو از سوی مشتری، حداکثر حمایت بانک معادل صد درصد خواهد بود.',
 almasaghsat: 'طرح الماس با امکان پرداخت از محل بازگشت اقساط. مدت انتظار ده روز از زمان تودیع مبلغ تفاهم‌نامه. دوره بازپرداخت دوازده، بیست و چهار، سی و شش، چهل و دو، چهل و هشت یا شصت ماه. حداقل آورده صد واحد، حمایت بانک از بیست و پنج تا صد واحد.',
 almas2: 'طرح الماس با نرخ کارمزد کمتر از دو درصد. برای مشتریان حقوقی که درخواست کارمزد کمتر از دو درصد برای سهم شخص حقوقی دارند. در این نوع تسهیلات امکان تسویه، آزادسازی یا برداشت زودتر از موعد آورده اولیه و همچنین استفاده از بازگشت اقساط مجاز نمی‌باشد.',
@@ -470,7 +538,6 @@ var currentUrl = window.location.href.split('?')[0].split('#')[0];
 document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
 document.getElementById('qrUrl').textContent = currentUrl;
 
-// توقف هنگام بستن صفحه
 window.addEventListener('beforeunload', stopAll);
 </script>
 </body>
