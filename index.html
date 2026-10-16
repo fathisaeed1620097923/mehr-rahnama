@@ -5,13 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مهر راهنما - نظام جامع اعتباری ۱۴۰۵</title>
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #0d5c3a 0%, #1a8f5a 100%); padding: 15px; min-height: 100vh; line-height: 1.8; }
 .box { background: #fff; max-width: 640px; margin: 0 auto; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 h1 { color: #0d5c3a; text-align: center; font-size: 24px; margin-bottom: 6px; }
-.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 15px; }
+.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 12px; }
+#status { background: #e3f2fd; border-right: 4px solid #1976d2; padding: 10px 14px; border-radius: 8px; font-size: 12px; color: #0d47a1; margin-bottom: 14px; line-height: 1.7; }
+#status.ok { background: #d4edda; border-color: #28a745; color: #155724; }
+#status.warn { background: #fff3cd; border-color: #f39c12; color: #7a5c00; }
+#status.err { background: #f8d7da; border-color: #c0392b; color: #721c24; }
 .qr-box { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 15px; padding: 14px; margin-bottom: 15px; }
 .qr-box p { color: #0d5c3a; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
 .qr-box img { width: 140px; height: 140px; background: #fff; padding: 5px; border-radius: 10px; }
@@ -35,6 +38,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 .detail-box div { color: #333; font-size: 13px; line-height: 2; }
 .speak-btn { display: block; width: 100%; padding: 11px; background: #0d5c3a; color: #fff; border: none; border-radius: 10px; font-size: 14px; font-family: inherit; font-weight: bold; cursor: pointer; }
 .speak-btn:active { background: #094228; }
+.speak-btn.active { background: #f39c12; }
 .footer { text-align: center; color: #999; font-size: 12px; margin-top: 18px; line-height: 1.9; }
 .note { background: #fff8e1; border-right: 4px solid #f39c12; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #7a5c00; margin-top: 8px; }
 </style>
@@ -44,6 +48,8 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 
 <h1>مهر راهنما</h1>
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
+
+<div id="status">🔍 در حال بررسی سیستم صوتی...</div>
 
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
@@ -71,7 +77,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۰۱</div>
 </div>
-<button class="speak-btn" onclick="readPlan('niloufar')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('niloufar', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -85,7 +91,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۸۲</div>
 </div>
-<button class="speak-btn" onclick="readPlan('noora')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -98,7 +104,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۸۱</div>
 </div>
-<button class="speak-btn" onclick="readPlan('rezvan')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -111,7 +117,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۳۶ ماهه اقساطی</div>
 <div>کد تسهیلات: ۲۰۹</div>
 </div>
-<button class="speak-btn" onclick="readPlan('karamat')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -124,7 +130,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت انتظار: حداقل ۳ و حداکثر ۱۰ ماه</div>
 <div>نرخ کارمزد: ۴٪</div>
 </div>
-<button class="speak-btn" onclick="readPlan('shams')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
@@ -139,13 +145,12 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <span class="type-badge">امتیازی - دارای تفاهم‌نامه</span>
 <p>به منظور تعامل با صاحبین کسب‌وکارها و حمایت از شاغلین زیرمجموعه، امکان اخذ وام قرض‌الحسنه بر اساس معدل حساب فراهم شده است.</p>
 <div class="detail-box">
-<div>جامعه هدف: اتحادیه‌ها و تمامی اصناف واجد شرایط</div>
 <div>مبلغ تسهیلات: حقیقی ۱۰ میلیارد ریال، حقوقی ۱۵ میلیارد ریال</div>
 <div>نرخ کارمزد: صفر - ۲٪ - ۴٪</div>
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: حقیقی ۱۰۶، حقوقی ۸۰۶</div>
 </div>
-<button class="speak-btn" onclick="readPlan('naron')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('naron', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -157,7 +162,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مبلغ تسهیلات: طبق جدول</div>
 <div>نرخ کارمزد: ۳٪ تا ۴٪</div>
 </div>
-<button class="speak-btn" onclick="readPlan('sarv1')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -170,7 +175,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>نرخ کارمزد: ۴٪</div>
 <div>کد تسهیلات: بانک ۲۴۳، اجتماعی ۲۵۹</div>
 </div>
-<button class="speak-btn" onclick="readPlan('sarv2')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -183,7 +188,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۲۳۳</div>
 </div>
-<button class="speak-btn" onclick="readPlan('tooska')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
@@ -203,7 +208,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: حقیقی ۱۸۰، حقوقی ۸۵۰</div>
 </div>
-<button class="speak-btn" onclick="readPlan('yaghout')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -216,7 +221,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: حقیقی ۱۸۰، حقوقی ۸۵۰</div>
 </div>
-<button class="speak-btn" onclick="readPlan('yaghout2')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('yaghout2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -229,7 +234,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت انتظار: ۱۰ روز</div>
 <div>کد تسهیلات: بانک ۲۴۲، اجتماعی ۲۵۸</div>
 </div>
-<button class="speak-btn" onclick="readPlan('almas')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -241,7 +246,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: ۱۲ تا ۶۰ ماه</div>
 <div>حمایت بانک: از ۱۰۰٪ تا بیش از ۱۰۰٪</div>
 </div>
-<button class="speak-btn" onclick="readPlan('almas100')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('almas100', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -254,7 +259,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>حداقل آورده: ۱۰۰ واحد</div>
 <div>حمایت بانک: ۲۵ تا ۱۰۰ واحد</div>
 </div>
-<button class="speak-btn" onclick="readPlan('almasaghsat')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('almasaghsat', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -266,7 +271,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>حالت دوم: آورده ۱۰۰، کارمزد مشتری ۰٪، حمایت بانک ۸۰، کارمزد بانک ۴٪</div>
 <div>توجه: تسویه زودتر از موعد مجاز نیست</div>
 </div>
-<button class="speak-btn" onclick="readPlan('almas2')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('almas2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -279,7 +284,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۳۶ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۵۱</div>
 </div>
-<button class="speak-btn" onclick="readPlan('firoozeh')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
@@ -300,7 +305,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>کد تسهیلات: ۱۸۳</div>
 </div>
-<button class="speak-btn" onclick="readPlan('najm')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -313,7 +318,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>نرخ کارمزد: بانک ۴٪، اجتماعی صفر</div>
 <div>سقف کل: ۱.۵۰۰ میلیون ریال</div>
 </div>
-<button class="speak-btn" onclick="readPlan('nasr')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -326,7 +331,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
 <div>مدت انتظار: ۱۰ روز</div>
 </div>
-<button class="speak-btn" onclick="readPlan('nasr2')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -339,7 +344,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>نرخ کارمزد: بانک ۴٪، اجتماعی صفر</div>
 <div>ویژگی: پرداخت وام به شخص معرفی‌شده</div>
 </div>
-<button class="speak-btn" onclick="readPlan('orkideh')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -347,7 +352,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <span class="type-badge">در حال بررسی</span>
 <p>با الهام از صندوق‌های قرض‌الحسنه خانگی، بستری امن برای همیاری و مشارکت اعضا.</p>
 <div class="note">توجه: طرح‌های احسان و امین در حال حاضر در مرحله بررسی بوده و پس از ابلاغ دستورالعمل‌ها قابل اجرا خواهند بود.</div>
-<button class="speak-btn" onclick="readPlan('ehsan')">🔊 شنیدن توضیحات</button>
+<button class="speak-btn" onclick="readPlan('ehsan', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
@@ -361,22 +366,76 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 
 <script>
-// ============ ResponsiveVoice با اولویت فارسی ============
+// ============================================================
+// سیستم صوتی چندلایه:
+// 1) Web Speech API (اگر صدای فارسی روی دستگاه باشد - بهترین)
+// 2) Google Translate TTS (اگر اینترنت باشد)
+// 3) نمایش راهنما اگر هیچ‌کدام کار نکرد
+// ============================================================
+
+var persianVoice = null;
+var currentUtter = null;
+var currentAudio = null;
 var isPlaying = false;
-var rvReady = false;
-var fallbackAudio = null;
 
-function checkRV() {
-if (typeof responsiveVoice !== 'undefined') {
-rvReady = true;
-return true;
+// ---------- تشخیص صدای فارسی ----------
+function findPersianVoice() {
+if (!('speechSynthesis' in window)) return null;
+var voices = window.speechSynthesis.getVoices();
+if (!voices || voices.length === 0) return null;
+
+// اولویت ۱: صداهای نورال مایکروسافت فارسی (Edge)
+for (var i = 0; i < voices.length; i++) {
+var n = voices[i].name || '';
+if (n.indexOf('Farid') !== -1 || n.indexOf('Dilara') !== -1) return voices[i];
 }
-return false;
+// اولویت ۲: هر صدای lang=fa
+for (var i = 0; i < voices.length; i++) {
+var l = (voices[i].lang || '').toLowerCase();
+if (l === 'fa-ir' || l === 'fa' || l.indexOf('fa-') === 0) return voices[i];
+}
+// اولویت ۳: نام شامل Persian یا Farsi
+for (var i = 0; i < voices.length; i++) {
+var n = (voices[i].name || '').toLowerCase();
+if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) return voices[i];
+}
+return null;
 }
 
-// ============ تقسیم متن ============
+function updateStatus() {
+var el = document.getElementById('status');
+persianVoice = findPersianVoice();
+
+if (persianVoice) {
+el.className = 'ok';
+el.innerHTML = '✅ <b>صدای فارسی پیدا شد:</b> ' + persianVoice.name + '<br>کیفیت: عالی (آفلاین)';
+return;
+}
+// بررسی اینکه Web Speech کار می‌کند
+if ('speechSynthesis' in window) {
+el.className = 'warn';
+el.innerHTML = '⚠️ صدای فارسی روی دستگاه شما نصب نیست.<br>' +
+'🔹 راه‌حل ۱ (بهترین): این صفحه را در <b>Microsoft Edge</b> باز کنید.<br>' +
+'🔹 راه‌حل ۲: صدای فارسی روی دستگاه نصب کنید (پایین توضیح داده شده).<br>' +
+'🔹 فعلاً از Google Translate استفاده می‌شود (ممکن است عربی باشد).';
+return;
+}
+
+el.className = 'err';
+el.innerHTML = '❌ مرورگر شما از صوتی پشتیبانی نمی‌کند. از <b>Chrome</b> یا <b>Edge</b> استفاده کنید.';
+}
+
+// بارگذاری صداها
+if ('speechSynthesis' in window) {
+updateStatus();
+window.speechSynthesis.onvoiceschanged = updateStatus;
+setTimeout(updateStatus, 500);
+setTimeout(updateStatus, 1500);
+}
+
+// ---------- تقسیم متن ----------
 function chunkText(text, maxLen) {
-maxLen = maxLen || 200;
+maxLen = maxLen || 190;
 var parts = text.split(/(?<=[.!?؟،:؛])\s+/);
 var chunks = [], buf = '';
 for (var i = 0; i < parts.length; i++) {
@@ -398,33 +457,32 @@ if (buf.trim()) chunks.push(buf.trim());
 return chunks;
 }
 
-// ============ پخش با ResponsiveVoice ============
-function speakRV(text, onEnd) {
-try {
-responsiveVoice.speak(text, "Persian Female", {
-rate: 0.9,
-pitch: 1,
-volume: 1,
-onend: function() { if (onEnd) onEnd(); },
-onerror: function() { if (onEnd) onEnd(); }
-});
-} catch(e) {
-console.warn('RV error:', e);
-if (onEnd) onEnd();
-}
+// ---------- پخش با Web Speech ----------
+function speakWS(text, onEnd) {
+var u = new SpeechSynthesisUtterance(text);
+u.voice = persianVoice;
+u.lang = persianVoice.lang || 'fa-IR';
+u.rate = 0.9;
+u.pitch = 1;
+u.volume = 1;
+u.onend = function() { if (onEnd) onEnd(); };
+u.onerror = function(e) { console.warn('WS error', e); if (onEnd) onEnd(); };
+currentUtter = u;
+window.speechSynthesis.speak(u);
 }
 
-// ============ پخش با Google (پشتیبان) ============
-function playGoogle(text, onEnd) {
+// ---------- پخش با Google ----------
+function speakGoogleChunk(text, onEnd) {
 var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q=' + encodeURIComponent(text);
 var audio = new Audio(url);
-fallbackAudio = audio;
-audio.onended = function() { fallbackAudio = null; if (onEnd) onEnd(); };
-audio.onerror = function() { fallbackAudio = null; if (onEnd) onEnd(); };
-audio.play().catch(function() { if (onEnd) onEnd(); });
+currentAudio = audio;
+audio.onended = function() { currentAudio = null; if (onEnd) onEnd(); };
+audio.onerror = function() { currentAudio = null; if (onEnd) onEnd(); };
+var p = audio.play();
+if (p && p.catch) p.catch(function() { if (onEnd) onEnd(); });
 }
 
-// ============ تابع اصلی ============
+// ---------- تابع اصلی ----------
 function speak(text) {
 if (!text || !text.trim()) return;
 stopAll();
@@ -433,16 +491,18 @@ var chunks = chunkText(text);
 var i = 0;
 
 function next() {
-if (!isPlaying || i >= chunks.length) { isPlaying = false; return; }
+if (!isPlaying || i >= chunks.length) { isPlaying = false; clearActiveButtons(); return; }
 var chunk = chunks[i];
 
-if (rvReady) {
-speakRV(chunk, function() {
+if (persianVoice) {
+// روش ۱: Web Speech فارسی
+speakWS(chunk, function() {
 i++;
-if (isPlaying) setTimeout(next, 200);
+if (isPlaying) setTimeout(next, 150);
 });
 } else {
-playGoogle(chunk, function() {
+// روش ۲: Google TTS
+speakGoogleChunk(chunk, function() {
 i++;
 if (isPlaying) setTimeout(next, 200);
 });
@@ -453,17 +513,21 @@ next();
 
 function stopAll() {
 isPlaying = false;
-if (typeof responsiveVoice !== 'undefined') {
-try { responsiveVoice.cancel(); } catch(e) {}
-}
-if (fallbackAudio) {
-try { fallbackAudio.pause(); fallbackAudio.src = ''; } catch(e) {}
-fallbackAudio = null;
-}
 try { window.speechSynthesis.cancel(); } catch(e) {}
+if (currentAudio) {
+try { currentAudio.pause(); currentAudio.src = ''; } catch(e) {}
+currentAudio = null;
+}
+currentUtter = null;
+clearActiveButtons();
 }
 
-// ============ متون طرح‌ها ============
+function clearActiveButtons() {
+var btns = document.querySelectorAll('.speak-btn');
+for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+}
+
+// ---------- متون طرح‌ها ----------
 var planTexts = {
 niloufar: 'طرح نیلوفر. در خط بانکداری خرد، به جهت بهره‌مندی مشتریان از اعتبار ایجادشده سپرده‌های خود پایه‌ریزی شده است. جامعه هدف کلیه اشخاص حقیقی هستند. سقف تسهیلات پنج میلیارد ریال است. نرخ کارمزد صفر، دو یا چهار درصد می‌باشد. مدت بازپرداخت تا شصت ماهه اقساطی است. کد تسهیلات یکصد و یک.',
 noora: 'طرح نورا. با هدف توسعه فرهنگ قرآنی قرض‌الحسنه و تسهیل شرایط دریافت وام، امکان اخذ تسهیلات قرض‌الحسنه بدون پرداخت کارمزد فراهم شده است. سقف تسهیلات پنج میلیارد ریال، نرخ کارمزد صفر درصد، مدت بازپرداخت تا شصت ماه، کد تسهیلات یکصد و هشتاد و دو.',
@@ -492,22 +556,28 @@ function readWelcome() {
 speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. این سامانه بر اساس نظام جامع اعتباری سال هزار و چهارصد و پنج بانک قرض‌الحسنه مهر ایران طراحی شده است. کافی است شغل خود را از لیست زیر انتخاب کنید تا طرح‌های مناسب شما نمایش داده شود.');
 }
 
-function readPlan(key) {
-if (planTexts[key]) speak(planTexts[key]);
+function readPlan(key, btn) {
+if (!planTexts[key]) return;
+clearActiveButtons();
+if (btn) btn.classList.add('active');
+speak(planTexts[key]);
 }
 
-// QR Code
+// ---------- QR Code ----------
 var currentUrl = window.location.href.split('?')[0].split('#')[0];
 document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
 document.getElementById('qrUrl').textContent = currentUrl;
 
-// بررسی دوره‌ای ResponsiveVoice
-var rvCheck = setInterval(function() {
-if (checkRV()) clearInterval(rvCheck);
-}, 300);
-setTimeout(checkRV, 1500);
-
 window.addEventListener('beforeunload', stopAll);
+
+// دکمه تست صدا در بارگذاری
+setTimeout(function(){
+if (persianVoice) {
+console.log('✅ Persian voice ready:', persianVoice.name);
+} else {
+console.log('⚠️ No Persian voice found. Will use Google TTS.');
+}
+}, 2000);
 </script>
 </body>
 </html>
