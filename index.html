@@ -5,14 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مهر راهنما - نظام جامع اعتباری ۱۴۰۵</title>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #0d5c3a 0%, #1a8f5a 100%); padding: 15px; min-height: 100vh; line-height: 1.8; }
 .box { background: #fff; max-width: 640px; margin: 0 auto; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 h1 { color: #0d5c3a; text-align: center; font-size: 24px; margin-bottom: 6px; }
-.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 12px; }
-.banner { background: #fff3cd; border-right: 4px solid #f39c12; padding: 10px 14px; border-radius: 8px; font-size: 12px; color: #7a5c00; margin-bottom: 15px; line-height: 1.7; }
-.banner.good { background: #d4edda; border-color: #28a745; color: #155724; }
+.sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 15px; }
 .qr-box { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 15px; padding: 14px; margin-bottom: 15px; }
 .qr-box p { color: #0d5c3a; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
 .qr-box img { width: 140px; height: 140px; background: #fff; padding: 5px; border-radius: 10px; }
@@ -45,8 +44,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 
 <h1>مهر راهنما</h1>
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
-
-<div id="voiceBanner" class="banner">🔍 در حال بررسی صدای فارسی...</div>
 
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
@@ -94,7 +91,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح رضوان</h3>
 <span class="type-badge">امتیازی - دارای تفاهم‌نامه</span>
-<p>به منظور تعامل با اشخاص حقوقی (سازمان‌های اجتماعی) و خیرین حقیقی که گردش منابع خود را نزد بانک متمرکز می‌نمایند، امکان اعطای تسهیلات به افراد معرفی‌شده فراهم شده است.</p>
+<p>به منظور تعامل با اشخاص حقوقی سازمان‌های اجتماعی و خیرین حقیقی که گردش منابع خود را نزد بانک متمرکز می‌نمایند، امکان اعطای تسهیلات به افراد معرفی‌شده فراهم شده است.</p>
 <div class="detail-box">
 <div>مبلغ تسهیلات: سقف ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۲٪ - ۳٪ - ۴٪</div>
@@ -225,8 +222,8 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس</h3>
 <span class="type-badge">حمایتی - دارای تفاهم‌نامه</span>
-<p>برای شرکت‌های سهامی و مشمول قانون تجارت. مشتری از ماه دوم می‌تواند از بازگشت اقساط سهم خود برای تسهیلات مجدد استفاده کند تو.</pضی>
-<divحات class="detail-box">
+<p>برای شرکت‌های سهامی و مشمول قانون تجارت. مشتری از ماه دوم می‌تواند از بازگشت اقساط سهم خود برای تسهیلات مجدد استفاده کند.</p>
+<div class="detail-box">
 <div>مبلغ تسهیلات: تا سقف ۵ میلیارد ریال و یک برابر حمایت بانک</div>
 <div>نرخ کارمزد: بانک ۴٪، مشتری ۲٪ یا ۴٪</div>
 <div>مدت انتظار: ۱۰ روز</div>
@@ -342,7 +339,7 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>نرخ کارمزد: بانک ۴٪، اجتماعی صفر</div>
 <div>ویژگی: پرداخت وام به شخص معرفی‌شده</div>
 </div>
-<button class="speak-btn" onclick="readPlan('orkideh')">🔊 شنیدن</button>
+<button class="speak-btn" onclick="readPlan('orkideh')">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
@@ -364,68 +361,22 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 
 <script>
-// ============ تشخیص و پخش صدای فارسی ============
-var persianVoice = null;
-var useGoogleTTS = false;
-var currentAudio = null;
+// ============ ResponsiveVoice با اولویت فارسی ============
 var isPlaying = false;
+var rvReady = false;
+var fallbackAudio = null;
 
-function detectPersianVoice() {
-var banner = document.getElementById('voiceBanner');
-if (!('speechSynthesis' in window)) {
-useGoogleTTS = true;
-banner.className = 'banner';
-banner.innerHTML = '⚠️ مرورگر شما از Web Speech پشتیبانی نمی‌کند. برای صدای بهتر از <b>Microsoft Edge</b> استفاده کنید.';
-return;
+function checkRV() {
+if (typeof responsiveVoice !== 'undefined') {
+rvReady = true;
+return true;
 }
-
-var voices = window.speechSynthesis.getVoices();
-// اولویت ۱: صدای نورال مایکروسافت (Edge)
-for (var i = 0; i < voices.length; i++) {
-var v = voices[i];
-if (v.name.indexOf('Farid') !== -1 || v.name.indexOf('Dilara') !== -1) {
-persianVoice = v; break;
-}
-}
-// اولویت ۲: هر صدای با lang = fa
-if (!persianVoice) {
-for (var i = 0; i < voices.length; i++) {
-var v = voices[i];
-if (v.lang && (v.lang === 'fa-IR' || v.lang.indexOf('fa') === 0)) {
-persianVoice = v; break;
-}
-}
-}
-// اولویت ۳: نام شامل Persian یا Farsi
-if (!persianVoice) {
-for (var i = 0; i < voices.length; i++) {
-var v = voices[i];
-var n = (v.name || '').toLowerCase();
-if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) {
-persianVoice = v; break;
-}
-}
+return false;
 }
 
-if (persianVoice) {
-useGoogleTTS = false;
-banner.className = 'banner good';
-banner.innerHTML = '✅ صدای فارسی پیدا شد: <b>' + persianVoice.name + '</b>';
-} else {
-useGoogleTTS = true;
-banner.className = 'banner';
-banner.innerHTML = '⚠️ صدای فارسی روی دستگاه شما نصب نیست. برای صدای عالی از <b>Microsoft Edge</b> استفاده کنید یا صدای فارسی نصب کنید.';
-}
-}
-
-if ('speechSynthesis' in window) {
-detectPersianVoice();
-window.speechSynthesis.onvoiceschanged = detectPersianVoice;
-}
-
-// ============ Google TTS (پشتیبان) ============
+// ============ تقسیم متن ============
 function chunkText(text, maxLen) {
-maxLen = maxLen || 180;
+maxLen = maxLen || 200;
 var parts = text.split(/(?<=[.!?؟،:؛])\s+/);
 var chunks = [], buf = '';
 for (var i = 0; i < parts.length; i++) {
@@ -447,26 +398,30 @@ if (buf.trim()) chunks.push(buf.trim());
 return chunks;
 }
 
-function playChunk(text, onEnd) {
-var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q=' + encodeURIComponent(text);
-var audio = new Audio(url);
-currentAudio = audio;
-audio.onended = function() { if (onEnd) onEnd(); };
-audio.onerror = function() { if (onEnd) onEnd(); };
-audio.play().catch(function() { if (onEnd) onEnd(); });
+// ============ پخش با ResponsiveVoice ============
+function speakRV(text, onEnd) {
+try {
+responsiveVoice.speak(text, "Persian Female", {
+rate: 0.9,
+pitch: 1,
+volume: 1,
+onend: function() { if (onEnd) onEnd(); },
+onerror: function() { if (onEnd) onEnd(); }
+});
+} catch(e) {
+console.warn('RV error:', e);
+if (onEnd) onEnd();
+}
 }
 
-function speakGoogle(text) {
-var chunks = chunkText(text);
-var i = 0;
-function next() {
-if (!isPlaying || i >= chunks.length) { isPlaying = false; return; }
-playChunk(chunks[i], function() {
-i++;
-if (isPlaying) setTimeout(next, 150);
-});
-}
-next();
+// ============ پخش با Google (پشتیبان) ============
+function playGoogle(text, onEnd) {
+var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q=' + encodeURIComponent(text);
+var audio = new Audio(url);
+fallbackAudio = audio;
+audio.onended = function() { fallbackAudio = null; if (onEnd) onEnd(); };
+audio.onerror = function() { fallbackAudio = null; if (onEnd) onEnd(); };
+audio.play().catch(function() { if (onEnd) onEnd(); });
 }
 
 // ============ تابع اصلی ============
@@ -474,30 +429,38 @@ function speak(text) {
 if (!text || !text.trim()) return;
 stopAll();
 isPlaying = true;
+var chunks = chunkText(text);
+var i = 0;
 
-if (persianVoice) {
-// Web Speech API با صدای فارسی
-var msg = new SpeechSynthesisUtterance(text);
-msg.voice = persianVoice;
-msg.lang = persianVoice.lang || 'fa-IR';
-msg.rate = 0.9;
-msg.pitch = 1;
-msg.volume = 1;
-msg.onend = function() { isPlaying = false; };
-window.speechSynthesis.speak(msg);
+function next() {
+if (!isPlaying || i >= chunks.length) { isPlaying = false; return; }
+var chunk = chunks[i];
+
+if (rvReady) {
+speakRV(chunk, function() {
+i++;
+if (isPlaying) setTimeout(next, 200);
+});
 } else {
-// Google TTS
-speakGoogle(text);
+playGoogle(chunk, function() {
+i++;
+if (isPlaying) setTimeout(next, 200);
+});
 }
+}
+next();
 }
 
 function stopAll() {
 isPlaying = false;
-try { window.speechSynthesis.cancel(); } catch(e) {}
-if (currentAudio) {
-try { currentAudio.pause(); currentAudio.src = ''; } catch(e) {}
-currentAudio = null;
+if (typeof responsiveVoice !== 'undefined') {
+try { responsiveVoice.cancel(); } catch(e) {}
 }
+if (fallbackAudio) {
+try { fallbackAudio.pause(); fallbackAudio.src = ''; } catch(e) {}
+fallbackAudio = null;
+}
+try { window.speechSynthesis.cancel(); } catch(e) {}
 }
 
 // ============ متون طرح‌ها ============
@@ -537,6 +500,12 @@ if (planTexts[key]) speak(planTexts[key]);
 var currentUrl = window.location.href.split('?')[0].split('#')[0];
 document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
 document.getElementById('qrUrl').textContent = currentUrl;
+
+// بررسی دوره‌ای ResponsiveVoice
+var rvCheck = setInterval(function() {
+if (checkRV()) clearInterval(rvCheck);
+}, 300);
+setTimeout(checkRV, 1500);
 
 window.addEventListener('beforeunload', stopAll);
 </script>
