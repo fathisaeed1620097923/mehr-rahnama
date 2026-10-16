@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مهر راهنما - نظام جامع اعتباری ۱۴۰۵</title>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Tahoma, Arial, sans-serif; background: linear-gradient(180deg, #0d5c3a 0%, #1a8f5a 100%); padding: 15px; min-height: 100vh; line-height: 1.8; }
@@ -84,7 +86,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <span class="type-badge">امتیازی - بدون کارمزد</span>
 <p>با هدف توسعه فرهنگ قرآنی قرض‌الحسنه و تسهیل شرایط دریافت وام، امکان اخذ تسهیلات قرض‌الحسنه بدون پرداخت کارمزد فراهم شده است.</p>
 <div class="detail-box">
-<div>جامعه هدف: اشخاص حقیقی متقاضی وام بدون کارمزد</div>
 <div>مبلغ تسهیلات: سقف ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: صفر درصد</div>
 <div>مدت بازپرداخت: سقف ۶۰ ماهه اقساطی</div>
@@ -366,34 +367,31 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 
 <script>
 // ============================================================
-// سیستم صوتی چندلایه:
-// 1) Web Speech API (اگر صدای فارسی روی دستگاه باشد - بهترین)
-// 2) Google Translate TTS (اگر اینترنت باشد)
-// 3) نمایش راهنما اگر هیچ‌کدام کار نکرد
+// سیستم صوتی ۳ لایه:
+// 1) Web Speech API + صدای فارسی دستگاه (Edge = بهترین)
+// 2) ResponsiveVoice (سرور مستقل، در Chrome کار می‌کند)
+// 3) Google Translate (آخرین راه)
 // ============================================================
 
 var persianVoice = null;
 var currentUtter = null;
 var currentAudio = null;
 var isPlaying = false;
+var rvReady = false;
 
-// ---------- تشخیص صدای فارسی ----------
+// ---------- تشخیص صدای فارسی دستگاه ----------
 function findPersianVoice() {
 if (!('speechSynthesis' in window)) return null;
 var voices = window.speechSynthesis.getVoices();
 if (!voices || voices.length === 0) return null;
-
-// اولویت ۱: صداهای نورال مایکروسافت فارسی (Edge)
 for (var i = 0; i < voices.length; i++) {
 var n = voices[i].name || '';
 if (n.indexOf('Farid') !== -1 || n.indexOf('Dilara') !== -1) return voices[i];
 }
-// اولویت ۲: هر صدای lang=fa
 for (var i = 0; i < voices.length; i++) {
 var l = (voices[i].lang || '').toLowerCase();
 if (l === 'fa-ir' || l === 'fa' || l.indexOf('fa-') === 0) return voices[i];
 }
-// اولویت ۳: نام شامل Persian یا Farsi
 for (var i = 0; i < voices.length; i++) {
 var n = (voices[i].name || '').toLowerCase();
 if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) return voices[i];
@@ -401,35 +399,43 @@ if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) return voices[i];
 return null;
 }
 
+// ---------- بررسی ResponsiveVoice ----------
+function checkRV() {
+if (typeof responsiveVoice !== 'undefined') {
+rvReady = true;
+return true;
+}
+return false;
+}
+
+// ---------- به‌روزرسانی وضعیت ----------
 function updateStatus() {
 var el = document.getElementById('status');
 persianVoice = findPersianVoice();
 
 if (persianVoice) {
 el.className = 'ok';
-el.innerHTML = '✅ <b>صدای فارسی پیدا شد:</b> ' + persianVoice.name + '<br>کیفیت: عالی (آفلاین)';
+el.innerHTML = '✅ صدای فارسی عالی پیدا شد: <b>' + persianVoice.name + '</b> — همه چیز آماده است';
 return;
 }
-// بررسی اینکه Web Speech کار می‌کند
-if ('speechSynthesis' in window) {
+
+if (checkRV()) {
+el.className = 'ok';
+el.innerHTML = '✅ از سرویس ResponsiveVoice استفاده می‌شود — صدای فارسی آماده است';
+return;
+}
+
 el.className = 'warn';
 el.innerHTML = '⚠️ صدای فارسی روی دستگاه شما نصب نیست.<br>' +
-'🔹 راه‌حل ۱ (بهترین): این صفحه را در <b>Microsoft Edge</b> باز کنید.<br>' +
-'🔹 راه‌حل ۲: صدای فارسی روی دستگاه نصب کنید (پایین توضیح داده شده).<br>' +
-'🔹 فعلاً از Google Translate استفاده می‌شود (ممکن است عربی باشد).';
-return;
+'🔹 <b>بهترین راه‌حل:</b> این صفحه را در <b>Microsoft Edge</b> باز کنید.<br>' +
+'🔹 یا کمی صبر کنید تا سرویس آنلاین بارگذاری شود.';
 }
 
-el.className = 'err';
-el.innerHTML = '❌ مرورگر شما از صوتی پشتیبانی نمی‌کند. از <b>Chrome</b> یا <b>Edge</b> استفاده کنید.';
-}
-
-// بارگذاری صداها
 if ('speechSynthesis' in window) {
 updateStatus();
 window.speechSynthesis.onvoiceschanged = updateStatus;
 setTimeout(updateStatus, 500);
-setTimeout(updateStatus, 1500);
+setTimeout(updateStatus, 2000);
 }
 
 // ---------- تقسیم متن ----------
@@ -465,13 +471,28 @@ u.rate = 0.9;
 u.pitch = 1;
 u.volume = 1;
 u.onend = function() { if (onEnd) onEnd(); };
-u.onerror = function(e) { console.warn('WS error', e); if (onEnd) onEnd(); };
+u.onerror = function() { if (onEnd) onEnd(); };
 currentUtter = u;
 window.speechSynthesis.speak(u);
 }
 
+// ---------- پخش با ResponsiveVoice ----------
+function speakRV(text, onEnd) {
+try {
+responsiveVoice.speak(text, "Persian Female", {
+rate: 0.9,
+pitch: 1,
+volume: 1,
+onend: function() { if (onEnd) onEnd(); },
+onerror: function() { if (onEnd) onEnd(); }
+});
+} catch(e) {
+if (onEnd) onEnd();
+}
+}
+
 // ---------- پخش با Google ----------
-function speakGoogleChunk(text, onEnd) {
+function speakGoogle(text, onEnd) {
 var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q=' + encodeURIComponent(text);
 var audio = new Audio(url);
 currentAudio = audio;
@@ -494,17 +515,14 @@ if (!isPlaying || i >= chunks.length) { isPlaying = false; clearActiveButtons();
 var chunk = chunks[i];
 
 if (persianVoice) {
-// روش ۱: Web Speech فارسی
-speakWS(chunk, function() {
-i++;
-if (isPlaying) setTimeout(next, 150);
-});
+// بهترین کیفیت: صدای دستگاه (Edge)
+speakWS(chunk, function() { i++; if (isPlaying) setTimeout(next, 150); });
+} else if (rvReady) {
+// کیفیت خوب: سرویس آنلاین
+speakRV(chunk, function() { i++; if (isPlaying) setTimeout(next, 200); });
 } else {
-// روش ۲: Google TTS
-speakGoogleChunk(chunk, function() {
-i++;
-if (isPlaying) setTimeout(next, 200);
-});
+// پشتیبان: Google
+speakGoogle(chunk, function() { i++; if (isPlaying) setTimeout(next, 250); });
 }
 }
 next();
@@ -513,6 +531,9 @@ next();
 function stopAll() {
 isPlaying = false;
 try { window.speechSynthesis.cancel(); } catch(e) {}
+if (typeof responsiveVoice !== 'undefined') {
+try { responsiveVoice.cancel(); } catch(e) {}
+}
 if (currentAudio) {
 try { currentAudio.pause(); currentAudio.src = ''; } catch(e) {}
 currentAudio = null;
@@ -552,7 +573,7 @@ ehsan: 'طرح احسان. این طرح در حال حاضر در مرحله ب
 };
 
 function readWelcome() {
-speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. این سامانه بر اساس نظام جامع اعتباری سال هزار و چهارصد و پنج بانک قرض‌الحسنه مهر ایران طراحی شده است. کافی است شغل خود را از لیست زیر انتخاب کنید تا طرح‌های مناسب شما نمایش داده شود.');
+speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. کافی است شغل خود را از لیست زیر انتخاب کنید تا طرح‌های مناسب شما نمایش داده شود.');
 }
 
 function readPlan(key, btn) {
@@ -567,16 +588,13 @@ var currentUrl = window.location.href.split('?')[0].split('#')[0];
 document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
 document.getElementById('qrUrl').textContent = currentUrl;
 
-window.addEventListener('beforeunload', stopAll);
+// بررسی دوره‌ای ResponsiveVoice
+var rvCheck = setInterval(function() {
+if (checkRV()) { clearInterval(rvCheck); updateStatus(); }
+}, 400);
+setTimeout(function() { checkRV(); updateStatus(); }, 3000);
 
-// دکمه تست صدا در بارگذاری
-setTimeout(function(){
-if (persianVoice) {
-console.log('✅ Persian voice ready:', persianVoice.name);
-} else {
-console.log('⚠️ No Persian voice found. Will use Google TTS.');
-}
-}, 2000);
+window.addEventListener('beforeunload', stopAll);
 </script>
 </body>
 </html>
