@@ -7,7 +7,7 @@
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(160deg,#f0f5f1,#e8f0ea,#dde8e0);background-attachment:fixed;padding:14px;min-height:100vh;line-height:1.9;font-size:15px;color:#1a2e2a}
+body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(160deg,#f0f5f1,#e8f0ea);background-attachment:fixed;padding:14px;min-height:100vh;line-height:1.9;font-size:15px;color:#1a2e2a}
 .box{background:#faf8f3;max-width:720px;margin:0 auto;border-radius:24px;box-shadow:0 20px 60px rgba(10,77,46,.15);overflow:hidden}
 .header{background:linear-gradient(135deg,#0a4d2e,#0d6b3e,#148a4f);color:#fff;padding:28px 20px 24px;text-align:center;position:relative;overflow:hidden}
 .header::before{content:"";position:absolute;top:-50px;left:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(212,160,23,.3),transparent 70%);border-radius:50%}
@@ -15,47 +15,46 @@ body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(160deg,#f0f5
 .header h1::before{content:"🌿 "}
 .header .sub{font-size:12px;opacity:.92;position:relative}
 .header-btns{display:flex;gap:8px;justify-content:center;margin-top:14px;position:relative;z-index:10}
-.hbtn{flex:1;max-width:170px;padding:10px 16px;background:linear-gradient(135deg,#d4a017,#f0b927);color:#fff;border:none;border-radius:22px;font-size:13px;font-family:inherit;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(212,160,23,.4)}
+.hbtn{flex:1;max-width:170px;padding:10px 16px;background:linear-gradient(135deg,#d4a017,#f0b927);color:#fff;border:none;border-radius:22px;font-size:13px;font-family:inherit;font-weight:800;cursor:pointer}
 .content{padding:18px}
-.guide-box{background:linear-gradient(135deg,#fff,#f5f9f6);border:1px solid rgba(10,77,46,.1);border-radius:18px;padding:18px;margin-bottom:16px;box-shadow:0 4px 20px rgba(10,77,46,.06)}
+.guide-box{background:#fff;border:1px solid rgba(10,77,46,.1);border-radius:18px;padding:18px;margin-bottom:16px}
 .guide-box h3{color:#0a4d2e;font-size:15px;margin-bottom:12px;text-align:center;font-weight:800}
 .guide-step{background:#faf8f3;border-right:3px solid #d4a017;padding:9px 12px;margin-bottom:6px;border-radius:10px;font-size:12.5px;display:flex;align-items:flex-start;gap:8px}
-.guide-step .num{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0}
-.terms-box{background:linear-gradient(135deg,#fef9e7,#fdf3d3);border:1px solid rgba(212,160,23,.3);border-radius:18px;padding:18px;margin-bottom:16px}
+.guide-step .num{background:#0a4d2e;color:#fff;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0}
+.terms-box{background:#fef9e7;border:1px solid rgba(212,160,23,.3);border-radius:18px;padding:18px;margin-bottom:16px}
 .terms-box h3{color:#8a6a0f;font-size:15px;margin-bottom:12px;text-align:center;font-weight:800}
 .term{background:#fff;padding:9px 12px;border-radius:10px;margin-bottom:6px;font-size:12px;line-height:1.9;border-right:3px solid #d4a017}
 .term b{color:#8a6a0f}
-.ravish-box{background:linear-gradient(135deg,#e8f5ec,#d4edd9);border:2px solid #27ae60;border-radius:18px;padding:18px;margin-bottom:16px;text-align:center}
+.ravish-box{background:#e8f5ec;border:2px solid #27ae60;border-radius:18px;padding:16px;margin-bottom:16px;text-align:center}
 .ravish-box h3{color:#1e7a44;font-size:15px;margin-bottom:8px;font-weight:800}
-.ravish-percent{display:inline-block;background:linear-gradient(135deg,#27ae60,#2ecc71);color:#fff;padding:6px 16px;border-radius:22px;font-weight:800;font-size:15px}
+.ravish-percent{display:inline-block;background:#27ae60;color:#fff;padding:5px 16px;border-radius:22px;font-weight:800;font-size:15px}
 .qr-box{text-align:center;background:#fff;border:2px dashed #0a4d2e;border-radius:18px;padding:14px;margin-bottom:16px}
 .qr-box p{color:#0a4d2e;font-size:12px;font-weight:700;margin-bottom:8px}
-.qr-box img{width:120px;height:120px;background:#fff;padding:5px;border-radius:12px;display:inline-block}
+.qr-box img{width:120px;height:120px;background:#fff;padding:5px;border-radius:12px}
 .qr-box .qr-url{color:#666;font-size:9.5px;word-break:break-all;margin-top:6px;direction:ltr}
-.voice-main{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;border:none;border-radius:12px;font-size:14.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-bottom:8px}
-.stop-btn{display:block;width:100%;padding:12px;background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;border:none;border-radius:12px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-bottom:16px}
-.q{color:#0a4d2e;font-size:15px;font-weight:800;margin-bottom:8px;text-align:center;padding:12px;background:#f8f9fa;border-radius:12px;border:1px solid rgba(212,160,23,.2)}
-.hint-toggle{font-size:11.5px;color:#666;text-align:center;margin-bottom:16px}
-.group{background:#fff;border:1px solid #e8e8e8;border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.voice-main{display:block;width:100%;padding:14px;background:#0a4d2e;color:#fff;border:none;border-radius:12px;font-size:14.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-bottom:8px}
+.stop-btn{display:block;width:100%;padding:12px;background:#c0392b;color:#fff;border:none;border-radius:12px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-bottom:16px}
+.q{color:#0a4d2e;font-size:15px;font-weight:800;margin-bottom:12px;text-align:center;padding:12px;background:#f8f9fa;border-radius:12px}
+.group{background:#fff;border:1px solid #e8e8e8;border-radius:16px;margin-bottom:12px;overflow:hidden}
 .group.open{border-color:#0a4d2e;box-shadow:0 8px 28px rgba(10,77,46,.12)}
-.group-title{padding:14px 18px;cursor:pointer;font-size:14.5px;font-weight:700;background:#faf8f3;user-select:none;position:relative;color:#1a2e2a}
+.group-title{padding:14px 18px;cursor:pointer;font-size:14.5px;font-weight:700;background:#faf8f3;position:relative;color:#1a2e2a}
 .group-title::after{content:"▼";position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:11px}
-.group.open .group-title{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff}
+.group.open .group-title{background:#0a4d2e;color:#fff}
 .group.open .group-title::after{content:"▲";color:#d4a017}
 .group-desc{font-size:11.5px;color:#666;padding:0 18px 10px;background:#faf8f3;line-height:1.7}
-.group.open .group-desc{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:rgba(255,255,255,.85);padding-top:4px}
-.plans{display:none;padding:16px;background:#fff}
+.group.open .group-desc{background:#0a4d2e;color:rgba(255,255,255,.85);padding-top:4px}
+.plans{display:none;padding:16px}
 .group.open .plans{display:block}
-.card{background:#fff;border:1px solid #e8e8e8;border-radius:14px;margin-bottom:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:14px;margin-bottom:12px;overflow:hidden}
 .card.open{border-color:#0a4d2e;box-shadow:0 8px 28px rgba(10,77,46,.12)}
-.card-title{color:#1a2e2a;font-size:15.5px;font-weight:700;padding:14px 44px 14px 18px;text-align:center;cursor:pointer;user-select:none;position:relative;background:#faf8f3}
+.card-title{color:#1a2e2a;font-size:15.5px;font-weight:700;padding:14px 44px 14px 18px;text-align:center;cursor:pointer;position:relative;background:#faf8f3}
 .card-title::after{content:"▼";font-size:11px;position:absolute;left:18px;top:50%;transform:translateY(-50%)}
-.card.open .card-title{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff}
+.card.open .card-title{background:#0a4d2e;color:#fff}
 .card.open .card-title::after{content:"▲";color:#d4a017}
 .card-body{display:none;padding:16px}
 .card.open .card-body{display:block}
-.type-badge{display:block;background:linear-gradient(135deg,#d4a017,#f0b927);color:#fff;padding:5px 14px;border-radius:18px;font-size:11px;font-weight:700;text-align:center;margin:0 auto 14px auto;width:fit-content}
-.section{margin-bottom:10px;padding:12px 14px 12px 18px;border-radius:10px;font-size:13px;line-height:1.95;border-left:5px solid}
+.type-badge{display:block;background:#d4a017;color:#fff;padding:5px 14px;border-radius:18px;font-size:11px;font-weight:700;text-align:center;margin:0 auto 14px auto;width:fit-content}
+.section{margin-bottom:10px;padding:12px 14px;border-radius:10px;font-size:13px;line-height:1.95;border-left:5px solid}
 .sec-title{font-weight:800;font-size:14px;display:block;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed rgba(0,0,0,.12)}
 .sec-num{display:inline-block;color:#fff;width:24px;height:24px;line-height:24px;text-align:center;border-radius:50%;font-size:11px;font-weight:800;margin-left:8px;vertical-align:middle}
 .sec-blue{background:#eaf3fd;color:#1a5490;border-left-color:#4a90d9}
@@ -79,41 +78,43 @@ body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(160deg,#f0f5
 .sec-pink{background:#fce8f1;color:#8a2a55;border-left-color:#e91e63}
 .sec-pink .sec-title{color:#8a2a55}
 .sec-pink .sec-num{background:#e91e63}
+ul.bullet{padding-right:20px;margin-top:5px}
+ul.bullet li{font-size:12.5px;line-height:2;margin-bottom:3px}
 table.mini{width:100%;border-collapse:collapse;font-size:11.5px;margin:8px 0;border-radius:8px;overflow:hidden}
 table.mini th,table.mini td{border:1px solid #f0f0f0;padding:8px 5px;text-align:center}
-table.mini th{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;font-weight:700}
+table.mini th{background:#0a4d2e;color:#fff;font-weight:700}
 table.mini tr:nth-child(even){background:#faf8f3}
-.mini-calc{background:linear-gradient(135deg,#fff9e6,#fdf3d3);border:2px solid #d4a017;border-radius:14px;padding:14px;margin:12px 0}
+.mini-calc{background:#fff9e6;border:2px solid #d4a017;border-radius:14px;padding:14px;margin:12px 0}
 .mini-calc h4{color:#8a6a0f;font-size:14px;margin-bottom:10px;text-align:center;font-weight:800}
 .mini-calc label{display:block;font-size:12px;color:#8a6a0f;font-weight:700;margin-bottom:4px;margin-top:8px}
 .mini-calc input{width:100%;padding:11px;border:2px solid #d4a017;border-radius:8px;font-family:inherit;font-size:13.5px;font-weight:700;background:#fff;color:#1a2e2a}
 .mini-calc .fee-row{display:flex;gap:6px;margin-top:6px}
 .mini-calc .fee-btn{flex:1;padding:9px;border:2px solid #d4a017;background:#fff;color:#8a6a0f;border-radius:8px;font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer}
-.mini-calc .fee-btn.active{background:linear-gradient(135deg,#d4a017,#f0b927);color:#fff}
-.mini-calc .go-btn{display:block;width:100%;padding:12px;background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
+.mini-calc .fee-btn.active{background:#d4a017;color:#fff}
+.mini-calc .go-btn{display:block;width:100%;padding:12px;background:#0a4d2e;color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
 .mini-result{background:#fff;border:2px solid #0a4d2e;border-radius:10px;padding:10px;margin-top:10px;display:none;font-size:11.5px}
 .mini-result.show{display:block}
 .mini-result h5{color:#0a4d2e;font-size:13px;margin-bottom:8px;text-align:center;font-weight:700}
 .mini-result table{width:100%;border-collapse:collapse}
 .mini-result th,.mini-result td{border:1px solid #0a4d2e;padding:6px 4px;text-align:center;font-size:11px}
-.mini-result th{background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;font-weight:700}
+.mini-result th{background:#0a4d2e;color:#fff}
 .mini-result td.amount{background:#e8f5ec;color:#0a4d2e;font-weight:800}
-.qbank-box{background:linear-gradient(135deg,#eaf3fd,#d6e6f7);border:2px solid #4a90d9;border-radius:14px;padding:14px;margin:12px 0}
+.qbank-box{background:#eaf3fd;border:2px solid #4a90d9;border-radius:14px;padding:14px;margin:12px 0}
 .qbank-box h4{color:#1a5490;font-size:14px;margin-bottom:10px;text-align:center;font-weight:800}
 .qbank-steps{counter-reset:step}
-.qbank-step{background:#fff;border-radius:8px;padding:10px 12px 10px 10px;margin-bottom:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px;counter-increment:step}
-.qbank-step::before{content:counter(step);background:linear-gradient(135deg,#4a90d9,#3498db);color:#fff;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0}
-.qbank-download{display:block;width:100%;padding:12px;background:linear-gradient(135deg,#4a90d9,#3498db);color:#fff;border:none;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;margin-top:10px}
-.speak-btn{display:block;width:100%;padding:12px;background:linear-gradient(135deg,#0a4d2e,#148a4f);color:#fff;border:none;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
-.speak-btn.active{background:linear-gradient(135deg,#d4a017,#f0b927)}
+.qbank-step{background:#fff;border-radius:8px;padding:10px 12px;margin-bottom:6px;font-size:12px;display:flex;align-items:flex-start;gap:8px;counter-increment:step}
+.qbank-step::before{content:counter(step);background:#4a90d9;color:#fff;min-width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0}
+.qbank-download{display:block;width:100%;padding:12px;background:#4a90d9;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;margin-top:10px}
+.speak-btn{display:block;width:100%;padding:12px;background:#0a4d2e;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
+.speak-btn.active{background:#d4a017}
 .footer{text-align:center;color:#666;font-size:11px;padding:20px;border-top:1px solid rgba(0,0,0,.05);background:#faf8f3}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(5,30,20,.92);z-index:9999;justify-content:center;align-items:center;padding:14px;overflow-y:auto}
 .modal.show{display:flex}
-.modal-content{position:relative;background:linear-gradient(160deg,#0a4d2e,#0d6b3e);border-radius:22px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.5);max-width:520px;width:100%;margin:auto}
+.modal-content{position:relative;background:#0a4d2e;border-radius:22px;padding:18px;max-width:520px;width:100%;margin:auto}
 .modal-close{position:absolute;top:10px;left:10px;width:34px;height:34px;background:#c0392b;color:#fff;border:none;border-radius:50%;font-size:17px;cursor:pointer;font-family:inherit;z-index:5}
 .modal-title{color:#f0b927;text-align:center;font-size:16px;font-weight:800;margin-bottom:12px}
 .mirror-video-wrap{position:relative;background:#000;border-radius:16px;overflow:hidden;border:2px solid rgba(212,160,23,.4)}
-.mirror-video{width:100%;height:auto;display:block;transform:scaleX(-1);max-height:45vh;object-fit:cover}
+.mirror-video{width:100%;display:block;transform:scaleX(-1);max-height:45vh;object-fit:cover}
 .face-badge{position:absolute;top:8px;right:8px;padding:4px 10px;border-radius:12px;font-size:10.5px;font-weight:700}
 .face-ok{background:rgba(39,174,96,.9);color:#fff}
 .face-wait{background:rgba(243,156,18,.9);color:#fff}
@@ -122,23 +123,23 @@ table.mini tr:nth-child(even){background:#faf8f3}
 .mood-row{display:flex;gap:6px;margin-top:12px}
 .mood-btn{flex:1;padding:10px;background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(212,160,23,.3);border-radius:12px;font-family:inherit;font-size:18px;cursor:pointer}
 .mood-btn span{display:block;font-size:10px;margin-top:3px;color:#c8e6d2;font-weight:600}
-.mood-btn.active{background:linear-gradient(135deg,#d4a017,#f0b927)}
+.mood-btn.active{background:#d4a017}
 .mood-btn.active span{color:#fff}
-.mood-preview{margin-top:10px;padding:12px;background:rgba(255,255,255,.95);border-radius:12px;display:none}
+.mood-preview{margin-top:10px;padding:12px;background:#fff;border-radius:12px;display:none}
 .mood-preview.show{display:block}
 .mood-msg{color:#0a4d2e;font-size:13px;font-weight:700;line-height:1.8;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed rgba(10,77,46,.2)}
 .mood-plan{color:#333;font-size:12px;line-height:1.9}
 .mirror-actions{display:flex;gap:6px;margin-top:12px}
 .mirror-action{flex:1;padding:10px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(212,160,23,.4);border-radius:10px;font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer}
-.mirror-action.primary{background:linear-gradient(135deg,#d4a017,#f0b927)}
-.mirror-error{color:#fff;text-align:center;padding:20px;font-size:13px;line-height:1.9;background:rgba(192,57,43,.3);border-radius:12px}
+.mirror-action.primary{background:#d4a017}
+.mirror-error{color:#fff;text-align:center;padding:20px;font-size:13px;background:rgba(192,57,43,.3);border-radius:12px}
 .mirror-stats{display:flex;gap:6px;margin-top:12px;justify-content:space-around;padding:8px;background:rgba(255,255,255,.08);border-radius:10px}
 .mirror-stat{text-align:center;color:#fff}
 .mirror-stat .num{font-size:16px;font-weight:800;color:#f0b927;display:block}
 .mirror-stat .label{font-size:10px;opacity:.85}
 .game-tabs{display:flex;gap:5px;margin-bottom:12px}
 .game-tab{flex:1;padding:9px 6px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(212,160,23,.3);border-radius:9px;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer}
-.game-tab.active{background:linear-gradient(135deg,#d4a017,#f0b927);border-color:#f0b927}
+.game-tab.active{background:#d4a017}
 .game-panel{display:none}
 .game-panel.show{display:block}
 .quiz-q{background:#fff;border-radius:12px;padding:14px;margin-bottom:10px;color:#0a4d2e}
@@ -150,7 +151,7 @@ table.mini tr:nth-child(even){background:#faf8f3}
 .prog-dot{width:26px;height:5px;background:rgba(255,255,255,.2);border-radius:3px}
 .prog-dot.active{background:#f0b927}
 .prog-dot.done{background:#27ae60}
-.quiz-btn{display:block;width:100%;padding:12px;background:linear-gradient(135deg,#d4a017,#f0b927);color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
+.quiz-btn{display:block;width:100%;padding:12px;background:#d4a017;color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer;margin-top:10px}
 .quiz-result{background:#fff;border-radius:12px;padding:16px;color:#0a4d2e;text-align:center}
 .quiz-result h4{font-size:17px;margin-bottom:6px}
 .quiz-result .plan-name{font-size:20px;color:#d4a017;font-weight:800;margin:8px 0}
@@ -160,7 +161,7 @@ table.mini tr:nth-child(even){background:#faf8f3}
 .wheel{width:100%;height:100%;border-radius:50%;position:relative;transition:transform 4s cubic-bezier(.25,.1,.25,1);box-shadow:0 10px 40px rgba(0,0,0,.3)}
 .wheel-seg{position:absolute;top:0;left:50%;width:50%;height:50%;transform-origin:0 100%;overflow:hidden}
 .wheel-seg-content{position:absolute;right:20%;top:20%;font-size:10px;font-weight:800;color:#fff;transform:rotate(-45deg);white-space:nowrap}
-.wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:linear-gradient(135deg,#d4a017,#f0b927);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;cursor:pointer;border:4px solid #fff;z-index:5}
+.wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:#d4a017;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;cursor:pointer;border:4px solid #fff;z-index:5}
 .wheel-pointer{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:22px;color:#c0392b;z-index:6}
 .wheel-result{background:#fff;border-radius:12px;padding:14px;margin-top:14px;text-align:center;color:#0a4d2e;display:none}
 .wheel-result.show{display:block}
@@ -168,7 +169,7 @@ table.mini tr:nth-child(even){background:#faf8f3}
 .badges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px}
 .badge-card{background:rgba(255,255,255,.1);border:2px solid rgba(212,160,23,.2);border-radius:12px;padding:12px;text-align:center;color:#fff}
 .badge-card.locked{opacity:.35;filter:grayscale(1)}
-.badge-card.unlocked{background:linear-gradient(135deg,#d4a017,#f0b927);border-color:#f0b927}
+.badge-card.unlocked{background:#d4a017}
 .badge-icon{font-size:28px;margin-bottom:4px}
 .badge-name{font-size:11px;font-weight:700}
 .badge-req{font-size:9.5px;opacity:.85;margin-top:3px}
@@ -183,7 +184,7 @@ table.mini tr:nth-child(even){background:#faf8f3}
 .stat-box{flex:1;background:rgba(255,255,255,.1);border-radius:10px;padding:10px;text-align:center;color:#fff}
 .stat-box .v{font-size:18px;font-weight:800;color:#f0b927;display:block}
 .stat-box .l{font-size:10px;opacity:.85}
-@media(max-width:480px){body{padding:8px;font-size:14px}.content{padding:12px}.card-body{padding:12px}.header h1{font-size:21px}}
+@media(max-width:480px){body{padding:8px;font-size:14px}.content{padding:12px}.card-body{padding:12px}}
 </style>
 </head>
 <body>
@@ -200,21 +201,17 @@ table.mini tr:nth-child(even){background:#faf8f3}
 
 <div class="guide-box">
 <h3>🎯 چطور استفاده کنم؟</h3>
-<div class="guide-step"><span class="num">۱</span><span>شغل خودت را از لیست زیر انتخاب کن</span></div>
-<div class="guide-step"><span class="num">۲</span><span>روی عنوان هر طرح بزن تا باز شود</span></div>
-<div class="guide-step"><span class="num">۳</span><span>با آینه حالت خودت را انتخاب کن</span></div>
-<div class="guide-step"><span class="num">۴</span><span>با بازی، طرح مناسب خودت را کشف کن</span></div>
-<div class="guide-step"><span class="num">۵</span><span>با دکمه «درخواست از کیوبانک» به اپلیکیشن برو</span></div>
+<div class="guide-step"><span class="num">۱</span><span>شغل خودت را انتخاب کن</span></div>
+<div class="guide-step"><span class="num">۲</span><span>روی طرح بزن و ۹ بخش را کامل بخوان</span></div>
+<div class="guide-step"><span class="num">۳</span><span>مدارک و شرایط را چک کن، بعد به بانک برو</span></div>
 </div>
 
 <div class="terms-box">
-<h3>📖 اصطلاحات مهم</h3>
-<div class="term"><b>معدل حساب =</b> میانگین پولی که در طول ماه‌ها در حسابتان نگه داشته‌اید.</div>
-<div class="term"><b>رتبه Z =</b> رتبه اعتباری شما در سامانه ضمان، بین ۰ تا ۱۰۰.</div>
-<div class="term"><b>بدون ضامن =</b> اگر رتبه اعتبارسنجی ایرانیان A یا B باشد.</div>
-<div class="term"><b>کارمزد =</b> سودی که بانک می‌گیرد. ۴٪ یعنی ۴ میلیون در هر ۱۰۰ میلیون.</div>
-<div class="term"><b>تفاهم‌نامه =</b> قرارداد بین سازمان و بانک برای وام کارکنان.</div>
-<div class="term"><b>کیوبانک =</b> اپلیکیشن دیجیتال بانک مهر ایران.</div>
+<h3>📖 اصطلاحات</h3>
+<div class="term"><b>معدل حساب =</b> میانگین پولی که در حسابتان مانده. مثال: ۳ ماه ۱۰۰ میلیون + ۳ ماه ۲۰۰ میلیون → معدل ۱۵۰ میلیون.</div>
+<div class="term"><b>رتبه Z =</b> رتبه اعتباری سامانه ضمان ۰ تا ۱۰۰.</div>
+<div class="term"><b>بدون ضامن =</b> رتبه ایرانیان A یا B + بیمه عمر.</div>
+<div class="term"><b>تفاهم‌نامه =</b> قرارداد سازمان/اتحادیه با بانک.</div>
 </div>
 
 <div class="ravish-box">
@@ -223,33 +220,35 @@ table.mini tr:nth-child(even){background:#faf8f3}
 </div>
 
 <div class="qr-box">
-<p>این صفحه را با دیگران به اشتراک بگذارید</p>
-<img id="qrImg" src="" alt="QR Code">
+<p>اشتراک با دیگران</p>
+<img id="qrImg" src="" alt="QR">
 <div class="qr-url" id="qrUrl"></div>
 </div>
 
 <button class="voice-main" onclick="readWelcome()">🔊 راهنمای صوتی</button>
-<button class="stop-btn" onclick="stopAll()">⏹ توقف صوتی</button>
+<button class="stop-btn" onclick="stopAll()">⏹ توقف</button>
 
 <div class="q">شغل خود را انتخاب کنید</div>
 
 <!-- گروه ۱ -->
 <div class="group open" id="g1">
 <div class="group-title" onclick="toggleGroup('g1')">🌟 عمومی - برای همه مشاغل</div>
-<div class="group-desc">کارمند، بازنشسته، خانه‌دار، دانشجو.</div>
+<div class="group-desc">کارمند، بازنشسته، خانه‌دار، دانشجو، فاقد شغل.</div>
 <div class="plans">
 
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح نیلوفر</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - سپرده محور - کد ۱۰۱</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>هر کسی که حساب قرض‌الحسنه پس‌انداز در بانک مهر ایران دارد. بدون نیاز به جواز کسب یا تفاهم‌نامه سازمانی. ساده‌ترین راه گرفتن وام قرض‌الحسنه.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 چقدر وام؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> (۵ میلیارد ریال). مبلغ دقیق بر اساس معدل حساب.</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ چقدر طول می‌کشه؟</span>دوره معدل‌گیری: ۱ تا ۱۲ ماه / بازپرداخت: ۶ تا ۶۰ ماه / از درخواست تا واریز: ۳ تا ۷ روز کاری</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪ — خودت انتخاب می‌کنی. هرچه کمتر، وام کمتر.</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق سامانه ضمان. رتبه ایرانیان A یا B + بیمه عمر = بدون ضامن. در غیر این صورت یک ضامن + وثیقه.</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>⭐ تبصره وام فوری:</span>اگر معدل تا ۱۰۰ میلیون تومان و رتبه A یا B، وام فوری بدون ضامن.</div>
-<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📌 تفاوت با نورا:</span>نیلوفر کارمزد دارد ولی ضریب وام بالاتر است. نورا کارمزد ندارد ولی وام کمتر.</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 این طرح برای کیه؟</span>هر شخص حقیقی ایرانی بالای ۱۸ سال که <b>حساب قرض‌الحسنه پس‌انداز</b> در بانک مهر ایران دارد. <b>بدون نیاز</b> به جواز کسب، تفاهم‌نامه یا پرونده حمایتی.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط دقیق دریافت</span><ul class="bullet"><li>حداقل سن: ۱۸ سال</li><li>حساب قرض‌الحسنه پس‌انداز فعال (حداقل ۱ ماهه)</li><li>نداشتن چک برگشتی یا بدهی معوق در سیستم بانکی</li><li>رتبه اعتبارسنجی ایرانیان بهتر از Z باشد</li><li>گذشت دوره معدل‌گیری (حداقل ۱ ماه)</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ وام و نحوه محاسبه معدل</span><b>معدل حساب چیه؟</b> میانگین پولی که در طول دوره در حسابتان مانده. مثلاً اگر ۶ ماه ۱۰۰ میلیون در حساب داشته باشید، معدل = ۱۰۰ میلیون.<br><br><b>فرمول:</b> مبلغ وام = معدل حساب × ضریب<br><br><b>ضریب</b> بستگی دارد به: دوره معدل‌گیری + مدت بازپرداخت + نرخ کارمزد.<br><br>سقف نهایی: <b>۵۰۰ میلیون تومان</b></div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد و بازپرداخت</span><ul class="bullet"><li>نرخ کارمزد: ۲٪ یا ۳٪ یا ۴٪ (خودتان انتخاب می‌کنید)</li><li>مدت بازپرداخت: ۶ تا ۶۰ ماه</li><li>دوره معدل‌گیری: ۱ تا ۱۲ ماه</li><li>قسط ماهانه: وام + کارمزد ÷ تعداد ماه</li></ul></div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق سامانه ضمان:<ul class="bullet"><li>رتبه A یا B + بیمه عمر → بدون ضامن</li><li>رتبه C یا D → یک ضامن + وثیقه (چک یا کسر از حقوق)</li><li>رتبه E یا پایین‌تر → یک یا دو ضامن + وثایق</li></ul></div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک لازم</span><ul class="bullet"><li>کارت ملی + شناسنامه</li><li>شماره حساب قرض‌الحسنه</li><li>فیش حقوقی (اگر کارمند)</li><li>چک یا کسر از حقوق (اگر ضامن نیاز باشد)</li><li>بیمه عمر (اگر بدون ضامن می‌خواهید)</li></ul></div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل درخواست</span>۱. حساب پس‌انداز باز کن → ۲. پول را ۱ تا ۱۲ ماه نگه دار → ۳. در کیوبانک طرح نیلوفر را انتخاب کن → ۴. مدارک را بارگذاری کن → ۵. منتظر تأیید (۳-۷ روز) → ۶. وام به حسابت واریز می‌شود.</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۸</span>⚠️ هشدارها</span><ul class="bullet"><li>اگر چک برگشتی دارید، رد می‌شوید.</li><li>اگر معدل حساب زیر ۱ میلیون باشد، وام نمی‌گیرید.</li><li>کارمزد ۴٪ = ۴ میلیون به ازای هر ۱۰۰ میلیون (یک‌بار در سال اول).</li></ul></div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۹</span>💡 مثال کامل</span>شما ۱۰۰ میلیون تومان را ۱۲ ماه در حساب نگه می‌دارید. رتبه ایرانیان A دارید و بیمه عمر می‌پذیرید:<br>• معدل = ۱۰۰ میلیون<br>• ضریب (۱۲ ماه، بازپرداخت ۱۲ ماهه، کارمزد ۴٪) = ۲.۲۹۶<br>• وام = ۱۰۰ × ۲.۲۹۶ = <b>۲۲۹ میلیون تومان</b><br>• قسط ماهانه ≈ ۱۹.۸ میلیون تومان<br>• <b>بدون ضامن</b> پرداخت می‌شود.</div>
 <div class="mini-calc">
 <h4>🧮 حساب کن</h4>
 <label>مبلغ سپرده:</label><input type="text" id="niloufar-deposit" placeholder="100,000,000">
@@ -266,11 +265,11 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="qbank-box">
 <h4>📲 درخواست از کیوبانک</h4>
 <div class="qbank-steps">
-<div class="qbank-step">کیوبانک را دانلود و نصب کن</div>
+<div class="qbank-step">کیوبانک را از qbank24.ir دانلود کن</div>
 <div class="qbank-step">حساب قرض‌الحسنه افتتاح و احراز هویت شو</div>
 <div class="qbank-step">مبلغ را ۱-۱۲ ماه نگه دار</div>
-<div class="qbank-step">طرح نیلوفر را انتخاب و درخواست بده</div>
-<div class="qbank-step">وام به حسابت واریز می‌شود</div>
+<div class="qbank-step">در بخش تسهیلات، طرح نیلوفر را انتخاب کن</div>
+<div class="qbank-step">درخواست ثبت و منتظر تأیید باش</div>
 </div>
 <a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
 </div>
@@ -282,12 +281,14 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card-title" onclick="toggleCard(this)">طرح نورا</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - بدون کارمزد - کد ۱۸۲</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>هر کسی که می‌خواهد وام بگیرد ولی نمی‌خواهد کارمزد بدهد. قرض‌الحسنه واقعی و بدون سود.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 چقدر وام؟</span>تا سقف <b>۵۰۰ میلیون تومان</b>.</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ چقدر طول می‌کشه؟</span>معدل‌گیری ۱-۱۲ ماه / بازپرداخت ۶-۶۰ ماه / واریز ۳-۷ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span><b>صفر درصد — رایگان</b></div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق سامانه ضمان. با بیمه عمر و رتبه بالا: بدون ضامن.</div>
-<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۶</span>⚠️ نکته:</span>ضریب نورا پایین‌تر از نیلوفر است چون کارمزد ندارد و بانک ریسک بیشتری می‌پذیرد.</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>هر شخص حقیقی که می‌خواهد وام <b>بدون کارمزد</b> بگیرد (قرض‌الحسنه واقعی).</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>حساب پس‌انداز فعال</li><li>بدون چک برگشتی</li><li>رتبه ایرانیان بهتر از Z</li><li>دوره معدل‌گیری ۱ تا ۱۲ ماه</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ وام</span>سقف ۵۰۰ میلیون تومان. <b>ضریب پایین‌تر از نیلوفر است</b> چون کارمزد ندارد و بانک ریسک بیشتری می‌پذیرد.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span><b>صفر درصد</b> — کاملاً رایگان. مدت بازپرداخت ۶ تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق سامانه ضمان. رتبه A یا B + بیمه عمر = بدون ضامن.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک</span>کارت ملی، شناسنامه، شماره حساب، بیمه عمر (اختیاری).</div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل</span>حساب باز کن → پول بگذار → معدل بگیر → در کیوبانک درخواست بده → واریز.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۸</span>💡 مثال</span>معدل ۱۲ ماهه ۱۰۰ میلیون + بازپرداخت ۱۲ ماهه → وام حدود <b>۹۲ میلیون تومان</b> بدون کارمزد.</div>
 <div class="mini-calc">
 <h4>🧮 حساب کن</h4>
 <label>مبلغ سپرده:</label><input type="text" id="noora-deposit" placeholder="100,000,000">
@@ -295,81 +296,7 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <button class="go-btn" onclick="calcLoan('noora')">محاسبه</button>
 <div class="mini-result" id="noora-result"></div>
 </div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">کیوبانک را دانلود و نصب کن</div>
-<div class="qbank-step">حساب قرض‌الحسنه افتتاح کن</div>
-<div class="qbank-step">طرح نورا را انتخاب کن</div>
-<div class="qbank-step">درخواست بده و منتظر واریز باش</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
 <button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات کامل</button>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح نصر حقیقی</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - دو منبع - کد ۲۴۷ / ۲۵۷</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>اشخاص حقیقی که در یکی از این نهادها پرونده دارند: کمیته امداد، بهزیستی، بنیاد علوی، بنیاد شهید، هلال احمر یا صندوق‌های قرض‌الحسنه.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 چقدر وام؟</span>تا <b>۱۵۰ میلیون تومان</b> — ترکیبی از دو منبع: بانک + بانکداری اجتماعی.</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۳۰ ماه / انتظار: آنی یا ۳۰ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>بانک ۴٪ / بانکداری اجتماعی صفر (رایگان)</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق سامانه ضمان.</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📋 جدول:</span></div>
-<table class="mini">
-<tr><th>انتظار</th><th>بازپرداخت</th><th>سهم بانک</th><th>سهم مشتری</th></tr>
-<tr><td>آنی</td><td>۲۰ ماه</td><td>۲۵ م</td><td>۵۰ م</td></tr>
-<tr><td>آنی</td><td>۲۴ ماه</td><td>۴۵ م</td><td>۱۰۰ م</td></tr>
-<tr><td>۳۰ روز</td><td>۳۰ ماه</td><td>۷۰ م</td><td>۱۵۰ م</td></tr>
-</table>
-<div class="section sec-pink"><b>⚠️ شرط:</b> تأیید سیستمی از طریق API نهاد مربوطه.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">مطمئن شو در نهاد حمایتی پرونده فعال داری</div>
-<div class="qbank-step">در کیوبانک بخش بانکداری اجتماعی را باز کن</div>
-<div class="qbank-step">اطلاعات پرونده را وارد کن</div>
-<div class="qbank-step">منتظر تأیید API نهاد باش (۳-۷ روز)</div>
-<div class="qbank-step">وام به حسابت واریز می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
-<button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات کامل</button>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح ارکیده</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - دو برابر سپرده - کد ۱۳۸ / ۱۶۴</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>اشخاص حقیقی که از طریق یک فروشنده مصالح ساختمانی (مصالح) به بانک معرفی می‌شوند.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 چقدر وام؟</span><b>دو برابر مبلغ سپرده تودیعی مصالح</b> در زمان درخواست.</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۵۰ ماه / انتظار: ۳۰ تا ۱۲۰ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>بانک ۴٪ / بانکداری اجتماعی صفر</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>مصالح باید در پرونده نقش تسهیلات‌گیرنده یا ضامن داشته باشد. وام به شخص معرفی‌شده پرداخت می‌شود.</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📋 جدول:</span></div>
-<table class="mini">
-<tr><th>انتظار</th><th>بازپرداخت</th><th>سپرده</th><th>وام</th></tr>
-<tr><td>۳۰ روز</td><td>۲۰ ماه</td><td>۱۰۰ م</td><td>۲۰۰ م</td></tr>
-<tr><td>۶۰ روز</td><td>۳۰ ماه</td><td>۱۵۰ م</td><td>۳۰۰ م</td></tr>
-<tr><td>۹۰ روز</td><td>۴۰ ماه</td><td>۲۰۰ م</td><td>۴۰۰ م</td></tr>
-<tr><td>۱۲۰ روز</td><td>۵۰ ماه</td><td>۲۵۰ م</td><td>۵۰۰ م</td></tr>
-</table>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">فروشنده مصالح با بانک تفاهم‌نامه امضا می‌کند</div>
-<div class="qbank-step">در کیوبانک طرح ارکیده را انتخاب کن</div>
-<div class="qbank-step">اطلاعات سپرده و شخص معرفی‌شده را وارد کن</div>
-<div class="qbank-step">مدارک ضمانت را بارگذاری کن</div>
-<div class="qbank-step">وام به حساب معرفی‌شده واریز می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
-<button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -377,26 +304,17 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card-title" onclick="toggleCard(this)">طرح شمس</div>
 <div class="card-body">
 <span class="type-badge">پس‌انداز ماهیانه</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>افراد کم‌برخوردار، اقشار آسیب‌پذیر، کسانی که پول یکجا ندارند ولی می‌خواهند با پس‌انداز ماهیانه به وام برسند.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 چقدر وام؟</span>حداقل ۹ تا حداکثر <b>۹۰ میلیون تومان</b>.</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ چقدر طول می‌کشه؟</span>مدت پس‌انداز: ۹ تا ۳۰ ماه / انتظار: ۳ تا ۱۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۴٪ — پرداخت از شعبه دیجیتال</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۵</span>📋 جدول:</span></div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>افراد کم‌برخوردار که نمی‌توانند پول یکجا بگذارند ولی ماهی مبلغی پس‌انداز می‌کنند.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>حداقل پرداخت ماهیانه: ۲ میلیون تومان</li><li>مدت پس‌انداز: ۹ تا ۳۰ ماه</li><li>تعهد به واریز منظم ماهانه</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ وام</span>۹ تا ۹۰ میلیون تومان بر اساس مبلغ و مدت پس‌انداز.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۴٪ — پرداخت از شعبه دیجیتال.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۵</span>📋 جدول وام</span></div>
 <table class="mini">
 <tr><th>پرداخت ماهانه</th><th>۹ ماه</th><th>۱۸ ماه</th><th>۳۰ ماه</th></tr>
 <tr><td>۲ میلیون</td><td>۹ م</td><td>۲۷ م</td><td>۴۵ م</td></tr>
 <tr><td>۳ میلیون</td><td>—</td><td>۳۶ م</td><td>۹۰ م</td></tr>
 </table>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">در کیوبانک طرح شمس را انتخاب کن</div>
-<div class="qbank-step">مبلغ و دوره پس‌انداز را مشخص کن</div>
-<div class="qbank-step">هر ماه مبلغ را واریز کن</div>
-<div class="qbank-step">پس از اتمام دوره وام واریز می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۶</span>⚠️ هشدار</span>اگر یک ماه پرداخت را فراموش کنید، <b>مدت تأخیر به دوره انتظار اضافه می‌شود</b>.</div>
 <button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -404,115 +322,32 @@ table.mini tr:nth-child(even){background:#faf8f3}
 </div>
 </div>
 
-<!-- گروه ۲ -->
-<div class="group" id="g2">
-<div class="group-title" onclick="toggleGroup('g2')">🤝 کارکنان سازمان‌های حمایتی</div>
-<div class="group-desc">کمیته امداد، بهزیستی، بنیاد علوی، صندوق قرض‌الحسنه.</div>
-<div class="plans">
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح رضوان</div>
-<div class="card-body">
-<span class="type-badge">امتیازی - با تفاهم‌نامه - کد ۱۸۱</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>کارکنان سازمان‌های حمایتی که سازمانشان با بانک تفاهم‌نامه دارد.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۶۰ ماه / واریز ۳-۷ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📌 چرا رضوان؟</span>سازمان با بانک قرارداد دارد و اعتبارتان تضمین شده. سقف بالاتر و شرایط ساده‌تر.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">مطمئن شو سازمانت با بانک تفاهم‌نامه دارد</div>
-<div class="qbank-step">در کیوبانک طرح رضوان را انتخاب کن</div>
-<div class="qbank-step">معرفی‌نامه سازمان را بارگذاری کن</div>
-<div class="qbank-step">پس از تأیید وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
-<button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات کامل</button>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح کرامت</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - پشتوانه مستمری - کد ۲۰۹</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>دریافت‌کنندگان مستمری از کمیته امداد، بهزیستی، بنیاد علوی.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان — بر اساس امتیاز واریز مستمری ماهیانه</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۳۶ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه با سازمان حمایتی</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">در کیوبانک طرح کرامت را انتخاب کن</div>
-<div class="qbank-step">اطلاعات مستمری خود را وارد کن</div>
-<div class="qbank-step">منتظر تأیید و پرداخت وام باش</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
-<button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات کامل</button>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- گروه ۳ -->
-<div class="group" id="g3">
-<div class="group-title" onclick="toggleGroup('g3')">💚 اقشار حمایتی و آسیب‌پذیر</div>
-<div class="group-desc">بانوان سرپرست، مددجو، معلول، عشایر، جانباز.</div>
-<div class="plans">
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح نجم</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - بانکداری اجتماعی - کد ۱۸۳</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان — ضریب ۱۱۵٪ (۱۵٪ بیشتر)</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق سامانه ضمان + تأیید API نهاد</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>⭐ مزیت:</span>ضریب امتیازی بالاتر از معمول</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">در کیوبانک بخش بانکداری اجتماعی را باز کن</div>
-<div class="qbank-step">طرح نجم را انتخاب کن</div>
-<div class="qbank-step">اطلاعات خود را وارد کن</div>
-<div class="qbank-step">منتظر تأیید API نهاد باش</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
-<button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات کامل</button>
-</div>
-</div>
-</div>
-</div>
-
-<!-- گروه ۴ اصناف -->
+<!-- گروه ۲ اصناف - کامل -->
 <div class="group" id="g4">
 <div class="group-title" onclick="toggleGroup('g4')">🏪 اصناف و کسبه</div>
-<div class="group-desc">صاحب مغازه، کارگاه، دفتر، دارای جواز کسب.</div>
+<div class="group-desc">صاحب مغازه، کارگاه، جواز کسب، اتحادیه.</div>
 <div class="plans">
 
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح نارون</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - ویژه اصناف - کد ۱۰۶ / ۸۰۶</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>صاحبان مغازه با جواز کسب، اعضای اتحادیه، پروانه کسب، صاحبان کارگاه کوچک.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>حقیقی ۱ میلیارد / حقوقی ۱.۵ میلیارد تومان</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>۶ تا ۶۰ ماه / معدل‌گیری ۱-۱۲ ماه / واریز ۳-۷ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>صفر٪ - ۲٪ - ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق سامانه ضمان</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>⭐ چرا نارون؟</span>مخصوص اصناف. معدل‌محور. بدون سپرده تودیعی حجیم.</div>
-<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📌 تفاوت با سرو:</span>نارون معدل‌محور، سرو سپرده‌محور بر اساس عقد صلح.</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 این طرح برای کیه؟</span>اگر یکی از این‌ها هستی:<ul class="bullet"><li>صاحب <b>جواز کسب معتبر</b></li><li>عضو <b>اتحادیه صنفی</b></li><li>دارای <b>پروانه کسب</b> از اتاق اصناف</li><li>صاحب کارگاه کوچک تولیدی یا خدماتی</li></ul></div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط دقیق دریافت ۱ میلیارد</span>برای گرفتن سقف ۱ میلیارد تومان:<ul class="bullet"><li>جواز کسب معتبر (حداقل ۱ سال سابقه)</li><li>گردش حساب فعال (حداقل ۱ تراکنش در ماه)</li><li>معدل حساب بالا (حداقل ۵۰۰ میلیون برای ضریب ۲)</li><li>رتبه اعتبارسنجی ایرانیان A یا B</li><li>نداشتن چک برگشتی</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 نحوه محاسبه وام ۱ میلیارد</span><b>فرمول:</b> مبلغ وام = معدل حساب × ضریب<br><br>برای وام ۱ میلیارد تومان با ضریب ۲.۲۹۶ (۱۲ ماه معدل، ۱۲ ماه بازپرداخت):<br>• باید معدل حساب = ۱،۰۰۰ ÷ ۲.۲۹۶ ≈ <b>۴۳۵ میلیون تومان</b><br>• یعنی باید ۱۲ ماه ۴۳۵ میلیون در حساب داشته باشید<br><br><b>راه سریع‌تر:</b> با معدل‌گیری ۳۶ ماهه و بازپرداخت ۶۰ ماهه، ضریب پایین‌تر → نیاز به سپرده بیشتر. بهترین حالت: ۱۲ ماه معدل + ۱۲ ماه بازپرداخت.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد و بازپرداخت</span><ul class="bullet"><li>کارمزد: صفر٪ یا ۲٪ یا ۴٪</li><li>مدت بازپرداخت: ۶ تا ۶۰ ماه</li><li>دوره معدل‌گیری: ۱ تا ۱۲ ماه</li></ul></div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق سامانه ضمان. برای ۱ میلیارد: بیمه عمر + رتبه A = بدون ضامن. رتبه پایین‌تر: ۱ ضامن + چک یا سفته.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک لازم</span><ul class="bullet"><li>کارت ملی + شناسنامه</li><li><b>جواز کسب یا پروانه صنفی</b> (حتماً معتبر)</li><li>اظهارنامه مالیاتی سال آخر</li><li>گردش حساب ۶ ماهه</li><li>شماره حساب قرض‌الحسنه</li></ul></div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل درخواست</span>۱. جواز کسب را آماده کن → ۲. حساب قرض‌الحسنه فعال داشته باش → ۳. مدارک مالی را در کیوبانک بارگذاری کن → ۴. معدل حساب را در بخش اصناف وارد کن → ۵. درخواست وام را ثبت کن → ۶. منتظر تأیید (۳-۷ روز) → ۷. وام به حسابت واریز می‌شود.</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۸</span>⚠️ هشدارها</span><ul class="bullet"><li>اگر جواز کسب اعتبار نداشته باشد، رد می‌شوید.</li><li>اگر مالیات معوق داشته باشید، ممکن است مشکل پیش بیاید.</li><li>وام ۱ میلیارد نیاز به معدل بالا دارد — با ۱۰۰ میلیون سپرده فقط ۲۲۹ میلیون می‌گیرید.</li></ul></div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۹</span>💡 مثال کامل</span>رضا صاحب مغازه لوازم خانگی با جواز ۲ ساله. ۱۲ ماه ۵۰۰ میلیون تومان در حساب داشته:<br>• معدل = ۵۰۰ میلیون<br>• ضریب (۱۲ ماه، ۱۲ ماه بازپرداخت، کارمزد ۴٪) = ۲.۲۹۶<br>• وام = ۵۰۰ × ۲.۲۹۶ = <b>۱.۱۴۸ میلیارد تومان</b><br>• سقف ۱ میلیارد → وام ۱ میلیارد پرداخت می‌شود.<br>• قسط ماهانه ≈ ۸۶ میلیون تومان.</div>
 <div class="qbank-box">
 <h4>📲 درخواست از کیوبانک</h4>
 <div class="qbank-steps">
-<div class="qbank-step">در کیوبانک بخش اصناف را باز کن</div>
-<div class="qbank-step">اطلاعات جواز کسب را وارد کن</div>
-<div class="qbank-step">مدارک مالی را بارگذاری کن</div>
+<div class="qbank-step">کیوبانک را دانلود و نصب کن</div>
+<div class="qbank-step">در بخش اصناف ثبت‌نام کن</div>
+<div class="qbank-step">اطلاعات جواز کسب و اظهارنامه مالیاتی را وارد کن</div>
+<div class="qbank-step">گردش حساب ۶ ماهه را بارگذاری کن</div>
 <div class="qbank-step">معدل حساب را مشخص کن</div>
 <div class="qbank-step">درخواست وام را ثبت کن</div>
 </div>
@@ -525,31 +360,21 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح سرو بدون تفاهم‌نامه</div>
 <div class="card-body">
-<span class="type-badge">حمایتی - ساده</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>دارندگان جواز کسب معتبر که بدون درگیر شدن با تفاهم‌نامه سازمانی وام می‌خواهند.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۱.۵ میلیارد تومان بسته به سپرده</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>۷ تا ۲۴ ماه / انتظار ۲۰-۶۰ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۳٪ یا ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>مصالح باید در پرونده نقش تسهیلات‌گیرنده یا ضامن داشته باشد</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📋 جدول حمایت ۱۰۰٪:</span></div>
+<span class="type-badge">حمایتی - کد ندارد</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>دارندگان جواز کسب معتبر که <b>نمی‌خواهند با تفاهم‌نامه سازمانی درگیر شوند</b>.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>جواز کسب یا پروانه صنفی معتبر</li><li>سپرده‌گذاری مبلغ مشخص در قالب <b>عقد صلح</b></li><li>دوره انتظار: ۲۰ تا ۶۰ روز</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ وام</span>تا ۱.۵ میلیارد تومان — بسته به مبلغ سپرده و مدت انتظار.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۴</span>📋 جدول حمایت ۱۰۰٪ بانک:</span></div>
 <table class="mini">
-<tr><th>سقف وام</th><th>۶۰۰</th><th>۸۰۰</th><th>۱۰۰۰</th><th>۱۵۰۰</th></tr>
-<tr><td>شرایط</td><td>۳۰۰</td><td>۴۰۰</td><td>۵۰۰</td><td>۷۵۰</td></tr>
-<tr><td>بازپرداخت</td><td>۷ ماه</td><td>۹ ماه</td><td>۱۲ ماه</td><td>۲۴ ماه</td></tr>
-<tr><td>انتظار</td><td>۲۰ روز</td><td>۳۰ روز</td><td>۳۰ روز</td><td>۶۰ روز</td></tr>
+<tr><th>سقف وام (میلیون)</th><th>۶۰۰</th><th>۸۰۰</th><th>۱۰۰۰</th><th>۱۲۰۰</th><th>۱۵۰۰</th></tr>
+<tr><td>شرایط ویژه</td><td>۳۰۰</td><td>۴۰۰</td><td>۵۰۰</td><td>۶۰۰</td><td>۷۵۰</td></tr>
+<tr><td>بازپرداخت</td><td>۷ ماه</td><td>۹ ماه</td><td>۱۲ ماه</td><td>۱۶ ماه</td><td>۲۴ ماه</td></tr>
+<tr><td>انتظار</td><td>۲۰ روز</td><td>۳۰ روز</td><td>۳۰ روز</td><td>۵۰ روز</td><td>۶۰ روز</td></tr>
 </table>
-<div class="section sec-pink"><b>📌 تفاهم‌نامه چیه؟</b>قرارداد بین اتحادیه یا سازمان با بانک. اگر نداری این طرح را انتخاب کن.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">در کیوبانک بخش اصناف را باز کن</div>
-<div class="qbank-step">طرح سرو (بدون تفاهم‌نامه) را انتخاب کن</div>
-<div class="qbank-step">مبلغ سپرده و انتظار را مشخص کن</div>
-<div class="qbank-step">مدارک جواز کسب و ضمانت را بارگذاری کن</div>
-<div class="qbank-step">وام واریز می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>مصالح (تودیع‌کننده سپرده) باید نقش تسهیلات‌گیرنده یا ضامن داشته باشد.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک</span>کارت ملی، جواز کسب، شماره حساب، چک یا قرارداد ضمانت.</div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل</span>حساب باز کن → سپرده بگذار → در کیوبانک طرح سرو را انتخاب کن → مدارک را بارگذاری کن → پس از دوره انتظار وام واریز می‌شود.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۸</span>💡 مثال</span>اگر ۵۰۰ میلیون سپرده بگذارید و ۳۰ روز صبر کنید، وام ۱ میلیارد تومان با بازپرداخت ۱۲ ماهه می‌گیرید.</div>
 <button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -557,23 +382,13 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح سرو تفاهم‌نامه‌ای</div>
 <div class="card-body">
-<span class="type-badge">حمایتی - با تفاهم‌نامه - کد ۲۴۳ / ۲۵۹</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>عضو اتحادیه صنفی با تفاهم‌نامه، صاحب صرافی، مدیر واحد تولیدی.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>استان درجه ۲ = ۸۰۰ میلیارد ریال / درجه ۱ = ۱۰۰۰ میلیارد ریال</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>۱۲ یا ۲۴ ماه / انتظار ۲۰-۴۰ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۴٪ — حمایت ۱۰۰٪ آورده</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه با اتحادیه</div>
-<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۶</span>📌 تفاوت با سرو بدون تفاهم:</span>اتحادیه با بانک قرارداد دارد. اعتبار جمعی. سقف بالاتر.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">مطمئن شو اتحادیه‌ات تفاهم‌نامه دارد</div>
-<div class="qbank-step">در کیوبانک طرح سرو تفاهم‌نامه‌ای را انتخاب کن</div>
-<div class="qbank-step">شماره تفاهم‌نامه و معرفی‌نامه را وارد کن</div>
-<div class="qbank-step">وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<span class="type-badge">حمایتی - کد ۲۴۳ / ۲۵۹</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>اعضای <b>اتحادیه صنفی</b> که اتحادیه‌شان با بانک تفاهم‌نامه دارد.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>عضویت فعال در اتحادیه</li><li>اتحادیه تفاهم‌نامه با بانک داشته باشد</li><li>معرفی‌نامه از اتحادیه</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 سقف</span>درجه ۲: ۸۰۰ میلیارد ریال / درجه ۱: ۱۰۰۰ میلیارد ریال.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۴٪ — مدت ۱۲ یا ۲۴ ماه.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۵</span>📄 مدارک</span>کارت ملی، معرفی‌نامه اتحادیه، شماره تفاهم‌نامه.</div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۶</span>📌 تفاوت با سرو بدون تفاهم</span>اتحادیه با بانک قرارداد دارد. سقف بالاتر و شرایط ساده‌تر.</div>
 <button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -582,24 +397,115 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card-title" onclick="toggleCard(this)">طرح توسکا</div>
 <div class="card-body">
 <span class="type-badge">حقوق محور - کد ۲۳۳</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>کارفرمایانی که حقوق کارکنان را از بانک مهر ایران واریز می‌کنند. شرط اصلی: داشتن دستگاه پوز فعال.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۱ میلیارد تومان</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۶۰ ماه / واریز ۳-۷ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه با کارفرما. کارفرما تعهد کسر از حقوق کارکنان را می‌پذیرد.</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>⭐ چرا توسکا؟</span>هم خودت و هم کارکنانت استفاده می‌کنید.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">مطمئن شو پوز فعال داری</div>
-<div class="qbank-step">حقوق کارکنان را از بانک واریز کن</div>
-<div class="qbank-step">در کیوبانک طرح توسکا را انتخاب کن</div>
-<div class="qbank-step">اطلاعات پوز و لیست حقوق را وارد کن</div>
-<div class="qbank-step">تعهد کسر از حقوق را امضا کن</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>کارفرمایانی که حقوق کارکنان را از بانک مهر ایران واریز می‌کنند.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li><b>دستگاه پوز فعال</b> در بانک مهر ایران (شرط اصلی)</li><li>واریز حقوق کارکنان از این بانک</li><li>حداقل ۶ ماه سابقه واریز</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>تا ۱ میلیارد تومان — بر اساس مجموع حقوق واریزی ماهیانه.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۴٪ — مدت بازپرداخت تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق تفاهم‌نامه با کارفرما. کارفرما تعهد کسر از حقوق را می‌پذیرد.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک</span>کارت ملی، جواز کسب، اطلاعات پوز، لیست حقوق کارکنان.</div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل</span>پوز فعال داشته باش → حقوق را از بانک واریز کن → در کیوبانک طرح توسکا را انتخاب کن → تعهد کسر از حقوق را امضا کن → وام واریز می‌شود.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۸</span>💡 مزیت</span>هم خودت و هم کارکنانت می‌توانید استفاده کنید.</div>
 <button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- گروه ۳ حمایتی -->
+<div class="group" id="g2">
+<div class="group-title" onclick="toggleGroup('g2')">🤝 کارکنان سازمان‌های حمایتی</div>
+<div class="group-desc">کمیته امداد، بهزیستی، بنیاد علوی، صندوق قرض‌الحسنه.</div>
+<div class="plans">
+
+<div class="card">
+<div class="card-title" onclick="toggleCard(this)">طرح رضوان</div>
+<div class="card-body">
+<span class="type-badge">امتیازی - با تفاهم‌نامه - کد ۱۸۱</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>کارکنان سازمان‌های حمایتی: کمیته امداد، بهزیستی، بنیاد علوی، صندوق‌های قرض‌الحسنه.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>کارمند رسمی یا پیمانی سازمان</li><li>سازمان با بانک تفاهم‌نامه داشته باشد</li><li>حداقل ۶ ماه سابقه کار</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۲٪ - ۳٪ - ۴٪ — مدت تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق تفاهم‌نامه سازمان.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک</span>کارت ملی، معرفی‌نامه سازمان، شماره حساب.</div>
+<button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title" onclick="toggleCard(this)">طرح کرامت</div>
+<div class="card-body">
+<span class="type-badge">حمایتی - کد ۲۰۹</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>دریافت‌کنندگان مستمری از کمیته امداد، بهزیستی، بنیاد علوی.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>دریافت مستمری ماهانه فعال</li><li>حداقل ۶ ماه واریز مستمری</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان — بر اساس امتیاز واریز مستمری.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۴٪ — مدت تا ۳۶ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق تفاهم‌نامه با سازمان حمایتی.</div>
+<button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- گروه ۴ اقشار حمایتی -->
+<div class="group" id="g3">
+<div class="group-title" onclick="toggleGroup('g3')">💚 اقشار حمایتی و آسیب‌پذیر</div>
+<div class="group-desc">بانوان سرپرست، مددجو، معلول، عشایر، جانباز.</div>
+<div class="plans">
+
+<div class="card">
+<div class="card-title" onclick="toggleCard(this)">طرح نجم</div>
+<div class="card-body">
+<span class="type-badge">حمایتی - کد ۱۸۳</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>تأیید از نهاد حمایتی مربوطه از طریق API</li><li>پرونده فعال در نهاد</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان — <b>ضریب ۱۱۵٪ (۱۵٪ بیشتر از معمول)</b>.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد</span>۲٪ - ۳٪ - ۴٪ — مدت تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>طبق سامانه ضمان + تأیید API نهاد.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📄 مدارک</span>کارت ملی، معرفی‌نامه نهاد، شماره پرونده.</div>
+<div class="section sec-pink"><span class="sec-title"><span class="sec-num">۷</span>📝 مراحل</span>در کیوبانک بخش بانکداری اجتماعی → طرح نجم → اطلاعات پرونده → منتظر تأیید API → وام.</div>
+<button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title" onclick="toggleCard(this)">طرح نصر حقیقی</div>
+<div class="card-body">
+<span class="type-badge">حمایتی - دو منبع - کد ۲۴۷/۲۵۷</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>اشخاص حقیقی که در یکی از این نهادها پرونده دارند: کمیته امداد، بهزیستی، بنیاد علوی، بنیاد شهید، هلال احمر، صندوق‌های قرض‌الحسنه.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>پرونده فعال در نهاد حمایتی</li><li>تأیید سیستمی API</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>تا ۱۵۰ میلیون تومان — ترکیبی از دو منبع: بانک + بانکداری اجتماعی.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۴</span>📋 جدول</span></div>
+<table class="mini">
+<tr><th>انتظار</th><th>بازپرداخت</th><th>سهم بانک</th><th>سهم مشتری</th></tr>
+<tr><td>آنی</td><td>۲۰ ماه</td><td>۲۵ م</td><td>۵۰ م</td></tr>
+<tr><td>آنی</td><td>۲۴ ماه</td><td>۴۵ م</td><td>۱۰۰ م</td></tr>
+<tr><td>۳۰ روز</td><td>۳۰ ماه</td><td>۷۰ م</td><td>۱۵۰ م</td></tr>
+</table>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۵</span>💵 کارمزد</span>بانک ۴٪ / اجتماعی صفر.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۶</span>🔒 ضمانت</span>طبق سامانه ضمان.</div>
+<button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title" onclick="toggleCard(this)">طرح ارکیده</div>
+<div class="card-body">
+<span class="type-badge">حمایتی - کد ۱۳۸/۱۶۴</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>اشخاص حقیقی که از طریق یک فروشنده مصالح ساختمانی (مصالح) به بانک معرفی می‌شوند.</div>
+<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>✅ شرایط</span><ul class="bullet"><li>معرفی از سوی مصالح دارای قرارداد با بانک</li><li>سپرده تودیعی از طرف مصالح</li><li>دوره انتظار ۳۰ تا ۱۲۰ روز</li></ul></div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>💰 مبلغ</span>دو برابر سپرده تودیعی مصالح.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۴</span>📋 جدول</span></div>
+<table class="mini">
+<tr><th>انتظار</th><th>بازپرداخت</th><th>سپرده</th><th>وام</th></tr>
+<tr><td>۳۰ روز</td><td>۲۰ ماه</td><td>۱۰۰ م</td><td>۲۰۰ م</td></tr>
+<tr><td>۶۰ روز</td><td>۳۰ ماه</td><td>۱۵۰ م</td><td>۳۰۰ م</td></tr>
+<tr><td>۹۰ روز</td><td>۴۰ ماه</td><td>۲۰۰ م</td><td>۴۰۰ م</td></tr>
+<tr><td>۱۲۰ روز</td><td>۵۰ ماه</td><td>۲۵۰ م</td><td>۵۰۰ م</td></tr>
+</table>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت</span>مصالح باید در پرونده نقش تسهیلات‌گیرنده یا ضامن داشته باشد.</div>
+<button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -615,23 +521,11 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح یاقوت</div>
 <div class="card-body">
-<span class="type-badge">امتیازی - سازمانی - کد ۱۸۰ / ۸۵۰</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>کلیه سازمان‌ها، نهادها، ارگان‌ها، شرکت‌ها و اشخاص حقوقی که گردش منابع خود را نزد بانک متمرکز می‌کنند.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>حقیقی: ۵۰۰ میلیون / حقوقی: ۱.۵ میلیارد تومان</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>طبق جداول امتیازی ابلاغی هر سال</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان با بانک</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📌 چرا یاقوت؟</span>سازمان میانگین موجودی نگه می‌دارد و اعتبار برای کارکنان ایجاد می‌شود.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">سازمان با بانک تفاهم‌نامه امضا می‌کند</div>
-<div class="qbank-step">در کیوبانک طرح یاقوت را انتخاب کن</div>
-<div class="qbank-step">اطلاعات تفاهم‌نامه و کارکنان را وارد کن</div>
-<div class="qbank-step">وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<span class="type-badge">امتیازی - سازمانی - کد ۱۸۰/۸۵۰</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>سازمان‌ها، نهادها، ارگان‌ها، شرکت‌ها و اشخاص حقوقی که گردش منابع خود را نزد بانک متمرکز می‌کنند.</div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۲</span>💰 مبلغ</span>حقیقی: ۵۰۰ میلیون / حقوقی: ۱.۵ میلیارد تومان.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۳</span>💵 کارمزد</span>طبق جداول امتیازی — مدت تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۴</span>🔒 ضمانت</span>طبق تفاهم‌نامه سازمان.</div>
 <button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -639,23 +533,12 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح الماس</div>
 <div class="card-body">
-<span class="type-badge">حمایتی - با تفاهم‌نامه - کد ۲۴۲ / ۲۵۸</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>شرکت‌های سهامی و کلیه شرکت‌های مشمول قانون تجارت.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان (یک برابر حمایت بانک)</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>انتظار ۱۰ روز / بازپرداخت تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>بانک ۴٪ / مشتری ۲٪ یا ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه حمایتی شرکت</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>⭐ ویژگی ویژه:</span>از ماه دوم می‌توان از بازگشت اقساط برای تسهیلات مجدد استفاده کرد.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">شرکت با بانک تفاهم‌نامه امضا می‌کند</div>
-<div class="qbank-step">در کیوبانک طرح الماس را انتخاب کن</div>
-<div class="qbank-step">مبلغ آورده و کارکنان را وارد کن</div>
-<div class="qbank-step">وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<span class="type-badge">حمایتی - کد ۲۴۲/۲۵۸</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>شرکت‌های سهامی و مشمول قانون تجارت.</div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۲</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان (یک برابر حمایت بانک).</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۳</span>💵 کارمزد</span>بانک ۴٪ / مشتری ۲٪ یا ۴٪ — انتظار ۱۰ روز — مدت تا ۶۰ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۴</span>🔒 ضمانت</span>طبق تفاهم‌نامه حمایتی شرکت.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۵</span>⭐ ویژگی</span>از ماه دوم می‌توان از بازگشت اقساط برای تسهیلات مجدد استفاده کرد.</div>
 <button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -663,23 +546,12 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح فیروزه</div>
 <div class="card-body">
-<span class="type-badge">محاسبه واریز حقوق - کد ۱۵۱</span>
+<span class="type-badge">واریز حقوق - کد ۱۵۱</span>
 <div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>شرکت‌هایی که حقوق کارکنان را از بانک مهر ایران واریز می‌کنند.</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان = ۵٪ مجموع حقوق ماهیانه</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۳۶ ماه</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه شرکت</div>
-<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۶</span>📐 مثال:</span>اگر مجموع حقوق ماهیانه ۱۰۰ میلیون باشد، وام تا ۵ میلیون برای هر کارمند.</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">پرداخت حقوق را به بانک مهر ایران منتقل کن</div>
-<div class="qbank-step">در کیوبانک طرح فیروزه را انتخاب کن</div>
-<div class="qbank-step">مجموع حقوق واریزی را وارد کن</div>
-<div class="qbank-step">وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۲</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان = ۵٪ مجموع حقوق ماهیانه.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۳</span>💵 کارمزد</span>۴٪ — مدت تا ۳۶ ماه.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۴</span>🔒 ضمانت</span>طبق تفاهم‌نامه شرکت.</div>
+<div class="section sec-purple"><span class="sec-title"><span class="sec-num">۵</span>📐 مثال</span>اگر مجموع حقوق ماهیانه ۱۰۰ میلیون باشد، وام تا ۵ میلیون برای هر کارمند.</div>
 <button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -687,22 +559,11 @@ table.mini tr:nth-child(even){background:#faf8f3}
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح نصر حقوقی</div>
 <div class="card-body">
-<span class="type-badge">حمایتی - سمن - کد ۲۴۷ / ۲۵۷</span>
-<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>سازمان‌های مردم نهاد (سمن‌ها).</div>
-<div class="section sec-green"><span class="sec-title"><span class="sec-num">۲</span>💰 وام:</span>تا ۵۰۰ میلیون تومان — حداکثر ۱۰۰٪ آورده</div>
-<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۳</span>⏱ مدت:</span>تا ۶۰ ماه / انتظار ۱۰ روز</div>
-<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۴</span>💵 کارمزد:</span>بانک ۴٪ / اجتماعی ۲٪ و ۴٪</div>
-<div class="section sec-red"><span class="sec-title"><span class="sec-num">۵</span>🔒 ضمانت:</span>طبق تفاهم‌نامه سمن با بانک</div>
-<div class="qbank-box">
-<h4>📲 درخواست از کیوبانک</h4>
-<div class="qbank-steps">
-<div class="qbank-step">سمن با بانک تفاهم‌نامه امضا می‌کند</div>
-<div class="qbank-step">در کیوبانک طرح نصر حقوقی را انتخاب کن</div>
-<div class="qbank-step">لیست اعضا و مدارک را بارگذاری کن</div>
-<div class="qbank-step">وام پرداخت می‌شود</div>
-</div>
-<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
-</div>
+<span class="type-badge">حمایتی - سمن - کد ۲۴۷/۲۵۷</span>
+<div class="section sec-blue"><span class="sec-title"><span class="sec-num">۱</span>🎯 برای کیه؟</span>سازمان‌های مردم نهاد (سمن‌ها) که می‌خواهند به اعضای خود وام بدهند.</div>
+<div class="section sec-yellow"><span class="sec-title"><span class="sec-num">۲</span>💰 مبلغ</span>تا ۵۰۰ میلیون تومان — حداکثر ۱۰۰٪ آورده.</div>
+<div class="section sec-orange"><span class="sec-title"><span class="sec-num">۳</span>💵 کارمزد</span>بانک ۴٪ / اجتماعی ۲٪ و ۴٪.</div>
+<div class="section sec-red"><span class="sec-title"><span class="sec-num">۴</span>🔒 ضمانت</span>طبق تفاهم‌نامه سمن با بانک.</div>
 <button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
@@ -815,25 +676,25 @@ function stopAll(){isPlaying=false;try{window.speechSynthesis.cancel();}catch(e)
 function clearAct(){var b=document.querySelectorAll('.speak-btn');for(var i=0;i<b.length;i++)b[i].classList.remove('active');}
 
 var planTexts={
-niloufar:'طرح نیلوفر. کد یکصد و یک. برای کلیه اشخاص حقیقی. سقف پانصد میلیون تومان. کارمزد دو تا چهار درصد. مدت بازپرداخت شش تا شصت ماه. تبصره ویژه: اگر معدل تا صد میلیون تومان و رتبه ایرانیان A یا B باشد بدون ضامن.',
-noora:'طرح نورا. کد یکصد و هشتاد و دو. بدون کارمزد. سقف پانصد میلیون تومان. کارمزد صفر. ضریب پایین تر چون کارمزد ندارد.',
-nasr:'طرح نصر حقیقی. برای اشخاص با پرونده حمایتی. سقف صد و پنجاه میلیون تومان.',
-orkideh:'طرح ارکیده. دو برابر سپرده مصالح. تا پانصد میلیون تومان.',
-shams:'طرح شمس. پس انداز ماهیانه. نه تا نود میلیون تومان.',
-rezvan:'طرح رضوان. کارکنان سازمان های حمایتی. سقف پانصد میلیون تومان.',
-karamat:'طرح کرامت. دریافت کنندگان مستمری. سقف پانصد میلیون تومان.',
-najm:'طرح نجم. اقشار آسیب پذیر. ضریب صد و پانزده درصد. سقف پانصد میلیون تومان.',
-naron:'طرح نارون. ویژه اصناف. وام حقیقی یک میلیارد و حقوقی یک و نیم میلیارد تومان.',
-sarv1:'طرح سرو بدون تفاهم نامه. دارندگان جواز کسب. تا یک و نیم میلیارد تومان.',
-sarv2:'طرح سرو تفاهم نامه ای. اتحادیه ها و صرافی ها.',
-tooska:'طرح توسکا. کارفرمایان با پوز فعال. تا یک میلیارد تومان.',
-yaghout:'طرح یاقوت. سازمان ها. حقیقی پانصد میلیون و حقوقی یک و نیم میلیارد.',
-almas:'طرح الماس. شرکت های سهامی. سقف پانصد میلیون تومان.',
-firoozeh:'طرح فیروزه. پنج درصد حقوق ماهیانه. تا پانصد میلیون تومان.',
-nasr2:'طرح نصر حقوقی. سازمان های مردم نهاد. سقف پانصد میلیون تومان.'
+niloufar:'طرح نیلوفر. کد یکصد و یک. برای هر شخص حقیقی بالای هجده سال که حساب قرض الحسنه پس انداز در بانک مهر ایران دارد. سقف وام پانصد میلیون تومان. مبلغ دقیق بر اساس معدل حساب یعنی میانگین پولی که در حساب مانده. مثال: اگر صد میلیون تومان را دوازده ماه نگه دارید و کارمزد چهار درصد انتخاب کنید وام دویست و بیست و نه میلیون می گیرید. کارمزد دو یا سه یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. دوره معدل گیری یک تا دوازده ماه. مدارک: کارت ملی شناسنامه شماره حساب و در صورت نیاز ضامن. تبصره ویژه: اگر معدل تا صد میلیون و رتبه ایرانیان A یا B باشد وام فوری بدون ضامن.',
+noora:'طرح نورا. کد یکصد و هشتاد و دو. وام بدون کارمزد برای هر شخص حقیقی. سقف پانصد میلیون تومان. کارمزد صفر درصد. مثال: معدل صد میلیون برای دوازده ماه وام نود و دو میلیون بدون سود. مدت بازپرداخت شش تا شصت ماه. ضریب پایین تر چون کارمزد ندارد.',
+naron:'طرح نارون. کد یکصد و شش و هشتصد و شش. ویژه اصناف. اگر صاحب مغازه با جواز کسب یا عضو اتحادیه هستید. برای وام یک میلیارد تومان باید معدل حساب حدود چهارصد و سی و پنج میلیون تومان باشد و دوازده ماه پول را نگه دارید. سقف وام حقیقی یک میلیارد و حقوقی یک و نیم میلیارد تومان. کارمزد صفر یا دو یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. مدارک: کارت ملی جواز کسب اظهارنامه مالیاتی گردش حساب شش ماهه. مراحل: جواز کسب را آماده کن بعد در کیوبانک بخش اصناف ثبت نام کن و مدارک را بارگذاری کن. تفاوت با سرو این است که نارون معدل محور است و سرو سپرده محور.',
+sarv1:'طرح سرو بدون تفاهم نامه. برای دارندگان جواز کسب معتبر که نمی خواهند با تفاهم نامه سازمانی درگیر شوند. سپرده گذاری در قالب عقد صلح. تا یک و نیم میلیارد تومان. مدت بازپرداخت هفت تا بیست و چهار ماه. کارمزد سه یا چهار درصد. جدول: پنجصد میلیون سپرده و سی روز انتظار می دهد یک میلیارد تومان وام. ضمان: مصالح باید نقش تسهیلات گیرنده یا ضامن داشته باشد.',
+sarv2:'طرح سرو تفاهم نامه ای. برای اعضای اتحادیه صنفی که اتحادیه شان با بانک تفاهم نامه دارد. درجه دو هشتصد میلیارد ریال و درجه یک هزار میلیارد ریال. کارمزد چهار درصد. مدت دوازده یا بیست و چهار ماه. سقف بالاتر و شرایط ساده تر از سرو بدون تفاهم نامه.',
+tooska:'طرح توسکا. کد دویست و سی و سه. کارفرمایانی که حقوق کارکنان را از بانک مهر ایران واریز می کنند و پوز فعال دارند. سقف یک میلیارد تومان. کارمزد چهار درصد. مدت تا شصت ماه. مدارک کارت ملی جواز کسب اطلاعات پوز لیست حقوق. مراحل: پوز فعال داشته باش حقوق را از بانک واریز کن در کیوبانک طرح توسکا را انتخاب کن تعهد کسر از حقوق را امضا کن.',
+rezvan:'طرح رضوان. کد یکصد و هشتاد و یک. کارکنان سازمان های حمایتی که سازمانشان با بانک تفاهم نامه دارد. سقف پانصد میلیون تومان. کارمزد دو تا چهار درصد. مدارک: کارت ملی و معرفی نامه سازمان.',
+karamat:'طرح کرامت. کد دویست و نه. دریافت کنندگان مستمری از کمیته امداد بهزیستی بنیاد علوی. تا پانصد میلیون تومان بر اساس امتیاز واریز مستمری. کارمزد چهار درصد. مدت تا سی و شش ماه.',
+najm:'طرح نجم. کد یکصد و هشتاد و سه. ویژه بانوان سرپرست خانوار مددجویان معلولان عشایر جانبازان مشاغل روستایی. ضریب صد و پانزده درصد یعنی پانزده درصد بیشتر از معمول. سقف پانصد میلیون تومان. کارمزد دو تا چهار درصد. شرط تایید از طریق API نهاد حمایتی.',
+nasr:'طرح نصر حقیقی. برای اشخاص حقیقی با پرونده در نهاد حمایتی. سقف صد و پنجاه میلیون تومان ترکیبی از دو منبع. جدول: آنی با بیست ماه سهم بانک بیست و پنج میلیون و سهم مشتری پنجاه میلیون. سی روز با سی ماه سهم بانک هفتاد و سهم مشتری صد و پنجاه میلیون.',
+orkideh:'طرح ارکیده. برای اشخاص حقیقی که از طریق مصالح یعنی فروشنده مصالح ساختمانی معرفی می شوند. مبلغ دو برابر سپرده تودیعی مصالح. جدول: سی روز انتظار با صد میلیون سپرده وام دویست میلیون. صد و بیست روز با دویست و پنجاه میلیون سپرده وام پانصد میلیون. ضمان مصالح ضامن است.',
+shams:'طرح شمس. پس انداز ماهیانه. برای افراد کم برخوردار. حداقل پرداخت دو میلیون در ماه. مدت نه تا سی ماه. جدول: دو میلیون در نه ماه وام نه میلیون. دو میلیون در سی ماه وام چهل و پنج میلیون. سه میلیون در سی ماه وام نود میلیون تومان.',
+yaghout:'طرح یاقوت. برای سازمان ها و شرکت ها. وام حقیقی پانصد میلیون و حقوقی یک و نیم میلیارد تومان. کارمزد طبق جداول امتیازی. مدت تا شصت ماه.',
+almas:'طرح الماس. برای شرکت های سهامی. سقف پانصد میلیون تومان. کارمزد بانک چهار و مشتری دو یا چهار درصد. انتظار ده روز. مدت تا شصت ماه. ویژگی: از ماه دوم می توان از بازگشت اقساط برای تسهیلات مجدد استفاده کرد.',
+firoozeh:'طرح فیروزه. شرکت هایی که حقوق کارکنان را از بانک واریز می کنند. سقف پانصد میلیون تومان معادل پنج درصد مجموع حقوق ماهیانه. کارمزد چهار درصد. مدت تا سی و شش ماه.',
+nasr2:'طرح نصر حقوقی. سازمان های مردم نهاد. سقف پانصد میلیون تومان. کارمزد بانک چهار و اجتماعی دو یا چهار درصد. مدت تا شصت ماه.'
 };
 
-function readWelcome(){unlockAudio();speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. روی عنوان هر گروه بزن و طرح ها را ببین. با آینه حالت خودت را انتخاب کن. با بازی هم طرح مناسب خودت را کشف کن.')}
+function readWelcome(){unlockAudio();speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. این سامانه شرح کامل هر طرح را با شرایط دریافت مدارک لازم مراحل درخواست و مثال عددی نشان می دهد. روی عنوان هر گروه بزن و طرح ها را ببین.')}
 function readPlan(key,btn){if(!planTexts[key])return;unlockAudio();clearAct();if(btn)btn.classList.add('active');speak(planTexts[key]);}
 function readMirrorGreeting(){speak('سلام. من آینه هوشمند مهر هستم. حالت خودت را انتخاب کن تا بهترین طرح را پیشنهاد بدم.')}
 
@@ -841,10 +702,10 @@ function readMirrorGreeting(){speak('سلام. من آینه هوشمند مهر
 var mirrorStream=null,mirrorInterval=null,faceCount=0,currentMood=null,visitCount=0,points=0;
 try{var today=new Date().toDateString();var lastVisit=localStorage.getItem('mirror_lastvisit');visitCount=parseInt(localStorage.getItem('mirror_visits')||'0');points=parseInt(localStorage.getItem('mirror_points')||'0');if(lastVisit!==today){visitCount++;points+=10;localStorage.setItem('mirror_lastvisit',today);localStorage.setItem('mirror_visits',visitCount);localStorage.setItem('mirror_points',points);}}catch(e){}
 function openMirror(){unlockAudio();var m=document.getElementById('mirrorModal');m.classList.add('show');try{document.getElementById('statVisit').textContent=visitCount.toLocaleString('fa-IR');document.getElementById('statPoints').textContent=points.toLocaleString('fa-IR');}catch(e){}startCamera();}
-function startCamera(){var v=document.getElementById('mirrorVideo');if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){showMirrorError('مرورگر شما از دوربین پشتیبانی نمی‌کند.');return;}navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false}).then(function(s){mirrorStream=s;v.srcObject=s;v.play().catch(function(){});startFaceDetection(v);setTimeout(function(){speak('سلام. حالت خودت را انتخاب کن.');},800);}).catch(function(err){var msg='دسترسی به دوربین ممکن نشد.';if(err.name==='NotAllowedError')msg+=' اجازه دوربین را فعال کن.';else if(err.name==='NotFoundError')msg+=' دستگاه دوربین ندارد.';showMirrorError(msg);});}
+function startCamera(){var v=document.getElementById('mirrorVideo');if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){showMirrorError('مرورگر شما از دوربین پشتیبانی نمی‌کند.');return;}navigator.mediaDevices.getUserMedia({video:{facingMode:'user'},audio:false}).then(function(s){mirrorStream=s;v.srcObject=s;v.play().catch(function(){});startFaceDetection(v);setTimeout(function(){speak('سلام. حالت خودت را انتخاب کن.');},800);}).catch(function(err){var msg='دسترسی به دوربین ممکن نشد.';if(err.name==='NotAllowedError')msg+=' اجازه دوربین را فعال کن.';showMirrorError(msg);});}
 function startFaceDetection(v){if('FaceDetector' in window){try{var d=new FaceDetector({fastMode:true,maxDetectedFaces:1});mirrorInterval=setInterval(function(){d.detect(v).then(function(f){faceCount=f.length;updateFaceBadge();}).catch(function(){});},1200);return;}catch(e){}}var c=document.createElement('canvas');c.width=40;c.height=30;var ctx=c.getContext('2d');mirrorInterval=setInterval(function(){try{if(!v.videoWidth)return;ctx.drawImage(v,0,0,40,30);var data=ctx.getImageData(0,0,40,30).data;var sum=0;for(var i=0;i<data.length;i+=4)sum+=(data[i]+data[i+1]+data[i+2])/3;var avg=sum/1200;faceCount=(avg>40&&avg<220)?1:0;updateFaceBadge();}catch(e){}},1000);}
 function updateFaceBadge(){var e=document.getElementById('faceBadge');if(!e)return;if(faceCount>0){e.textContent='✅ چهره تشخیص داده شد';e.className='face-badge face-ok';}else{e.textContent='🔍 منتظر چهره...';e.className='face-badge face-wait';}}
-function setMood(mood){currentMood=mood;var btns=document.querySelectorAll('.mood-btn');for(var i=0;i<btns.length;i++)btns[i].classList.toggle('active',btns[i].dataset.mood===mood);var msg='',plan='',planName='',vt='';if(mood==='happy'){msg='😊 خوشحالی؟ عالی!';plan='طرح نیلوفر با ضریب بالا. کارمزد ۴٪ بیشترین وام رو میده.';planName='نیلوفر';vt='بهترین طرح برای تو نیلوفر است.';}else if(mood==='calm'){msg='😐 آرامی؟ وقت بررسی دقیق.';plan='نیلوفر یا نورا. وام بیشتر نیلوفر، بدون سود نورا.';planName='نیلوفر/نورا';vt='بین نیلوفر و نورا یکی رو انتخاب کن.';}else if(mood==='worried'){msg='😟 نگران نباش.';plan='طرح شمس. با پس انداز ماهیانه کوچیک به وام می رسی.';planName='شمس';vt='طرح شمس رو پیشنهاد می دم.';}var pv=document.getElementById('moodPreview');pv.innerHTML='<div class="mood-msg">'+msg+'</div><div class="mood-plan">'+plan+'</div>';pv.classList.add('show');try{document.getElementById('statPlan').textContent=planName;}catch(e){}var o=document.getElementById('loanOverlay');if(o){var a='—';if(planName==='نیلوفر'||planName==='نیلوفر/نورا')a='تا ۵۰۰ میلیون';else if(planName==='شمس')a='تا ۹۰ میلیون';o.innerHTML='💡 وام تقریبی: <b>'+a+'</b>';}speak(vt);}
+function setMood(mood){currentMood=mood;var btns=document.querySelectorAll('.mood-btn');for(var i=0;i<btns.length;i++)btns[i].classList.toggle('active',btns[i].dataset.mood===mood);var msg='',plan='',planName='',vt='';if(mood==='happy'){msg='😊 خوشحالی؟ عالی!';plan='طرح نیلوفر با ضریب بالا. کارمزد ۴٪ بیشترین وام.';planName='نیلوفر';vt='بهترین طرح برای تو نیلوفر است.';}else if(mood==='calm'){msg='😐 آرامی؟ وقت بررسی دقیق.';plan='نیلوفر یا نورا. وام بیشتر نیلوفر، بدون سود نورا.';planName='نیلوفر/نورا';vt='بین نیلوفر و نورا یکی رو انتخاب کن.';}else if(mood==='worried'){msg='😟 نگران نباش.';plan='طرح شمس. با پس انداز ماهیانه کوچیک به وام می رسی.';planName='شمس';vt='طرح شمس رو پیشنهاد می دم.';}var pv=document.getElementById('moodPreview');pv.innerHTML='<div class="mood-msg">'+msg+'</div><div class="mood-plan">'+plan+'</div>';pv.classList.add('show');try{document.getElementById('statPlan').textContent=planName;}catch(e){}var o=document.getElementById('loanOverlay');if(o){var a='—';if(planName==='نیلوفر'||planName==='نیلوفر/نورا')a='تا ۵۰۰ میلیون';else if(planName==='شمس')a='تا ۹۰ میلیون';o.innerHTML='💡 وام تقریبی: <b>'+a+'</b>';}speak(vt);}
 function captureSelfie(){var v=document.getElementById('mirrorVideo');if(!v||!v.videoWidth){alert('دوربین روشن نیست');return;}var c=document.createElement('canvas');c.width=v.videoWidth;c.height=v.videoHeight;var ctx=c.getContext('2d');ctx.translate(c.width,0);ctx.scale(-1,1);ctx.drawImage(v,0,0);c.toBlob(function(b){var u=URL.createObjectURL(b);var a=document.createElement('a');a.href=u;a.download='mehr-selfie-'+Date.now()+'.png';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u);},1000);speak('عکس ذخیره شد.');},'image/png');}
 function closeMirror(){var m=document.getElementById('mirrorModal');m.classList.remove('show');if(mirrorInterval){clearInterval(mirrorInterval);mirrorInterval=null;}if(mirrorStream){mirrorStream.getTracks().forEach(function(t){t.stop();});mirrorStream=null;}var v=document.getElementById('mirrorVideo');if(v)v.srcObject=null;var pv=document.getElementById('moodPreview');if(pv)pv.classList.remove('show');stopAll();}
 function showMirrorError(msg){var e=document.getElementById('mirrorBody');if(e)e.innerHTML='<div class="mirror-error">⚠️ '+msg+'</div>';}
@@ -857,27 +718,25 @@ var quizQuestions=[
 {q:'شغل شما چیست؟',opts:['کارمند دولت یا خصوصی','صاحب کسب و کار / اصناف','کارمند سازمان حمایتی','اقشار حمایتی','بازنشسته']},
 {q:'چقدر می‌توانید سپرده بگذارید؟',opts:['کمتر از ۵۰ میلیون','۵۰ تا ۲۰۰ میلیون','۲۰۰ تا ۵۰۰ میلیون','بیشتر از ۵۰۰ میلیون']},
 {q:'چند ماه می‌توانید صبر کنید؟',opts:['۱ تا ۳ ماه','۳ تا ۶ ماه','۶ تا ۱۲ ماه','بیشتر از ۱۲ ماه']},
-{q:'هدف وام چیست؟',opts:['خرید کالا','درمان','ازدواج یا فرزندآوری','کسب و کار','مسکن']},
+{q:'هدف وام چیست؟',opts:['خرید کالا','درمان','ازدواج','کسب و کار','مسکن']},
 {q:'کدام مهم‌تر است؟',opts:['کارمزد کمتر','وام بیشتر','سرعت پرداخت','هر دو']},
 {q:'ضمانت شما؟',opts:['بیمه عمر می‌پذیرم','یک ضامن دارم','دو ضامن دارم','فقط خودم']}
 ];
-function getPlanFromAnswers(){var job=quizAnswers[0]||'',dep=quizAnswers[1]||'',goal=quizAnswers[3]||'',priority=quizAnswers[4]||'',guarantee=quizAnswers[5]||'';if(job.indexOf('اصناف')!==-1){if(dep.indexOf('بیشتر از ۵۰۰')!==-1)return{name:'الماس',desc:'برای اصناف با سپرده بالا.'};return{name:'نارون',desc:'مخصوص اصناف با جواز کسب. معدل‌محور.'};}if(job.indexOf('حمایتی')!==-1||job.indexOf('مددجو')!==-1){return{name:'نجم',desc:'ویژه اقشار حمایتی. ضریب ۱۱۵٪.'};}if(job.indexOf('کارمند سازمان')!==-1){return{name:'رضوان',desc:'مخصوص کارکنان سازمان‌های حمایتی.'};}if(goal.indexOf('درمان')!==-1||goal.indexOf('ازدواج')!==-1){return{name:'نورا',desc:'بدون کارمزد. برای اهداف ضروری.'};}if(dep.indexOf('کمتر از ۵۰')!==-1){return{name:'شمس',desc:'با پس‌انداز ماهیانه. تا ۹۰ میلیون.'};}if(priority.indexOf('کارمزد کمتر')!==-1){return{name:'نورا',desc:'کارمزد صفر.'};}if(priority.indexOf('وام بیشتر')!==-1||guarantee.indexOf('بیمه')!==-1){return{name:'نیلوفر',desc:'با ضریب بالا و کارمزد ۴٪ بیشترین وام.'};}return{name:'نیلوفر',desc:'طرح عمومی برای همه.'};}
+function getPlanFromAnswers(){var job=quizAnswers[0]||'',dep=quizAnswers[1]||'',goal=quizAnswers[3]||'',priority=quizAnswers[4]||'',guarantee=quizAnswers[5]||'';if(job.indexOf('اصناف')!==-1){return{name:'نارون',desc:'مخصوص اصناف. معدل‌محور. تا ۱ میلیارد تومان.'};}if(job.indexOf('حمایتی')!==-1||job.indexOf('مددجو')!==-1){return{name:'نجم',desc:'ویژه اقشار حمایتی. ضریب ۱۱۵٪.'};}if(job.indexOf('کارمند سازمان')!==-1){return{name:'رضوان',desc:'مخصوص کارکنان سازمان‌های حمایتی.'};}if(goal.indexOf('درمان')!==-1||goal.indexOf('ازدواج')!==-1){return{name:'نورا',desc:'بدون کارمزد.'};}if(dep.indexOf('کمتر از ۵۰')!==-1){return{name:'شمس',desc:'با پس‌انداز ماهیانه.'};}if(priority.indexOf('کارمزد کمتر')!==-1){return{name:'نورا',desc:'کارمزد صفر.'};}return{name:'نیلوفر',desc:'طرح عمومی برای همه.'};}
 function openGame(){unlockAudio();document.getElementById('gameModal').classList.add('show');updateGameStats();switchTab('quiz');resetQuiz();}
 function closeGame(){document.getElementById('gameModal').classList.remove('show');}
 function switchTab(t){var tabs=document.querySelectorAll('.game-tab');for(var i=0;i<tabs.length;i++)tabs[i].classList.toggle('active',tabs[i].dataset.tab===t);var panels=document.querySelectorAll('.game-panel');for(var i=0;i<panels.length;i++)panels[i].classList.remove('show');document.getElementById('panel-'+t).classList.add('show');if(t==='badges')renderBadges();if(t==='challenge')renderChallenge();if(t==='wheel')renderWheel();}
 function updateGameStats(){document.getElementById('gamePoints').textContent=gamePoints.toLocaleString('fa-IR');document.getElementById('gameWins').textContent=gameWins.toLocaleString('fa-IR');var b='🥉';if(gamePoints>=500)b='👑';else if(gamePoints>=300)b='💎';else if(gamePoints>=150)b='🥇';else if(gamePoints>=50)b='🥈';document.getElementById('gameBadge').textContent=b;}
 function resetQuiz(){quizIndex=0;quizAnswers=[];renderQuiz();}
-function renderQuiz(){var prog=document.getElementById('quizProgress');var ph='';for(var i=0;i<quizQuestions.length;i++){var cls='prog-dot';if(i<quizIndex)cls+=' done';if(i===quizIndex)cls+=' active';ph+='<div class="'+cls+'"></div>';}prog.innerHTML=ph;var content=document.getElementById('quizContent');if(quizIndex>=quizQuestions.length){var plan=getPlanFromAnswers();gamePoints+=20;gameWins++;try{localStorage.setItem('game_points',gamePoints);localStorage.setItem('game_wins',gameWins);}catch(e){}updateGameStats();content.innerHTML='<div class="quiz-result"><h4>🎉 تبریک!</h4><div class="score">+۲۰ امتیاز</div><div class="plan-name">'+plan.name+'</div><div class="plan-desc">'+plan.desc+'</div><button class="quiz-btn" onclick="resetQuiz()" style="margin-top:12px">🔄 دوباره بازی کن</button></div>';speak('تبریک. طرح مناسب تو '+plan.name+' است.');return;}var q=quizQuestions[quizIndex];var oh='';for(var i=0;i<q.opts.length;i++){oh+='<button class="quiz-opt" onclick="quizAnswer(\''+q.opts[i].replace(/'/g,"\\'")+'\')">'+q.opts[i]+'</button>';}content.innerHTML='<div class="quiz-q"><div class="quiz-q-title">سوال '+(quizIndex+1)+' از '+quizQuestions.length+'<br>'+q.q+'</div><div class="quiz-options">'+oh+'</div></div>';}
+function renderQuiz(){var prog=document.getElementById('quizProgress');var ph='';for(var i=0;i<quizQuestions.length;i++){var cls='prog-dot';if(i<quizIndex)cls+=' done';if(i===quizIndex)cls+=' active';ph+='<div class="'+cls+'"></div>';}prog.innerHTML=ph;var content=document.getElementById('quizContent');if(quizIndex>=quizQuestions.length){var plan=getPlanFromAnswers();gamePoints+=20;gameWins++;try{localStorage.setItem('game_points',gamePoints);localStorage.setItem('game_wins',gameWins);}catch(e){}updateGameStats();content.innerHTML='<div class="quiz-result"><h4>🎉 تبریک!</h4><div class="score">+۲۰ امتیاز</div><div class="plan-name">'+plan.name+'</div><div class="plan-desc">'+plan.desc+'</div><button class="quiz-btn" onclick="resetQuiz()" style="margin-top:12px">🔄 دوباره</button></div>';speak('تبریک. طرح مناسب تو '+plan.name+' است.');return;}var q=quizQuestions[quizIndex];var oh='';for(var i=0;i<q.opts.length;i++){oh+='<button class="quiz-opt" onclick="quizAnswer(\''+q.opts[i].replace(/'/g,"\\'")+'\')">'+q.opts[i]+'</button>';}content.innerHTML='<div class="quiz-q"><div class="quiz-q-title">سوال '+(quizIndex+1)+' از '+quizQuestions.length+'<br>'+q.q+'</div><div class="quiz-options">'+oh+'</div></div>';}
 function quizAnswer(ans){quizAnswers.push(ans);quizIndex++;setTimeout(renderQuiz,200);}
-function renderWheel(){var wheel=document.getElementById('wheel');var segs=[{n:'نیلوفر'},{n:'نورا'},{n:'نارون'},{n:'الماس'},{n:'نجم'},{n:'شمس'},{n:'توسکا'},{n:'دوباره'}];var html='';for(var i=0;i<segs.length;i++){html+='<div class="wheel-seg" style="transform:rotate('+(i*45)+'deg)"><div class="wheel-seg-content">'+segs[i].n+'</div></div>';}wheel.innerHTML=html;wheel.style.transform='rotate(0deg)';document.getElementById('wheelResult').classList.remove('show');}
+function renderWheel(){var wheel=document.getElementById('wheel');var segs=['نیلوفر','نورا','نارون','الماس','نجم','شمس','توسکا','دوباره'];var html='';for(var i=0;i<segs.length;i++){html+='<div class="wheel-seg" style="transform:rotate('+(i*45)+'deg)"><div class="wheel-seg-content">'+segs[i]+'</div></div>';}wheel.innerHTML=html;wheel.style.transform='rotate(0deg)';document.getElementById('wheelResult').classList.remove('show');}
 function spinWheel(){if(wheelRotating)return;wheelRotating=true;var wheel=document.getElementById('wheel');var random=Math.floor(Math.random()*8);wheel.style.transform='rotate('+(360*5+(360-random*45))+'deg)';setTimeout(function(){wheelRotating=false;var segs=['نیلوفر','نورا','نارون','الماس','نجم','شمس','توسکا','دوباره'];var win=segs[random];var res=document.getElementById('wheelResult');if(win==='دوباره'){res.innerHTML='<div class="win-name">🔄 دوباره بچرخون</div>';speak('دوباره بچرخون');}else{gamePoints+=15;try{localStorage.setItem('game_points',gamePoints);}catch(e){}updateGameStats();res.innerHTML='<div class="win-name">🎉 '+win+'</div><div>+۱۵ امتیاز!</div>';speak('تبریک. طرح '+win+' بردی');}res.classList.add('show');},4200);}
 function renderBadges(){var grid=document.getElementById('badgesGrid');var badges=[{i:'🥉',n:'تازه‌وارد',r:'۰-۵۰',min:0},{i:'🥈',n:'کاوشگر',r:'۵۰-۱۵۰',min:50},{i:'🥇',n:'کارشناس',r:'۱۵۰-۳۰۰',min:150},{i:'💎',n:'استاد',r:'۳۰۰-۵۰۰',min:300},{i:'👑',n:'مهرشناس',r:'۵۰۰+',min:500}];var html='';for(var i=0;i<badges.length;i++){var locked=gamePoints<badges[i].min;html+='<div class="badge-card '+(locked?'locked':'unlocked')+'"><div class="badge-icon">'+badges[i].i+'</div><div class="badge-name">'+badges[i].n+'</div><div class="badge-req">'+badges[i].r+'</div></div>';}grid.innerHTML=html;}
 var challenges=[
-{s:'علی ۳۵ ساله کارمند شرکت خصوصی است. ۲۰۰ میلیون تومان پس‌انداز دارد و می‌خواهد ۵۰۰ میلیون وام بگیرد.',opts:['طرح نیلوفر با کارمزد ۴٪','طرح نارون برای اصناف','طرح نجم'],c:0,e:'نیلوفر بهترین گزینه. کارمند است و ۲۰۰ میلیون سپرده دارد.'},
-{s:'زهرا ۴۵ ساله مددجوی کمیته امداد است. ۵۰ میلیون پس‌انداز دارد و برای درمان وام می‌خواهد.',opts:['طرح نیلوفر','طرح نجم یا نصر حقیقی','طرح الماس'],c:1,e:'نجم و نصر حقیقی مخصوص اقشار حمایتی است.'},
-{s:'رضا صاحب مغازه لوازم خانگی است. جواز کسب دارد و ۱۰۰ میلیون سپرده می‌تواند بگذارد.',opts:['طرح نورا','طرح نارون ویژه اصناف','طرح یاقوت'],c:1,e:'نارون مخصوص اصناف است. با جواز کسب تا ۱ میلیارد وام می‌گیرد.'},
-{s:'شرکت الف می‌خواهد به ۲۰ کارمندش وام بدهد. حقوق همه از بانک مهر ایران واریز می‌شود.',opts:['طرح فیروزه','طرح الماس یا یاقوت','طرح توسکا'],c:1,e:'الماس و یاقوت برای سازمان‌ها و شرکت‌هاست.'},
-{s:'مریم ۳۰ ساله خانه‌دار است. ماهی ۲ میلیون تومان می‌تواند پس‌انداز کند.',opts:['طرح نیلوفر','طرح شمس','طرح نجم'],c:1,e:'شمس مخصوص پس‌انداز ماهیانه است.'}
+{s:'علی ۳۵ ساله کارمند شرکت خصوصی است. ۲۰۰ میلیون تومان پس‌انداز دارد و می‌خواهد ۵۰۰ میلیون وام بگیرد.',opts:['طرح نیلوفر با کارمزد ۴٪','طرح نارون','طرح نجم'],c:0,e:'نیلوفر بهترین گزینه. کارمند است و ۲۰۰ میلیون سپرده دارد.'},
+{s:'زهرا ۴۵ ساله مددجوی کمیته امداد است. ۵۰ میلیون پس‌انداز دارد و برای درمان وام می‌خواهد.',opts:['طرح نیلوفر','طرح نجم یا نصر حقیقی','طرح الماس'],c:1,e:'نجم و نصر حقیقی مخصوص اقشار حمایتی.'},
+{s:'رضا صاحب مغازه است. جواز کسب دارد و ۱۰۰ میلیون سپرده می‌تواند بگذارد.',opts:['طرح نورا','طرح نارون ویژه اصناف','طرح یاقوت'],c:1,e:'نارون مخصوص اصناف است.'}
 ];
 function renderChallenge(){var day=new Date().getDate()%challenges.length;var c=challenges[day];var content=document.getElementById('challengeContent');var oh='';for(var i=0;i<c.opts.length;i++){oh+='<button class="challenge-opt" onclick="challengeAnswer('+i+','+c.c+')">'+c.opts[i]+'</button>';}content.innerHTML='<div class="challenge-card"><h5>🎯 چالش روزانه</h5><div class="challenge-scenario">'+c.s+'</div><div class="challenge-actions">'+oh+'</div></div>';}
 function challengeAnswer(selected,correct){var btns=document.querySelectorAll('.challenge-opt');for(var i=0;i<btns.length;i++){if(i===selected)btns[i].classList.add(i===correct?'correct':'wrong');else if(i===correct)btns[i].classList.add('correct');}var day=new Date().getDate()%challenges.length;var c=challenges[day];var content=document.getElementById('challengeContent');content.innerHTML+='<div style="background:#fff;border-radius:12px;padding:14px;margin-top:10px;color:#0a4d2e;line-height:1.9;font-size:12.5px;"><b>✅ توضیح:</b><br>'+c.e+'</div>';if(selected===correct){gamePoints+=25;try{localStorage.setItem('game_points',gamePoints);}catch(e){}updateGameStats();speak('آفرین. درست جواب دادی.');}else{speak('اشتباه بود.');}}
