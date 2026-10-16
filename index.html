@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -7,109 +6,459 @@
 <title>مهر راهنما - نظام جامع اعتباری ۱۴۰۵</title>
 <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(180deg,#0d5c3a 0%,#1a8f5a 100%);padding:12px;min-height:100vh;line-height:1.85;font-size:15px}
-.box{background:#fff;max-width:680px;margin:0 auto;border-radius:18px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-h1{color:#0d5c3a;text-align:center;font-size:22px;margin-bottom:5px}
-.sub{text-align:center;color:#666;font-size:12px;margin-bottom:12px}
-.guide-box{background:#e8f5ee;border:2px solid #0d5c3a;border-radius:12px;padding:14px;margin-bottom:14px}
-.guide-box h3{color:#0d5c3a;font-size:15px;margin-bottom:10px;text-align:center}
-.guide-step{background:#fff;border-right:4px solid #0d5c3a;padding:8px 12px;margin-bottom:6px;border-radius:6px;font-size:13px;color:#333}
-.guide-step b{color:#0d5c3a}
-.terms-box{background:#fff8e1;border:2px solid #f39c12;border-radius:12px;padding:14px;margin-bottom:14px}
-.terms-box h3{color:#7a5c00;font-size:15px;margin-bottom:10px;text-align:center}
-.term{background:#fff;padding:8px 12px;border-radius:6px;margin-bottom:6px;font-size:12.5px;line-height:1.9;color:#333;border-right:3px solid #f39c12}
-.term b{color:#7a5c00}
-.ravish-box{background:linear-gradient(135deg,#d4edda 0%,#a8e6b8 100%);border:3px solid #28a745;border-radius:14px;padding:14px;margin-bottom:14px}
-.ravish-box h3{color:#155724;font-size:15px;margin-bottom:8px;text-align:center}
-.ravish-box p{color:#155724;font-size:13px;line-height:1.9;margin-bottom:6px}
-.ravish-percent{display:inline-block;background:#28a745;color:#fff;padding:2px 10px;border-radius:15px;font-weight:bold;font-size:14px}
-.qr-box{text-align:center;background:#e8f5ee;border:2px dashed #0d5c3a;border-radius:14px;padding:12px;margin-bottom:12px}
-.qr-box p{color:#0d5c3a;font-size:12px;font-weight:bold;margin-bottom:6px}
-.qr-box img{width:120px;height:120px;background:#fff;padding:4px;border-radius:10px;display:inline-block}
-.qr-box .qr-url{color:#0d5c3a;font-size:10px;word-break:break-all;margin-top:6px;direction:ltr}
-.voice-main{display:block;width:100%;padding:13px;background:#0d5c3a;color:#fff;border:none;border-radius:11px;font-size:15px;font-family:inherit;font-weight:bold;cursor:pointer;margin-bottom:6px}
-.stop-btn{display:block;width:100%;padding:11px;background:#c0392b;color:#fff;border:none;border-radius:11px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-bottom:14px}
-.q{color:#0d5c3a;font-size:15px;font-weight:bold;margin-bottom:8px;text-align:center;padding:9px;background:#f5f5f5;border-radius:10px}
-.hint-toggle{font-size:11px;color:#666;text-align:center;margin-bottom:12px}
-.group{background:#fafafa;border:2px solid #e0e0e0;border-radius:11px;margin-bottom:9px;overflow:hidden}
-.group.open{border-color:#0d5c3a}
-.group-title{padding:13px;cursor:pointer;font-size:15px;font-weight:bold;list-style:none;color:#333;background:#f0f0f0;user-select:none;position:relative}
-.group-title::after{content:"▼";position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:11px;color:#333}
-.group.open .group-title{background:#0d5c3a;color:#fff}
-.group.open .group-title::after{content:"▲";color:#fff}
-.group-desc{font-size:11.5px;color:#666;font-weight:normal;padding:0 13px 8px;background:#f0f0f0;line-height:1.7}
-.group.open .group-desc{background:#0d5c3a;color:#c8e6d2}
-.plans{display:none;padding:12px;background:#fff}
-.group.open .plans{display:block}
-.card{background:#f9fdfb;border:2px solid #0d5c3a;border-radius:12px;padding:0;margin-bottom:12px;overflow:hidden}
-.card.open{box-shadow:0 4px 12px rgba(13,92,58,.15)}
-.card-title{color:#0d5c3a;font-size:16px;margin:0;padding:14px 40px 14px 14px;text-align:center;cursor:pointer;user-select:none;position:relative;background:#f0f8f3}
-.card-title::after{content:"▼";font-size:11px;color:#0d5c3a;position:absolute;left:15px;top:50%;transform:translateY(-50%)}
-.card.open .card-title{background:#d4edda;border-bottom:2px solid #0d5c3a}
-.card.open .card-title::after{content:"▲"}
-.card-body{display:none;padding:14px}
-.card.open .card-body{display:block}
-.type-badge{display:block;background:#0d5c3a;color:#fff;padding:4px 11px;border-radius:18px;font-size:11px;text-align:center;margin:0 auto 10px auto;width:fit-content}
-.section{margin-bottom:9px;padding:10px 12px;border-radius:8px;font-size:13px;line-height:2}
-.sec-title{font-weight:bold;color:#0d5c3a;display:block;margin-bottom:4px;font-size:13.5px}
-.sec-blue{background:#e3f2fd;border-right:4px solid #1976d2;color:#0d47a1}
-.sec-green{background:#d4edda;border-right:4px solid #28a745;color:#155724}
-.sec-yellow{background:#fff8e1;border-right:4px solid #f39c12;color:#7a5c00}
-.sec-orange{background:#fdebd0;border-right:4px solid #d35400;color:#7a3d00}
-.sec-red{background:#f8d7da;border-right:4px solid #c0392b;color:#721c24}
-.sec-purple{background:#ede7f6;border-right:4px solid #673ab7;color:#311b92}
-.sec-pink{background:#fce4ec;border-right:4px solid #e91e63;color:#880e4f}
-table.mini{width:100%;border-collapse:collapse;font-size:11.5px;margin:8px 0}
-table.mini th,table.mini td{border:1px solid #d35400;padding:5px 3px;text-align:center}
-table.mini th{background:#d35400;color:#fff;font-weight:normal}
-table.mini tr:nth-child(even){background:#fef5e7}
-.mini-calc{background:#fff3cd;border:2px solid #f39c12;border-radius:10px;padding:12px;margin:10px 0}
-.mini-calc h4{color:#7a5c00;font-size:14px;margin-bottom:10px;text-align:center}
-.mini-calc label{display:block;font-size:12px;color:#7a5c00;font-weight:bold;margin-bottom:4px;margin-top:8px}
-.mini-calc input{width:100%;padding:10px;border:2px solid #f39c12;border-radius:6px;font-family:inherit;font-size:14px;background:#fff;color:#333;font-weight:bold}
-.mini-calc .fee-row{display:flex;gap:6px;margin-top:6px}
-.mini-calc .fee-btn{flex:1;padding:8px;border:2px solid #d35400;background:#fff;color:#d35400;border-radius:6px;font-family:inherit;font-size:13px;font-weight:bold;cursor:pointer}
-.mini-calc .fee-btn.active{background:#d35400;color:#fff}
-.mini-calc .go-btn{display:block;width:100%;padding:11px;background:#d35400;color:#fff;border:none;border-radius:8px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-top:10px}
-.mini-result{background:#fff;border:2px solid #0d5c3a;border-radius:8px;padding:10px;margin-top:10px;display:none;font-size:12px}
-.mini-result.show{display:block}
-.mini-result h5{color:#0d5c3a;font-size:13px;margin-bottom:8px;text-align:center}
-.mini-result table{width:100%;border-collapse:collapse}
-.mini-result th,.mini-result td{border:1px solid #0d5c3a;padding:5px 3px;text-align:center;font-size:11px}
-.mini-result th{background:#0d5c3a;color:#fff;font-weight:normal}
-.mini-result td.amount{background:#e8f5ee;color:#0d5c3a;font-weight:bold}
-.speak-btn{display:block;width:100%;padding:11px;background:#0d5c3a;color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-top:10px}
-.footer{text-align:center;color:#999;font-size:11px;margin-top:15px;line-height:1.8}
+:root {
+--primary: #0d5c3a;
+--primary-light: #1a8f5a;
+--primary-dark: #094228;
+--accent: #f39c12;
+--accent-dark: #d35400;
+--success: #28a745;
+--info: #1976d2;
+--bg: #f0f7f3;
+--card-bg: #ffffff;
+--text: #2c3e50;
+--text-light: #6c757d;
+--border: #dee2e6;
+--shadow: 0 4px 20px rgba(13, 92, 58, 0.08);
+--shadow-lg: 0 12px 40px rgba(13, 92, 58, 0.15);
+--radius: 16px;
+--radius-sm: 10px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+background: linear-gradient(135deg, #0d5c3a 0%, #1a8f5a 50%, #0d5c3a 100%);
+background-attachment: fixed;
+padding: 16px;
+min-height: 100vh;
+line-height: 1.9;
+font-size: 15px;
+color: var(--text);
+-webkit-font-smoothing: antialiased;
+}
+.box {
+background: var(--card-bg);
+max-width: 720px;
+margin: 0 auto;
+border-radius: var(--radius);
+padding: 0;
+box-shadow: var(--shadow-lg);
+overflow: hidden;
+}
+.header {
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+color: #fff;
+padding: 28px 24px 24px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.header::before {
+content: "🕌";
+position: absolute;
+top: -20px;
+left: -20px;
+font-size: 120px;
+opacity: 0.08;
+}
+.header h1 { font-size: 26px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
+.header .sub { font-size: 13px; opacity: 0.9; font-weight: 400; }
+.content { padding: 20px; }
+
+/* راهنما */
+.guide-box {
+background: linear-gradient(135deg, #e8f5ee 0%, #d4edda 100%);
+border: 2px solid var(--primary);
+border-radius: var(--radius);
+padding: 18px;
+margin-bottom: 18px;
+position: relative;
+}
+.guide-box h3 { color: var(--primary); font-size: 16px; margin-bottom: 12px; text-align: center; font-weight: 800; }
+.guide-step {
+background: #fff;
+border-right: 4px solid var(--primary);
+padding: 10px 14px;
+margin-bottom: 8px;
+border-radius: var(--radius-sm);
+font-size: 13.5px;
+display: flex;
+align-items: flex-start;
+gap: 10px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.guide-step:hover { transform: translateX(-4px); box-shadow: 0 4px 12px rgba(13,92,58,0.1); }
+.guide-step .num {
+background: var(--primary);
+color: #fff;
+min-width: 28px;
+height: 28px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size: 13px;
+flex-shrink: 0;
+}
+.guide-step b { color: var(--primary); }
+
+/* اصطلاحات */
+.terms-box {
+background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+border: 2px solid var(--accent);
+border-radius: var(--radius);
+padding: 18px;
+margin-bottom: 18px;
+}
+.terms-box h3 { color: #7a5c00; font-size: 16px; margin-bottom: 12px; text-align: center; font-weight: 800; }
+.term {
+background: #fff;
+padding: 10px 14px;
+border-radius: var(--radius-sm);
+margin-bottom: 8px;
+font-size: 13px;
+line-height: 1.9;
+border-right: 3px solid var(--accent);
+transition: transform 0.2s;
+}
+.term:hover { transform: translateX(-4px); }
+.term b { color: #7a5c00; }
+
+/* رویش مهر */
+.ravish-box {
+background: linear-gradient(135deg, #d4edda 0%, #a8e6b8 100%);
+border: 3px solid var(--success);
+border-radius: var(--radius);
+padding: 18px;
+margin-bottom: 18px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.ravish-box::before { content: "🎁"; position: absolute; top: -15px; right: -15px; font-size: 80px; opacity: 0.1; }
+.ravish-box h3 { color: #155724; font-size: 16px; margin-bottom: 8px; font-weight: 800; }
+.ravish-box p { color: #155724; font-size: 13.5px; margin-bottom: 6px; }
+.ravish-percent {
+display: inline-block;
+background: var(--success);
+color: #fff;
+padding: 4px 16px;
+border-radius: 20px;
+font-weight: 800;
+font-size: 16px;
+box-shadow: 0 4px 12px rgba(40,167,69,0.3);
+}
+
+/* QR */
+.qr-box {
+text-align: center;
+background: #fff;
+border: 2px dashed var(--primary);
+border-radius: var(--radius);
+padding: 18px;
+margin-bottom: 18px;
+}
+.qr-box p { color: var(--primary); font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+.qr-box img { width: 130px; height: 130px; background: #fff; padding: 6px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: inline-block; }
+.qr-box .qr-url { color: var(--text-light); font-size: 10px; word-break: break-all; margin-top: 8px; direction: ltr; }
+
+/* دکمه‌های صوتی */
+.voice-main {
+display: block;
+width: 100%;
+padding: 15px;
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+color: #fff;
+border: none;
+border-radius: 12px;
+font-size: 16px;
+font-family: inherit;
+font-weight: 700;
+cursor: pointer;
+margin-bottom: 8px;
+transition: transform 0.2s, box-shadow 0.2s;
+box-shadow: 0 4px 15px rgba(13,92,58,0.3);
+}
+.voice-main:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(13,92,58,0.4); }
+.voice-main:active { transform: translateY(0); }
+.stop-btn {
+display: block;
+width: 100%;
+padding: 12px;
+background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+color: #fff;
+border: none;
+border-radius: 12px;
+font-size: 14px;
+font-family: inherit;
+font-weight: 700;
+cursor: pointer;
+margin-bottom: 18px;
+transition: transform 0.2s;
+}
+.stop-btn:hover { transform: translateY(-2px); }
+
+/* گروه‌ها */
+.q { color: var(--primary); font-size: 16px; font-weight: 800; margin-bottom: 8px; text-align: center; padding: 12px; background: #f8f9fa; border-radius: var(--radius-sm); }
+.hint-toggle { font-size: 12px; color: var(--text-light); text-align: center; margin-bottom: 18px; }
+.group {
+background: #fff;
+border: 2px solid var(--border);
+border-radius: var(--radius);
+margin-bottom: 12px;
+overflow: hidden;
+transition: border-color 0.3s, box-shadow 0.3s;
+}
+.group.open { border-color: var(--primary); box-shadow: var(--shadow); }
+.group-title {
+padding: 16px 18px;
+cursor: pointer;
+font-size: 16px;
+font-weight: 700;
+color: var(--text);
+background: #f8f9fa;
+user-select: none;
+position: relative;
+transition: background 0.3s, color 0.3s;
+}
+.group-title::after { content: "▼"; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 12px; transition: transform 0.3s; }
+.group.open .group-title { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: #fff; }
+.group.open .group-title::after { transform: translateY(-50%) rotate(180deg); color: #fff; }
+.group-desc { font-size: 12px; color: var(--text-light); padding: 0 18px 12px; background: #f8f9fa; line-height: 1.8; }
+.group.open .group-desc { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: rgba(255,255,255,0.85); padding-top: 4px; }
+.plans { display: none; padding: 16px; background: #fff; }
+.group.open .plans { display: block; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* کارت‌ها */
+.card { background: #fff; border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 14px; overflow: hidden; transition: border-color 0.3s, box-shadow 0.3s; }
+.card.open { border-color: var(--primary); box-shadow: var(--shadow); }
+.card-title {
+color: var(--text);
+font-size: 16px;
+font-weight: 700;
+padding: 16px 44px 16px 18px;
+text-align: center;
+cursor: pointer;
+user-select: none;
+position: relative;
+background: #f8f9fa;
+transition: background 0.3s, color 0.3s;
+}
+.card-title::after { content: "▼"; font-size: 12px; position: absolute; left: 18px; top: 50%; transform: translateY(-50%); transition: transform 0.3s; }
+.card.open .card-title { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: #fff; }
+.card.open .card-title::after { transform: translateY(-50%) rotate(180deg); color: #fff; }
+.card-body { display: none; padding: 18px; }
+.card.open .card-body { display: block; animation: fadeIn 0.3s ease; }
+.type-badge {
+display: block;
+background: var(--primary);
+color: #fff;
+padding: 6px 14px;
+border-radius: 20px;
+font-size: 11.5px;
+font-weight: 600;
+text-align: center;
+margin: 0 auto 14px auto;
+width: fit-content;
+}
+
+/* بخش‌ها */
+.section { margin-bottom: 12px; padding: 12px 16px; border-radius: var(--radius-sm); font-size: 13.5px; line-height: 2; }
+.sec-title { font-weight: 800; color: var(--primary); display: block; margin-bottom: 4px; font-size: 14px; }
+.sec-blue { background: #e3f2fd; border-right: 4px solid var(--info); color: #0d47a1; }
+.sec-green { background: #d4edda; border-right: 4px solid var(--success); color: #155724; }
+.sec-yellow { background: #fff8e1; border-right: 4px solid var(--accent); color: #7a5c00; }
+.sec-orange { background: #fdebd0; border-right: 4px solid var(--accent-dark); color: #7a3d00; }
+.sec-red { background: #f8d7da; border-right: 4px solid #c0392b; color: #721c24; }
+.sec-purple { background: #ede7f6; border-right: 4px solid #673ab7; color: #311b92; }
+.sec-pink { background: #fce4ec; border-right: 4px solid #e91e63; color: #880e4f; }
+
+/* جدول */
+table.mini { width: 100%; border-collapse: collapse; font-size: 12px; margin: 10px 0; border-radius: var(--radius-sm); overflow: hidden; }
+table.mini th, table.mini td { border: 1px solid #e0e0e0; padding: 8px 6px; text-align: center; }
+table.mini th { background: var(--primary); color: #fff; font-weight: 600; }
+table.mini tr:nth-child(even) { background: #f8f9fa; }
+
+/* ماشین‌حساب */
+.mini-calc { background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px; margin: 12px 0; }
+.mini-calc h4 { color: #7a5c00; font-size: 15px; margin-bottom: 12px; text-align: center; font-weight: 800; }
+.mini-calc label { display: block; font-size: 12.5px; color: #7a5c00; font-weight: 700; margin-bottom: 4px; margin-top: 10px; }
+.mini-calc input {
+width: 100%;
+padding: 12px;
+border: 2px solid var(--accent);
+border-radius: var(--radius-sm);
+font-family: inherit;
+font-size: 15px;
+background: #fff;
+color: var(--text);
+font-weight: 700;
+transition: border-color 0.3s, box-shadow 0.3s;
+}
+.mini-calc input:focus { outline: none; border-color: var(--accent-dark); box-shadow: 0 0 0 3px rgba(243,156,18,0.2); }
+.mini-calc .fee-row { display: flex; gap: 8px; margin-top: 8px; }
+.mini-calc .fee-btn {
+flex: 1;
+padding: 10px;
+border: 2px solid var(--accent-dark);
+background: #fff;
+color: var(--accent-dark);
+border-radius: var(--radius-sm);
+font-family: inherit;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.2s;
+}
+.mini-calc .fee-btn.active { background: var(--accent-dark); color: #fff; box-shadow: 0 4px 12px rgba(211,84,0,0.3); }
+.mini-calc .go-btn {
+display: block;
+width: 100%;
+padding: 13px;
+background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+color: #fff;
+border: none;
+border-radius: var(--radius-sm);
+font-size: 15px;
+font-family: inherit;
+font-weight: 700;
+cursor: pointer;
+margin-top: 12px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.mini-calc .go-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(211,84,0,0.4); }
+.mini-result { background: #fff; border: 2px solid var(--primary); border-radius: var(--radius-sm); padding: 12px; margin-top: 12px; display: none; font-size: 12.5px; }
+.mini-result.show { display: block; animation: fadeIn 0.3s ease; }
+.mini-result h5 { color: var(--primary); font-size: 14px; margin-bottom: 10px; text-align: center; font-weight: 700; }
+.mini-result table { width: 100%; border-collapse: collapse; }
+.mini-result th, .mini-result td { border: 1px solid var(--primary); padding: 7px 4px; text-align: center; font-size: 11.5px; }
+.mini-result th { background: var(--primary); color: #fff; font-weight: 600; }
+.mini-result td.amount { background: #e8f5ee; color: var(--primary); font-weight: 700; }
+
+/* دکمه صوتی کارت */
+.speak-btn {
+display: block;
+width: 100%;
+padding: 12px;
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+color: #fff;
+border: none;
+border-radius: var(--radius-sm);
+font-size: 14px;
+font-family: inherit;
+font-weight: 700;
+cursor: pointer;
+margin-top: 12px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.speak-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,92,58,0.3); }
+.speak-btn.active { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); }
+
+/* Q Bank */
+.qbank-box {
+background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+border: 2px solid var(--info);
+border-radius: var(--radius);
+padding: 16px;
+margin: 12px 0;
+}
+.qbank-box h4 { color: #0d47a1; font-size: 14.5px; margin-bottom: 10px; text-align: center; font-weight: 800; }
+.qbank-steps { counter-reset: step; }
+.qbank-step {
+background: #fff;
+border-radius: var(--radius-sm);
+padding: 10px 14px;
+margin-bottom: 8px;
+font-size: 13px;
+display: flex;
+align-items: flex-start;
+gap: 10px;
+counter-increment: step;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.qbank-step:hover { transform: translateX(-4px); box-shadow: 0 4px 12px rgba(25,118,210,0.15); }
+.qbank-step::before {
+content: counter(step);
+background: var(--info);
+color: #fff;
+min-width: 26px;
+height: 26px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+font-size: 12px;
+flex-shrink: 0;
+}
+.qbank-download {
+display: block;
+width: 100%;
+padding: 13px;
+background: linear-gradient(135deg, var(--info) 0%, #1565c0 100%);
+color: #fff;
+border: none;
+border-radius: var(--radius-sm);
+font-size: 15px;
+font-family: inherit;
+font-weight: 700;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+margin-top: 10px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.qbank-download:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(25,118,210,0.4); }
+
+.footer { text-align: center; color: var(--text-light); font-size: 11.5px; padding: 20px; line-height: 1.9; border-top: 1px solid var(--border); }
+
+@media (max-width: 480px) {
+body { padding: 8px; font-size: 14px; }
+.header h1 { font-size: 22px; }
+.content { padding: 14px; }
+.card-body { padding: 14px; }
+}
 </style>
 </head>
 <body>
 <div class="box">
+<div class="header">
 <h1>مهر راهنما</h1>
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
-
-<div class="guide-box">
-<h3>🎯 چطور از این سایت استفاده کنم؟</h3>
-<div class="guide-step"><b>مرحله ۱:</b> شغل خودت را از لیست زیر انتخاب کن</div>
-<div class="guide-step"><b>مرحله ۲:</b> روی عنوان هر طرح بزن تا باز شود</div>
-<div class="guide-step"><b>مرحله ۳:</b> شرح کامل، جدول و مثال را ببین</div>
-<div class="guide-step"><b>مرحله ۴:</b> برای نیلوفر و نورا، همان‌جا با ماشین‌حساب، مبلغ وامت را حساب کن</div>
 </div>
 
+<div class="content">
+<!-- راهنما -->
+<div class="guide-box">
+<h3>🎯 چطور از این سایت استفاده کنم؟</h3>
+<div class="guide-step"><span class="num">۱</span><span>شغل خودت را از لیست زیر انتخاب کن</span></div>
+<div class="guide-step"><span class="num">۲</span><span>روی عنوان هر طرح بزن تا باز شود</span></div>
+<div class="guide-step"><span class="num">۳</span><span>شرح کامل، جدول و مثال را ببین</span></div>
+<div class="guide-step"><span class="num">۴</span><span>برای نیلوفر و نورا، همان‌جا با ماشین‌حساب، مبلغ وامت را حساب کن</span></div>
+<div class="guide-step"><span class="num">۵</span><span>با دکمه «درخواست از کیوبانک» مستقیم به اپلیکیشن هدایت شو</span></div>
+</div>
+
+<!-- اصطلاحات -->
 <div class="terms-box">
 <h3>📖 اصطلاحات مهم</h3>
 <div class="term"><b>معدل حساب =</b> میانگین پولی که در طول ماه‌ها در حسابتان نگه داشته‌اید.</div>
 <div class="term"><b>رتبه Z =</b> رتبه اعتباری شما در سامانه ضمان، بین ۰ تا ۱۰۰.</div>
 <div class="term"><b>بدون ضامن =</b> اگر رتبه اعتبارسنجی ایرانیان شما A یا B باشد.</div>
 <div class="term"><b>کارمزد =</b> سودی که بانک می‌گیرد. ۴٪ یعنی به ازای هر ۱۰۰ میلیون، ۴ میلیون.</div>
+<div class="term"><b>کیوبانک =</b> اپلیکیشن تمام‌دیجیتال بانک مهر ایران که ۹۳٪ تسهیلات از طریق آن پرداخت می‌شود.</div>
 </div>
 
+<!-- رویش مهر -->
 <div class="ravish-box">
 <h3>🎁 جشنواره رویش مهر</h3>
 <p>اگر جشنواره فعال باشد، <span class="ravish-percent">۲۰٪ به مبلغ وام اضافه می‌شود</span></p>
-<p style="font-size:12px">مثال: وام ۱۰۰ میلیون → ۱۲۰ میلیون تومان</p>
+<p style="font-size: 12px; margin-top: 4px;">مثال: وام ۱۰۰ میلیون → ۱۲۰ میلیون تومان</p>
 </div>
 
+<!-- QR -->
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
 <img id="qrImg" src="" alt="QR Code">
@@ -122,7 +471,7 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="q">شغل خود را انتخاب کنید</div>
 <div class="hint-toggle">👆 روی عنوان هر گروه و کارت بزنید</div>
 
-<!-- گروه ۱: عمومی -->
+<!-- گروه ۱ -->
 <div class="group open" id="g1">
 <div class="group-title" onclick="toggleGroup('g1')">🌟 عمومی - برای همه مشاغل</div>
 <div class="group-desc">اگر کارمند، بازنشسته، خانه‌دار، دانشجو یا هر شغل دیگری هستی، این طرح‌ها برای توست.</div>
@@ -135,9 +484,9 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که حساب قرض‌الحسنه پس‌انداز در بانک مهر ایران دارد.</div>
 <div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
 <div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>دوره معدل‌گیری: ۱ تا ۱۲ ماه — هر چه بیشتر، وام بیشتر<br>مدت بازپرداخت: ۶ تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪ (انتخابی شما)</div>
-<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان. با بیمه عمر و رتبه بالا: بدون ضامن. در غیر این صورت: یک ضامن + وثیقه.</div>
-<div class="section sec-purple"><span class="sec-title">⭐ تبصره ویژه:</span>اگر معدل حساب شما تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه اعتبارسنجی ایرانیان <b>A یا B</b> باشد، وام فوری بدون ضامن دریافت می‌کنید.</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان. با بیمه عمر و رتبه بالا: بدون ضامن.</div>
+<div class="section sec-purple"><span class="sec-title">⭐ تبصره ویژه:</span>اگر معدل حساب تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه ایرانیان <b>A یا B</b>، وام فوری بدون ضامن.</div>
 
 <div class="mini-calc">
 <h4>🧮 همین‌جا حساب کن</h4>
@@ -154,7 +503,20 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <button class="go-btn" onclick="calcLoan('niloufar')">🧮 محاسبه وام</button>
 <div class="mini-result" id="niloufar-result"></div>
 </div>
-<button class="speak-btn" onclick="readPlan('niloufar', this)">🔊 شنیدن توضیحات</button>
+
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">اپلیکیشن کیوبانک را از سایت رسمی بانک مهر ایران دانلود کن</div>
+<div class="qbank-step">با کارت ملی و شماره همراه، حساب قرض‌الحسنه افتتاح کن</div>
+<div class="qbank-step">احراز هویت غیرحضوری را از طریق اسکن کارت ملی انجام بده</div>
+<div class="qbank-step">در بخش تسهیلات، طرح نیلوفر را انتخاب و درخواست را ثبت کن</div>
+<div class="qbank-step">منتظر اعتبارسنجی و واریز وام به حسابت باش</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+
+<button class="speak-btn" onclick="readPlan('niloufar', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -162,12 +524,12 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="card-title" onclick="toggleCard(this)">طرح نورا</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - بدون کارمزد - کد ۱۸۲</span>
-<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که می‌خواهد وام بدون کارمزد بگیرد.</div>
-<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
-<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>دوره معدل‌گیری: ۱ تا ۱۲ ماه<br>مدت بازپرداخت: ۶ تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span><b>صفر درصد — کاملاً رایگان</b></div>
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b>.</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>معدل‌گیری ۱ تا ۱۲ ماه / بازپرداخت ۶ تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span><b>صفر درصد — رایگان</b></div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
-<div class="section sec-pink"><b>⚠️ نکته:</b> ضریب نورا پایین‌تر از نیلوفر است چون کارمزد ندارد.</div>
+<div class="section sec-pink">⚠️ ضریب نورا پایین‌تر از نیلوفر است چون کارمزد ندارد.</div>
 
 <div class="mini-calc">
 <h4>🧮 همین‌جا حساب کن</h4>
@@ -178,7 +540,19 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <button class="go-btn" onclick="calcLoan('noora')">🧮 محاسبه وام</button>
 <div class="mini-result" id="noora-result"></div>
 </div>
-<button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات</button>
+
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">اپلیکیشن کیوبانک را دانلود و نصب کن</div>
+<div class="qbank-step">حساب قرض‌الحسنه افتتاح کن و احراز هویت شو</div>
+<div class="qbank-step">در بخش تسهیلات، طرح نورا را انتخاب کن</div>
+<div class="qbank-step">درخواست را ثبت و منتظر واریز وام باش</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+
+<button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -192,12 +566,22 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
 <table class="mini">
-<tr><th>مدت انتظار</th><th>بازپرداخت</th><th>سهم بانک</th><th>سهم مشتری</th></tr>
+<tr><th>انتظار</th><th>بازپرداخت</th><th>سهم بانک</th><th>سهم مشتری</th></tr>
 <tr><td>آنی</td><td>۲۰ ماه</td><td>۲۵ میلیون</td><td>۵۰ میلیون</td></tr>
 <tr><td>آنی</td><td>۲۴ ماه</td><td>۴۵ میلیون</td><td>۱۰۰ میلیون</td></tr>
 <tr><td>۳۰ روز</td><td>۳۰ ماه</td><td>۷۰ میلیون</td><td>۱۵۰ میلیون</td></tr>
 </table>
-<button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، بخش بانکداری اجتماعی را باز کن</div>
+<div class="qbank-step">اطلاعات پرونده حمایتی خود را وارد کن</div>
+<div class="qbank-step">منتظر تأیید از طریق API نهاد مربوطه باش</div>
+<div class="qbank-step">پس از تأیید، درخواست وام ثبت و پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -209,7 +593,7 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>دو برابر مبلغ سپرده تودیعی مصالح</div>
 <div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۵۰ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
-<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>مصالح در پرونده نقش تسهیلات‌گیرنده یا ضامن دارد.</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>مصالح باید در پرونده نقش تسهیلات‌گیرنده یا ضامن داشته باشد.</div>
 <table class="mini">
 <tr><th>انتظار</th><th>بازپرداخت</th><th>سپرده مصالح</th><th>وام</th></tr>
 <tr><td>۳۰ روز</td><td>۲۰ ماه</td><td>۱۰۰ میلیون</td><td>۲۰۰ میلیون</td></tr>
@@ -217,7 +601,17 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <tr><td>۹۰ روز</td><td>۴۰ ماه</td><td>۲۰۰ میلیون</td><td>۴۰۰ میلیون</td></tr>
 <tr><td>۱۲۰ روز</td><td>۵۰ ماه</td><td>۲۵۰ میلیون</td><td>۵۰۰ میلیون</td></tr>
 </table>
-<button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، بخش طرح‌های حمایتی را باز کن</div>
+<div class="qbank-step">اطلاعات سپرده مصالح و شخص معرفی‌شده را وارد کن</div>
+<div class="qbank-step">مدارک ضمانت (چک یا قرارداد) را بارگذاری کن</div>
+<div class="qbank-step">پس از تأیید، وام به حساب معرفی‌شده واریز می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
@@ -234,14 +628,24 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <tr><td>۲ میلیون</td><td>۹ میلیون</td><td>۲۷ میلیون</td><td>۴۵ میلیون</td></tr>
 <tr><td>۳ میلیون</td><td>—</td><td>۳۶ میلیون</td><td>۹۰ میلیون</td></tr>
 </table>
-<button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، طرح شمس را انتخاب کن</div>
+<div class="qbank-step">مبلغ و دوره پس‌انداز ماهیانه را مشخص کن</div>
+<div class="qbank-step">هر ماه مبلغ تعیین‌شده را واریز کن</div>
+<div class="qbank-step">پس از اتمام دوره، وام به حسابت واریز می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 
 </div>
 </div>
 
-<!-- گروه ۲: سازمان‌های حمایتی -->
+<!-- گروه ۲ -->
 <div class="group" id="g2">
 <div class="group-title" onclick="toggleGroup('g2')">🤝 کارکنان سازمان‌های حمایتی</div>
 <div class="group-desc">اگر کارمند کمیته امداد، بهزیستی، بنیاد علوی یا صندوق قرض‌الحسنه هستی، این طرح‌ها برای توست.</div>
@@ -255,7 +659,17 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
-<button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">اطمینان حاصل کن که سازمانت با بانک تفاهم‌نامه دارد</div>
+<div class="qbank-step">در کیوبانک، طرح رضوان را انتخاب کن</div>
+<div class="qbank-step">مدارک معرفی‌نامه سازمان را بارگذاری کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 <div class="card">
@@ -267,13 +681,22 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۳۶ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با سازمان.</div>
-<button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، طرح کرامت را انتخاب کن</div>
+<div class="qbank-step">اطلاعات مستمری خود را وارد کن</div>
+<div class="qbank-step">منتظر تأیید و پرداخت وام باش</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 </div>
 </div>
 
-<!-- گروه ۳: اقشار حمایتی -->
+<!-- گروه ۳ -->
 <div class="group" id="g3">
 <div class="group-title" onclick="toggleGroup('g3')">💚 اقشار حمایتی و آسیب‌پذیر</div>
 <div class="group-desc">اگر بانوی سرپرست خانوار، مددجو، معلول، عشایر، جانباز یا ساکن روستا هستی، این طرح ویژه توست.</div>
@@ -287,31 +710,48 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان + تأیید API نهاد.</div>
-<button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، بخش بانکداری اجتماعی را باز کن</div>
+<div class="qbank-step">طرح نجم را انتخاب و اطلاعات خود را وارد کن</div>
+<div class="qbank-step">منتظر تأیید از طریق API نهاد مربوطه باش</div>
+<div class="qbank-step">پس از تأیید، وام پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
 </div>
 </div>
 
-<!-- گروه ۴: اصناف -->
+<!-- گروه ۴ -->
 <div class="group" id="g4">
 <div class="group-title" onclick="toggleGroup('g4')">🏪 اصناف و کسبه</div>
 <div class="group-desc">اگر صاحب کسب‌وکار، مغازه‌دار یا دارای جواز کسب هستی، این طرح‌ها برای توست.</div>
 <div class="plans">
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح نارون</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - ویژه اصناف - کد ۱۰۶ / ۸۰۶</span>
-<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>اتحادیه‌ها، صاحبین کسب‌وکار و تمامی اصناف.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>اتحادیه‌ها، صاحبین کسب‌وکار و اصناف.</div>
 <div class="section sec-green"><span class="sec-title">💰 وام:</span>حقیقی تا ۱ میلیارد تومان / حقوقی تا ۱.۵ میلیارد</div>
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>صفر - ۲٪ - ۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
-<button class="speak-btn" onclick="readPlan('naron', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، بخش بانکداری اصناف را باز کن</div>
+<div class="qbank-step">اطلاعات جواز کسب و معدل حساب را وارد کن</div>
+<div class="qbank-step">درخواست وام را ثبت و منتظر تأیید باش</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('naron', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح سرو بدون تفاهم‌نامه</div>
 <div class="card-body">
@@ -327,10 +767,19 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <tr><td>بازپرداخت</td><td>۷ ماه</td><td>۹ ماه</td><td>۱۲ ماه</td><td>۱۶ ماه</td><td>۲۴ ماه</td></tr>
 <tr><td>انتظار</td><td>۲۰ روز</td><td>۳۰ روز</td><td>۳۰ روز</td><td>۵۰ روز</td><td>۶۰ روز</td></tr>
 </table>
-<button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، طرح سرو را انتخاب کن</div>
+<div class="qbank-step">مبلغ سپرده و مدت انتظار را مشخص کن</div>
+<div class="qbank-step">مدارک جواز کسب و ضمانت را بارگذاری کن</div>
+<div class="qbank-step">پس از تأیید، وام پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح سرو تفاهم‌نامه‌ای</div>
 <div class="card-body">
@@ -340,10 +789,19 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>۱۲ یا ۲۴ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪ — حمایت ۱۰۰٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با اتحادیه.</div>
-<button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">اطمینان حاصل کن که اتحادیه‌ات با بانک تفاهم‌نامه دارد</div>
+<div class="qbank-step">در کیوبانک، طرح سرو تفاهم‌نامه‌ای را انتخاب کن</div>
+<div class="qbank-step">مدارک تفاهم‌نامه را بارگذاری کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح توسکا</div>
 <div class="card-body">
@@ -354,19 +812,27 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با کارفرما.</div>
 <div class="section sec-pink">⚠️ شرط: داشتن دستگاه پوز فعال در بانک.</div>
-<button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">در کیوبانک، طرح توسکا را انتخاب کن</div>
+<div class="qbank-step">اطلاعات پوز و لیست حقوق را وارد کن</div>
+<div class="qbank-step">تعهد کسر از حقوق را امضا کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات کامل</button>
+</div>
+</div>
 </div>
 </div>
 
-</div>
-</div>
-
-<!-- گروه ۵: سازمان‌ها و شرکت‌ها -->
+<!-- گروه ۵ -->
 <div class="group" id="g5">
 <div class="group-title" onclick="toggleGroup('g5')">🏢 سازمان‌ها و شرکت‌ها</div>
 <div class="group-desc">اگر شرکت، سازمان یا نهاد هستی و می‌خواهی برای کارکنانت وام بگیری، این طرح‌ها برای توست.</div>
 <div class="plans">
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح یاقوت</div>
 <div class="card-body">
@@ -376,22 +842,19 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>طبق جداول امتیازی</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
-<button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">سازمان با بانک تفاهم‌نامه امضا می‌کند</div>
+<div class="qbank-step">در کیوبانک، طرح یاقوت را انتخاب کن</div>
+<div class="qbank-step">اطلاعات تفاهم‌نامه و لیست کارکنان را وارد کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح یاقوت با حفظ مبلغ ثابت</div>
-<div class="card-body">
-<span class="type-badge">امتیازی - تبصره یاقوت</span>
-<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>متقاضیان حقوقی با حفظ مبلغ ثابت نزد بانک.</div>
-<div class="section sec-yellow"><span class="sec-title">⏱ مدت تودیع:</span>حداکثر ۱۲ ماه بدون محدودیت تمدید</div>
-<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
-<button class="speak-btn" onclick="readPlan('yaghout2', this)">🔊 شنیدن توضیحات</button>
-</div>
-</div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح الماس</div>
 <div class="card-body">
@@ -402,85 +865,63 @@ table.mini tr:nth-child(even){background:#fef5e7}
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>بانک ۴٪ / مشتری ۲٪ یا ۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه حمایتی شرکت.</div>
 <div class="section sec-purple">⭐ از ماه دوم می‌توان از بازگشت اقساط برای تسهیلات مجدد استفاده کرد.</div>
-<button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">شرکت با بانک تفاهم‌نامه حمایتی امضا می‌کند</div>
+<div class="qbank-step">در کیوبانک، طرح الماس را انتخاب کن</div>
+<div class="qbank-step">مبلغ آورده و لیست کارکنان را وارد کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح الماس با حمایت بالای ۱۰۰٪</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - ویژه</span>
-<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان الماس که می‌خواهند حمایت بانک بیش از ۱۰۰٪ باشد.</div>
-<table class="mini">
-<tr><th>بازپرداخت</th><th>انتظار</th><th>ستون (۱)</th><th>ستون (۲)</th></tr>
-<tr><td>۱۲ ماه</td><td>۳ ماه</td><td>۱۴۵٪</td><td>۱۲۵٪</td></tr>
-<tr><td>۲۴ ماه</td><td>۶ ماه</td><td>۲۴۰٪</td><td>۱۷۰٪</td></tr>
-<tr><td>۳۶ ماه</td><td>۹ ماه</td><td>۳۲۰٪</td><td>۲۱۵٪</td></tr>
-<tr><td>۴۸ ماه</td><td>۱۲ ماه</td><td>۴۸۰٪</td><td>۲۶۰٪</td></tr>
-<tr><td>۶۰ ماه</td><td>۱۲ ماه</td><td>۵۴۰٪</td><td>۲۸۵٪</td></tr>
-</table>
-<button class="speak-btn" onclick="readPlan('almas100', this)">🔊 شنیدن توضیحات</button>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح الماس با بازگشت اقساط</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - پیشرفته</span>
-<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان حقوقی که پرداخت از محل بازگشت اقساط را می‌خواهند.</div>
-<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>انتظار ۱۰ روز از تودیع تفاهم‌نامه</div>
-<table class="mini">
-<tr><th>بازپرداخت</th><th>حمایت بانک</th><th>حداقل مدت تسهیلات مجدد</th></tr>
-<tr><td>۱۲ ماه</td><td>۱۰۰ واحد</td><td>پس از ۱۰ ماه</td></tr>
-<tr><td>۱۲ ماه</td><td>۷۵ واحد</td><td>پس از ۹ ماه</td></tr>
-<tr><td>۲۴ ماه</td><td>۱۰۰ واحد</td><td>پس از ۲۰ ماه</td></tr>
-<tr><td>۳۶ ماه</td><td>۱۰۰ واحد</td><td>پس از ۳۰ ماه</td></tr>
-</table>
-<button class="speak-btn" onclick="readPlan('almasaghsat', this)">🔊 شنیدن توضیحات</button>
-</div>
-</div>
-
-<div class="card">
-<div class="card-title" onclick="toggleCard(this)">طرح الماس با کارمزد کمتر از ۲٪</div>
-<div class="card-body">
-<span class="type-badge">حمایتی - کم‌کارمزد</span>
-<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان حقوقی با کارمزد کمتر از ۲٪.</div>
-<table class="mini">
-<tr><th>آورده</th><th>کارمزد مشتری</th><th>حمایت بانک</th><th>کارمزد بانک</th></tr>
-<tr><td>۱۰۰ واحد</td><td>۱٪</td><td>۹۰ واحد</td><td>۴٪</td></tr>
-<tr><td>۱۰۰ واحد</td><td>۰٪</td><td>۸۰ واحد</td><td>۴٪</td></tr>
-</table>
-<div class="section sec-pink">⚠️ تسویه زودتر از موعد یا بازگشت اقساط مجاز نیست.</div>
-<button class="speak-btn" onclick="readPlan('almas2', this)">🔊 شنیدن توضیحات</button>
-</div>
-</div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح فیروزه</div>
 <div class="card-body">
 <span class="type-badge">محاسبه واریز حقوق - کد ۱۵۱</span>
 <div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>شرکت‌هایی که حقوق کارکنان را از بانک واریز می‌کنند.</div>
-<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان = ۵٪ مجموع حقوق واریزی ماهیانه</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان = ۵٪ مجموع حقوق ماهیانه</div>
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۳۶ ماه</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه شرکت.</div>
-<button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">شرکت پرداخت حقوق را به بانک مهر ایران منتقل می‌کند</div>
+<div class="qbank-step">در کیوبانک، طرح فیروزه را انتخاب کن</div>
+<div class="qbank-step">مجموع حقوق واریزی را وارد کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
 <div class="card">
 <div class="card-title" onclick="toggleCard(this)">طرح نصر حقوقی</div>
 <div class="card-body">
-<span class="type-badge">حمایتی - سازمان مردم نهاد - کد ۲۴۷ / ۲۵۷</span>
+<span class="type-badge">حمایتی - سمن - کد ۲۴۷ / ۲۵۷</span>
 <div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>سازمان‌های مردم نهاد (سمن‌ها).</div>
 <div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان</div>
 <div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه / انتظار ۱۰ روز</div>
 <div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>بانک ۴٪ / اجتماعی ۲٪ و ۴٪</div>
 <div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سمن.</div>
-<button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات</button>
+<div class="qbank-box">
+<h4>📲 درخواست از کیوبانک</h4>
+<div class="qbank-steps">
+<div class="qbank-step">سمن با بانک تفاهم‌نامه امضا می‌کند</div>
+<div class="qbank-step">در کیوبانک، طرح نصر حقوقی را انتخاب کن</div>
+<div class="qbank-step">لیست اعضا و مدارک تفاهم‌نامه را بارگذاری کن</div>
+<div class="qbank-step">درخواست ثبت و پس از تأیید پرداخت می‌شود</div>
+</div>
+<a href="https://qbank24.ir/downloads" target="_blank" class="qbank-download">📲 دانلود کیوبانک</a>
+</div>
+<button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات کامل</button>
 </div>
 </div>
-
 </div>
 </div>
 
@@ -489,46 +930,35 @@ table.mini tr:nth-child(even){background:#fef5e7}
 نظام جامع اعتباری سال ۱۴۰۵ | معاونت بانکداری
 </div>
 </div>
+</div>
 
 <script>
-// ===== جداول ضرایب =====
 var T4={6:{1:.312,2:.632,3:.949,4:1.265,5:1.581,6:1.897,7:2.213,8:2.529,9:2.846,10:3.162,11:3.478,12:3.794},12:{1:.187,2:.383,3:.574,4:.765,5:.957,6:1.148,7:1.340,8:1.531,9:1.722,10:1.914,11:2.105,12:2.296},18:{1:.152,2:.312,3:.469,4:.655,5:.781,6:.937,7:1.093,8:1.249,9:1.406,10:1.562,11:1.718,12:1.874},24:{1:.120,2:.248,3:.373,4:.497,5:.621,6:.745,7:.869,8:.993,9:1.118,10:1.242,11:1.366,12:1.490},36:{1:.080,2:.168,3:.253,4:.337,5:.421,6:.505,7:.589,8:.673,9:.758,10:.842,11:.926,12:1.010},48:{1:.060,2:.128,3:.193,4:.257,5:.321,6:.385,7:.449,8:.513,9:.578,10:.642,11:.706,12:.770},60:{1:.048,2:.104,3:.157,4:.209,5:.261,6:.313,7:.365,8:.417,9:.470,10:.522,11:.574,12:.666}};
 var T3={6:{1:.281,2:.569,3:.854,4:1.138,5:1.423,6:1.707,7:1.992,8:2.276,9:2.561,10:2.846,11:3.130,12:3.415},12:{1:.168,2:.344,3:.517,4:.689,5:.861,6:1.033,7:1.206,8:1.378,9:1.550,10:1.722,11:1.895,12:2.067},18:{1:.137,2:.281,3:.422,4:.562,5:.703,6:.843,7:.984,8:1.124,9:1.265,10:1.406,11:1.546,12:1.687},24:{1:.108,2:.224,3:.335,4:.447,5:.559,6:.671,7:.782,8:.894,9:1.006,10:1.118,11:1.229,12:1.341},36:{1:.072,2:.152,3:.227,4:.303,5:.379,6:.455,7:.530,8:.606,9:.682,10:.758,11:.832,12:.909},48:{1:.054,2:.116,3:.173,4:.231,5:.289,6:.347,7:.404,8:.462,9:.520,10:.578,11:.635,12:.693},60:{1:.043,2:.094,3:.141,4:.188,5:.235,6:.282,7:.329,8:.376,9:.423,10:.470,11:.516,12:.563}};
 var T2={6:{1:.250,2:.506,3:.759,4:1.012,5:1.265,6:1.518,7:1.771,8:2.023,9:2.276,10:2.529,11:2.782,12:3.035},12:{1:.150,2:.306,3:.459,4:.612,5:.765,6:.919,7:1.072,8:1.225,9:1.378,10:1.531,11:1.684,12:1.837},18:{1:.122,2:.250,3:.375,4:.500,5:.625,6:.750,7:.875,8:.999,9:1.124,10:1.249,11:1.374,12:1.499},24:{1:.096,2:.199,3:.298,4:.397,5:.497,6:.596,7:.695,8:.795,9:.894,10:.993,11:1.093,12:1.192},36:{1:.064,2:.135,3:.202,4:.269,5:.337,6:.404,7:.471,8:.539,9:.606,10:.673,11:.741,12:.808},48:{1:.048,2:.103,3:.154,4:.205,5:.257,6:.308,7:.359,8:.411,9:.462,10:.513,11:.565,12:.616},60:{1:.038,2:.083,3:.125,4:.167,5:.209,6:.250,7:.292,8:.334,9:.376,10:.417,11:.459,12:.501}};
 var TN={6:{1:.125,2:.253,3:.380,4:.506,5:.633,6:.759,7:.886,8:1.012,9:1.138,10:1.265,11:1.391,12:1.518},12:{1:.075,2:.153,3:.230,4:.306,5:.383,6:.459,7:.536,8:.612,9:.689,10:.765,11:.842,12:.919},18:{1:.061,2:.125,3:.188,4:.250,5:.313,6:.375,7:.438,8:.500,9:.562,10:.625,11:.687,12:.750},24:{1:.048,2:.100,3:.149,4:.199,5:.249,6:.298,7:.348,8:.398,9:.447,10:.497,11:.547,12:.596},36:{1:.032,2:.068,3:.101,4:.135,5:.169,6:.202,7:.236,8:.270,9:.303,10:.337,11:.371,12:.404},48:{1:.024,2:.052,3:.077,4:.103,5:.129,6:.154,7:.180,8:.206,9:.231,10:.257,11:.283,12:.308},60:{1:.019,2:.042,3:.063,4:.084,5:.105,6:.125,7:.146,8:.167,9:.188,10:.209,11:.230,12:.251}};
 
 var fees={niloufar:4,noora:0};
-
-// ===== باز کردن قفل صدا =====
 var audioUnlocked=false;
+
 function unlockAudio(){
 if(audioUnlocked)return;
-try{
-var s=new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
-s.volume=0;s.play().catch(function(){});
-}catch(e){}
-if('speechSynthesis' in window){
-try{var u=new SpeechSynthesisUtterance(' ');u.volume=0;u.rate=10;window.speechSynthesis.speak(u);}catch(e){}
-}
+try{var s=new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');s.volume=0;s.play().catch(function(){});}catch(e){}
+if('speechSynthesis' in window){try{var u=new SpeechSynthesisUtterance(' ');u.volume=0;u.rate=10;window.speechSynthesis.speak(u);}catch(e){}}
 audioUnlocked=true;
 }
 document.addEventListener('touchstart',unlockAudio,{passive:true});
 document.addEventListener('click',unlockAudio);
 
-// ===== آکاردئون گروه‌ها =====
 function toggleGroup(id){
 unlockAudio();
 var all=document.querySelectorAll('.group');
 for(var i=0;i<all.length;i++){
-if(all[i].id===id){
-all[i].classList.toggle('open');
-}else{
-all[i].classList.remove('open');
-}
+if(all[i].id===id)all[i].classList.toggle('open');
+else all[i].classList.remove('open');
 }
 }
 
-// ===== آکاردئون کارت‌ها =====
 function toggleCard(el){
 unlockAudio();
 var card=el.parentElement;
@@ -538,32 +968,29 @@ for(var i=0;i<all.length;i++)all[i].classList.remove('open');
 if(!wasOpen)card.classList.add('open');
 }
 
-// ===== فرمت اعداد =====
 function formatNum(n){return Math.round(n).toLocaleString('fa-IR');}
 
-// ===== انتخاب کارمزد =====
 function selectFee(scheme,rate){
 fees[scheme]=rate;
-var card=document.querySelector('#'+scheme+'-result').closest('.card');
+var res=document.getElementById(scheme+'-result');
+var card=res.closest('.card');
 var btns=card.querySelectorAll('.fee-btn');
 for(var i=0;i<btns.length;i++)btns[i].classList.toggle('active',parseInt(btns[i].dataset.fee)===rate);
 }
 
-// ===== محاسبه وام =====
 function calcLoan(scheme){
 unlockAudio();
 var depEl=document.getElementById(scheme+'-deposit');
 var perEl=document.getElementById(scheme+'-period');
 var resEl=document.getElementById(scheme+'-result');
-if(!depEl||!perEl||!resEl){alert('خطا');return;}
 var d=parseFloat(depEl.value.replace(/,/g,''))||0;
 var p=parseInt(perEl.value)||0;
 if(d<=0){alert('لطفاً مبلغ سپرده را وارد کنید');return;}
 if(p<1||p>12){alert('مدت معدل‌گیری باید بین ۱ تا ۱۲ ماه باشد');return;}
 var feeRate=fees[scheme];
 var table;
-if(scheme==='noora'){table=TN;}
-else{ if(feeRate===2)table=T2; else if(feeRate===3)table=T3; else table=T4; }
+if(scheme==='noora')table=TN;
+else{if(feeRate===2)table=T2;else if(feeRate===3)table=T3;else table=T4;}
 var h='<h5>📊 نتیجه - '+(scheme==='niloufar'?'نیلوفر':'نورا')+' (کارمزد '+feeRate+'٪)</h5>';
 h+='<table><tr><th>بازپرداخت</th><th>مبلغ وام</th><th>قسط</th></tr>';
 var ps=[6,12,18,24,36,48,60];
@@ -577,78 +1004,47 @@ var ins=(l+f)/rp;
 h+='<tr><td>'+rp+' ماهه</td><td class="amount">'+formatNum(l)+'</td><td>'+formatNum(ins)+'</td></tr>';
 }
 h+='</table>';
-if(scheme==='niloufar'&&d<=100000000){
-h+='<div style="background:#d4edda;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#155724;">⭐ رتبه A یا B → وام فوری بدون ضامن</div>';
-}
-h+='<div style="background:#fff8e1;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#7a5c00;">⚠️ اعداد تقریبی است</div>';
+if(scheme==='niloufar'&&d<=100000000)h+='<div style="background:#d4edda;padding:8px;border-radius:6px;margin-top:8px;font-size:11px;color:#155724;">⭐ رتبه A یا B → وام فوری بدون ضامن</div>';
+h+='<div style="background:#fff8e1;padding:8px;border-radius:6px;margin-top:8px;font-size:11px;color:#7a5c00;">⚠️ اعداد تقریبی است</div>';
 resEl.innerHTML=h;
 resEl.classList.add('show');
 }
 
-// ===== فرمت خودکار ورودی سپرده =====
 document.addEventListener('DOMContentLoaded',function(){
 ['niloufar-deposit','noora-deposit'].forEach(function(id){
 var inp=document.getElementById(id);
-if(inp){
-inp.addEventListener('input',function(){
+if(inp)inp.addEventListener('input',function(){
 var r=this.value.replace(/[^\d]/g,'');
 this.value=r?parseInt(r).toLocaleString('en-US'):'';
 });
-}
 });
 });
 
-// ===== QR Code =====
 (function(){
 var url=window.location.href.split('?')[0].split('#')[0];
 var qr=document.getElementById('qrImg');
 var qru=document.getElementById('qrUrl');
 qru.textContent=url;
 qr.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(url);
-qr.onerror=function(){
-qr.src='https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+encodeURIComponent(url);
-};
+qr.onerror=function(){qr.src='https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+encodeURIComponent(url);};
 })();
 
-// ===== سیستم صوتی =====
-var persianVoice=null;
-var currentAudio=null;
-var isPlaying=false;
-var rvReady=false;
-
+var persianVoice=null,currentAudio=null,isPlaying=false,rvReady=false;
 function isIOS(){return /iPhone|iPad|iPod/i.test(navigator.userAgent);}
-function isMobile(){return /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);}
+function isMobile(){return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
 
 function findPersianVoice(){
 if(!('speechSynthesis' in window))return null;
 var voices=window.speechSynthesis.getVoices();
 if(!voices||voices.length===0)return null;
-for(var i=0;i<voices.length;i++){
-var n=voices[i].name||'';
-if(n.indexOf('Farid')!==-1||n.indexOf('Dilara')!==-1)return voices[i];
-}
-var appleNames=['Majid','Laila','Kiana','Nava'];
-for(var i=0;i<voices.length;i++){
-var n=voices[i].name||'';
-for(var j=0;j<appleNames.length;j++){
-if(n.indexOf(appleNames[j])!==-1)return voices[i];
-}
-}
-for(var i=0;i<voices.length;i++){
-var l=(voices[i].lang||'').toLowerCase();
-if(l==='fa-ir'||l==='fa'||l.indexOf('fa-')===0)return voices[i];
-}
-for(var i=0;i<voices.length;i++){
-var n=(voices[i].name||'').toLowerCase();
-if(n.indexOf('persian')!==-1||n.indexOf('farsi')!==-1)return voices[i];
-}
+for(var i=0;i<voices.length;i++){var n=voices[i].name||'';if(n.indexOf('Farid')!==-1||n.indexOf('Dilara')!==-1)return voices[i];}
+var an=['Majid','Laila','Kiana','Nava'];
+for(var i=0;i<voices.length;i++){var n=voices[i].name||'';for(var j=0;j<an.length;j++)if(n.indexOf(an[j])!==-1)return voices[i];}
+for(var i=0;i<voices.length;i++){var l=(voices[i].lang||'').toLowerCase();if(l==='fa-ir'||l==='fa'||l.indexOf('fa-')===0)return voices[i];}
+for(var i=0;i<voices.length;i++){var n=(voices[i].name||'').toLowerCase();if(n.indexOf('persian')!==-1||n.indexOf('farsi')!==-1)return voices[i];}
 return null;
 }
-
-function checkRV(){
-if(typeof responsiveVoice!=='undefined'){rvReady=true;return true;}
-return false;
-}
+function checkRV(){if(typeof responsiveVoice!=='undefined'){rvReady=true;return true;}return false;}
 
 if('speechSynthesis' in window){
 persianVoice=findPersianVoice();
@@ -656,7 +1052,7 @@ window.speechSynthesis.onvoiceschanged=function(){persianVoice=findPersianVoice(
 setTimeout(function(){persianVoice=findPersianVoice();},500);
 setTimeout(function(){persianVoice=findPersianVoice();},2000);
 }
-var rvTimer=setInterval(function(){if(checkRV())clearInterval(rvTimer);},400);
+setInterval(function(){checkRV();},400);
 
 function chunkText(text,maxLen){
 maxLen=maxLen||180;
@@ -666,16 +1062,9 @@ for(var i=0;i<parts.length;i++){
 var s=parts[i];
 if((buf+' '+s).length>maxLen){
 if(buf)chunks.push(buf.trim());
-while(s.length>maxLen){
-var cut=s.lastIndexOf(' ',maxLen);
-if(cut===-1)cut=maxLen;
-chunks.push(s.substring(0,cut).trim());
-s=s.substring(cut).trim();
-}
+while(s.length>maxLen){var cut=s.lastIndexOf(' ',maxLen);if(cut===-1)cut=maxLen;chunks.push(s.substring(0,cut).trim());s=s.substring(cut).trim();}
 buf=s;
-}else{
-buf=buf?buf+' '+s:s;
-}
+}else buf=buf?buf+' '+s:s;
 }
 if(buf.trim())chunks.push(buf.trim());
 return chunks;
@@ -683,64 +1072,38 @@ return chunks;
 
 function speakWS(text,onEnd,onErr){
 var u=new SpeechSynthesisUtterance(text);
-if(persianVoice){u.voice=persianVoice;u.lang=persianVoice.lang||'fa-IR';}
-else u.lang='fa-IR';
-u.rate=isMobile()?0.85:0.9;
-u.pitch=1;u.volume=1;
+if(persianVoice){u.voice=persianVoice;u.lang=persianVoice.lang||'fa-IR';}else u.lang='fa-IR';
+u.rate=isMobile()?0.85:0.9;u.pitch=1;u.volume=1;
 u.onend=function(){if(onEnd)onEnd();};
 u.onerror=function(){if(onErr)onErr();else if(onEnd)onEnd();};
 window.speechSynthesis.speak(u);
 }
-
 function speakRV(text,onEnd){
-try{
-responsiveVoice.speak(text,"Persian Female",{
-rate:0.9,pitch:1,volume:1,
-onend:function(){if(onEnd)onEnd();},
-onerror:function(){if(onEnd)onEnd();}
-});
-}catch(e){if(onEnd)onEnd();}
+try{responsiveVoice.speak(text,"Persian Female",{rate:0.9,pitch:1,volume:1,onend:function(){if(onEnd)onEnd();},onerror:function(){if(onEnd)onEnd();}});}catch(e){if(onEnd)onEnd();}
 }
-
 function speakGoogle(text,onEnd){
 var url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q='+encodeURIComponent(text);
 var audio=new Audio(url);
 currentAudio=audio;
 audio.onended=function(){currentAudio=null;if(onEnd)onEnd();};
 audio.onerror=function(){currentAudio=null;if(onEnd)onEnd();};
-var p=audio.play();
-if(p&&p.catch)p.catch(function(){if(onEnd)onEnd();});
+var p=audio.play();if(p&&p.catch)p.catch(function(){if(onEnd)onEnd();});
 }
 
 function speak(text){
 if(!text||!text.trim())return;
-unlockAudio();
-stopAll();
-isPlaying=true;
+unlockAudio();stopAll();isPlaying=true;
 var chunks=chunkText(text),i=0;
 var ios=isIOS();
 var hasPersian=persianVoice&&(persianVoice.lang==='fa-IR'||(persianVoice.lang||'').indexOf('fa')===0);
 function next(){
 if(!isPlaying||i>=chunks.length){isPlaying=false;clearAct();return;}
 var c=chunks[i];
-if(ios&&hasPersian){
-speakWS(c,
-function(){i++;if(isPlaying)setTimeout(next,150);},
-function(){speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});}
-);
-return;
-}
-if(ios&&!hasPersian){
-speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});
-return;
-}
-if(persianVoice){
-speakWS(c,function(){i++;if(isPlaying)setTimeout(next,150);});
-}else if(rvReady){
-speakRV(c,function(){i++;if(isPlaying)setTimeout(next,200);});
-}else{
-speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});
-}
+if(ios&&hasPersian){speakWS(c,function(){i++;if(isPlaying)setTimeout(next,150);},function(){speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});});return;}
+if(ios&&!hasPersian){speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});return;}
+if(persianVoice)speakWS(c,function(){i++;if(isPlaying)setTimeout(next,150);});
+else if(rvReady)speakRV(c,function(){i++;if(isPlaying)setTimeout(next,200);});
+else speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});
 }
 next();
 }
@@ -752,14 +1115,10 @@ if(typeof responsiveVoice!=='undefined'){try{responsiveVoice.cancel();}catch(e){
 if(currentAudio){try{currentAudio.pause();currentAudio.src='';}catch(e){}currentAudio=null;}
 clearAct();
 }
-
-function clearAct(){
-var b=document.querySelectorAll('.speak-btn');
-for(var i=0;i<b.length;i++)b[i].classList.remove('active');
-}
+function clearAct(){var b=document.querySelectorAll('.speak-btn');for(var i=0;i<b.length;i++)b[i].classList.remove('active');}
 
 var planTexts={
-niloufar:'طرح نیلوفر. کد یکصد و یک. برای کلیه اشخاص حقیقی. سقف تسهیلات پانصد میلیون تومان. کارمزد دو یا سه یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. دوره معدل گیری یک تا دوازده ماه. تبصره ویژه وام فوری: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه ایرانیان A یا B باشد، وام فوری بدون ضامن.',
+niloufar:'طرح نیلوفر. کد یکصد و یک. برای کلیه اشخاص حقیقی. سقف تسهیلات پانصد میلیون تومان. کارمزد دو یا سه یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. تبصره ویژه وام فوری: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه ایرانیان A یا B باشد، وام فوری بدون ضامن.',
 noora:'طرح نورا. کد یکصد و هشتاد و دو. تسهیلات بدون کارمزد. سقف پانصد میلیون تومان. کارمزد صفر. مدت بازپرداخت شش تا شصت ماه.',
 nasr:'طرح نصر حقیقی. برای اشخاص حقیقی که در نهاد حمایتی پرونده دارند. سقف صد و پنجاه میلیون تومان.',
 orkideh:'طرح ارکیده. برای اشخاص حقیقی از طریق مصالح. دو برابر سپرده تودیعی. ضمان مصالح ضامن است.',
@@ -783,7 +1142,7 @@ nasr2:'طرح نصر حقوقی. ویژه سازمان های مردم نهاد.
 
 function readWelcome(){
 unlockAudio();
-speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. مرحله اول شغل خودت را انتخاب کن. مرحله دوم روی عنوان هر طرح بزن. مرحله سوم شرح کامل و جدول را ببین. مرحله چهارم با ماشین حساب داخل کارت نیلوفر یا نورا، مبلغ وام خودت را حساب کن.');
+speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. مرحله اول شغل خودت را انتخاب کن. مرحله دوم روی عنوان هر طرح بزن. مرحله سوم شرح کامل و جدول را ببین. مرحله چهارم با ماشین حساب داخل کارت نیلوفر یا نورا، مبلغ وام خودت را حساب کن. مرحله پنجم با دکمه درخواست از کیوبانک، مستقیم به اپلیکیشن هدایت شو.');
 }
 
 function readPlan(key,btn){
