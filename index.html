@@ -16,6 +16,30 @@ h1 { color: #0d5c3a; text-align: center; font-size: 22px; margin-bottom: 5px; }
 #status.ok { background: #d4edda; border-color: #28a745; color: #155724; }
 #status.warn { background: #fff3cd; border-color: #f39c12; color: #7a5c00; }
 #status.err { background: #f8d7da; border-color: #c0392b; color: #721c24; }
+.rule-box { background: #e8f5ee; border: 2px solid #0d5c3a; border-radius: 12px; padding: 12px; margin-bottom: 14px; }
+.rule-box h3 { color: #0d5c3a; font-size: 14px; margin-bottom: 8px; text-align: center; }
+.rule-box p { font-size: 12.5px; color: #333; line-height: 1.9; margin-bottom: 6px; }
+.rule-box table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 6px; }
+.rule-box th, .rule-box td { border: 1px solid #0d5c3a; padding: 5px 6px; text-align: center; }
+.rule-box th { background: #0d5c3a; color: #fff; font-weight: normal; }
+.special-box { background: #d4edda; border: 2px solid #28a745; border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 12.5px; color: #155724; line-height: 1.9; }
+.special-box b { color: #0d5c3a; }
+.calc-box { background: #fff3cd; border: 2px solid #f39c12; border-radius: 14px; padding: 16px; margin-bottom: 16px; }
+.calc-box h3 { color: #7a5c00; font-size: 16px; margin-bottom: 12px; text-align: center; }
+.calc-row { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.calc-field { flex: 1; min-width: 140px; }
+.calc-field label { display: block; font-size: 12px; color: #7a5c00; font-weight: bold; margin-bottom: 4px; }
+.calc-field input, .calc-field select { width: 100%; padding: 10px; border: 2px solid #f39c12; border-radius: 8px; font-family: inherit; font-size: 14px; background: #fff; }
+.calc-btn { display: block; width: 100%; padding: 12px; background: #f39c12; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-family: inherit; font-weight: bold; cursor: pointer; margin-top: 8px; }
+.calc-btn:active { background: #d35400; }
+.calc-result { background: #fff; border: 2px solid #0d5c3a; border-radius: 12px; padding: 14px; margin-top: 12px; display: none; }
+.calc-result.show { display: block; }
+.calc-result h4 { color: #0d5c3a; font-size: 15px; margin-bottom: 10px; text-align: center; }
+.result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.result-item { background: #e8f5ee; border-radius: 8px; padding: 8px 10px; text-align: center; }
+.result-item b { display: block; font-size: 11px; color: #666; margin-bottom: 3px; }
+.result-item span { font-size: 16px; color: #0d5c3a; font-weight: bold; }
+.result-note { background: #fff8e1; border-right: 4px solid #f39c12; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #7a5c00; margin-top: 10px; line-height: 1.8; }
 .qr-box { text-align: center; background: #e8f5ee; border: 2px dashed #0d5c3a; border-radius: 14px; padding: 12px; margin-bottom: 12px; }
 .qr-box p { color: #0d5c3a; font-size: 12px; font-weight: bold; margin-bottom: 6px; }
 .qr-box img { width: 120px; height: 120px; background: #fff; padding: 4px; border-radius: 10px; }
@@ -35,14 +59,20 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 .card p { color: #444; font-size: 13.5px; line-height: 1.95; margin-bottom: 9px; text-align: justify; }
 .detail-box { background: #fff; border-right: 4px solid #0d5c3a; padding: 9px 12px; margin-bottom: 8px; border-radius: 8px; }
 .detail-box div { color: #333; font-size: 13px; line-height: 2; }
+.zeman-box { background: #fdebd0; border-right: 4px solid #d35400; padding: 10px 13px; border-radius: 8px; font-size: 12.5px; color: #7a3d00; margin-bottom: 9px; line-height: 2; }
+.zeman-box b { color: #a04000; }
+.foori-box { background: #d4edda; border: 2px solid #28a745; padding: 10px 13px; border-radius: 8px; font-size: 12.5px; color: #155724; margin-bottom: 9px; line-height: 2; }
+.foori-box b { color: #0d5c3a; }
 .formula-box { background: #fff3cd; border-right: 4px solid #f39c12; padding: 10px 13px; border-radius: 8px; font-size: 13px; color: #7a5c00; margin-bottom: 9px; line-height: 2; }
-.formula-box b { color: #8a6d0f; }
 .example-box { background: #e8f5ee; border-right: 4px solid #0d5c3a; padding: 10px 13px; border-radius: 8px; font-size: 13px; color: #0d5c3a; margin-bottom: 9px; line-height: 2; }
 .speak-btn { display: block; width: 100%; padding: 11px; background: #0d5c3a; color: #fff; border: none; border-radius: 10px; font-size: 14px; font-family: inherit; font-weight: bold; cursor: pointer; }
-.speak-btn:active { background: #094228; }
 .speak-btn.active { background: #f39c12; }
 .footer { text-align: center; color: #999; font-size: 11px; margin-top: 15px; line-height: 1.8; }
 .note { background: #fff8e1; border-right: 4px solid #f39c12; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #7a5c00; margin-top: 8px; line-height: 1.85; }
+.warn-note { background: #f8d7da; border-right: 4px solid #c0392b; padding: 8px 12px; border-radius: 6px; font-size: 12px; color: #721c24; margin-top: 8px; line-height: 1.85; }
+@media (max-width: 400px) {
+.result-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -52,6 +82,89 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
 
 <div id="status">🔍 در حال بررسی سیستم صوتی...</div>
+
+<!-- ========== ماشین‌حساب وام ========== -->
+<div class="calc-box">
+<h3>🧮 ماشین‌حساب وام سپرده‌محور</h3>
+<p style="font-size:12.5px; color:#7a5c00; text-align:center; margin-bottom:12px;">
+مبلغ وام = میانگین موجودی × ضریب<br>
+ضریب بر اساس دوره معدل‌گیری و مدت بازپرداخت تعیین می‌شود
+</p>
+<div class="calc-row">
+<div class="calc-field">
+<label>مبلغ سپرده (میلیون تومان)</label>
+<input type="number" id="depositAmount" placeholder="مثلاً 100" min="1" step="1">
+</div>
+</div>
+<div class="calc-row">
+<div class="calc-field">
+<label>دوره معدل‌گیری (ماه)</label>
+<select id="avgPeriod">
+<option value="1">۱ ماه</option>
+<option value="3">۳ ماه</option>
+<option value="6">۶ ماه</option>
+<option value="9">۹ ماه</option>
+<option value="12" selected>۱۲ ماه</option>
+<option value="18">۱۸ ماه</option>
+<option value="24">۲۴ ماه</option>
+<option value="30">۳۰ ماه</option>
+<option value="36">۳۶ ماه</option>
+</select>
+</div>
+<div class="calc-field">
+<label>مدت بازپرداخت (ماه)</label>
+<select id="repayPeriod">
+<option value="12">۱۲ ماه</option>
+<option value="18">۱۸ ماه</option>
+<option value="24">۲۴ ماه</option>
+<option value="36">۳۶ ماه</option>
+<option value="48">۴۸ ماه</option>
+<option value="60" selected>۶۰ ماه</option>
+</select>
+</div>
+</div>
+<button class="calc-btn" onclick="calculateLoan()">محاسبه وام</button>
+<div class="calc-result" id="calcResult">
+<h4>📊 نتیجه محاسبه</h4>
+<div class="result-grid">
+<div class="result-item">
+<b>مبلغ وام تقریبی</b>
+<span id="resLoan">---</span>
+</div>
+<div class="result-item">
+<b>کارمزد</b>
+<span id="resRate">---</span>
+</div>
+<div class="result-item">
+<b>مدت بازپرداخت</b>
+<span id="resMonths">---</span>
+</div>
+<div class="result-item">
+<b>قسط تقریبی ماهانه</b>
+<span id="resInstallment">---</span>
+</div>
+</div>
+<div class="result-note" id="resNote"></div>
+</div>
+</div>
+
+<div class="rule-box">
+<h3>🔒 نظام ضمانت در همه طرح‌ها</h3>
+<p><b>در تمام طرح‌های تسهیلات، ضمان بر اساس «سامانه ضمان» و رتبه اعتباری شما تعیین می‌شود.</b></p>
+<p><b>نحوه محاسبه رتبه ضمانی (Z):</b> ۷۰٪ رتبه سامانه ضمان + ۳۰٪ رتبه شرکت اعتبارسنجی ایرانیان</p>
+<table>
+<tr><th>رتبه Z</th><th>تضمین</th></tr>
+<tr><td>Z ≥ ۸۰</td><td>با پذیرش بیمه عمر: بدون ضامن / بدون بیمه: یک ضامن</td></tr>
+<tr><td>۸۰ > Z ≥ ۵۰</td><td>با پذیرش بیمه عمر: بدون ضامن / بدون بیمه: یک ضامن</td></tr>
+<tr><td>۵۰ > Z ≥ ۳۰</td><td>با پذیرش بیمه عمر: بدون ضامن / بدون بیمه: یک ضامن</td></tr>
+<tr><td>Z < ۳۰</td><td>با پذیرش بیمه عمر: بدون ضامن / بدون بیمه: یک یا دو ضامن + وثایق</td></tr>
+</table>
+<p style="margin-top:8px;"><b>سقف ضمانی:</b> حداکثر وامی که با ضمان سامانه (بدون ضامن اضافی) می‌توانید بگیرید، برابر است با <b>Z × ضریب</b> (ضریب بین ۱ تا ۵).</p>
+<div class="special-box">
+<b>⭐ تبصره ویژه طرح نیلوفر (وام فوری):</b><br>
+اگر معدل حساب شما تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه اعتبارسنجی ایرانیان شما <b>A یا B</b> باشد، <b>وام فوری بدون ضامن</b> دریافت می‌کنید.
+</div>
+</div>
 
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
@@ -72,26 +185,25 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نیلوفر</h3>
 <span class="type-badge">امتیازی - سپرده محور</span>
-<p>در این طرح، شما با سپرده‌گذاری در حساب قرض‌الحسنه پس‌انداز بانک مهر ایران، اعتبار ایجاد می‌کنید. هر چه مبلغ سپرده بیشتر باشد و مدت بیشتری حفظ شود، اعتبار شما برای دریافت وام بیشتر می‌شود. بدون نیاز به ضامن و فقط بر اساس اعتبار سپرده خودتان.</p>
+<p>در این طرح با سپرده‌گذاری در حساب قرض‌الحسنه پس‌انداز بانک، اعتبار ایجاد می‌کنید. هر چه سپرده بیشتر و مدت حفظ بیشتر باشد، اعتبار وام بالاتر است.</p>
+<div class="foori-box">
+<b>⭐ تبصره ویژه وام فوری:</b> اگر معدل حساب شما تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه اعتبارسنجی ایرانیان شما <b>A یا B</b> باشد، <b>وام فوری بدون ضامن</b> دریافت می‌کنید.
+</div>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان و رتبه اعتباری. با پذیرش بیمه عمر و رتبه مناسب، بدون ضامن؛ در غیر این صورت یک ضامن و وثیقه (چک/کسر از حقوق).
+</div>
 <div class="detail-box">
-<div>جامعه هدف: کلیه اشخاص حقیقی</div>
-<div>سقف تسهیلات: ۵ میلیارد ریال (۵۰۰ میلیون تومان)</div>
+<div>سقف تسهیلات: ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۰٪ - ۲٪ - ۴٪</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
+<div>دوره معدل‌گیری: ۱ تا ۳۶ ماه</div>
 <div>کد تسهیلات: ۱۰۱</div>
 </div>
 <div class="formula-box">
-<b>📐 نحوه محاسبه وام:</b><br>
-مبلغ وام = میانگین موجودی حساب × ضریب<br>
-هر چه <b>دوره معدل‌گیری</b> (تعداد ماهی که سپرده را نگه می‌دارید) بیشتر باشد، ضریب بالاتر و وام بیشتر است.<br>
-هر چه <b>مدت بازپرداخت</b> کوتاه‌تر باشد، ضریب بالاتر است.
+<b>📐 نحوه محاسبه:</b> مبلغ وام = میانگین موجودی حساب × ضریب (هر چه دوره معدل‌گیری بیشتر، ضریب بالاتر)
 </div>
 <div class="example-box">
-<b>💡 مثال:</b><br>
-اگر ۱۰۰ میلیون تومان به مدت ۱۲ ماه در حساب قرض‌الحسنه نگه دارید:<br>
-• بازپرداخت ۱۲ ماهه: تا حدود ۱۰۶ میلیون تومان وام<br>
-• بازپرداخت ۶۰ ماهه: تا حدود ۳۴ میلیون تومان وام<br>
-(ضریب دقیق از جدول ۳-۱ سیاست اعتباری هر سال)
+<b>💡 مثال:</b> میانگین ۱۲ ماهه ۸۶ میلیون تومان → ۳۰۰ میلیون تومان وام با بازپرداخت ۱۲ ماهه و کارمزد ۴٪[reference:1]
 </div>
 <button class="speak-btn" onclick="readPlan('niloufar', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -99,16 +211,19 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نورا</h3>
 <span class="type-badge">امتیازی - بدون کارمزد</span>
-<p>این طرح برای ترویج فرهنگ قرآنی قرض‌الحسنه طراحی شده و تسهیلات بدون کارمزد پرداخت می‌کند. اگر می‌خواهید وام بدون هزینه اضافی بگیرید، این طرح عالی است.</p>
+<p>تسهیلات بدون کارمزد برای ترویج فرهنگ قرض‌الحسنه. بر اساس معدل حساب، تا سقف ۵۰۰ میلیون تومان.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان و رتبه اعتباری. با پذیرش بیمه عمر و رتبه بالا، بدون ضامن؛ در غیر این صورت یک ضامن و وثیقه.
+</div>
 <div class="detail-box">
 <div>سقف تسهیلات: ۵ میلیارد ریال</div>
-<div>نرخ کارمزد: صفر درصد (کاملاً رایگان)</div>
-<div>مدت بازپرداخت: تا ۶۰ ماه</div>
+<div>نرخ کارمزد: صفر درصد</div>
+<div>مدت بازپرداخت: ۱۸ تا ۶۰ ماه</div>
+<div>دوره معدل‌گیری: ۱ تا ۳۶ ماه</div>
 <div>کد تسهیلات: ۱۸۲</div>
 </div>
 <div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-این طرح نیز سپرده‌محور است. مبلغ وام بر اساس میانگین موجودی و مدت سپرده‌گذاری تعیین می‌شود. کارمزد صفر است، یعنی هیچ سودی پرداخت نمی‌کنید.
+<b>📐 نحوه محاسبه:</b> برای دریافت ۵۰۰ میلیون تومان، با معدل‌گیری ۳۶ ماهه حدود ۳۸۰ میلیون تومان موجودی لازم است؛ با معدل‌گیری ۱۲ ماهه حدود ۱ میلیارد تومان[reference:2]
 </div>
 <button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -116,17 +231,15 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح رضوان</h3>
 <span class="type-badge">امتیازی - با تفاهم‌نامه</span>
-<p>این طرح ویژه کارکنان سازمان‌هایی است که با بانک تفاهم‌نامه امضا کرده‌اند. اگر کارمند کمیته امداد، بهزیستی، بنیاد علوی یا سازمان‌های مشابه هستید، می‌توانید از این طرح استفاده کنید.</p>
+<p>ویژه کارکنان سازمان‌های حمایتی که با بانک تفاهم‌نامه دارند.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق ضوابط تفاهم‌نامه سازمان با بانک.
+</div>
 <div class="detail-box">
-<div>جامعه هدف: کارکنان سازمان‌های حمایتی</div>
 <div>سقف تسهیلات: ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۲٪ - ۳٪ - ۴٪</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
 <div>کد تسهیلات: ۱۸۱</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-سازمان شما با بانک تفاهم‌نامه امضا می‌کند و بر اساس اعتبار تفاهم‌نامه، شما می‌توانید وام بگیرید. مبلغ وام بر اساس ضریب تفاهم‌نامه و مدت سپرده‌گذاری سازمان تعیین می‌شود.
 </div>
 <button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -134,16 +247,15 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح کرامت</h3>
 <span class="type-badge">حمایتی - پشتوانه مستمری</span>
-<p>این طرح ویژه افرادی است که مستمری از سازمان‌های حمایتی (کمیته امداد، بهزیستی، بنیاد علوی و...) دریافت می‌کنند. با پشتوانه واریز مستمری، می‌توانید وام قرض‌الحسنه بگیرید.</p>
+<p>ویژه دریافت‌کنندگان مستمری از سازمان‌های حمایتی.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه با سازمان حمایتی.
+</div>
 <div class="detail-box">
 <div>سقف تسهیلات: ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
 <div>مدت بازپرداخت: تا ۳۶ ماه</div>
 <div>کد تسهیلات: ۲۰۹</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ وام بر اساس امتیاز واریز مستمری ماهیانه محاسبه می‌شود. هر چه مستمری بیشتر و منظم‌تر واریز شود، وام بیشتر است. نیازمند انعقاد تفاهم‌نامه با سازمان حمایتی.
 </div>
 <button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -151,29 +263,22 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح شمس</h3>
 <span class="type-badge">پس‌انداز ماهیانه</span>
-<p>این طرح یک راه ساده برای پس‌انداز است. شما هر ماه مبلغ ثابتی (بین ۲ تا ۳ میلیون تومان) واریز می‌کنید و پس از ۹ تا ۳۰ ماه، می‌توانید وام بگیرید. عالی برای کسانی که می‌خواهند پس‌انداز کنند و بعد وام بگیرند.</p>
+<p>هر ماه مبلغ ثابتی واریز می‌کنید و پس از مدتی وام می‌گیرید.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان. با بیمه عمر و رتبه مناسب، بدون ضامن؛ در غیر این صورت یک ضامن و وثیقه.
+</div>
 <div class="detail-box">
 <div>مدت پس‌انداز: ۹ تا ۳۰ ماه</div>
-<div>مبلغ وام: ۹۰ تا ۹۰۰ میلیون ریال (۹ تا ۹۰ میلیون تومان)</div>
+<div>مبلغ وام: ۹۰ تا ۹۰۰ میلیون ریال</div>
 <div>مدت انتظار: ۳ تا ۱۰ ماه</div>
 <div>نرخ کارمزد: ۴٪</div>
-<div>شعبه: دیجیتال (کیوبانک)</div>
 </div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-هر ماه مبلغ ثابت واریز می‌کنید:<br>
-• واریز ۲ میلیون تومان در ماه، ۹ ماه: تا ۹ میلیون تومان وام<br>
-• واریز ۲ میلیون تومان در ماه، ۳۰ ماه: تا ۹۰ میلیون تومان وام<br>
-• واریز ۳ میلیون تومان در ماه، ۳۰ ماه: تا ۹۰ میلیون تومان وام
-</div>
-<div class="note">⚠️ اگر یک ماه واریز را فراموش کنید، مدت تأخیر به دوره انتظار اضافه می‌شود.</div>
 <button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
 </details>
 
-<!-- ========== اصناف ========== -->
 <details>
 <summary>اصناف و کسبه</summary>
 <div class="plans">
@@ -181,41 +286,34 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نارون</h3>
 <span class="type-badge">امتیازی - ویژه اصناف</span>
-<p>طرح ویژه اصناف و کسبه‌ای که جواز کسب یا پروانه صنفی معتبر دارند. با ایجاد معدل در حساب، وام قرض‌الحسنه با کارمزد صفر تا ۴ درصد دریافت می‌کنید.</p>
+<p>ویژه اصناف و کسبه با جواز کسب یا پروانه صنفی معتبر.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان و رتبه اعتباری.
+</div>
 <div class="detail-box">
-<div>مبلغ وام حقیقی: ۱۰ میلیارد ریال (۱ میلیارد تومان)</div>
-<div>مبلغ وام حقوقی: ۱۵ میلیارد ریال (۱.۵ میلیارد تومان)</div>
+<div>وام حقیقی: ۱۰ میلیارد ریال</div>
+<div>وام حقوقی: ۱۵ میلیارد ریال</div>
 <div>نرخ کارمزد: صفر - ۲٪ - ۴٪</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
 <div>کد تسهیلات: ۱۰۶ (حقیقی) / ۸۰۶ (حقوقی)</div>
 </div>
 <div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ وام = میانگین موجودی حساب × ضریب<br>
-هر چه معدل بالاتر و مدت حفظ بیشتر باشد، وام بیشتر است. ضریب دقیق از جدول ۳-۱ سیاست اعتباری.
+<b>📐 محاسبه:</b> وام = میانگین موجودی حساب × ضریب
 </div>
-<div class="note">💡 در اصناف خرد، نیازی به تفاهم‌نامه نیست. خود صاحب سپرده یا شخص معرفی‌شده می‌تواند وام بگیرد.</div>
 <button class="speak-btn" onclick="readPlan('naron', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح سرو بدون تفاهم‌نامه</h3>
 <span class="type-badge">حمایتی - ساده</span>
-<p>با تودیع مبلغی مشخص برای مدت معین در قالب عقد صلح، تسهیلات قرض‌الحسنه دریافت می‌کنید. اگر جواز کسب معتبر دارید، بدون نیاز به تفاهم‌نامه می‌توانید وام بگیرید.</p>
+<p>با تودیع مبلغ مشخص در قالب عقد صلح، تسهیلات قرض‌الحسنه.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> <b>مصالح</b> (تودیع‌کننده) می‌بایست در پرونده تسهیلات، نقش <b>تسهیلات‌گیرنده یا ضامن</b> را داشته باشد.
+</div>
 <div class="detail-box">
 <div>مدت بازپرداخت: ۷ تا ۲۴ ماه</div>
 <div>نرخ کارمزد: ۳٪ تا ۴٪</div>
-<div>مبلغ: طبق جدول بر اساس مبلغ و مدت</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-بر اساس جدول زیر، بسته به مبلغ تودیع و مدت انتظار، وام تعیین می‌شود:
-</div>
-<div class="example-box">
-<b>💡 مثال (حمایت ۱۰۰٪):</b><br>
-• ۶۰۰ میلیون تومان وام: ۲۴ ماه بازپرداخت، ۶۰ روز انتظار<br>
-• ۱۰۰۰ میلیون تومان وام: ۱۴ ماه بازپرداخت، ۴۰ روز انتظار<br>
-• ۱۵۰۰ میلیون تومان وام: ۷ ماه بازپرداخت، ۲۰ روز انتظار
+<div>مبلغ: طبق جدول</div>
 </div>
 <button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -223,20 +321,15 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح سرو تفاهم‌نامه‌ای</h3>
 <span class="type-badge">حمایتی - با تفاهم‌نامه</span>
-<p>ویژه اتحادیه‌ها و صاحبین کسب‌وکار که می‌خواهند برای کارکنان زیرمجموعه وام بگیرند. با انعقاد تفاهم‌نامه، سرمایه در گردش تقویت می‌شود.</p>
+<p>ویژه اتحادیه‌ها و صاحبین کسب‌وکار.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه با اتحادیه یا صاحب کسب‌وکار.
+</div>
 <div class="detail-box">
 <div>مدت بازپرداخت: ۱۲ یا ۲۴ ماه</div>
 <div>مدت انتظار: ۲۰ یا ۴۰ روز</div>
 <div>نرخ کارمزد: ۴٪</div>
 <div>کد تسهیلات: بانک ۲۴۳ / اجتماعی ۲۵۹</div>
-<div>سقف تفاهم‌نامه: درجه ۲ = ۸۰۰ میلیارد ریال، درجه ۱ = ۱۰۰۰ میلیارد ریال</div>
-<div>سقف جمعی: درجه ۲ = ۴۰۰۰ میلیارد ریال، درجه ۱ = ۵۰۰۰ میلیارد ریال</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-حمایت بانک: ۱۰۰٪ مبلغ آورده تفاهم‌نامه<br>
-مدت ۱۲ ماه: ۲۰ روز انتظار<br>
-مدت ۲۴ ماه: ۴۰ روز انتظار
 </div>
 <button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -244,17 +337,15 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح توسکا</h3>
 <span class="type-badge">حقوق محور</span>
-<p>برای کارفرمایانی که حقوق کارکنان خود را از طریق بانک مهر ایران واریز می‌کنند. داشتن دستگاه پوز فعال در بانک الزامی است.</p>
+<p>برای کارفرمایانی که حقوق کارکنان را از طریق بانک واریز می‌کنند. پوز فعال الزامی است.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه با کارفرما. کارفرما تعهد کسر از حقوق کارکنان را می‌پذیرد.
+</div>
 <div class="detail-box">
-<div>مبلغ وام: سقف ۱۰ میلیارد ریال (۱ میلیارد تومان)</div>
+<div>مبلغ وام: سقف ۱۰ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
 <div>کد تسهیلات: ۲۳۳</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ وام = مجموع حقوق واریزی × ضریب<br>
-طبق جدول ۳-۲ ضرایب واریز حقوق: هر چه مدت بازپرداخت بیشتر باشد، ضریب بالاتر است.
 </div>
 <button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -262,7 +353,6 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 </details>
 
-<!-- ========== سازمان‌ها ========== -->
 <details>
 <summary>سازمان‌ها و شرکت‌ها</summary>
 <div class="plans">
@@ -270,17 +360,16 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح یاقوت</h3>
 <span class="type-badge">امتیازی - سازمانی</span>
-<p>برای سازمان‌ها و شرکت‌هایی که گردش منابع خود را نزد بانک متمرکز می‌کنند. با انعقاد تفاهم‌نامه، کارکنان و افراد معرفی‌شده می‌توانند وام بگیرند.</p>
+<p>برای سازمان‌ها و شرکت‌هایی که گردش منابع خود را نزد بانک متمرکز می‌کنند.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه سازمان با بانک.
+</div>
 <div class="detail-box">
-<div>مبلغ وام حقیقی: ۵ میلیارد ریال</div>
-<div>مبلغ وام حقوقی: ۱۵ میلیارد ریال</div>
+<div>وام حقیقی: ۵ میلیارد ریال</div>
+<div>وام حقوقی: ۱۵ میلیارد ریال</div>
 <div>نرخ کارمزد: طبق جداول امتیازی</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
 <div>کد تسهیلات: ۱۸۰ (حقیقی) / ۸۵۰ (حقوقی)</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-سازمان با بانک تفاهم‌نامه امضا می‌کند و بر اساس میانگین موجودی سازمان، اعتبار برای کارکنان ایجاد می‌شود.
 </div>
 <button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -288,16 +377,14 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح یاقوت با حفظ مبلغ ثابت</h3>
 <span class="type-badge">امتیازی - تبصره یاقوت</span>
-<p>اگر سازمان شما مبلغ ثابتی را برای مدت ثابت نزد بانک نگه دارد، از همان ابتدا می‌توانید برای کارکنان وام بگیرید. بدون نیاز به انتظار برای ایجاد معدل.</p>
+<p>سازمان مبلغ ثابت نزد بانک نگه می‌دارد و از همان ابتدا اعتبار وام دارد.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه سازمان با بانک.
+</div>
 <div class="detail-box">
-<div>مبلغ وام: مثل طرح یاقوت</div>
 <div>مدت تودیع: حداکثر ۱۲ ماه</div>
 <div>نرخ کارمزد: ۴٪</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ ثابت سازمان نزد بانک = اعتبار آنی برای کارکنان<br>
-محدودیتی در تعداد دفعات تمدید تفاهم‌نامه وجود ندارد.
+<div>تمدید: بدون محدودیت</div>
 </div>
 <button class="speak-btn" onclick="readPlan('yaghout2', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -305,35 +392,30 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس</h3>
 <span class="type-badge">حمایتی - با تفاهم‌نامه</span>
-<p>برای شرکت‌های سهامی و مشمول قانون تجارت. مزیت ویژه: از ماه دوم می‌توانید از بازگشت اقساط سهم خود برای وام مجدد استفاده کنید.</p>
+<p>برای شرکت‌های سهامی و مشمول قانون تجارت.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه حمایتی شرکت با بانک.
+</div>
 <div class="detail-box">
-<div>مبلغ وام: تا ۵ میلیارد ریال (یک برابر حمایت بانک)</div>
+<div>مبلغ وام: تا ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: بانک ۴٪ / مشتری ۲٪ یا ۴٪</div>
-<div>مدت انتظار: ۱۰ روز از واریز</div>
+<div>مدت انتظار: ۱۰ روز</div>
 <div>کد تسهیلات: بانک ۲۴۲ / اجتماعی ۲۵۸</div>
 </div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-حمایت بانک = ۱۰۰٪ مبلغ آورده<br>
-بازگشت اقساط سهم شما، پس از تسویه کامل قابل استفاده مجدد است (بعد از ۱۰ ماه)
-</div>
-<div class="note">⚠️ در استان‌هایی که نسبت مصارف به منابع بالای ۹۵٪ است، سقف بازپرداخت ۳۶ ماه لحاظ می‌شود.</div>
 <button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح الماس با حمایت بالای ۱۰۰٪</h3>
 <span class="type-badge">حمایتی - ویژه</span>
-<p>برای مشتریانی که می‌خواهند حمایت بانک بیش از ۱۰۰٪ آورده باشد. با انتخاب ستون (۱) یا (۲) از جدول، حمایت بالاتری دریافت می‌کنید.</p>
+<p>حمایت بانک بیش از ۱۰۰٪ آورده مشتری.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه حمایتی شرکت.
+</div>
 <div class="detail-box">
 <div>حداقل آورده: ۱۰۰ واحد</div>
 <div>مدت بازپرداخت: ۱۲ تا ۶۰ ماه</div>
-<div>حمایت: بسته به انتخاب، از ۱۰۰٪ تا بالای ۱۰۰٪</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مثال: آورده ۱۰۰ واحد، مدت ۱۲ ماه، با انتخاب ستون (۱): ۱۴۵٪ حمایت (یعنی ۱۴۵ واحد وام)<br>
-با ستون (۲): ۱۲۵٪ حمایت (۱۲۵ واحد وام)
+<div>حمایت: ۱۰۰٪ تا بیش از ۱۰۰٪</div>
 </div>
 <button class="speak-btn" onclick="readPlan('almas100', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -341,16 +423,14 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس با بازگشت اقساط</h3>
 <span class="type-badge">حمایتی - پیشرفته</span>
-<p>امکان پرداخت تسهیلات از محل بازگشت اقساط (چرخه گردش منابع). برای شرکت‌هایی که می‌خواهند بازگشت اقساط را مجدداً به کارمند جدید وام بدهند.</p>
-<div class="detail-box">
-<div>مدت انتظار: ۱۰ روز از تودیع تفاهم‌نامه</div>
-<div>دوره بازپرداخت: ۱۲، ۲۴، ۳۶، ۴۲، ۴۸، ۶۰ ماه</div>
-<div>حداقل آورده: ۱۰۰ واحد</div>
-<div>حمایت بانک: ۲۵ تا ۱۰۰ واحد</div>
+<p>پرداخت تسهیلات از محل بازگشت اقساط.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه حمایتی شرکت.
 </div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-پس از مدت مشخص (مثلاً ۹ ماه برای ۱۲ ماه بازپرداخت)، سهم شرکت از بازگشت اقساط آزاد می‌شود و می‌تواند برای وام جدید استفاده شود.
+<div class="detail-box">
+<div>مدت انتظار: ۱۰ روز</div>
+<div>دوره بازپرداخت: ۱۲ تا ۶۰ ماه</div>
+<div>حداقل آورده: ۱۰۰ واحد</div>
 </div>
 <button class="speak-btn" onclick="readPlan('almasaghsat', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -358,20 +438,24 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح الماس با کارمزد کمتر از ۲٪</h3>
 <span class="type-badge">حمایتی - کم‌کارمزد</span>
-<p>اگر شرکت شما می‌خواهد کارمزد سهم خودش کمتر از ۲٪ باشد، می‌تواند با کاهش حمایت بانک این کار را انجام دهد. این گزینه برای شرکت‌هایی است که به دنبال کارمزد پایین هستند.</p>
-<div class="detail-box">
-<div>حالت اول: کارمزد مشتری ۱٪، حمایت بانک ۹۰ واحد، کارمزد بانک ۴٪</div>
-<div>حالت دوم: کارمزد مشتری ۰٪، حمایت بانک ۸۰ واحد، کارمزد بانک ۴٪</div>
-<div>مبلغ آورده: ۱۰۰ واحد</div>
+<p>کارمزد سهم مشتری حقوقی کمتر از ۲٪.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه شرکت با بانک. تسویه زودتر از موعد مجاز نیست.
 </div>
-<div class="note">⚠️ در این حالت، امکان تسویه زودتر از موعد یا استفاده از بازگشت اقساط مجاز نیست.</div>
+<div class="detail-box">
+<div>حالت اول: کارمزد مشتری ۱٪ / حمایت بانک ۹۰ واحد</div>
+<div>حالت دوم: کارمزد مشتری ۰٪ / حمایت بانک ۸۰ واحد</div>
+</div>
 <button class="speak-btn" onclick="readPlan('almas2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح فیروزه</h3>
 <span class="type-badge">محاسبه امتیاز واریز حقوق</span>
-<p>شرکت‌ها با انتقال پرداخت حقوق کارکنان به بانک مهر ایران، برای کارکنان وام می‌گیرند. حداکثر معادل ۵٪ مجموع حقوق واریزی ماهیانه.</p>
+<p>شرکت‌ها با انتقال پرداخت حقوق به بانک، وام به کارکنان می‌دهند.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه شرکت با بانک.
+</div>
 <div class="detail-box">
 <div>مبلغ وام: سقف ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: ۴٪</div>
@@ -379,18 +463,14 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div>کد تسهیلات: ۱۵۱</div>
 </div>
 <div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ وام = ۵٪ × مجموع حقوق واریزی ماهیانه<br>
-مثال: اگر مجموع حقوق واریزی ماهیانه ۱۰۰ میلیون تومان باشد، وام تا ۵ میلیون تومان برای هر کارمند.
+<b>📐 محاسبه:</b> وام = ۵٪ × مجموع حقوق واریزی ماهیانه
 </div>
-<div class="note">⚠️ مشتری حقوقی نمی‌تواند خودش از این امتیاز استفاده کند، فقط کارکنان.</div>
 <button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 </div>
 </details>
 
-<!-- ========== اقشار حمایتی ========== -->
 <details>
 <summary>اقشار حمایتی و خاص</summary>
 <div class="plans">
@@ -398,39 +478,30 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نجم</h3>
 <span class="type-badge">حمایتی - بانکداری اجتماعی</span>
-<p>ویژه اقشار آسیب‌پذیر و مشتریان بانکداری اجتماعی. ضرایب امتیازی این طرح ۱۱۵٪ ضرایب عادی است، یعنی حمایت بیشتری از این اقشار می‌شود.</p>
+<p>ویژه اقشار آسیب‌پذیر با ضرایب امتیازی ۱۱۵٪.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان و رتبه اعتباری. اطلاعات شما باید از طریق API نهاد مربوطه تأیید شود.
+</div>
 <div class="detail-box">
-<div>جامعه هدف: بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی</div>
 <div>سقف تسهیلات: ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: طبق جداول امتیازی</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
 <div>کد تسهیلات: ۱۸۳</div>
 </div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-مبلغ وام = بر اساس امتیاز اجتماعی شما<br>
-ضریب: ۱۱۵٪ ضرایب عادی (یعنی ۱۵٪ بیشتر از معمول)
-</div>
-<div class="note">📱 برای بهره‌مندی، اطلاعات شما باید از طریق API نهاد مربوطه به صورت سیستمی تأیید شود.</div>
 <button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح نصر حقیقی</h3>
-<span class="type-badge">حمایتی - بدون تفاهم‌نامه</span>
-<p>برای اقشار آسیب‌پذیر. وام از دو منبع پرد:اخت می‌شود: منابع بانک (با کارم۱زد ۴٪) و بان.کداری اجتماعی (با کارمزد صفر). سقف کل ۱.۵ میلیارد ریال.</p>
+<span class="type-badge">حمایتی - دو منبع</span>
+<p>وام از دو منبع: بانک (کارمزد ۴٪) + بانکداری اجتماعی (کارمزد صفر).</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق سامانه ضمان.
+</div>
 <div class="detail-box">
+<div>سقف کل: ۱.۵۰۰ میلیون ریال</div>
 <div>مدت بازپرداخت: ۲۰ تا ۳۰ ماه</div>
 <div>کد تسهیلات: بانک ۲۴۷ / اجتماعی ۲۵۷</div>
-<div>نرخ کارمزد: بانک ۴٪ / اجتماعی صفر</div>
-<div>سقف کل۵۰۰ میلیون ریال</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-ترکیب دو منبع:<br>
-• بخش بانک: تا ۷۰ میلیون تومان (کارمزد ۴٪)<br>
-• بخش اجتماعی: صفر کارمزد<br>
-• کل وام: تا ۱۵۰ میلیون تومان
 </div>
 <button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات</button>
 </div>
@@ -438,46 +509,42 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 <div class="card">
 <h3>طرح نصر حقوقی</h3>
 <span class="type-badge">حمایتی - با تفاهم‌نامه</span>
-<p>ویژه سازمان‌های مردم نهاد (سمن‌ها) که می‌خواهند به اعضای خود وام بدهند. با انعقاد تفاهم‌نامه حمایتی، اعضا می‌توانند از تسهیلات استفاده کنند.</p>
+<p>ویژه سازمان‌های مردم نهاد برای اعضای خود.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> طبق تفاهم‌نامه سازمان مردم نهاد با بانک.
+</div>
 <div class="detail-box">
 <div>سقف تسهیلات: ۵ میلیارد ریال</div>
 <div>نرخ کارمزد: بانک ۴٪ / اجتماعی ۲٪ یا ۴٪</div>
 <div>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div>مدت انتظار: ۱۰ روز پس از واریز یکجا</div>
-<div>کد تسهیلات: بانک ۲۴۷ / اجتماعی ۲۵۷</div>
-</div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-حداکثر حمایت بانک: ۱۰۰٪ مبلغ آورده مشتری
+<div>مدت انتظار: ۱۰ روز</div>
 </div>
 <button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح ارکیده</h3>
-<span class="type-badge">حمایتی - بدون تفاهم‌نامه</span>
-<p>بر اساس تسهیلات حمایتی طراحی شده. به میزان مجموعاً دو برابر مبلغ سپرده تودیعی مصالح در زمان درخواست.</p>
+<span class="type-badge">حمایتی - دو برابر سپرده</span>
+<p>دو برابر مبلغ سپرده تودیعی مصالح.</p>
+<div class="zeman-box">
+<b>🔒 ضمان:</b> <b>مصالح</b> (تودیع‌کننده) ضامن است.
+</div>
 <div class="detail-box">
 <div>مدت بازپرداخت: ۲۰ تا ۵۰ ماه</div>
-<div>کد تسهیلات: بانک ۱۳۸ / اجتماعی ۱۶۴</div>
 <div>نرخ کارمزد: بانک ۴٪ / اجتماعی صفر</div>
-<div>مبلغ: دو برابر سپرده تودیعی مصالح</div>
+<div>کد تسهیلات: بانک ۱۳۸ / اجتماعی ۱۶۴</div>
 </div>
-<div class="formula-box">
-<b>📐 نحوه محاسبه:</b><br>
-اگر مصالح ۱۰۰ میلیون تومان سپرده بگذارد:<br>
-• تا ۲۰۰ میلیون تومان وام (دو برابر)<br>
-• مبلغ وام به شخص معرفی‌شده از سوی مصالح پرداخت می‌شود
+<div class="example-box">
+<b>💡 مثال:</b> ۱۰۰ میلیون سپرده → ۲۰۰ میلیون وام (۲۰ ماه) / ۲۵۰ میلیون سپرده → ۵۰۰ میلیون وام (۵۰ ماه)
 </div>
-<div class="note">📊 جدول مبالغ:<br>• ۱۰۰ میلیون سپرده → ۲۰۰ میلیون وام (۲۰ ماه بازپرداخت)<br>• ۱۵۰ میلیون سپرده → ۳۰۰ میلیون وام (۳۰ ماه)<br>• ۲۵۰ میلیون سپرده → ۵۰۰ میلیون وام (۵۰ ماه)</div>
 <button class="speak-btn" onclick="readPlan('orkideh', this)">🔊 شنیدن توضیحات</button>
 </div>
 
 <div class="card">
 <h3>طرح احسان</h3>
 <span class="type-badge">در حال بررسی</span>
-<p>با الهام از صندوق‌های قرض‌الحسنه خانگی، بستری امن و پایدار برای همیاری و مشارکت اعضا فراهم می‌آورد.</p>
-<div class="note">⚠️ طرح‌های احسان و امین در حال حاضر در مرحله بررسی بوده و پس از ابلاغ دستورالعمل‌ها و جداول آن و ایجاد در سامانه اعتباری قابل اجرا خواهند بود.</div>
+<p>همیاری و مشارکت اعضا.</p>
+<div class="warn-note">⚠️ طرح‌های احسان و امین در حال حاضر در مرحله بررسی بوده و پس از ابلاغ دستورالعمل‌ها قابل اجرا خواهند بود.</div>
 <button class="speak-btn" onclick="readPlan('ehsan', this)">🔊 شنیدن توضیحات</button>
 </div>
 
@@ -492,19 +559,84 @@ details[open] summary { background: #0d5c3a; color: #fff; }
 </div>
 
 <script>
-// ============================================================
-// سیستم صوتی هوشمند برای موبایل و دسکتاپ
-// 1) Web Speech + صدای فارسی دستگاه (اگر موجود)
-// 2) ResponsiveVoice (سرور مستقل)
-// 3) Google Translate TTS (آخرین راه)
-// ============================================================
+// ========== ماشین‌حساب ==========
+// جدول ضریب تقریبی بر اساس دوره معدل‌گیری و مدت بازپرداخت
+// (برگرفته از جداول ۳-۱ و ۳-۳ سند و مثال‌های واقعی)
+var loanRatios = {
+1: { 12: 3.49, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+3: { 12: 3.49, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+6: { 12: 3.49, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+9: { 12: 3.49, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+12: { 12: 3.49, 18: 2.62, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+18: { 12: 3.49, 18: 2.62, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+24: { 12: 3.49, 18: 2.62, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+30: { 12: 3.49, 18: 2.62, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 },
+36: { 12: 3.49, 18: 2.62, 24: 2.03, 36: 1.46, 48: 1.15, 60: 0.88 }
+};
 
+// ضریب تعدیل بر اساس دوره معدل‌گیری (هر چه بیشتر، وام بیشتر)
+var periodMultiplier = {
+1: 0.3, 3: 0.45, 6: 0.6, 9: 0.75, 12: 1.0,
+18: 1.15, 24: 1.3, 30: 1.45, 36: 1.6
+};
+
+function calculateLoan() {
+var deposit = parseFloat(document.getElementById('depositAmount').value);
+var avgPeriod = parseInt(document.getElementById('avgPeriod').value);
+var repayPeriod = parseInt(document.getElementById('repayPeriod').value);
+var resultDiv = document.getElementById('calcResult');
+
+if (!deposit || deposit <= 0) {
+alert('لطفاً مبلغ سپرده را وارد کنید');
+return;
+}
+
+// پیدا کردن ضریب پایه
+var baseRatio = loanRatios[12][repayPeriod] || 0.88;
+
+// تعدیل بر اساس دوره معدل‌گیری
+var periodMult = periodMultiplier[avgPeriod] || 1.0;
+
+// ضریب نهایی
+var finalRatio = baseRatio * periodMult;
+
+// محاسبه مبلغ وام (به میلیون تومان)
+var loanAmount = Math.round(deposit * finalRatio);
+
+// محدودیت سقف ۵۰۰ میلیون تومان
+if (loanAmount > 500) loanAmount = 500;
+
+// محاسبه قسط تقریبی (با کارمزد ۴٪)
+var rate = 4;
+var totalWithFee = loanAmount * (1 + (rate / 100) * (repayPeriod / 12));
+var installment = Math.round(totalWithFee / repayPeriod);
+
+// نمایش نتایج
+document.getElementById('resLoan').textContent = loanAmount.toLocaleString('fa-IR') + ' میلیون تومان';
+document.getElementById('resRate').textContent = rate + '٪';
+document.getElementById('resMonths').textContent = repayPeriod.toLocaleString('fa-IR') + ' ماه';
+document.getElementById('resInstallment').textContent = installment.toLocaleString('fa-IR') + ' میلیون تومان';
+
+// یادداشت توضیحی
+var note = '';
+if (avgPeriod >= 24) {
+note = '💡 با افزایش دوره معدل‌گیری به ' + avgPeriod.toLocaleString('fa-IR') + ' ماه، ضریب وام افزایش یافته و با سپرده کمتر، وام بیشتری دریافت می‌کنید.';
+} else if (avgPeriod <= 6) {
+note = '💡 اگر می‌توانید سپرده را مدت بیشتری نگه دارید، دوره معدل‌گیری را افزایش دهید تا وام بیشتری بگیرید.';
+} else {
+note = '💡 این محاسبه تقریبی است. مبلغ دقیق توسط سامانه بانک تعیین می‌شود.';
+}
+document.getElementById('resNote').innerHTML = note;
+
+resultDiv.classList.add('show');
+}
+
+// ========== سیستم صوتی ==========
 var persianVoice = null;
 var currentAudio = null;
 var isPlaying = false;
 var rvReady = false;
 
-// ---------- تشخیص دستگاه ----------
 function isMobile() {
 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
@@ -515,18 +647,14 @@ function isAndroid() {
 return /Android/i.test(navigator.userAgent);
 }
 
-// ---------- تشخیص صدای فارسی ----------
 function findPersianVoice() {
 if (!('speechSynthesis' in window)) return null;
 var voices = window.speechSynthesis.getVoices();
 if (!voices || voices.length === 0) return null;
-
-// ۱: صداهای نورال مایکروسافت (Edge)
 for (var i = 0; i < voices.length; i++) {
 var n = voices[i].name || '';
 if (n.indexOf('Farid') !== -1 || n.indexOf('Dilara') !== -1) return voices[i];
 }
-// ۲: صداهای اپل (iOS/macOS)
 var appleNames = ['Majid', 'Laila', 'Siri Female', 'Siri Male', 'Kiana', 'Nava'];
 for (var i = 0; i < voices.length; i++) {
 var n = voices[i].name || '';
@@ -534,12 +662,10 @@ for (var j = 0; j < appleNames.length; j++) {
 if (n.indexOf(appleNames[j]) !== -1) return voices[i];
 }
 }
-// ۳: هر صدای lang=fa
 for (var i = 0; i < voices.length; i++) {
 var l = (voices[i].lang || '').toLowerCase();
 if (l === 'fa-ir' || l === 'fa' || l.indexOf('fa-') === 0) return voices[i];
 }
-// ۴: نام شامل Persian یا Farsi
 for (var i = 0; i < voices.length; i++) {
 var n = (voices[i].name || '').toLowerCase();
 if (n.indexOf('persian') !== -1 || n.indexOf('farsi') !== -1) return voices[i];
@@ -548,45 +674,32 @@ return null;
 }
 
 function checkRV() {
-if (typeof responsiveVoice !== 'undefined') {
-rvReady = true;
-return true;
-}
+if (typeof responsiveVoice !== 'undefined') { rvReady = true; return true; }
 return false;
 }
 
 function updateStatus() {
 var el = document.getElementById('status');
 persianVoice = findPersianVoice();
-
 if (persianVoice) {
 el.className = 'ok';
 el.innerHTML = '✅ صدای فارسی آماده است: <b>' + persianVoice.name + '</b>';
 return;
 }
-
 if (checkRV()) {
 el.className = 'ok';
 el.innerHTML = '✅ سرویس صوتی آنلاین آماده است';
 return;
 }
-
-// راهنمایی مخصوص موبایل
 if (isIOS()) {
 el.className = 'warn';
-el.innerHTML = '📱 آیفون: برای صدای فارسی<br>' +
-'Settings → Accessibility → Spoken Content → Voices → Persian → دانلود کنید<br>' +
-'سپس این صفحه را دوباره باز کنید.';
+el.innerHTML = '📱 آیفون: Settings → Accessibility → Spoken Content → Voices → Persian → دانلود';
 } else if (isAndroid()) {
 el.className = 'warn';
-el.innerHTML = '📱 اندروید: برای صدای فارسی<br>' +
-'Settings → Language & Input → Text-to-Speech → Google → Install voice data → Persian<br>' +
-'سپس این صفحه را دوباره باز کنید.';
+el.innerHTML = '📱 اندروید: Settings → Language & Input → Text-to-Speech → Google → Install voice data → Persian';
 } else {
 el.className = 'warn';
-el.innerHTML = '💻 کامپیوتر: برای صدای فارسی<br>' +
-'🔹 <b>بهترین راه:</b> سایت را در <b>Microsoft Edge</b> باز کنید<br>' +
-'🔹 یا: Settings → Time & Language → Language → Add Persian → تیک Speech';
+el.innerHTML = '💻 کامپیوتر: سایت را در Microsoft Edge باز کنید یا صدای فارسی ویندوز نصب کنید';
 }
 }
 
@@ -597,7 +710,6 @@ setTimeout(updateStatus, 500);
 setTimeout(updateStatus, 2000);
 }
 
-// ---------- تقسیم متن ----------
 function chunkText(text, maxLen) {
 maxLen = maxLen || 180;
 var parts = text.split(/(?<=[.!?؟،:؛])\s+/);
@@ -621,20 +733,17 @@ if (buf.trim()) chunks.push(buf.trim());
 return chunks;
 }
 
-// ---------- Web Speech ----------
 function speakWS(text, onEnd) {
 var u = new SpeechSynthesisUtterance(text);
 u.voice = persianVoice;
 u.lang = persianVoice.lang || 'fa-IR';
 u.rate = isMobile() ? 0.85 : 0.9;
-u.pitch = 1;
-u.volume = 1;
+u.pitch = 1; u.volume = 1;
 u.onend = function() { if (onEnd) onEnd(); };
 u.onerror = function() { if (onEnd) onEnd(); };
 window.speechSynthesis.speak(u);
 }
 
-// ---------- ResponsiveVoice ----------
 function speakRV(text, onEnd) {
 try {
 responsiveVoice.speak(text, "Persian Female", {
@@ -645,7 +754,6 @@ onerror: function() { if (onEnd) onEnd(); }
 } catch(e) { if (onEnd) onEnd(); }
 }
 
-// ---------- Google ----------
 function speakGoogle(text, onEnd) {
 var url = 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q=' + encodeURIComponent(text);
 var audio = new Audio(url);
@@ -656,18 +764,15 @@ var p = audio.play();
 if (p && p.catch) p.catch(function() { if (onEnd) onEnd(); });
 }
 
-// ---------- تابع اصلی ----------
 function speak(text) {
 if (!text || !text.trim()) return;
 stopAll();
 isPlaying = true;
 var chunks = chunkText(text);
 var i = 0;
-
 function next() {
 if (!isPlaying || i >= chunks.length) { isPlaying = false; clearActiveButtons(); return; }
 var chunk = chunks[i];
-
 if (persianVoice) {
 speakWS(chunk, function() { i++; if (isPlaying) setTimeout(next, 150); });
 } else if (rvReady) {
@@ -697,33 +802,32 @@ var btns = document.querySelectorAll('.speak-btn');
 for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
 }
 
-// ---------- متون تفصیلی طرح‌ها ----------
 var planTexts = {
-niloufar: 'طرح نیلوفر. این طرح سپرده محور است. شما با سپرده‌گذاری در حساب قرض‌الحسنه پس‌انداز بانک مهر ایران، اعتبار ایجاد می‌کنید. هر چه مبلغ سپرده بیشتر باشد و مدت بیشتری حفظ شود، اعتبار شما بیشتر می‌شود. بدون نیاز به ضامن. سقف تسهیلات پنج میلیارد ریال است. نرخ کارمزد صفر، دو یا چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و یک. نحوه محاسبه: مبلغ وام برابر است با میانگین موجودی حساب ضربدر ضریب. هر چه دوره معدل‌گیری بیشتر باشد، ضریب بالاتر و وام بیشتر است. برای مثال اگر صد میلیون تومان به مدت دوازده ماه نگه دارید، با بازپرداخت دوازده ماهه حدود صد و شش میلیون تومان وام می‌گیرید.',
-noora: 'طرح نورا. برای ترویج فرهنگ قرآنی قرض‌الحسنه و تسهیل شرایط دریافت وام. امکان اخذ تسهیلات قرض‌الحسنه بدون پرداخت کارمزد. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد صفر درصد، یعنی کاملاً رایگان. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد و دو. این طرح نیز سپرده محور است و مبلغ وام بر اساس میانگین موجودی و مدت سپرده‌گذاری تعیین می‌شود.',
-rezvan: 'طرح رضوان. ویژه کارکنان سازمان‌هایی که با بانک تفاهم‌نامه امضا کرده‌اند. اگر کارمند کمیته امداد، بهزیستی، بنیاد علوی یا سازمان‌های حمایتی مشابه هستید، می‌توانید از این طرح استفاده کنید. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد دو، سه یا چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد و یک. سازمان شما با بانک تفاهم‌نامه امضا می‌کند و بر اساس اعتبار تفاهم‌نامه، شما می‌توانید وام بگیرید.',
-karamat: 'طرح کرامت. ویژه افرادی که مستمری از سازمان‌های حمایتی مانند کمیته امداد، بهزیستی، بنیاد علوی یا صندوق قرض‌الحسنه دریافت می‌کنند. با پشتوانه واریز مستمری، می‌توانید وام قرض‌الحسنه بگیرید. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا سی و شش ماه. کد تسهیلات دویست و نه. مبلغ وام بر اساس امتیاز واریز مستمری ماهیانه محاسبه می‌شود. نیازمند انعقاد تفاهم‌نامه با سازمان حمایتی.',
-shams: 'طرح شمس. یک راه ساده برای پس‌انداز. شما هر ماه مبلغ ثابتی بین دو تا سه میلیون تومان واریز می‌کنید. پس از نه تا سی ماه، می‌توانید وام بگیرید. مدت پس‌انداز از نه تا سی ماه. مبلغ وام از نود تا نهصد میلیون ریال. مدت انتظار از سه تا ده ماه. نرخ کارمزد چهار درصد. مثال: اگر هر ماه دو میلیون تومان واریز کنید، پس از نه ماه تا نه میلیون تومان، و پس از سی ماه تا نود میلیون تومان وام می‌گیرید. اگر یک ماه واریز فراموش شود، مدت تأخیر به دوره انتظار اضافه می‌شود.',
-naron: 'طرح نارون. ویژه اصناف و کسبه‌ای که جواز کسب یا پروانه صنفی معتبر دارند. مبلغ وام اشخاص حقیقی ده میلیارد ریال و اشخاص حقوقی پانزده میلیارد ریال. نرخ کارمزد صفر تا چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات برای حقیقی یکصد و شش و برای حقوقی هشتصد و شش. مبلغ وام برابر است با میانگین موجودی حساب ضربدر ضریب. هر چه معدل بالاتر و مدت حفظ بیشتر باشد، وام بیشتر است.',
-sarv1: 'طرح سرو بدون تفاهم‌نامه. با تودیع مبلغی مشخص برای مدت معین در قالب عقد صلح، تسهیلات قرض‌الحسنه دریافت می‌کنید. اگر جواز کسب معتبر دارید، بدون نیاز به تفاهم‌نامه می‌توانید وام بگیرید. مدت بازپرداخت از هفت تا بیست و چهار ماه. نرخ کارمزد سه تا چهار درصد. مثال: برای ششصد میلیون تومان وام، بیست و چهار ماه بازپرداخت و شصت روز انتظار. برای هزار میلیون تومان وام، چهارده ماه بازپرداخت و چهل روز انتظار. برای هزار و پانصد میلیون تومان وام، هفت ماه بازپرداخت و بیست روز انتظار.',
-sarv2: 'طرح سرو تفاهم‌نامه‌ای. ویژه اتحادیه‌ها و صاحبین کسب‌وکار که می‌خواهند برای کارکنان زیرمجموعه وام بگیرند. با انعقاد تفاهم‌نامه، سرمایه در گردش تقویت می‌شود. مدت بازپرداخت دوازده یا بیست و چهار ماه. مدت انتظار بیست یا چهل روز. نرخ کارمزد چهار درصد. کد تسهیلات بانک دویست و چهل و سه، اجتماعی دویست و پنجاه و نه. سقف تفاهم‌نامه در استان درجه دو هشتصد میلیارد ریال و درجه یک هزار میلیارد ریال. حمایت بانک صد درصد مبلغ آورده.',
-tooska: 'طرح توسکا. برای کارفرمایانی که حقوق کارکنان خود را از طریق بانک مهر ایران واریز می‌کنند. داشتن دستگاه پوز فعال در بانک الزامی است. سقف وام ده میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات دویست و سی و سه. مبلغ وام برابر است با مجموع حقوق واریزی ضربدر ضریب. طبق جدول ضرایب واریز حقوق، هر چه مدت بازپرداخت بیشتر باشد، ضریب بالاتر است.',
-yaghout: 'طرح یاقوت. برای سازمان‌ها و شرکت‌هایی که گردش منابع خود را نزد بانک متمرکز می‌کنند. با انعقاد تفاهم‌نامه، کارکنان و افراد معرفی‌شده می‌توانند وام بگیرند. مبلغ وام اشخاص حقیقی پنج میلیارد ریال و اشخاص حقوقی پانزده میلیارد ریال. نرخ کارمزد طبق جداول امتیازی. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد برای حقیقی و هشتصد و پنجاه برای حقوقی. سازمان با بانک تفاهم‌نامه امضا می‌کند و بر اساس میانگین موجودی سازمان، اعتبار برای کارکنان ایجاد می‌شود.',
-yaghout2: 'طرح یاقوت با حفظ مبلغ ثابت. اگر سازمان شما مبلغ ثابتی را برای مدت ثابت نزد بانک نگه دارد، از همان ابتدا می‌توانید برای کارکنان وام بگیرید. بدون نیاز به انتظار برای ایجاد معدل. مبلغ وام مثل طرح یاقوت. مدت تودیع حداکثر دوازده ماه. نرخ کارمزد چهار درصد. محدودیتی در تعداد دفعات تمدید تفاهم‌نامه وجود ندارد.',
-almas: 'طرح الماس. برای شرکت‌های سهامی و مشمول قانون تجارت. مزیت ویژه اینکه از ماه دوم می‌توانید از بازگشت اقساط سهم خود برای وام مجدد استفاده کنید. مبلغ وام تا پنج میلیارد ریال و یک برابر حمایت بانک. نرخ کارمزد بانک چهار درصد و مشتری دو یا چهار درصد. مدت انتظار ده روز از واریز. کد تسهیلات بانک دویست و چهل و دو، اجتماعی دویست و پنجاه و هشت. حمایت بانک صد درصد مبلغ آورده. در استان‌هایی که نسبت مصارف به منابع بالای نود و پنج درصد است، سقف بازپرداخت سی و شش ماه لحاظ می‌شود.',
-almas100: 'طرح الماس با حمایت بالای صد درصد. برای مشتریانی که می‌خواهند حمایت بانک بیش از صد درصد آورده باشد. با انتخاب ستون یک یا دو از جدول، حمایت بالاتری دریافت می‌کنید. حداقل آورده صد واحد. مدت بازپرداخت دوازده تا شصت ماه. برای مثال: آورده صد واحد، مدت دوازده ماه، با انتخاب ستون یک: صد و چهل و پنج درصد حمایت، یعنی صد و چهل و پنج واحد وام. با ستون دو: صد و بیست و پنج درصد حمایت.',
-almasaghsat: 'طرح الماس با بازگشت اقساط. امکان پرداخت تسهیلات از محل بازگشت اقساط یعنی چرخه گردش منابع. برای شرکت‌هایی که می‌خواهند بازگشت اقساط را مجدداً به کارمند جدید وام بدهند. مدت انتظار ده روز از تودیع تفاهم‌نامه. دوره بازپرداخت دوازده، بیست و چهار، سی و شش، چهل و دو، چهل و هشت یا شصت ماه. حداقل آورده صد واحد. حمایت بانک از بیست و پنج تا صد واحد. پس از مدت مشخص، سهم شرکت از بازگشت اقساط آزاد می‌شود و می‌تواند برای وام جدید استفاده شود.',
-almas2: 'طرح الماس با کارمزد کمتر از دو درصد. اگر شرکت شما می‌خواهد کارمزد سهم خودش کمتر از دو درصد باشد، می‌تواند با کاهش حمایت بانک این کار را انجام دهد. حالت اول: کارمزد مشتری یک درصد، حمایت بانک نود واحد، کارمزد بانک چهار درصد. حالت دوم: کارمزد مشتری صفر درصد، حمایت بانک هشتاد واحد، کارمزد بانک چهار درصد. در این حالت، امکان تسویه زودتر از موعد یا استفاده از بازگشت اقساط مجاز نیست.',
-firoozeh: 'طرح فیروزه. شرکت‌ها با انتقال پرداخت حقوق کارکنان به بانک مهر ایران، برای کارکنان وام می‌گیرند. حداکثر معادل پنج درصد مجموع حقوق واریزی ماهیانه. سقف وام پنج میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا سی و شش ماه. کد تسهیلات یکصد و پنجاه و یک. برای مثال اگر مجموع حقوق واریزی ماهیانه صد میلیون تومان باشد، وام تا پنج میلیون تومان برای هر کارمند. مشتری حقوقی نمی‌تواند خودش از این امتیاز استفاده کند، فقط کارکنان.',
-najm: 'طرح نجم. ویژه اقشار آسیب‌پذیر و مشتریان بانکداری اجتماعی. جامعه هدف: بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد طبق جداول امتیازی. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد و سه. ضریب امتیازی این طرح صد و پانزده درصد ضرایب عادی است، یعنی پانزده درصد بیشتر از معمول. برای بهره‌مندی، اطلاعات شما باید از طریق ای پی آی نهاد مربوطه به صورت سیستمی تأیید شود.',
-nasr: 'طرح نصر حقیقی. برای اقشار آسیب‌پذیر. وام از دو منبع پرداخت می‌شود: منابع بانک با کارمزد چهار درصد و بانکداری اجتماعی با کارمزد صفر. سقف کل یک میلیون و پانصد میلیون ریال. مدت بازپرداخت بیست تا سی ماه. کد تسهیلات بانک دویست و چهل و هفت و اجتماعی دویست و پنجاه و هفت. ترکیب دو منبع: بخش بانک تا هفتاد میلیون تومان با کارمزد چهار درصد، بخش اجتماعی با کارمزد صفر. کل وام تا صد و پنجاه میلیون تومان.',
-nasr2: 'طرح نصر حقوقی. ویژه سازمان‌های مردم نهاد که می‌خواهند به اعضای خود وام بدهند. با انعقاد تفاهم‌نامه حمایتی، اعضا می‌توانند از تسهیلات استفاده کنند. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد بانک چهار درصد و اجتماعی دو یا چهار درصد. مدت بازپرداخت تا شصت ماه. مدت انتظار ده روز پس از واریز یکجا. کد تسهیلات بانک دویست و چهل و هفت و اجتماعی دویست و پنجاه و هفت. حداکثر حمایت بانک صد درصد مبلغ آورده مشتری.',
-orkideh: 'طرح ارکیده. بر اساس تسهیلات حمایتی. به میزان مجموعاً دو برابر مبلغ سپرده تودیعی مصالح در زمان درخواست. مدت بازپرداخت بیست تا پنجاه ماه. کد تسهیلات بانک یکصد و سی و هشت و اجتماعی یکصد و شصت و چهار. نرخ کارمزد بانک چهار درصد و اجتماعی صفر. اگر مصالح صد میلیون تومان سپرده بگذارد، تا دویست میلیون تومان وام دو برابر پرداخت می‌شود. مبلغ وام به شخص معرفی‌شده از سوی مصالح پرداخت می‌شود. جدول: صد میلیون سپرده دو صد میلیون وام بیست ماه. صد و پنجاه میلیون سپرده سیصد میلیون وام سی ماه. دویست و پنجاه میلیون سپرده پانصد میلیون وام پنجاه ماه.',
-ehsan: 'طرح احسان. با الهام از صندوق‌های قرض‌الحسنه خانگی، بستری امن و پایدار برای همیاری و مشارکت اعضا فراهم می‌آورد. طرح‌های احسان و امین در حال حاضر در مرحله بررسی بوده و پس از ابلاغ دستورالعمل‌ها و جداول آن و ایجاد در سامانه اعتباری قابل اجرا خواهند بود.'
+niloufar: 'طرح نیلوفر. سپرده محور. شما با سپرده‌گذاری در حساب قرض‌الحسنه پس‌انداز بانک، اعتبار ایجاد می‌کنید. تبصره ویژه وام فوری: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه اعتبارسنجی ایرانیان شما A یا B باشد، وام فوری بدون ضامن دریافت می‌کنید. در غیر این صورت، ضمان طبق سامانه ضمان و بر اساس رتبه اعتباری شما تعیین می‌شود. اگر رتبه شما بالا باشد و بیمه عمر بپذیرید، بدون ضامن؛ اگر بیمه عمر نپذیرید یا رتبه پایین باشد، یک ضامن و وثیقه لازم است. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد صفر، دو یا چهار درصد. مدت بازپرداخت تا شصت ماه. دوره معدل‌گیری از یک تا سی و شش ماه. کد تسهیلات یکصد و یک. نحوه محاسبه: وام برابر میانگین موجودی ضربدر ضریب. مثال: میانگین دوازده ماهه هشتاد و شش میلیون تومان، امکان دریافت سیصد میلیون تومان وام با بازپرداخت دوازده ماهه و کارمزد چهار درصد.',
+noora: 'طرح نورا. تسهیلات قرض‌الحسنه بدون کارمزد. ضمان طبق سامانه ضمان و رتبه اعتباری. با پذیرش بیمه عمر و رتبه بالا، بدون ضامن؛ در غیر این صورت یک ضامن و وثیقه. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد صفر. مدت بازپرداخت هجده تا شصت ماه. دوره معدل‌گیری یک تا سی و شش ماه. کد تسهیلات یکصد و هشتاد و دو. برای دریافت پانصد میلیون تومان، با معدل‌گیری سی و شش ماهه حدود سیصد و هشتاد میلیون تومان موجودی لازم است؛ با معدل‌گیری دوازده ماهه حدود یک میلیارد تومان.',
+rezvan: 'طرح رضوان. ویژه کارکنان سازمان‌های حمایتی که با بانک تفاهم‌نامه دارند. ضمان طبق ضوابط تفاهم‌نامه سازمان با بانک. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد دو، سه یا چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد و یک.',
+karamat: 'طرح کرامت. ویژه دریافت‌کنندگان مستمری. ضمان طبق تفاهم‌نامه با سازمان حمایتی. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا سی و شش ماه. کد تسهیلات دویست و نه.',
+shams: 'طرح شمس. پس‌انداز ماهیانه. ضمان طبق سامانه ضمان. مدت پس‌انداز نه تا سی ماه. مبلغ وام نود تا نهصد میلیون ریال. مدت انتظار سه تا ده ماه. نرخ کارمزد چهار درصد.',
+naron: 'طرح نارون. ویژه اصناف. ضمان طبق سامانه ضمان و رتبه اعتباری. وام حقیقی ده میلیارد ریال و حقوقی پانزده میلیارد ریال. نرخ کارمزد صفر تا چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات حقیقی یکصد و شش و حقوقی هشتصد و شش.',
+sarv1: 'طرح سرو بدون تفاهم‌نامه. ضمان: مصالح که تودیع‌کننده است، می‌بایست در پرونده تسهیلات نقش تسهیلات‌گیرنده یا ضامن را داشته باشد. مدت بازپرداخت هفت تا بیست و چهار ماه. نرخ کارمزد سه تا چهار درصد.',
+sarv2: 'طرح سرو تفاهم‌نامه‌ای. ضمان طبق تفاهم‌نامه با اتحادیه یا صاحب کسب‌وکار. مدت بازپرداخت دوازده یا بیست و چهار ماه. مدت انتظار بیست یا چهل روز. نرخ کارمزد چهار درصد.',
+tooska: 'طرح توسکا. ضمان طبق تفاهم‌نامه با کارفرما. سقف وام ده میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا شصت ماه. کد تسهیلات دویست و سی و سه.',
+yaghout: 'طرح یاقوت. ضمان طبق تفاهم‌نامه سازمان با بانک. وام حقیقی پنج میلیارد ریال و حقوقی پانزده میلیارد ریال. نرخ کارمزد طبق جداول امتیازی. مدت بازپرداخت تا شصت ماه.',
+yaghout2: 'طرح یاقوت با حفظ مبلغ ثابت. ضمان طبق تفاهم‌نامه سازمان با بانک. مدت تودیع حداکثر دوازده ماه. نرخ کارمزد چهار درصد.',
+almas: 'طرح الماس. ضمان طبق تفاهم‌نامه حمایتی شرکت با بانک. مبلغ وام تا پنج میلیارد ریال. نرخ کارمزد بانک چهار درصد و مشتری دو یا چهار درصد. مدت انتظار ده روز. کد تسهیلات بانک دویست و چهل و دو و اجتماعی دویست و پنجاه و هشت.',
+almas100: 'طرح الماس با حمایت بالای صد درصد. ضمان طبق تفاهم‌نامه حمایتی شرکت. حداقل آورده صد واحد. مدت بازپرداخت دوازده تا شصت ماه. حمایت از صد درصد تا بیش از صد درصد.',
+almasaghsat: 'طرح الماس با بازگشت اقساط. ضمان طبق تفاهم‌نامه حمایتی شرکت. مدت انتظار ده روز. دوره بازپرداخت دوازده تا شصت ماه. حداقل آورده صد واحد.',
+almas2: 'طرح الماس با کارمزد کمتر از دو درصد. ضمان طبق تفاهم‌نامه شرکت با بانک. تسویه زودتر از موعد یا استفاده از بازگشت اقساط مجاز نیست.',
+firoozeh: 'طرح فیروزه. ضمان طبق تفاهم‌نامه شرکت با بانک. سقف وام پنج میلیارد ریال. نرخ کارمزد چهار درصد. مدت بازپرداخت تا سی و شش ماه. کد تسهیلات یکصد و پنجاه و یک. وام برابر پنج درصد مجموع حقوق واریزی ماهیانه.',
+najm: 'طرح نجم. ویژه اقشار آسیب‌پذیر. ضمان طبق سامانه ضمان و رتبه اعتباری. اطلاعات شما باید از طریق ای پی آی نهاد مربوطه تأیید شود. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد طبق جداول امتیازی. مدت بازپرداخت تا شصت ماه. کد تسهیلات یکصد و هشتاد و سه.',
+nasr: 'طرح نصر حقیقی. ضمان طبق سامانه ضمان. سقف کل یک میلیون و پانصد میلیون ریال. مدت بازپرداخت بیست تا سی ماه. کد تسهیلات بانک دویست و چهل و هفت و اجتماعی دویست و پنجاه و هفت.',
+nasr2: 'طرح نصر حقوقی. ویژه سازمان‌های مردم نهاد. ضمان طبق تفاهم‌نامه سازمان با بانک. سقف تسهیلات پنج میلیارد ریال. نرخ کارمزد بانک چهار درصد و اجتماعی دو یا چهار درصد. مدت بازپرداخت تا شصت ماه.',
+orkideh: 'طرح ارکیده. ضمان: مصالح که تودیع‌کننده است، ضامن محسوب می‌شود. دو برابر سپرده تودیعی. مدت بازپرداخت بیست تا پنجاه ماه. نرخ کارمزد بانک چهار درصد و اجتماعی صفر. کد تسهیلات بانک یکصد و سی و هشت و اجتماعی یکصد و شصت و چهار.',
+ehsan: 'طرح احسان. طرح‌های احسان و امین در حال حاضر در مرحله بررسی بوده و پس از ابلاغ دستورالعمل‌ها و جداول آن قابل اجرا خواهند بود.'
 };
 
 function readWelcome() {
-speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. این سامانه بر اساس نظام جامع اعتباری سال هزار و چهارصد و پنج بانک قرض‌الحسنه مهر ایران طراحی شده است. شغل خود را از لیست زیر انتخاب کنید تا طرح‌های مناسب شما نمایش داده شود. برای هر طرح، شرح کامل، نحوه محاسبه، و مثال آورده شده است.');
+speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. در این سامانه، ضمان هر طرح بر اساس سامانه ضمان و رتبه اعتباری شما تعیین می‌شود. تبصره ویژه طرح نیلوفر: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه اعتبارسنجی ایرانیان شما A یا B باشد، وام فوری بدون ضامن دریافت می‌کنید. همچنین ماشین‌حساب وام در بالای صفحه قرار دارد. شغل خود را از لیست زیر انتخاب کنید.');
 }
 
 function readPlan(key, btn) {
@@ -733,12 +837,10 @@ if (btn) btn.classList.add('active');
 speak(planTexts[key]);
 }
 
-// QR Code
 var currentUrl = window.location.href.split('?')[0].split('#')[0];
 document.getElementById('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(currentUrl);
 document.getElementById('qrUrl').textContent = currentUrl;
 
-// بررسی دوره‌ای RV
 var rvCheck = setInterval(function() {
 if (checkRV()) { clearInterval(rvCheck); updateStatus(); }
 }, 400);
