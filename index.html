@@ -14,7 +14,7 @@ h1{color:#0d5c3a;text-align:center;font-size:22px;margin-bottom:5px}
 .sub{text-align:center;color:#666;font-size:12px;margin-bottom:12px}
 .guide-box{background:#e8f5ee;border:2px solid #0d5c3a;border-radius:12px;padding:14px;margin-bottom:14px}
 .guide-box h3{color:#0d5c3a;font-size:15px;margin-bottom:10px;text-align:center}
-.guide-step{background:#fff;border-right:4px solid #0d5c3a;padding:8px 12px;margin-bottom:6px;border-radius:6px;font-size:13px;color:#333;line-height:1.8}
+.guide-step{background:#fff;border-right:4px solid #0d5c3a;padding:8px 12px;margin-bottom:6px;border-radius:6px;font-size:13px;color:#333}
 .guide-step b{color:#0d5c3a}
 .terms-box{background:#fff8e1;border:2px solid #f39c12;border-radius:12px;padding:14px;margin-bottom:14px}
 .terms-box h3{color:#7a5c00;font-size:15px;margin-bottom:10px;text-align:center}
@@ -32,26 +32,27 @@ h1{color:#0d5c3a;text-align:center;font-size:22px;margin-bottom:5px}
 .stop-btn{display:block;width:100%;padding:11px;background:#c0392b;color:#fff;border:none;border-radius:11px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-bottom:14px}
 .q{color:#0d5c3a;font-size:15px;font-weight:bold;margin-bottom:8px;text-align:center;padding:9px;background:#f5f5f5;border-radius:10px}
 .hint-toggle{font-size:11px;color:#666;text-align:center;margin-bottom:12px}
-details{background:#fafafa;border:2px solid #e0e0e0;border-radius:11px;margin-bottom:9px;overflow:hidden}
-details[open]{border-color:#0d5c3a}
-summary{padding:13px;cursor:pointer;font-size:15px;font-weight:bold;list-style:none;color:#333;background:#f0f0f0}
-summary::-webkit-details-marker{display:none}
-details[open] summary{background:#0d5c3a;color:#fff}
+.group{background:#fafafa;border:2px solid #e0e0e0;border-radius:11px;margin-bottom:9px;overflow:hidden}
+.group.open{border-color:#0d5c3a}
+.group-title{padding:13px;cursor:pointer;font-size:15px;font-weight:bold;list-style:none;color:#333;background:#f0f0f0;user-select:none;position:relative}
+.group-title::after{content:"▼";position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:11px;color:#333}
+.group.open .group-title{background:#0d5c3a;color:#fff}
+.group.open .group-title::after{content:"▲";color:#fff}
 .group-desc{font-size:11.5px;color:#666;font-weight:normal;padding:0 13px 8px;background:#f0f0f0;line-height:1.7}
-details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
-.plans{padding:12px;background:#fff}
+.group.open .group-desc{background:#0d5c3a;color:#c8e6d2}
+.plans{display:none;padding:12px;background:#fff}
+.group.open .plans{display:block}
 .card{background:#f9fdfb;border:2px solid #0d5c3a;border-radius:12px;padding:0;margin-bottom:12px;overflow:hidden}
 .card.open{box-shadow:0 4px 12px rgba(13,92,58,.15)}
-.card h3{color:#0d5c3a;font-size:16px;margin:0;padding:14px 40px 14px 14px;text-align:center;cursor:pointer;user-select:none;position:relative;background:#f0f8f3;transition:background .2s}
-.card h3:hover{background:#e0efe6}
-.card h3::after{content:"▼";font-size:11px;color:#0d5c3a;position:absolute;left:15px;top:50%;transform:translateY(-50%)}
-.card.open h3::after{content:"▲"}
-.card.open h3{background:#d4edda;border-bottom:2px solid #0d5c3a}
+.card-title{color:#0d5c3a;font-size:16px;margin:0;padding:14px 40px 14px 14px;text-align:center;cursor:pointer;user-select:none;position:relative;background:#f0f8f3}
+.card-title::after{content:"▼";font-size:11px;color:#0d5c3a;position:absolute;left:15px;top:50%;transform:translateY(-50%)}
+.card.open .card-title{background:#d4edda;border-bottom:2px solid #0d5c3a}
+.card.open .card-title::after{content:"▲"}
 .card-body{display:none;padding:14px}
 .card.open .card-body{display:block}
 .type-badge{display:block;background:#0d5c3a;color:#fff;padding:4px 11px;border-radius:18px;font-size:11px;text-align:center;margin:0 auto 10px auto;width:fit-content}
 .section{margin-bottom:9px;padding:10px 12px;border-radius:8px;font-size:13px;line-height:2}
-.section-title-mini{font-weight:bold;color:#0d5c3a;display:block;margin-bottom:4px;font-size:13.5px}
+.sec-title{font-weight:bold;color:#0d5c3a;display:block;margin-bottom:4px;font-size:13.5px}
 .sec-blue{background:#e3f2fd;border-right:4px solid #1976d2;color:#0d47a1}
 .sec-green{background:#d4edda;border-right:4px solid #28a745;color:#155724}
 .sec-yellow{background:#fff8e1;border-right:4px solid #f39c12;color:#7a5c00}
@@ -59,27 +60,26 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 .sec-red{background:#f8d7da;border-right:4px solid #c0392b;color:#721c24}
 .sec-purple{background:#ede7f6;border-right:4px solid #673ab7;color:#311b92}
 .sec-pink{background:#fce4ec;border-right:4px solid #e91e63;color:#880e4f}
-.table-mini{width:100%;border-collapse:collapse;font-size:11.5px;margin:8px 0}
-.table-mini th,.table-mini td{border:1px solid #d35400;padding:5px 3px;text-align:center}
-.table-mini th{background:#d35400;color:#fff;font-weight:normal}
-.table-mini tr:nth-child(even){background:#fef5e7}
-.mini-calc{background:#fff3cd;border:2px solid #f39c12;border-radius:10px;padding:12px;margin-top:10px;margin-bottom:10px}
+table.mini{width:100%;border-collapse:collapse;font-size:11.5px;margin:8px 0}
+table.mini th,table.mini td{border:1px solid #d35400;padding:5px 3px;text-align:center}
+table.mini th{background:#d35400;color:#fff;font-weight:normal}
+table.mini tr:nth-child(even){background:#fef5e7}
+.mini-calc{background:#fff3cd;border:2px solid #f39c12;border-radius:10px;padding:12px;margin:10px 0}
 .mini-calc h4{color:#7a5c00;font-size:14px;margin-bottom:10px;text-align:center}
 .mini-calc label{display:block;font-size:12px;color:#7a5c00;font-weight:bold;margin-bottom:4px;margin-top:8px}
 .mini-calc input{width:100%;padding:10px;border:2px solid #f39c12;border-radius:6px;font-family:inherit;font-size:14px;background:#fff;color:#333;font-weight:bold}
 .mini-calc .fee-row{display:flex;gap:6px;margin-top:6px}
-.mini-calc .fee-btn-mini{flex:1;padding:8px;border:2px solid #d35400;background:#fff;color:#d35400;border-radius:6px;font-family:inherit;font-size:13px;font-weight:bold;cursor:pointer}
-.mini-calc .fee-btn-mini.active{background:#d35400;color:#fff}
-.mini-calc .calc-btn-mini{display:block;width:100%;padding:11px;background:#d35400;color:#fff;border:none;border-radius:8px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-top:10px}
-.mini-calc .result-mini{background:#fff;border:2px solid #0d5c3a;border-radius:8px;padding:10px;margin-top:10px;display:none;font-size:12px}
-.mini-calc .result-mini.show{display:block}
-.mini-calc .result-mini h5{color:#0d5c3a;font-size:13px;margin-bottom:8px;text-align:center}
-.mini-calc .result-mini table{width:100%;border-collapse:collapse}
-.mini-calc .result-mini th,.mini-calc .result-mini td{border:1px solid #0d5c3a;padding:5px 3px;text-align:center;font-size:11px}
-.mini-calc .result-mini th{background:#0d5c3a;color:#fff;font-weight:normal}
-.mini-calc .result-mini .amount{background:#e8f5ee;color:#0d5c3a;font-weight:bold}
+.mini-calc .fee-btn{flex:1;padding:8px;border:2px solid #d35400;background:#fff;color:#d35400;border-radius:6px;font-family:inherit;font-size:13px;font-weight:bold;cursor:pointer}
+.mini-calc .fee-btn.active{background:#d35400;color:#fff}
+.mini-calc .go-btn{display:block;width:100%;padding:11px;background:#d35400;color:#fff;border:none;border-radius:8px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-top:10px}
+.mini-result{background:#fff;border:2px solid #0d5c3a;border-radius:8px;padding:10px;margin-top:10px;display:none;font-size:12px}
+.mini-result.show{display:block}
+.mini-result h5{color:#0d5c3a;font-size:13px;margin-bottom:8px;text-align:center}
+.mini-result table{width:100%;border-collapse:collapse}
+.mini-result th,.mini-result td{border:1px solid #0d5c3a;padding:5px 3px;text-align:center;font-size:11px}
+.mini-result th{background:#0d5c3a;color:#fff;font-weight:normal}
+.mini-result td.amount{background:#e8f5ee;color:#0d5c3a;font-weight:bold}
 .speak-btn{display:block;width:100%;padding:11px;background:#0d5c3a;color:#fff;border:none;border-radius:10px;font-size:14px;font-family:inherit;font-weight:bold;cursor:pointer;margin-top:10px}
-.speak-btn.active{background:#f39c12}
 .footer{text-align:center;color:#999;font-size:11px;margin-top:15px;line-height:1.8}
 </style>
 </head>
@@ -87,50 +87,58 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 <div class="box">
 <h1>مهر راهنما</h1>
 <div class="sub">نظام جامع اعتباری سال ۱۴۰۵ | بانک قرض‌الحسنه مهر ایران</div>
+
 <div class="guide-box">
 <h3>🎯 چطور از این سایت استفاده کنم؟</h3>
 <div class="guide-step"><b>مرحله ۱:</b> شغل خودت را از لیست زیر انتخاب کن</div>
 <div class="guide-step"><b>مرحله ۲:</b> روی عنوان هر طرح بزن تا باز شود</div>
-<div class="guide-step"><b>مرحله ۳:</b> شرح کامل، جدول و مثال را ببین. برای نیلوفر و نورا، همان‌جا ماشین‌حساب هست</div>
-<div class="guide-step"><b>مرحله ۴:</b> به شعبه بانک مهر ایران برو و درخواست بده</div>
+<div class="guide-step"><b>مرحله ۳:</b> شرح کامل، جدول و مثال را ببین</div>
+<div class="guide-step"><b>مرحله ۴:</b> برای نیلوفر و نورا، همان‌جا با ماشین‌حساب، مبلغ وامت را حساب کن</div>
 </div>
+
 <div class="terms-box">
 <h3>📖 اصطلاحات مهم</h3>
-<div class="term"><b>معدل حساب =</b> میانگین پولی که در طول ماه‌ها در حسابتان نگه داشته‌اید. مثلاً اگر ۱ ماه ۱۰۰ میلیون و ۱ ماه ۲۰۰ میلیون داشته باشید، معدل = ۱۵۰ میلیون.</div>
-<div class="term"><b>رتبه Z =</b> رتبه اعتباری شما در سامانه ضمان، بین ۰ تا ۱۰۰. هر چه بالاتر، وام راحت‌تر.</div>
-<div class="term"><b>بدون ضامن =</b> اگر رتبه اعتبارسنجی ایرانیان شما A یا B باشد و بیمه عمر بپذیرید.</div>
-<div class="term"><b>کارمزد =</b> سودی که بانک می‌گیرد. ۴٪ یعنی به ازای هر ۱۰۰ میلیون، ۴ میلیون (طی سال).</div>
+<div class="term"><b>معدل حساب =</b> میانگین پولی که در طول ماه‌ها در حسابتان نگه داشته‌اید.</div>
+<div class="term"><b>رتبه Z =</b> رتبه اعتباری شما در سامانه ضمان، بین ۰ تا ۱۰۰.</div>
+<div class="term"><b>بدون ضامن =</b> اگر رتبه اعتبارسنجی ایرانیان شما A یا B باشد.</div>
+<div class="term"><b>کارمزد =</b> سودی که بانک می‌گیرد. ۴٪ یعنی به ازای هر ۱۰۰ میلیون، ۴ میلیون.</div>
 </div>
+
 <div class="ravish-box">
 <h3>🎁 جشنواره رویش مهر</h3>
 <p>اگر جشنواره فعال باشد، <span class="ravish-percent">۲۰٪ به مبلغ وام اضافه می‌شود</span></p>
-<p style="font-size:12px">مثال: وام محاسبه‌شده ۱۰۰ میلیون → ۱۲۰ میلیون تومان</p>
+<p style="font-size:12px">مثال: وام ۱۰۰ میلیون → ۱۲۰ میلیون تومان</p>
 </div>
+
 <div class="qr-box">
 <p>این صفحه را با دیگران به اشتراک بگذارید</p>
-<div id="qrImg">در حال بارگذاری...</div>
+<img id="qrImg" src="" alt="QR Code">
 <div class="qr-url" id="qrUrl"></div>
 </div>
+
 <button class="voice-main" onclick="readWelcome()">🔊 راهنمای صوتی - کلیک کنید</button>
 <button class="stop-btn" onclick="stopAll()">⏹ توقف صوتی</button>
-<div class="q">شغل خود را انتخاب کنید</div>
-<div class="hint-toggle">👆 روی عنوان هر کارت بزنید تا باز شود. کارت قبلی خودکار بسته می‌شود.</div>
 
-<details open>
-<summary>🌟 عمومی - برای همه مشاغل</summary>
-<div class="group-desc">اگر کارمند، بازنشسته، خانه‌دار، دانشجو یا هر شغل دیگری هستی و حساب پس‌انداز داری، این طرح‌ها برای توست.</div>
+<div class="q">شغل خود را انتخاب کنید</div>
+<div class="hint-toggle">👆 روی عنوان هر گروه و کارت بزنید</div>
+
+<!-- گروه ۱: عمومی -->
+<div class="group open" id="g1">
+<div class="group-title" onclick="toggleGroup('g1')">🌟 عمومی - برای همه مشاغل</div>
+<div class="group-desc">اگر کارمند، بازنشسته، خانه‌دار، دانشجو یا هر شغل دیگری هستی، این طرح‌ها برای توست.</div>
 <div class="plans">
 
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نیلوفر</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نیلوفر</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - سپرده محور - کد ۱۰۱</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که حساب قرض‌الحسنه پس‌انداز در بانک مهر ایران دارد.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span><b>دوره معدل‌گیری:</b> ۱ تا ۱۲ ماه — هر چه بیشتر، وام بیشتر<br><b>مدت بازپرداخت:</b> ۶ تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪ (انتخابی شما)</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق <b>سامانه ضمان</b>. با بیمه عمر و رتبه بالا: بدون ضامن. در غیر این صورت: یک ضامن + وثیقه.</div>
-<div class="section sec-purple"><span class="section-title-mini">⭐ تبصره ویژه:</span>اگر معدل حساب شما تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه اعتبارسنجی ایرانیان <b>A یا B</b> باشد، <b>وام فوری بدون ضامن</b> دریافت می‌کنید.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که حساب قرض‌الحسنه پس‌انداز در بانک مهر ایران دارد.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>دوره معدل‌گیری: ۱ تا ۱۲ ماه — هر چه بیشتر، وام بیشتر<br>مدت بازپرداخت: ۶ تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪ (انتخابی شما)</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان. با بیمه عمر و رتبه بالا: بدون ضامن. در غیر این صورت: یک ضامن + وثیقه.</div>
+<div class="section sec-purple"><span class="sec-title">⭐ تبصره ویژه:</span>اگر معدل حساب شما تا <b>۱۰۰ میلیون تومان</b> باشد و رتبه اعتبارسنجی ایرانیان <b>A یا B</b> باشد، وام فوری بدون ضامن دریافت می‌کنید.</div>
+
 <div class="mini-calc">
 <h4>🧮 همین‌جا حساب کن</h4>
 <label>💰 مبلغ سپرده (تومان):</label>
@@ -139,72 +147,70 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 <input type="number" id="niloufar-period" placeholder="مثلاً 12" min="1" max="12">
 <label>💵 نرخ کارمزد:</label>
 <div class="fee-row">
-<button class="fee-btn-mini active" data-fee="4" onclick="selectNiloufarFee(4)">۴٪</button>
-<button class="fee-btn-mini" data-fee="3" onclick="selectNiloufarFee(3)">۳٪</button>
-<button class="fee-btn-mini" data-fee="2" onclick="selectNiloufarFee(2)">۲٪</button>
+<button class="fee-btn active" data-fee="4" onclick="selectFee('niloufar',4)">۴٪</button>
+<button class="fee-btn" data-fee="3" onclick="selectFee('niloufar',3)">۳٪</button>
+<button class="fee-btn" data-fee="2" onclick="selectFee('niloufar',2)">۲٪</button>
 </div>
-<button class="calc-btn-mini" onclick="calcNiloufar()">🧮 محاسبه وام</button>
-<div class="result-mini" id="niloufar-result"></div>
+<button class="go-btn" onclick="calcLoan('niloufar')">🧮 محاسبه وام</button>
+<div class="mini-result" id="niloufar-result"></div>
 </div>
 <button class="speak-btn" onclick="readPlan('niloufar', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نورا</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نورا</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - بدون کارمزد - کد ۱۸۲</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که می‌خواهد وام بدون کارمزد بگیرد.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span><b>دوره معدل‌گیری:</b> ۱ تا ۱۲ ماه<br><b>مدت بازپرداخت:</b> ۶ تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span><b>صفر درصد — کاملاً رایگان</b></div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق سامانه ضمان. با بیمه عمر و رتبه بالا: بدون ضامن.</div>
-<div class="section sec-pink"><b>⚠️ نکته مهم:</b> ضریب نورا پایین‌تر از نیلوفر است چون کارمزد ندارد و بانک ریسک بیشتری می‌پذیرد.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>کلیه اشخاص حقیقی — هر کسی که می‌خواهد وام بدون کارمزد بگیرد.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا سقف <b>۵۰۰ میلیون تومان</b> — بر اساس معدل حساب.</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>دوره معدل‌گیری: ۱ تا ۱۲ ماه<br>مدت بازپرداخت: ۶ تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span><b>صفر درصد — کاملاً رایگان</b></div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
+<div class="section sec-pink"><b>⚠️ نکته:</b> ضریب نورا پایین‌تر از نیلوفر است چون کارمزد ندارد.</div>
+
 <div class="mini-calc">
 <h4>🧮 همین‌جا حساب کن</h4>
 <label>💰 مبلغ سپرده (تومان):</label>
 <input type="text" id="noora-deposit" placeholder="مثلاً 100,000,000" inputmode="numeric">
 <label>📅 مدت معدل‌گیری (۱ تا ۱۲ ماه):</label>
 <input type="number" id="noora-period" placeholder="مثلاً 12" min="1" max="12">
-<button class="calc-btn-mini" onclick="calcNoora()">🧮 محاسبه وام</button>
-<div class="result-mini" id="noora-result"></div>
+<button class="go-btn" onclick="calcLoan('noora')">🧮 محاسبه وام</button>
+<div class="mini-result" id="noora-result"></div>
 </div>
 <button class="speak-btn" onclick="readPlan('noora', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نصر حقیقی</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نصر حقیقی</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - دو منبع - کد ۲۴۷ / ۲۵۷</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>اشخاص حقیقی که در یکی از نهادهای حمایتی (کمیته امداد، بهزیستی، بنیاد علوی) پرونده دارند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۱۵۰ میلیون تومان</b> — ترکیبی از دو منبع: بانک + بانکداری اجتماعی.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۳۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>اشخاص حقیقی که در نهاد حمایتی پرونده دارند.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>تا ۱۵۰ میلیون تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۳۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
+<table class="mini">
 <tr><th>مدت انتظار</th><th>بازپرداخت</th><th>سهم بانک</th><th>سهم مشتری</th></tr>
 <tr><td>آنی</td><td>۲۰ ماه</td><td>۲۵ میلیون</td><td>۵۰ میلیون</td></tr>
 <tr><td>آنی</td><td>۲۴ ماه</td><td>۴۵ میلیون</td><td>۱۰۰ میلیون</td></tr>
 <tr><td>۳۰ روز</td><td>۳۰ ماه</td><td>۷۰ میلیون</td><td>۱۵۰ میلیون</td></tr>
 </table>
-<div class="section sec-pink">⚠️ بهره‌مندی منوط به تأیید API نهاد مربوطه می‌باشد.</div>
 <button class="speak-btn" onclick="readPlan('nasr', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح ارکیده</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح ارکیده</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - دو برابر سپرده - کد ۱۳۸ / ۱۶۴</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>اشخاص حقیقی که از طریق مصالح (فروشنده مصالح ساختمانی) به بانک معرفی می‌شوند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span><b>دو برابر مبلغ سپرده تودیعی مصالح</b></div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۵۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>مصالح باید در پرونده تسهیلات، نقش تسهیلات‌گیرنده یا ضامن داشته باشد.</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>اشخاص حقیقی که از طریق مصالح به بانک معرفی می‌شوند.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>دو برابر مبلغ سپرده تودیعی مصالح</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۲۰ تا ۵۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>منابع بانک ۴٪ / بانکداری اجتماعی صفر</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>مصالح در پرونده نقش تسهیلات‌گیرنده یا ضامن دارد.</div>
+<table class="mini">
 <tr><th>انتظار</th><th>بازپرداخت</th><th>سپرده مصالح</th><th>وام</th></tr>
 <tr><td>۳۰ روز</td><td>۲۰ ماه</td><td>۱۰۰ میلیون</td><td>۲۰۰ میلیون</td></tr>
 <tr><td>۶۰ روز</td><td>۳۰ ماه</td><td>۱۵۰ میلیون</td><td>۳۰۰ میلیون</td></tr>
@@ -216,187 +222,196 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 </div>
 
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح شمس</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح شمس</div>
 <div class="card-body">
 <span class="type-badge">پس‌انداز ماهیانه</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>افراد کم‌برخوردار و کسانی که می‌خواهند با پس‌انداز ماهیانه به وام برسند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>حداقل ۹ تا حداکثر <b>۹۰ میلیون تومان</b></div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت پس‌انداز: ۹ تا ۳۰ ماه / مدت انتظار: ۳ تا ۱۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪ — شعبه دیجیتال</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 این طرح برای کیه؟</span>افراد کم‌برخوردار که با پس‌انداز ماهیانه به وام می‌رسند.</div>
+<div class="section sec-green"><span class="sec-title">💰 چقدر وام می‌گیری؟</span>حداقل ۹ تا ۹۰ میلیون تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ چقدر طول می‌کشه؟</span>مدت پس‌انداز: ۹ تا ۳۰ ماه / انتظار: ۳ تا ۱۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪ — شعبه دیجیتال</div>
+<table class="mini">
 <tr><th>پرداخت ماهانه</th><th>۹ ماه</th><th>۱۸ ماه</th><th>۳۰ ماه</th></tr>
-<tr><td>۲ میلیون</td><td>۹ میلیون وام</td><td>۲۷ میلیون وام</td><td>۴۵ میلیون وام</td></tr>
-<tr><td>۳ میلیون</td><td>—</td><td>۳۶ میلیون وام</td><td>۹۰ میلیون وام</td></tr>
+<tr><td>۲ میلیون</td><td>۹ میلیون</td><td>۲۷ میلیون</td><td>۴۵ میلیون</td></tr>
+<tr><td>۳ میلیون</td><td>—</td><td>۳۶ میلیون</td><td>۹۰ میلیون</td></tr>
 </table>
 <button class="speak-btn" onclick="readPlan('shams', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 
 </div>
-</details>
+</div>
 
-<details>
-<summary>🤝 کارکنان سازمان‌های حمایتی</summary>
+<!-- گروه ۲: سازمان‌های حمایتی -->
+<div class="group" id="g2">
+<div class="group-title" onclick="toggleGroup('g2')">🤝 کارکنان سازمان‌های حمایتی</div>
 <div class="group-desc">اگر کارمند کمیته امداد، بهزیستی، بنیاد علوی یا صندوق قرض‌الحسنه هستی، این طرح‌ها برای توست.</div>
 <div class="plans">
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح رضوان</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح رضوان</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - با تفاهم‌نامه - کد ۱۸۱</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>کارکنان سازمان‌های حمایتی که با بانک تفاهم‌نامه دارند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b></div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان با بانک.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>کارکنان سازمان‌های حمایتی با تفاهم‌نامه.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
 <button class="speak-btn" onclick="readPlan('rezvan', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح کرامت</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح کرامت</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - پشتوانه مستمری - کد ۲۰۹</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>دریافت‌کنندگان مستمری از کمیته امداد، بهزیستی، بنیاد علوی.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b> — بر اساس امتیاز واریز مستمری.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۳۶ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه با سازمان حمایتی.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>دریافت‌کنندگان مستمری از سازمان‌های حمایتی.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۳۶ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با سازمان.</div>
 <button class="speak-btn" onclick="readPlan('karamat', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 </div>
-</details>
+</div>
 
-<details>
-<summary>💚 اقشار حمایتی و آسیب‌پذیر</summary>
+<!-- گروه ۳: اقشار حمایتی -->
+<div class="group" id="g3">
+<div class="group-title" onclick="toggleGroup('g3')">💚 اقشار حمایتی و آسیب‌پذیر</div>
 <div class="group-desc">اگر بانوی سرپرست خانوار، مددجو، معلول، عشایر، جانباز یا ساکن روستا هستی، این طرح ویژه توست.</div>
 <div class="plans">
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نجم</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نجم</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - بانکداری اجتماعی - کد ۱۸۳</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b> — ضریب ۱۱۵٪ (۱۵٪ بیشتر)</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۲٪ یا ۳٪ یا ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق سامانه ضمان + تأیید API نهاد مربوطه.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>بانوان سرپرست خانوار، زندانیان جرایم مالی، معلولان، مددجویان، عشایر، جانبازان، مشاغل روستایی.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان — ضریب ۱۱۵٪</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۲٪ - ۳٪ - ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان + تأیید API نهاد.</div>
 <button class="speak-btn" onclick="readPlan('najm', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
 </div>
-</details>
+</div>
 
-<details>
-<summary>🏪 اصناف و کسبه</summary>
+<!-- گروه ۴: اصناف -->
+<div class="group" id="g4">
+<div class="group-title" onclick="toggleGroup('g4')">🏪 اصناف و کسبه</div>
 <div class="group-desc">اگر صاحب کسب‌وکار، مغازه‌دار یا دارای جواز کسب هستی، این طرح‌ها برای توست.</div>
 <div class="plans">
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نارون</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نارون</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - ویژه اصناف - کد ۱۰۶ / ۸۰۶</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>اتحادیه‌ها، صاحبین کسب‌وکار و تمامی اصناف واجد شرایط.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>حقیقی: تا ۱ میلیارد تومان / حقوقی: تا ۱.۵ میلیارد تومان</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>صفر - ۲٪ - ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>اتحادیه‌ها، صاحبین کسب‌وکار و تمامی اصناف.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>حقیقی تا ۱ میلیارد تومان / حقوقی تا ۱.۵ میلیارد</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>صفر - ۲٪ - ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق سامانه ضمان.</div>
 <button class="speak-btn" onclick="readPlan('naron', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح سرو بدون تفاهم‌نامه</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح سرو بدون تفاهم‌نامه</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - ساده</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>دارندگان جواز کسب یا پروانه صنفی معتبر.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۱.۵ میلیارد تومان</b></div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۷ تا ۲۴ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۳٪ تا ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>مصالح باید در پرونده تسهیلات، نقش تسهیلات‌گیرنده یا ضامن داشته باشد.</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول حمایت ۱۰۰٪ بانک:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>دارندگان جواز کسب معتبر.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۱.۵ میلیارد تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>۷ تا ۲۴ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۳٪ تا ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>مصالح در پرونده نقش تسهیلات‌گیرنده یا ضامن دارد.</div>
+<table class="mini">
 <tr><th>سقف وام (میلیون تومان)</th><th>۶۰۰</th><th>۸۰۰</th><th>۱۰۰۰</th><th>۱۲۰۰</th><th>۱۵۰۰</th></tr>
 <tr><td>شرایط ویژه کسبه</td><td>۳۰۰</td><td>۴۰۰</td><td>۵۰۰</td><td>۶۰۰</td><td>۷۵۰</td></tr>
-<tr><td>مدت بازپرداخت</td><td>۷ ماه</td><td>۹ ماه</td><td>۱۲ ماه</td><td>۱۶ ماه</td><td>۲۴ ماه</td></tr>
-<tr><td>مدت انتظار</td><td>۲۰ روز</td><td>۳۰ روز</td><td>۳۰ روز</td><td>۵۰ روز</td><td>۶۰ روز</td></tr>
-<tr><td>کارمزد</td><td>۴٪</td><td>۳٪</td><td>۴٪</td><td>۴٪</td><td>۴٪</td></tr>
+<tr><td>بازپرداخت</td><td>۷ ماه</td><td>۹ ماه</td><td>۱۲ ماه</td><td>۱۶ ماه</td><td>۲۴ ماه</td></tr>
+<tr><td>انتظار</td><td>۲۰ روز</td><td>۳۰ روز</td><td>۳۰ روز</td><td>۵۰ روز</td><td>۶۰ روز</td></tr>
 </table>
 <button class="speak-btn" onclick="readPlan('sarv1', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح سرو تفاهم‌نامه‌ای</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح سرو تفاهم‌نامه‌ای</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - با تفاهم‌نامه - کد ۲۴۳ / ۲۵۹</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>اتحادیه‌ها، صرافی‌ها، صاحبین کسب‌وکارها، واحدهای تولیدی بزرگ.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>سقف تفاهم‌نامه: درجه ۲ = ۸۰۰ میلیارد ریال / درجه ۱ = ۱.۰۰۰ میلیارد ریال</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: ۱۲ یا ۲۴ ماه / انتظار: ۲۰ یا ۴۰ روز</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪ — حمایت ۱۰۰٪ آورده</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه با اتحادیه.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>اتحادیه‌ها، صرافی‌ها، صاحبین کسب‌وکارها.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>سقف استان درجه ۲ = ۸۰۰ میلیارد ریال / درجه ۱ = ۱.۰۰۰ میلیارد ریال</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>۱۲ یا ۲۴ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪ — حمایت ۱۰۰٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با اتحادیه.</div>
 <button class="speak-btn" onclick="readPlan('sarv2', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح توسکا</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح توسکا</div>
 <div class="card-body">
 <span class="type-badge">حقوق محور - کد ۲۳۳</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>کارفرمایانی که حقوق کارکنان را از بانک مهر ایران واریز می‌کنند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۱ میلیارد تومان</b></div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه با کارفرما.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>کارفرمایانی که حقوق کارکنان را از بانک واریز می‌کنند.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۱ میلیارد تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه با کارفرما.</div>
 <div class="section sec-pink">⚠️ شرط: داشتن دستگاه پوز فعال در بانک.</div>
 <button class="speak-btn" onclick="readPlan('tooska', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
-</div>
-</details>
 
-<details>
-<summary>🏢 سازمان‌ها و شرکت‌ها</summary>
+</div>
+</div>
+
+<!-- گروه ۵: سازمان‌ها و شرکت‌ها -->
+<div class="group" id="g5">
+<div class="group-title" onclick="toggleGroup('g5')">🏢 سازمان‌ها و شرکت‌ها</div>
 <div class="group-desc">اگر شرکت، سازمان یا نهاد هستی و می‌خواهی برای کارکنانت وام بگیری، این طرح‌ها برای توست.</div>
 <div class="plans">
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح یاقوت</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح یاقوت</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - سازمانی - کد ۱۸۰ / ۸۵۰</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>کلیه سازمان‌ها، نهادها، ارگان‌ها، شرکت‌ها.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>حقیقی: ۵۰۰ میلیون تومان / حقوقی: ۱.۵ میلیارد تومان</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>طبق جداول امتیازی ابلاغی</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان با بانک.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>کلیه سازمان‌ها، نهادها، ارگان‌ها، شرکت‌ها.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>حقیقی ۵۰۰ میلیون / حقوقی ۱.۵ میلیارد تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>طبق جداول امتیازی</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
 <button class="speak-btn" onclick="readPlan('yaghout', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح یاقوت با حفظ مبلغ ثابت</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح یاقوت با حفظ مبلغ ثابت</div>
 <div class="card-body">
 <span class="type-badge">امتیازی - تبصره یاقوت</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>متقاضیان حقوقی که با حفظ مبلغ ثابت نزد بانک، از تسهیلات استفاده می‌کنند.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت تودیع: حداکثر ۱۲ ماه — بدون محدودیت تمدید</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>متقاضیان حقوقی با حفظ مبلغ ثابت نزد بانک.</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت تودیع:</span>حداکثر ۱۲ ماه بدون محدودیت تمدید</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سازمان.</div>
 <button class="speak-btn" onclick="readPlan('yaghout2', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح الماس</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح الماس</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - با تفاهم‌نامه - کد ۲۴۲ / ۲۵۸</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>شرکت‌های سهامی و مشمول قانون تجارت.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b> — یک برابر حمایت بانک</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>انتظار: ۱۰ روز / بازپرداخت: تا ۶۰ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>منابع بانک ۴٪ / منابع مشتری ۲٪ و ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه حمایتی شرکت.</div>
-<div class="section sec-purple">⭐ <b>ویژگی ویژه:</b> از ماه دوم می‌توانی از بازگشت اقساط برای تسهیلات مجدد استفاده کنی.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>شرکت‌های سهامی و مشمول قانون تجارت.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان (یک برابر حمایت بانک)</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>انتظار ۱۰ روز / بازپرداخت تا ۶۰ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>بانک ۴٪ / مشتری ۲٪ یا ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه حمایتی شرکت.</div>
+<div class="section sec-purple">⭐ از ماه دوم می‌توان از بازگشت اقساط برای تسهیلات مجدد استفاده کرد.</div>
 <button class="speak-btn" onclick="readPlan('almas', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح الماس با حمایت بالای ۱۰۰٪</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح الماس با حمایت بالای ۱۰۰٪</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - ویژه</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>مشتریان طرح الماس که می‌خواهند حمایت بانک بیش از ۱۰۰٪ باشد.</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان الماس که می‌خواهند حمایت بانک بیش از ۱۰۰٪ باشد.</div>
+<table class="mini">
 <tr><th>بازپرداخت</th><th>انتظار</th><th>ستون (۱)</th><th>ستون (۲)</th></tr>
 <tr><td>۱۲ ماه</td><td>۳ ماه</td><td>۱۴۵٪</td><td>۱۲۵٪</td></tr>
 <tr><td>۲۴ ماه</td><td>۶ ماه</td><td>۲۴۰٪</td><td>۱۷۰٪</td></tr>
@@ -407,32 +422,30 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 <button class="speak-btn" onclick="readPlan('almas100', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح الماس با بازگشت اقساط</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح الماس با بازگشت اقساط</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - پیشرفته</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>مشتریان حقوقی که پرداخت تسهیلات از محل بازگشت اقساط را درخواست می‌کنند.</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>انتظار: ۱۰ روز از تودیع تفاهم‌نامه</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
-<tr><th>بازپرداخت</th><th>حمایت بانک</th><th>حداقل مدت برای تسهیلات مجدد</th></tr>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان حقوقی که پرداخت از محل بازگشت اقساط را می‌خواهند.</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>انتظار ۱۰ روز از تودیع تفاهم‌نامه</div>
+<table class="mini">
+<tr><th>بازپرداخت</th><th>حمایت بانک</th><th>حداقل مدت تسهیلات مجدد</th></tr>
 <tr><td>۱۲ ماه</td><td>۱۰۰ واحد</td><td>پس از ۱۰ ماه</td></tr>
 <tr><td>۱۲ ماه</td><td>۷۵ واحد</td><td>پس از ۹ ماه</td></tr>
-<tr><td>۱۲ ماه</td><td>۵۰ واحد</td><td>پس از ۷ ماه</td></tr>
 <tr><td>۲۴ ماه</td><td>۱۰۰ واحد</td><td>پس از ۲۰ ماه</td></tr>
-<tr><td>۲۴ ماه</td><td>۷۵ واحد</td><td>پس از ۱۷ ماه</td></tr>
 <tr><td>۳۶ ماه</td><td>۱۰۰ واحد</td><td>پس از ۳۰ ماه</td></tr>
 </table>
 <button class="speak-btn" onclick="readPlan('almasaghsat', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح الماس با کارمزد کمتر از ۲٪</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح الماس با کارمزد کمتر از ۲٪</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - کم‌کارمزد</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>مشتریان حقوقی که درخواست کارمزد کمتر از ۲٪ دارند.</div>
-<div class="section sec-purple"><span class="section-title-mini">📋 جدول کامل:</span></div>
-<table class="table-mini">
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>مشتریان حقوقی با کارمزد کمتر از ۲٪.</div>
+<table class="mini">
 <tr><th>آورده</th><th>کارمزد مشتری</th><th>حمایت بانک</th><th>کارمزد بانک</th></tr>
 <tr><td>۱۰۰ واحد</td><td>۱٪</td><td>۹۰ واحد</td><td>۴٪</td></tr>
 <tr><td>۱۰۰ واحد</td><td>۰٪</td><td>۸۰ واحد</td><td>۴٪</td></tr>
@@ -441,32 +454,35 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 <button class="speak-btn" onclick="readPlan('almas2', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح فیروزه</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح فیروزه</div>
 <div class="card-body">
 <span class="type-badge">محاسبه واریز حقوق - کد ۱۵۱</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>شرکت‌هایی که حقوق کارکنان را از بانک مهر ایران واریز می‌کنند.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b> = ۵٪ مجموع حقوق واریزی ماهیانه</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>مدت بازپرداخت: تا ۳۶ ماه</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه شرکت.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>شرکت‌هایی که حقوق کارکنان را از بانک واریز می‌کنند.</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان = ۵٪ مجموع حقوق واریزی ماهیانه</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۳۶ ماه</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه شرکت.</div>
 <button class="speak-btn" onclick="readPlan('firoozeh', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 <div class="card">
-<h3 onclick="toggleCard(this)">طرح نصر حقوقی</h3>
+<div class="card-title" onclick="toggleCard(this)">طرح نصر حقوقی</div>
 <div class="card-body">
 <span class="type-badge">حمایتی - سازمان مردم نهاد - کد ۲۴۷ / ۲۵۷</span>
-<div class="section sec-blue"><span class="section-title-mini">🎯 این طرح برای کیه؟</span>سازمان‌های مردم نهاد (سمن‌ها) برای اعضای خود.</div>
-<div class="section sec-green"><span class="section-title-mini">💰 چقدر وام می‌گیری؟</span>تا <b>۵۰۰ میلیون تومان</b> — حداکثر ۱۰۰٪ آورده</div>
-<div class="section sec-yellow"><span class="section-title-mini">⏱ چقدر طول می‌کشه؟</span>بازپرداخت: تا ۶۰ ماه / انتظار: ۱۰ روز</div>
-<div class="section sec-orange"><span class="section-title-mini">💵 کارمزد:</span>بانک ۴٪ / اجتماعی ۲٪ و ۴٪</div>
-<div class="section sec-red"><span class="section-title-mini">🔒 ضمانت:</span>طبق تفاهم‌نامه سمن با بانک.</div>
+<div class="section sec-blue"><span class="sec-title">🎯 برای کیه؟</span>سازمان‌های مردم نهاد (سمن‌ها).</div>
+<div class="section sec-green"><span class="sec-title">💰 وام:</span>تا ۵۰۰ میلیون تومان</div>
+<div class="section sec-yellow"><span class="sec-title">⏱ مدت:</span>تا ۶۰ ماه / انتظار ۱۰ روز</div>
+<div class="section sec-orange"><span class="sec-title">💵 کارمزد:</span>بانک ۴٪ / اجتماعی ۲٪ و ۴٪</div>
+<div class="section sec-red"><span class="sec-title">🔒 ضمانت:</span>طبق تفاهم‌نامه سمن.</div>
 <button class="speak-btn" onclick="readPlan('nasr2', this)">🔊 شنیدن توضیحات</button>
 </div>
 </div>
+
 </div>
-</details>
+</div>
 
 <div class="footer">
 مهر راهنما - بانک قرض‌الحسنه مهر ایران<br>
@@ -475,134 +491,308 @@ details[open] .group-desc{background:#0d5c3a;color:#c8e6d2}
 </div>
 
 <script>
+// ===== جداول ضرایب =====
+var T4={6:{1:.312,2:.632,3:.949,4:1.265,5:1.581,6:1.897,7:2.213,8:2.529,9:2.846,10:3.162,11:3.478,12:3.794},12:{1:.187,2:.383,3:.574,4:.765,5:.957,6:1.148,7:1.340,8:1.531,9:1.722,10:1.914,11:2.105,12:2.296},18:{1:.152,2:.312,3:.469,4:.655,5:.781,6:.937,7:1.093,8:1.249,9:1.406,10:1.562,11:1.718,12:1.874},24:{1:.120,2:.248,3:.373,4:.497,5:.621,6:.745,7:.869,8:.993,9:1.118,10:1.242,11:1.366,12:1.490},36:{1:.080,2:.168,3:.253,4:.337,5:.421,6:.505,7:.589,8:.673,9:.758,10:.842,11:.926,12:1.010},48:{1:.060,2:.128,3:.193,4:.257,5:.321,6:.385,7:.449,8:.513,9:.578,10:.642,11:.706,12:.770},60:{1:.048,2:.104,3:.157,4:.209,5:.261,6:.313,7:.365,8:.417,9:.470,10:.522,11:.574,12:.666}};
+var T3={6:{1:.281,2:.569,3:.854,4:1.138,5:1.423,6:1.707,7:1.992,8:2.276,9:2.561,10:2.846,11:3.130,12:3.415},12:{1:.168,2:.344,3:.517,4:.689,5:.861,6:1.033,7:1.206,8:1.378,9:1.550,10:1.722,11:1.895,12:2.067},18:{1:.137,2:.281,3:.422,4:.562,5:.703,6:.843,7:.984,8:1.124,9:1.265,10:1.406,11:1.546,12:1.687},24:{1:.108,2:.224,3:.335,4:.447,5:.559,6:.671,7:.782,8:.894,9:1.006,10:1.118,11:1.229,12:1.341},36:{1:.072,2:.152,3:.227,4:.303,5:.379,6:.455,7:.530,8:.606,9:.682,10:.758,11:.832,12:.909},48:{1:.054,2:.116,3:.173,4:.231,5:.289,6:.347,7:.404,8:.462,9:.520,10:.578,11:.635,12:.693},60:{1:.043,2:.094,3:.141,4:.188,5:.235,6:.282,7:.329,8:.376,9:.423,10:.470,11:.516,12:.563}};
+var T2={6:{1:.250,2:.506,3:.759,4:1.012,5:1.265,6:1.518,7:1.771,8:2.023,9:2.276,10:2.529,11:2.782,12:3.035},12:{1:.150,2:.306,3:.459,4:.612,5:.765,6:.919,7:1.072,8:1.225,9:1.378,10:1.531,11:1.684,12:1.837},18:{1:.122,2:.250,3:.375,4:.500,5:.625,6:.750,7:.875,8:.999,9:1.124,10:1.249,11:1.374,12:1.499},24:{1:.096,2:.199,3:.298,4:.397,5:.497,6:.596,7:.695,8:.795,9:.894,10:.993,11:1.093,12:1.192},36:{1:.064,2:.135,3:.202,4:.269,5:.337,6:.404,7:.471,8:.539,9:.606,10:.673,11:.741,12:.808},48:{1:.048,2:.103,3:.154,4:.205,5:.257,6:.308,7:.359,8:.411,9:.462,10:.513,11:.565,12:.616},60:{1:.038,2:.083,3:.125,4:.167,5:.209,6:.250,7:.292,8:.334,9:.376,10:.417,11:.459,12:.501}};
+var TN={6:{1:.125,2:.253,3:.380,4:.506,5:.633,6:.759,7:.886,8:1.012,9:1.138,10:1.265,11:1.391,12:1.518},12:{1:.075,2:.153,3:.230,4:.306,5:.383,6:.459,7:.536,8:.612,9:.689,10:.765,11:.842,12:.919},18:{1:.061,2:.125,3:.188,4:.250,5:.313,6:.375,7:.438,8:.500,9:.562,10:.625,11:.687,12:.750},24:{1:.048,2:.100,3:.149,4:.199,5:.249,6:.298,7:.348,8:.398,9:.447,10:.497,11:.547,12:.596},36:{1:.032,2:.068,3:.101,4:.135,5:.169,6:.202,7:.236,8:.270,9:.303,10:.337,11:.371,12:.404},48:{1:.024,2:.052,3:.077,4:.103,5:.129,6:.154,7:.180,8:.206,9:.231,10:.257,11:.283,12:.308},60:{1:.019,2:.042,3:.063,4:.084,5:.105,6:.125,7:.146,8:.167,9:.188,10:.209,11:.230,12:.251}};
+
+var fees={niloufar:4,noora:0};
+
+// ===== باز کردن قفل صدا =====
 var audioUnlocked=false;
-function unlockAudio(){if(audioUnlocked)return;try{var s=new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');s.volume=0;s.play().catch(function(){})}catch(e){}if('speechSynthesis' in window){try{var u=new SpeechSynthesisUtterance(' ');u.volume=0;u.rate=10;window.speechSynthesis.speak(u)}catch(e){}}audioUnlocked=true}
+function unlockAudio(){
+if(audioUnlocked)return;
+try{
+var s=new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
+s.volume=0;s.play().catch(function(){});
+}catch(e){}
+if('speechSynthesis' in window){
+try{var u=new SpeechSynthesisUtterance(' ');u.volume=0;u.rate=10;window.speechSynthesis.speak(u);}catch(e){}
+}
+audioUnlocked=true;
+}
 document.addEventListener('touchstart',unlockAudio,{passive:true});
 document.addEventListener('click',unlockAudio);
 
-document.addEventListener('DOMContentLoaded',function(){var all=document.querySelectorAll('details');all.forEach(function(d){d.addEventListener('toggle',function(){if(this.open){all.forEach(function(o){if(o!==d&&o.open)o.open=false})}})})});
+// ===== آکاردئون گروه‌ها =====
+function toggleGroup(id){
+unlockAudio();
+var all=document.querySelectorAll('.group');
+for(var i=0;i<all.length;i++){
+if(all[i].id===id){
+all[i].classList.toggle('open');
+}else{
+all[i].classList.remove('open');
+}
+}
+}
 
-function toggleCard(h3){try{unlockAudio()}catch(e){}var card=h3.parentElement;var wasOpen=card.classList.contains('open');var all=document.querySelectorAll('.plans .card');for(var i=0;i<all.length;i++)all[i].classList.remove('open');if(!wasOpen)card.classList.add('open')}
+// ===== آکاردئون کارت‌ها =====
+function toggleCard(el){
+unlockAudio();
+var card=el.parentElement;
+var wasOpen=card.classList.contains('open');
+var all=document.querySelectorAll('.card');
+for(var i=0;i<all.length;i++)all[i].classList.remove('open');
+if(!wasOpen)card.classList.add('open');
+}
 
-var T4={6:{1:.312,2:.632,3:.949,4:1.265,5:1.581,6:1.897,7:2.213,8:2.529,9:2.846,10:3.162,11:3.478,12:3.794},12:{1:.187,2:.383,3:.574,4:.765,5:.957,6:1.148,7:1.340,8:1.531,9:1.722,10:1.914,11:2.105,12:2.296},18:{1:.152,2:.312,3:.469,4:.655,5:.781,6:.937,7:1.093,8:1.249,9:1.406,10:1.562,11:1.718,12:1.874},24:{1:.120,2:.248,3:.373,4:.497,5:.621,6:.745,7:.869,8:.993,9:1.118,10:1.242,11:1.366,12:1.490},30:{1:.096,2:.200,3:.300,4:.400,5:.501,6:.601,7:.701,8:.801,9:.902,10:1.002,11:1.102,12:1.202},36:{1:.080,2:.168,3:.253,4:.337,5:.421,6:.505,7:.589,8:.673,9:.758,10:.842,11:.926,12:1.010},42:{1:.069,2:.145,3:.218,4:.291,5:.364,6:.436,7:.509,8:.582,9:.655,10:.727,11:.800,12:.873},48:{1:.060,2:.128,3:.193,4:.257,5:.321,6:.385,7:.449,8:.513,9:.578,10:.642,11:.706,12:.770},54:{1:.053,2:.115,3:.173,4:.230,5:.288,6:.345,7:.403,8:.460,9:.518,10:.575,11:.633,12:.690},60:{1:.048,2:.104,3:.157,4:.209,5:.261,6:.313,7:.365,8:.417,9:.470,10:.522,11:.574,12:.666}};
-var T3={6:{1:.281,2:.569,3:.854,4:1.138,5:1.423,6:1.707,7:1.992,8:2.276,9:2.561,10:2.846,11:3.130,12:3.415},12:{1:.168,2:.344,3:.517,4:.689,5:.861,6:1.033,7:1.206,8:1.378,9:1.550,10:1.722,11:1.895,12:2.067},18:{1:.137,2:.281,3:.422,4:.562,5:.703,6:.843,7:.984,8:1.124,9:1.265,10:1.406,11:1.546,12:1.687},24:{1:.108,2:.224,3:.335,4:.447,5:.559,6:.671,7:.782,8:.894,9:1.006,10:1.118,11:1.229,12:1.341},30:{1:.086,2:.180,3:.270,4:.361,5:.451,6:.541,7:.631,8:.721,9:.811,10:.902,11:.992,12:1.082},36:{1:.072,2:.152,3:.227,4:.303,5:.379,6:.455,7:.530,8:.606,9:.682,10:.758,11:.832,12:.909},42:{1:.062,2:.131,3:.196,4:.262,5:.327,6:.393,7:.458,8:.524,9:.589,10:.655,11:.720,12:.786},48:{1:.054,2:.116,3:.173,4:.231,5:.289,6:.347,7:.404,8:.462,9:.520,10:.578,11:.635,12:.693},54:{1:.048,2:.104,3:.155,4:.207,5:.259,6:.311,7:.362,8:.414,9:.466,10:.518,11:.569,12:.621},60:{1:.043,2:.094,3:.141,4:.188,5:.235,6:.282,7:.329,8:.376,9:.423,10:.470,11:.516,12:.563}};
-var T2={6:{1:.250,2:.506,3:.759,4:1.012,5:1.265,6:1.518,7:1.771,8:2.023,9:2.276,10:2.529,11:2.782,12:3.035},12:{1:.150,2:.306,3:.459,4:.612,5:.765,6:.919,7:1.072,8:1.225,9:1.378,10:1.531,11:1.684,12:1.837},18:{1:.122,2:.250,3:.375,4:.500,5:.625,6:.750,7:.875,8:.999,9:1.124,10:1.249,11:1.374,12:1.499},24:{1:.096,2:.199,3:.298,4:.397,5:.497,6:.596,7:.695,8:.795,9:.894,10:.993,11:1.093,12:1.192},30:{1:.077,2:.160,3:.240,4:.321,5:.401,6:.481,7:.561,8:.641,9:.721,10:.801,11:.881,12:.962},36:{1:.064,2:.135,3:.202,4:.269,5:.337,6:.404,7:.471,8:.539,9:.606,10:.673,11:.741,12:.808},42:{1:.055,2:.116,3:.175,4:.233,5:.291,6:.349,7:.407,8:.466,9:.524,10:.582,11:.640,12:.698},48:{1:.048,2:.103,3:.154,4:.205,5:.257,6:.308,7:.359,8:.411,9:.462,10:.513,11:.565,12:.616},54:{1:.043,2:.092,3:.138,4:.184,5:.230,6:.276,7:.322,8:.368,9:.414,10:.460,11:.506,12:.552},60:{1:.038,2:.083,3:.125,4:.167,5:.209,6:.250,7:.292,8:.334,9:.376,10:.417,11:.459,12:.501}};
-var TN={6:{1:.125,2:.253,3:.380,4:.506,5:.633,6:.759,7:.886,8:1.012,9:1.138,10:1.265,11:1.391,12:1.518},12:{1:.075,2:.153,3:.230,4:.306,5:.383,6:.459,7:.536,8:.612,9:.689,10:.765,11:.842,12:.919},18:{1:.061,2:.125,3:.188,4:.250,5:.313,6:.375,7:.438,8:.500,9:.562,10:.625,11:.687,12:.750},24:{1:.048,2:.100,3:.149,4:.199,5:.249,6:.298,7:.348,8:.398,9:.447,10:.497,11:.547,12:.596},30:{1:.039,2:.080,3:.120,4:.161,5:.201,6:.241,7:.281,8:.321,9:.361,10:.401,11:.441,12:.481},36:{1:.032,2:.068,3:.101,4:.135,5:.169,6:.202,7:.236,8:.270,9:.303,10:.337,11:.371,12:.404},42:{1:.028,2:.058,3:.088,4:.117,5:.146,6:.175,7:.204,8:.233,9:.262,10:.291,11:.320,12:.349},48:{1:.024,2:.052,3:.077,4:.103,5:.129,6:.154,7:.180,8:.206,9:.231,10:.257,11:.283,12:.308},54:{1:.022,2:.046,3:.069,4:.092,5:.115,6:.138,7:.161,8:.184,9:.207,10:.230,11:.253,12:.276},60:{1:.019,2:.042,3:.063,4:.084,5:.105,6:.125,7:.146,8:.167,9:.188,10:.209,11:.230,12:.251}};
+// ===== فرمت اعداد =====
+function formatNum(n){return Math.round(n).toLocaleString('fa-IR');}
 
-var niloufarFee=4;
-function selectNiloufarFee(r){niloufarFee=r;var b=document.querySelectorAll('.mini-calc .fee-btn-mini');for(var i=0;i<b.length;i++)b[i].classList.toggle('active',parseInt(b[i].dataset.fee)===r)}
-function formatNum(n){return Math.round(n).toLocaleString('fa-IR')}
+// ===== انتخاب کارمزد =====
+function selectFee(scheme,rate){
+fees[scheme]=rate;
+var card=document.querySelector('#'+scheme+'-result').closest('.card');
+var btns=card.querySelectorAll('.fee-btn');
+for(var i=0;i<btns.length;i++)btns[i].classList.toggle('active',parseInt(btns[i].dataset.fee)===rate);
+}
 
-function calcNiloufar(){
-var d=parseFloat(document.getElementById('niloufar-deposit').value.replace(/,/g,''))||0;
-var p=parseInt(document.getElementById('niloufar-period').value)||0;
-var rd=document.getElementById('niloufar-result');
-if(d<=0){alert('مبلغ سپرده را وارد کنید');return}
-if(p<1||p>12){alert('مدت معدل‌گیری ۱ تا ۱۲ ماه');return}
-var t=niloufarFee===2?T2:(niloufarFee===3?T3:T4);
-var h='<h5>📊 نتیجه - نیلوفر (کارمزد '+niloufarFee+'٪)</h5><table><tr><th>بازپرداخت</th><th>مبلغ وام</th><th>قسط</th></tr>';
+// ===== محاسبه وام =====
+function calcLoan(scheme){
+unlockAudio();
+var depEl=document.getElementById(scheme+'-deposit');
+var perEl=document.getElementById(scheme+'-period');
+var resEl=document.getElementById(scheme+'-result');
+if(!depEl||!perEl||!resEl){alert('خطا');return;}
+var d=parseFloat(depEl.value.replace(/,/g,''))||0;
+var p=parseInt(perEl.value)||0;
+if(d<=0){alert('لطفاً مبلغ سپرده را وارد کنید');return;}
+if(p<1||p>12){alert('مدت معدل‌گیری باید بین ۱ تا ۱۲ ماه باشد');return;}
+var feeRate=fees[scheme];
+var table;
+if(scheme==='noora'){table=TN;}
+else{ if(feeRate===2)table=T2; else if(feeRate===3)table=T3; else table=T4; }
+var h='<h5>📊 نتیجه - '+(scheme==='niloufar'?'نیلوفر':'نورا')+' (کارمزد '+feeRate+'٪)</h5>';
+h+='<table><tr><th>بازپرداخت</th><th>مبلغ وام</th><th>قسط</th></tr>';
 var ps=[6,12,18,24,36,48,60];
-for(var i=0;i<ps.length;i++){var rp=ps[i];var c=t[rp][p]||0;var l=d*c;if(l>500000000)l=500000000;var f=l*(niloufarFee/100)*(rp/12);var ins=(l+f)/rp;h+='<tr><td>'+rp+' ماهه</td><td class="amount">'+formatNum(l)+'</td><td>'+formatNum(ins)+'</td></tr>'}
+for(var i=0;i<ps.length;i++){
+var rp=ps[i];
+var c=table[rp][p]||0;
+var l=d*c;
+if(l>500000000)l=500000000;
+var f=l*(feeRate/100)*(rp/12);
+var ins=(l+f)/rp;
+h+='<tr><td>'+rp+' ماهه</td><td class="amount">'+formatNum(l)+'</td><td>'+formatNum(ins)+'</td></tr>';
+}
 h+='</table>';
-if(d<=100000000)h+='<div style="background:#d4edda;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#155724">⭐ رتبه A یا B → وام فوری بدون ضامن</div>';
-h+='<div style="background:#fff8e1;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#7a5c00">⚠️ اعداد تقریبی است</div>';
-rd.innerHTML=h;rd.classList.add('show');
+if(scheme==='niloufar'&&d<=100000000){
+h+='<div style="background:#d4edda;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#155724;">⭐ رتبه A یا B → وام فوری بدون ضامن</div>';
+}
+h+='<div style="background:#fff8e1;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#7a5c00;">⚠️ اعداد تقریبی است</div>';
+resEl.innerHTML=h;
+resEl.classList.add('show');
 }
 
-function calcNoora(){
-var d=parseFloat(document.getElementById('noora-deposit').value.replace(/,/g,''))||0;
-var p=parseInt(document.getElementById('noora-period').value)||0;
-var rd=document.getElementById('noora-result');
-if(d<=0){alert('مبلغ سپرده را وارد کنید');return}
-if(p<1||p>12){alert('مدت معدل‌گیری ۱ تا ۱۲ ماه');return}
-var h='<h5>📊 نتیجه - نورا (بدون کارمزد)</h5><table><tr><th>بازپرداخت</th><th>مبلغ وام</th><th>قسط</th></tr>';
-var ps=[6,12,18,24,36,48,60];
-for(var i=0;i<ps.length;i++){var rp=ps[i];var c=TN[rp][p]||0;var l=d*c;if(l>500000000)l=500000000;var ins=l/rp;h+='<tr><td>'+rp+' ماهه</td><td class="amount">'+formatNum(l)+'</td><td>'+formatNum(ins)+'</td></tr>'}
-h+='</table><div style="background:#fff8e1;padding:6px;border-radius:6px;margin-top:6px;font-size:11px;color:#7a5c00">⚠️ اعداد تقریبی است</div>';
-rd.innerHTML=h;rd.classList.add('show');
-}
-
+// ===== فرمت خودکار ورودی سپرده =====
 document.addEventListener('DOMContentLoaded',function(){
 ['niloufar-deposit','noora-deposit'].forEach(function(id){
 var inp=document.getElementById(id);
-if(inp)inp.addEventListener('input',function(){var r=this.value.replace(/[^\d]/g,'');this.value=r?parseInt(r).toLocaleString('en-US'):''});
+if(inp){
+inp.addEventListener('input',function(){
+var r=this.value.replace(/[^\d]/g,'');
+this.value=r?parseInt(r).toLocaleString('en-US'):'';
+});
+}
 });
 });
 
+// ===== QR Code =====
 (function(){
 var url=window.location.href.split('?')[0].split('#')[0];
-var c=document.getElementById('qrImg');var ud=document.getElementById('qrUrl');
-ud.textContent=url;
-var img=document.createElement('img');
-img.style.width='120px';img.style.height='120px';img.style.background='#fff';img.style.padding='4px';img.style.borderRadius='10px';
-img.alt='QR Code';
-img.src='https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+encodeURIComponent(url)+'&choe=UTF-8';
-img.onerror=function(){img.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(url)};
-c.innerHTML='';c.appendChild(img);
+var qr=document.getElementById('qrImg');
+var qru=document.getElementById('qrUrl');
+qru.textContent=url;
+qr.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(url);
+qr.onerror=function(){
+qr.src='https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl='+encodeURIComponent(url);
+};
 })();
 
-var persianVoice=null,currentAudio=null,isPlaying=false,rvReady=false;
-function isMobile(){return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)}
-function isIOS(){return /iPhone|iPad|iPod/i.test(navigator.userAgent)}
+// ===== سیستم صوتی =====
+var persianVoice=null;
+var currentAudio=null;
+var isPlaying=false;
+var rvReady=false;
 
-function findPersianVoice(){if(!('speechSynthesis' in window))return null;var v=window.speechSynthesis.getVoices();if(!v||v.length===0)return null;
-for(var i=0;i<v.length;i++){var n=v[i].name||'';if(n.indexOf('Farid')!==-1||n.indexOf('Dilara')!==-1)return v[i]}
-var an=['Majid','Laila','Siri Female','Siri Male','Kiana','Nava'];
-for(var i=0;i<v.length;i++){var n=v[i].name||'';for(var j=0;j<an.length;j++)if(n.indexOf(an[j])!==-1)return v[i]}
-for(var i=0;i<v.length;i++){var l=(v[i].lang||'').toLowerCase();if(l==='fa-ir'||l==='fa'||l.indexOf('fa-')===0)return v[i]}
-for(var i=0;i<v.length;i++){var n=(v[i].name||'').toLowerCase();if(n.indexOf('persian')!==-1||n.indexOf('farsi')!==-1)return v[i]}
-return null}
+function isIOS(){return /iPhone|iPad|iPod/i.test(navigator.userAgent);}
+function isMobile(){return /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);}
 
-function checkRV(){if(typeof responsiveVoice!=='undefined'){rvReady=true;return true}return false}
+function findPersianVoice(){
+if(!('speechSynthesis' in window))return null;
+var voices=window.speechSynthesis.getVoices();
+if(!voices||voices.length===0)return null;
+for(var i=0;i<voices.length;i++){
+var n=voices[i].name||'';
+if(n.indexOf('Farid')!==-1||n.indexOf('Dilara')!==-1)return voices[i];
+}
+var appleNames=['Majid','Laila','Kiana','Nava'];
+for(var i=0;i<voices.length;i++){
+var n=voices[i].name||'';
+for(var j=0;j<appleNames.length;j++){
+if(n.indexOf(appleNames[j])!==-1)return voices[i];
+}
+}
+for(var i=0;i<voices.length;i++){
+var l=(voices[i].lang||'').toLowerCase();
+if(l==='fa-ir'||l==='fa'||l.indexOf('fa-')===0)return voices[i];
+}
+for(var i=0;i<voices.length;i++){
+var n=(voices[i].name||'').toLowerCase();
+if(n.indexOf('persian')!==-1||n.indexOf('farsi')!==-1)return voices[i];
+}
+return null;
+}
 
-if('speechSynthesis' in window){persianVoice=findPersianVoice();window.speechSynthesis.onvoiceschanged=function(){persianVoice=findPersianVoice()};setTimeout(function(){persianVoice=findPersianVoice()},500);setTimeout(function(){persianVoice=findPersianVoice()},2000)}
-setInterval(function(){if(checkRV())clearInterval(this)},400);
+function checkRV(){
+if(typeof responsiveVoice!=='undefined'){rvReady=true;return true;}
+return false;
+}
 
-function chunkText(t,m){m=m||180;var p=t.split(/(?<=[.!?؟،:؛])\s+/);var c=[],b='';for(var i=0;i<p.length;i++){var s=p[i];if((b+' '+s).length>m){if(b)c.push(b.trim());while(s.length>m){var cut=s.lastIndexOf(' ',m);if(cut===-1)cut=m;c.push(s.substring(0,cut).trim());s=s.substring(cut).trim()}b=s}else{b=b?b+' '+s:s}}if(b.trim())c.push(b.trim());return c}
+if('speechSynthesis' in window){
+persianVoice=findPersianVoice();
+window.speechSynthesis.onvoiceschanged=function(){persianVoice=findPersianVoice();};
+setTimeout(function(){persianVoice=findPersianVoice();},500);
+setTimeout(function(){persianVoice=findPersianVoice();},2000);
+}
+var rvTimer=setInterval(function(){if(checkRV())clearInterval(rvTimer);},400);
 
-function speakWS(t,oe,oerr){var u=new SpeechSynthesisUtterance(t);if(persianVoice){u.voice=persianVoice;u.lang=persianVoice.lang||'fa-IR'}else u.lang='fa-IR';u.rate=isMobile()?.85:.9;u.pitch=1;u.volume=1;u.onend=function(){if(oe)oe()};u.onerror=function(){if(oerr)oerr();else if(oe)oe()};window.speechSynthesis.speak(u)}
+function chunkText(text,maxLen){
+maxLen=maxLen||180;
+var parts=text.split(/(?<=[.!?؟،:؛])\s+/);
+var chunks=[],buf='';
+for(var i=0;i<parts.length;i++){
+var s=parts[i];
+if((buf+' '+s).length>maxLen){
+if(buf)chunks.push(buf.trim());
+while(s.length>maxLen){
+var cut=s.lastIndexOf(' ',maxLen);
+if(cut===-1)cut=maxLen;
+chunks.push(s.substring(0,cut).trim());
+s=s.substring(cut).trim();
+}
+buf=s;
+}else{
+buf=buf?buf+' '+s:s;
+}
+}
+if(buf.trim())chunks.push(buf.trim());
+return chunks;
+}
 
-function speakRV(t,oe){try{responsiveVoice.speak(t,"Persian Female",{rate:.9,pitch:1,volume:1,onend:function(){if(oe)oe()},onerror:function(){if(oe)oe()}})}catch(e){if(oe)oe()}}
+function speakWS(text,onEnd,onErr){
+var u=new SpeechSynthesisUtterance(text);
+if(persianVoice){u.voice=persianVoice;u.lang=persianVoice.lang||'fa-IR';}
+else u.lang='fa-IR';
+u.rate=isMobile()?0.85:0.9;
+u.pitch=1;u.volume=1;
+u.onend=function(){if(onEnd)onEnd();};
+u.onerror=function(){if(onErr)onErr();else if(onEnd)onEnd();};
+window.speechSynthesis.speak(u);
+}
 
-function speakGoogle(t,oe){var u='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q='+encodeURIComponent(t);var a=new Audio(u);currentAudio=a;a.onended=function(){currentAudio=null;if(oe)oe()};a.onerror=function(){currentAudio=null;if(oe)oe()};var p=a.play();if(p&&p.catch)p.catch(function(){if(oe)oe()})}
+function speakRV(text,onEnd){
+try{
+responsiveVoice.speak(text,"Persian Female",{
+rate:0.9,pitch:1,volume:1,
+onend:function(){if(onEnd)onEnd();},
+onerror:function(){if(onEnd)onEnd();}
+});
+}catch(e){if(onEnd)onEnd();}
+}
 
-function speak(t){if(!t||!t.trim())return;unlockAudio();stopAll();isPlaying=true;var c=chunkText(t),i=0;var ios=isIOS();var hp=persianVoice&&(persianVoice.lang==='fa-IR'||(persianVoice.lang||'').indexOf('fa')===0);
-function next(){if(!isPlaying||i>=c.length){isPlaying=false;clearAct();return}var ck=c[i];
-if(ios&&hp){speakWS(ck,function(){i++;if(isPlaying)setTimeout(next,150)},function(){speakGoogle(ck,function(){i++;if(isPlaying)setTimeout(next,250)})});return}
-if(ios&&!hp){speakGoogle(ck,function(){i++;if(isPlaying)setTimeout(next,250)});return}
-if(persianVoice)speakWS(ck,function(){i++;if(isPlaying)setTimeout(next,150)});
-else if(rvReady)speakRV(ck,function(){i++;if(isPlaying)setTimeout(next,200)});
-else speakGoogle(ck,function(){i++;if(isPlaying)setTimeout(next,250)});}
-next()}
+function speakGoogle(text,onEnd){
+var url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=fa&q='+encodeURIComponent(text);
+var audio=new Audio(url);
+currentAudio=audio;
+audio.onended=function(){currentAudio=null;if(onEnd)onEnd();};
+audio.onerror=function(){currentAudio=null;if(onEnd)onEnd();};
+var p=audio.play();
+if(p&&p.catch)p.catch(function(){if(onEnd)onEnd();});
+}
 
-function stopAll(){isPlaying=false;try{window.speechSynthesis.cancel()}catch(e){}if(typeof responsiveVoice!=='undefined'){try{responsiveVoice.cancel()}catch(e){}}if(currentAudio){try{currentAudio.pause();currentAudio.src=''}catch(e){}currentAudio=null}clearAct()}
-function clearAct(){var b=document.querySelectorAll('.speak-btn');for(var i=0;i<b.length;i++)b[i].classList.remove('active')}
+function speak(text){
+if(!text||!text.trim())return;
+unlockAudio();
+stopAll();
+isPlaying=true;
+var chunks=chunkText(text),i=0;
+var ios=isIOS();
+var hasPersian=persianVoice&&(persianVoice.lang==='fa-IR'||(persianVoice.lang||'').indexOf('fa')===0);
+function next(){
+if(!isPlaying||i>=chunks.length){isPlaying=false;clearAct();return;}
+var c=chunks[i];
+if(ios&&hasPersian){
+speakWS(c,
+function(){i++;if(isPlaying)setTimeout(next,150);},
+function(){speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});}
+);
+return;
+}
+if(ios&&!hasPersian){
+speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});
+return;
+}
+if(persianVoice){
+speakWS(c,function(){i++;if(isPlaying)setTimeout(next,150);});
+}else if(rvReady){
+speakRV(c,function(){i++;if(isPlaying)setTimeout(next,200);});
+}else{
+speakGoogle(c,function(){i++;if(isPlaying)setTimeout(next,250);});
+}
+}
+next();
+}
 
-var pT={
-niloufar:'طرح نیلوفر. کد یکصد و یک. برای کلیه اشخاص حقیقی. سقف تسهیلات پانصد میلیون تومان. کارمزد دو یا سه یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. تبصره ویژه وام فوری: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه ایرانیان A یا B باشد، وام فوری بدون ضامن.',
+function stopAll(){
+isPlaying=false;
+try{window.speechSynthesis.cancel();}catch(e){}
+if(typeof responsiveVoice!=='undefined'){try{responsiveVoice.cancel();}catch(e){}}
+if(currentAudio){try{currentAudio.pause();currentAudio.src='';}catch(e){}currentAudio=null;}
+clearAct();
+}
+
+function clearAct(){
+var b=document.querySelectorAll('.speak-btn');
+for(var i=0;i<b.length;i++)b[i].classList.remove('active');
+}
+
+var planTexts={
+niloufar:'طرح نیلوفر. کد یکصد و یک. برای کلیه اشخاص حقیقی. سقف تسهیلات پانصد میلیون تومان. کارمزد دو یا سه یا چهار درصد. مدت بازپرداخت شش تا شصت ماه. دوره معدل گیری یک تا دوازده ماه. تبصره ویژه وام فوری: اگر معدل حساب شما تا صد میلیون تومان باشد و رتبه ایرانیان A یا B باشد، وام فوری بدون ضامن.',
 noora:'طرح نورا. کد یکصد و هشتاد و دو. تسهیلات بدون کارمزد. سقف پانصد میلیون تومان. کارمزد صفر. مدت بازپرداخت شش تا شصت ماه.',
-nasr:'طرح نصر حقیقی. کد دویست و چهل و هفت و دویست و پنجاه و هفت. برای اشخاص حقیقی که در نهاد حمایتی پرونده دارند. سقف صد و پنجاه میلیون تومان.',
-orkideh:'طرح ارکیده. کد یکصد و سی و هشت و یکصد و شصت و چهار. برای اشخاص حقیقی از طریق مصالح. دو برابر سپرده تودیعی. ضمان مصالح ضامن است.',
-shams:'طرح شمس. پس انداز ماهیانه. مبلغ وام نه تا نود میلیون تومان. کارمزد چهار درصد.',
-rezvan:'طرح رضوان. کد یکصد و هشتاد و یک. ویژه کارکنان سازمان های حمایتی با تفاهم نامه. سقف پانصد میلیون تومان.',
-karamat:'طرح کرامت. کد دویست و نه. ویژه دریافت کنندگان مستمری. سقف پانصد میلیون تومان.',
-najm:'طرح نجم. کد یکصد و هشتاد و سه. ویژه بانوان سرپرست خانوار، مددجویان، عشایر، جانبازان. سقف پانصد میلیون تومان.',
-naron:'طرح نارون. کد یکصد و شش و هشتصد و شش. ویژه اصناف. وام حقیقی یک میلیارد تومان و حقوقی یک و نیم میلیارد تومان.',
-sarv1:'طرح سرو بدون تفاهم نامه. برای دارندگان جواز کسب. تا یک و نیم میلیارد تومان. ضمان مصالح ضامن است.',
-sarv2:'طرح سرو تفاهم نامه ای. کد دویست و چهل و سه. ویژه اتحادیه ها.',
-tooska:'طرح توسکا. کد دویست و سی و سه. برای کارفرمایان. سقف یک میلیارد تومان. پوز فعال الزامی.',
-yaghout:'طرح یاقوت. کد یکصد و هشتاد و هشتصد و پنجاه. امتیازی با تفاهم نامه. وام حقیقی پانصد میلیون و حقوقی یک و نیم میلیارد تومان.',
+nasr:'طرح نصر حقیقی. برای اشخاص حقیقی که در نهاد حمایتی پرونده دارند. سقف صد و پنجاه میلیون تومان.',
+orkideh:'طرح ارکیده. برای اشخاص حقیقی از طریق مصالح. دو برابر سپرده تودیعی. ضمان مصالح ضامن است.',
+shams:'طرح شمس. پس انداز ماهیانه. مبلغ وام نه تا نود میلیون تومان.',
+rezvan:'طرح رضوان. ویژه کارکنان سازمان های حمایتی با تفاهم نامه. سقف پانصد میلیون تومان.',
+karamat:'طرح کرامت. ویژه دریافت کنندگان مستمری. سقف پانصد میلیون تومان.',
+najm:'طرح نجم. ویژه بانوان سرپرست خانوار، مددجویان، عشایر، جانبازان.',
+naron:'طرح نارون. ویژه اصناف. وام حقیقی یک میلیارد تومان و حقوقی یک و نیم میلیارد تومان.',
+sarv1:'طرح سرو بدون تفاهم نامه. برای دارندگان جواز کسب. تا یک و نیم میلیارد تومان.',
+sarv2:'طرح سرو تفاهم نامه ای. ویژه اتحادیه ها.',
+tooska:'طرح توسکا. برای کارفرمایان. سقف یک میلیارد تومان. پوز فعال الزامی.',
+yaghout:'طرح یاقوت. امتیازی با تفاهم نامه. وام حقیقی پانصد میلیون و حقوقی یک و نیم میلیارد تومان.',
 yaghout2:'طرح یاقوت با حفظ مبلغ ثابت. مدت تودیع حداکثر دوازده ماه.',
-almas:'طرح الماس. کد دویست و چهل و دو و دویست و پنجاه و هشت. حمایتی برای شرکت های سهامی. سقف پانصد میلیون تومان.',
+almas:'طرح الماس. حمایتی برای شرکت های سهامی. سقف پانصد میلیون تومان.',
 almas100:'طرح الماس با حمایت بالای صد درصد.',
 almasaghsat:'طرح الماس با بازگشت اقساط.',
 almas2:'طرح الماس با کارمزد کمتر از دو درصد.',
-firoozeh:'طرح فیروزه. کد یکصد و پنجاه و یک. برای شرکت هایی که حقوق کارکنان را از بانک واریز می کنند.',
-nasr2:'طرح نصر حقوقی. کد دویست و چهل و هفت و دویست و پنجاه و هفت. ویژه سازمان های مردم نهاد.'};
+firoozeh:'طرح فیروزه. برای شرکت هایی که حقوق کارکنان را از بانک واریز می کنند.',
+nasr2:'طرح نصر حقوقی. ویژه سازمان های مردم نهاد.'
+};
 
-function readWelcome(){unlockAudio();speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. مرحله اول شغل خودت را انتخاب کن. مرحله دوم روی عنوان هر طرح بزن. مرحله سوم شرح کامل و جدول را ببین. مرحله چهارم با ماشین حساب داخل کارت نیلوفر یا نورا، مبلغ وام خودت را حساب کن.')}
+function readWelcome(){
+unlockAudio();
+speak('سلام و وقت بخیر. به مهر راهنما خوش آمدید. مرحله اول شغل خودت را انتخاب کن. مرحله دوم روی عنوان هر طرح بزن. مرحله سوم شرح کامل و جدول را ببین. مرحله چهارم با ماشین حساب داخل کارت نیلوفر یا نورا، مبلغ وام خودت را حساب کن.');
+}
 
-function readPlan(k,b){if(!pT[k])return;unlockAudio();clearAct();if(b)b.classList.add('active');speak(pT[k])}
+function readPlan(key,btn){
+if(!planTexts[key])return;
+unlockAudio();
+clearAct();
+if(btn)btn.classList.add('active');
+speak(planTexts[key]);
+}
 
 window.addEventListener('beforeunload',stopAll);
 </script>
