@@ -4,47 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>سامانه جامع مهر</title>
-
-<!-- 🌟 تنظیمات PWA برای نصب روی گوشی -->
-<meta name="theme-color" content="#0a4d2e">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="سامانه مهر">
-
-<!-- 📅 افزودن کتابخانه تقویم شمسی -->
-<link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
-<script src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
-
-<!-- 🌟 ترفند ساخت خودکار شناسنامه اپلیکیشن (بدون نیاز به فایل جداگانه) -->
-<script>
-const manifestData = {
-"name": "سامانه جامع مهر",
-"short_name": "سامانه مهر",
-"start_url": "./index.html",
-"display": "standalone",
-"background_color": "#f0f5f1",
-"theme_color": "#0a4d2e",
-"icons": [
-{
-"src": "https://api.qrserver.com/v1/create-qr-code/?size=192x192&data=https://fathisaeed1620097923.github.io/mehr-khalvat/",
-"sizes": "192x192",
-"type": "image/png"
-},
-{
-"src": "https://api.qrserver.com/v1/create-qr-code/?size=512x512&data=https://fathisaeed1620097923.github.io/mehr-khalvat/",
-"sizes": "512x512",
-"type": "image/png"
-}
-]
-};
-const manifestBlob = new Blob([JSON.stringify(manifestData)], {type: 'application/json'});
-const manifestURL = URL.createObjectURL(manifestBlob);
-const link = document.createElement('link');
-link.rel = 'manifest';
-link.href = manifestURL;
-document.head.appendChild(link);
-</script>
-
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; }
 body { background: #f0f5f1; color: #1a2e2a; padding: 15px; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; line-height: 1.8; }
@@ -178,12 +137,6 @@ tr:nth-child(even) { background: #f8fbf9; }
 
 #hidden-plans { display: none !important; }
 
-/* تنظیمات تقویم شمسی */
-.jalali-datepicker { font-family: Tahoma, Arial, sans-serif !important; }
-.jalali-datepicker .jdp-day.jdp-selected { background-color: #0a4d2e !important; }
-.jalali-datepicker .jdp-day.jdp-today { border-color: #0a4d2e !important; }
-.jalali-datepicker .jdp-nav-btn:hover { background-color: #e8f5ec !important; }
-
 @media print {
 body { background: #fff !important; padding: 0 !important; }
 .tabs, .tab-btn, .header, .admin-login-link, .stepper,
@@ -310,7 +263,7 @@ body { background: #fff !important; padding: 0 !important; }
 </div>
 </div>
 
-<!-- ۲. پنل پیگیری (با نوار پیشرفت و لغو نوبت) -->
+<!-- ۲. پنل پیگیری -->
 <div class="content panel" id="panel-track">
 <div style="text-align: center; margin-bottom: 20px;">
 <h2 style="color: #0a4d2e; margin-bottom: 10px;">پیگیری وضعیت</h2>
@@ -323,25 +276,14 @@ body { background: #fff !important; padding: 0 !important; }
 <button class="btn" onclick="startTracking()">مشاهده و پیگیری زنده</button>
 
 <div class="result-box" id="track-result-box" style="display: none;">
-<!-- بخش تیکت -->
 <div id="track-ticket-section">
 <h3>وضعیت درخواست شما:</h3>
 <p style="font-size: 18px; font-weight: bold; margin: 10px 0; color: #d4a017;" id="track-status-text"></p>
 
-<!-- 🌟 نوار پیشرفت -->
 <div class="progress-container" id="track-progress-bar">
-<div class="progress-step" id="prog-1">
-<div class="progress-circle">✓</div>
-<div class="progress-text">ثبت شد</div>
-</div>
-<div class="progress-step" id="prog-2">
-<div class="progress-circle">⚙️</div>
-<div class="progress-text">در حال بررسی</div>
-</div>
-<div class="progress-step" id="prog-3">
-<div class="progress-circle">✅</div>
-<div class="progress-text">حل شد</div>
-</div>
+<div class="progress-step" id="prog-1"><div class="progress-circle">✓</div><div class="progress-text">ثبت شد</div></div>
+<div class="progress-step" id="prog-2"><div class="progress-circle">⚙️</div><div class="progress-text">در حال بررسی</div></div>
+<div class="progress-step" id="prog-3"><div class="progress-circle">✅</div><div class="progress-text">حل شد</div></div>
 </div>
 
 <div class="routing-info" id="track-dept-text"></div>
@@ -351,7 +293,6 @@ body { background: #fff !important; padding: 0 !important; }
 </div>
 </div>
 
-<!-- 🌟 بخش نوبت (اگر کد مربوط به نوبت باشد) -->
 <div id="track-appointment-section" style="display: none;">
 <h3 style="color: #0a4d2e;">اطلاعات نوبت شما:</h3>
 <div class="routing-info" id="track-app-details" style="margin-top: 15px; line-height: 2;"></div>
@@ -391,7 +332,7 @@ body { background: #fff !important; padding: 0 !important; }
 </div>
 </div>
 
-<!-- ۴. پنل درخواست پوز (۴ مرحله‌ای) -->
+<!-- ۴. پنل درخواست پوز -->
 <div class="content panel" id="panel-pos">
 <div style="text-align: center; margin-bottom: 20px;">
 <h2 style="color: #0a4d2e; margin-bottom: 10px;">درخواست دستگاه کارتخوان (پوز)</h2>
@@ -554,11 +495,10 @@ body { background: #fff !important; padding: 0 !important; }
 </div>
 
 <div class="form-group">
-<label>تاریخ مورد نظر را انتخاب کنید (شمسی):</label>
-<input type="text" id="app-date" data-jdp onchange="checkAvailability()" required placeholder="برای انتخاب تاریخ کلیک کنید" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: inherit; font-size: 14px; text-align: right; cursor: pointer;">
+<label>تاریخ مورد نظر را انتخاب کنید:</label>
+<input type="date" id="app-date" onchange="checkAvailability()" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: inherit; font-size: 14px; direction: ltr; text-align: right;">
 </div>
 
-<!-- منوی ساعت‌ها (هر ۲۰ دقیقه) -->
 <div class="form-group">
 <label>ساعت مورد نظر (هر ۲۰ دقیقه یک نوبت):</label>
 <select id="app-time" required>
@@ -800,19 +740,6 @@ function clearSignature(key) { if (signatures[key]) signatures[key].clear(); }
 document.addEventListener('DOMContentLoaded', function() {
 signatures['ticket'] = initSignature('signature-canvas-ticket');
 signatures['pos'] = initSignature('signature-canvas-pos');
-
-// 📅 فعال‌سازی تقویم شمسی
-if (typeof jalaliDatepicker !== 'undefined') {
-jalaliDatepicker.startWatch({
-selector: 'input[data-jdp]',
-date: true,
-time: false,
-format: 'YYYY/MM/DD',
-placeholder: 'انتخاب تاریخ',
-zIndex: 9999,
-theme: 'default'
-});
-}
 });
 
 function toggleCardAction(btn, type) {
@@ -1186,7 +1113,6 @@ document.getElementById('track-ticket-section').style.display = 'block';
 document.getElementById('track-status-text').innerText = data.status;
 document.getElementById('track-dept-text').innerText = "ارجاع به: " + data.department;
 
-// 🌟 آپدیت نوار پیشرفت
 document.querySelectorAll('#track-progress-bar .progress-step').forEach(el => el.classList.remove('active', 'completed'));
 if (data.status === 'در حال بررسی') {
 document.getElementById('prog-1').classList.add('completed');
@@ -1224,7 +1150,6 @@ fetchStatus();
 trackInterval = setInterval(fetchStatus, 15000);
 }
 
-// 🌟 لغو نوبت توسط مشتری
 function cancelMyAppointment() {
 if(!confirm("آیا از لغو نوبت خود مطمئن هستید؟")) return;
 fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify({ action: 'cancelAppointmentByCustomer', row: currentAppointmentRow }) })
@@ -1306,7 +1231,6 @@ fetchAppointments();
 }
 }
 
-/* ===== نوبت‌دهی ===== */
 function checkAvailability() {
 const branch = document.getElementById('app-branch').value;
 const date = document.getElementById('app-date').value;
@@ -1498,7 +1422,7 @@ if (!validateIBAN(iban)) { document.getElementById('pos-iban-error').style.displ
 else { document.getElementById('pos-iban-error').style.display = 'none'; }
 
 if (!deviceType) { alert('لطفاً نوع دستگاه پوز را انتخاب کنید.'); return; }
-if (!pxaccountHolder) { alert('لطف;اً نام صاحب حساب را وارد کنید.'); return; }
+if (!accountHolder) { alert('لطفاً نام صاحب حساب را وارد کنید.'); return; }
 if (!accountNumber) { alert('لطفاً شماره حساب را وارد کنید.'); return; }
 
 if (!signatures['pos'] || signatures['pos'].isEmpty()) { alert('لطفاً امضای خود را در کادر مربوطه ثبت کنید.'); return; }
@@ -1517,7 +1441,7 @@ reader.onload = (function(idx) {
 return function(e) {
 fileDataArray.push({ fileName: files[idx].name, mimeType: files[idx].type, base64: e.target.result.split(',')[1] });
 processed++;
-if (processed === border files.length) resolve(fileDataArray);
+if (processed === files.length) resolve(fileDataArray);
 };
 })(i);
 reader.readAsDataURL(files[i]);
@@ -1564,7 +1488,7 @@ let filesHtml = "";
 if(pos.files) {
 let links = pos.files.split("\n");
 filesHtml = `<p style="font-size:12px; margin-top:5px;"><strong>مدارک:</strong> `;
-links.forEach((link, idx) => { if(link): filesHtml += `<a href="${link}" target="_blank" style="color:#2980b9;">فایل ${idx+1}</a> | `; });
+links.forEach((link, idx) => { if(link) filesHtml += `<a href="${link}" target="_blank" style="color:#2980b9;">فایل ${idx+1}</a> | `; });
 filesHtml += `</p>`;
 }
 
@@ -1596,7 +1520,7 @@ ${filesHtml}
 <div style="background:#f0f8ff; padding:10px; border-radius:8px; margin-top:10px; border:1px solid #bce;">
 <label style="font-size:12px; font-weight:bold; color:#2980b9; margin-bottom:5px; display:block;">📧 ارسال به شرکت توزیع‌کننده (PSP):</label>
 <div style="display:flex; gap:5px;">
-<input type="email" id="psp-email-${pos.row}" placeholder="ایمیل شرکت توزیع‌کننده..." style="flex:1; padding:81px solid #ccc; border-radius:6px; font-size:12px; direction:ltr;">
+<input type="email" id="psp-email-${pos.row}" placeholder="ایمیل شرکت توزیع‌کننده..." style="flex:1; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:12px; direction:ltr;">
 <button type="button" class="btn" style="width:auto; margin:0; padding:8px 15px; font-size:12px; background:#2980b9;" onclick="sendPOSEmail(${pos.row}, this)">ارسال</button>
 </div>
 </div>
